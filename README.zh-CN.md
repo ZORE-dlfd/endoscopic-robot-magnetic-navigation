@@ -62,95 +62,145 @@ build_simulation.py          (动力学求解器)                  ├─┤
 
 Endoscopy 基线直接调用本机 Slicer 5.10.0 `EndoscopyLogic`：输入相同线性路径、0.5 mm 等弧长重采样、不设人工姿态关键帧，保留默认相机方向和四元数插值。导出姿态按路径弧长插值到同一相机位置。公平评价时使用相同 60° 垂直 FOV、4:3、几何、观察门槛。这不是用户当前 Slicer 场景的自定义关键帧、FOV 或默认 30° 显示设置。
 
+> **公式记号说明：** `_` 表示下标（如 `F_mag` 即 F 带下标 mag），`^T` 表示转置，`·` 是点乘，`×` 是叉乘，`|…|` 是模长/绝对值，`√` 是开方，`d…/dt` 是对时间求导，`clip[a, b, c]` 表示把 a 限制在 [b, c] 区间内。
+
 ## 相机前瞻与防运动晃动
 
 相机位置固定于机器人前端：
 
-$$\mathbf{p}_{\mathrm{cam}} = \mathbf{p}_{\mathrm{robot}} + \mathbf{R}_{\mathrm{robot}}\,[5.8,\,0,\,0]^{\top}\ \mathrm{mm}$$
+```
+p_cam = p_robot + R_robot · [5.8, 0, 0]^T   (mm)
+```
 
-机器人实体尺寸 12 × 6 mm；前端镜头简化为壳体内可转的光轴。前瞻距离使用启发式，随速度 $v$（mm/s）、曲率 $\kappa$（1/mm）、归一化风险 $r$ 与净空 $c$ 变化：
+机器人实体尺寸 12 × 6 mm；前端镜头简化为壳体内可转的光轴。前瞻距离使用启发式，随速度 `v`（mm/s）、曲率 `κ`（1/mm）、归一化风险 `r` 与净空 `c` 变化：
 
-$$L = \mathrm{clip}\!\left[\frac{12+1.8\,v}{1+25\,\kappa+0.8\,r},\;5,\;L_{\max}\right], \qquad L_{\max} = \mathrm{clip}[\,6+2c,\;5,\;45\,]$$
+```
+L     = clip[ (12 + 1.8·v) / (1 + 25·κ + 0.8·r),  5,  L_max ]
+L_max = clip[ 6 + 2·c,  5,  45 ]
+```
 
 沿中心线逐步缩短前瞻，并用三角网格射线排除遮挡目标。方向筛选采用迟滞：新目标点积阈值为 0.50（约 60°），已跟踪目标保持阈值为 0.45（约 63.3°）；前瞻弧长变化限制为 10 mm/s。若暂时没有新目标，沿中心线维持上一前瞻距离；首次无候选时取最近的前方中心线位置，不把目标重置到机器人正前方的虚拟点。目标点始终由中心线插值得到；被遮挡状态仍单独标记，不代表相机一定能看见该点。目标朝向使用正交坐标架，上一帧 up 向量投影到新视平面，减少非必要滚转。
 
-相对姿态为 $\mathbf{R}_{\mathrm{rel}} = \mathbf{R}_{\mathrm{robot}}^{\top}\mathbf{R}_{\mathrm{goal}}$，用 ZYX 欧拉关节参数 yaw/pitch/roll 描述可转镜头。关节控制律：
+相对姿态为 `R_rel = R_robot^T · R_goal`，用 ZYX 欧拉关节参数 yaw/pitch/roll 描述可转镜头。关节控制律：
 
-$$\ddot{\theta} = \mathrm{clip}\!\left[12\,e - 6\,\dot{\theta},\,-150,\,150\right]\ \text{deg/s}^2, \qquad |\dot{\theta}| \le 60\ \text{deg/s}$$
+```
+d²θ/dt² = clip[ 12·e − 6·(dθ/dt),  −150,  150 ]   (deg/s²)
+|dθ/dt| ≤ 60                                       (deg/s)
+```
 
-yaw、pitch 机械范围各为 ±89°，roll 可连续调节。数值积分子步 ≤0.01 s，在角限前采用制动速度 $\sqrt{2\,a_{\max}d}$。这些是关节运动假设，不代表已完成实体机构设计。
+yaw、pitch 机械范围各为 ±89°，roll 可连续调节。数值积分子步 ≤0.01 s，在角限前采用制动速度 `√(2 · a_max · d)`。这些是关节运动假设，不代表已完成实体机构设计。
 
 垂直 FOV 60°，水平约 75.2°，矩形视锥对角半角约 43.9°。为保证视锥整体不越过机器人后半空间，期望光轴相对本体前向轴最多偏转 45.0°（比 90°−43.9° 的几何上限多留约 1° 余量）；相机目标方向先投影到这个可视安全锥内，再由关节限速控制跟踪。摄像头朝向和机器人本体朝向分开；没有给单偶极子机器人添加主动轴向自转能力。
 
 ## 协同减速、等待和磁动力学
 
-先区分两种误差：**锥外误差** $e_{\mathrm{cone}}=\arccos(\mathbf{u}_{\mathrm{target}}\cdot\mathbf{u}_{\mathrm{feasible}})$，表示中心线方向超出安全视锥后剩下的几何误差；**跟踪误差** $e_{\mathrm{track}}=2\arccos(|\mathbf{q}_{\mathrm{goal}}\cdot\mathbf{q}_{\mathrm{actual}}|)$，表示实际相机相对可达期望姿态的四元数夹角。两个式子的反三角结果都换成度。只因后一类可解决的滞后减速；目标超出前向锥但镜头已经跟上可达姿态时，不会因锥外残差反复等待。四元数用于误差度量，云台执行器仍为上述逐轴欧拉角 PD，不能把它说成完整的四元数云台控制器。
+先区分两种误差：**锥外误差**表示中心线方向超出安全视锥后剩下的几何误差：
+
+```
+e_cone = arccos( u_target · u_feasible )
+```
+
+**跟踪误差**表示实际相机相对可达期望姿态的四元数夹角：
+
+```
+e_track = 2 · arccos( | q_goal · q_actual | )
+```
+
+两个式子的反三角结果都换成度。只因后一类可解决的滞后减速；目标超出前向锥但镜头已经跟上可达姿态时，不会因锥外残差反复等待。四元数用于误差度量，云台执行器仍为上述逐轴欧拉角 PD，不能把它说成完整的四元数云台控制器。
 
 慢行因子（15° 死区、50°/s 速率软限）：
 
-$$f = \mathrm{clip}\!\left[1+\frac{\max(e_{\mathrm{track}}-15^\circ,\,0)}{80^\circ}+\frac{\max(\omega_{\mathrm{rel}}-50\ \text{deg/s},\,0)}{120\ \text{deg/s}},\;1,\;1.25\right]$$
+```
+f = clip[ 1 + max(e_track − 15°, 0)/80°  +  max(ω_rel − 50 deg/s, 0)/(120 deg/s),  1,  1.25 ]
+```
 
-对 $f$ 用 $\sigma=6$ 个回放采样的高斯平滑后，重定时 $dt_{\mathrm{new}} = f\,dt_{\mathrm{old}}$。15° 死区避免把轻度常态误差当成全程慢行理由，50°/s 给 60°/s 的关节速率假设留余量；$f\le1.25$ 将局部参考速度降幅限制在约 20%。这是未经多病例标定的工程参数，不是论文给定的最优值。
+对 `f` 用 σ = 6 个回放采样的高斯平滑后，重定时 `dt_new = f · dt_old`。15° 死区避免把轻度常态误差当成全程慢行理由，50°/s 给 60°/s 的关节速率假设留余量；`f ≤ 1.25` 将局部参考速度降幅限制在约 20%。这是未经多病例标定的工程参数，不是论文给定的最优值。
 
 等待按调度器模拟得到的当前关节角和角速度决定：逐轴误差最大值超过 24°、距离上次等待结束至少 8 s 时，冻结当前可达目标，用 0.01 s 子步积分同一 PD 动力学。只有预计在最多 1.2 s 内同时达到逐轴误差 ≤3° 和逐轴角速度 ≤5°/s，才插入所需时长；达不到则继续，不把不可解决的误差变成反复停等。全程等待总预算为原始时长的 3%，本例约 8.61 s。该预算是实验效率限制，不是安全保证；超出预算的滞后在结果中保留，不会被隐藏。
 
 候选停等还要过一次实际重放状态核验：重算磁动力学和相机后，起点逐轴误差最大值需 ≥24°，终点逐轴误差 ≤3° 且逐轴角速度 ≤5°/s。没有滞后、不够稳定的候选全部删除，重新计算运动和前瞻目标，再核验剩余候选，直到全部通过。每轮只能删除候选，因此有限轮数内结束。
 
-重定时维护单调时钟 $\tau(t)$（停等时 $\tau$ 不变），用链式法则缩放：
+重定时维护单调时钟 `τ(t)`（停等时 `τ` 不变），用链式法则缩放：
 
-$$\mathbf{v}_{\mathrm{new}}=\mathbf{v}_{\mathrm{old}}\,\dot{\tau}, \qquad \mathbf{a}_{\mathrm{new}}=\mathbf{a}_{\mathrm{old}}\,\dot{\tau}^2+\mathbf{v}_{\mathrm{old}}\,\ddot{\tau}, \qquad \boldsymbol{\omega}_{\mathrm{new}}=\boldsymbol{\omega}_{\mathrm{old}}\,\dot{\tau}, \qquad \boldsymbol{\alpha}_{\mathrm{new}}=\boldsymbol{\alpha}_{\mathrm{old}}\,\dot{\tau}^2+\boldsymbol{\omega}_{\mathrm{old}}\,\ddot{\tau}$$
+```
+v_new = v_old · (dτ/dt)
+a_new = a_old · (dτ/dt)² + v_old · (d²τ/dt²)
+```
 
 随后用原胶囊模型重新求解动力学，不对旧磁场序列简单拉长。
 
-**磁动力学。** 平动：
+**磁动力学。** 平动（牛顿方程）：
 
-$$M\,\ddot{\mathbf{p}} = \mathbf{F}_{\mathrm{mag}} + \mathbf{F}_{\mathrm{res}} + M\,\mathbf{g}$$
+```
+M · d²p/dt² = F_mag + F_res + M · g
+```
 
 等效阻力：
 
-$$\mathbf{F}_{\mathrm{res}} = -\mu\,M\,|\mathbf{g}|\,\frac{\mathbf{v}}{\sqrt{\mathbf{v}\cdot\mathbf{v}+\varepsilon^2}}$$
+```
+F_res = −μ · M · |g| · v / √( v · v + ε² )
+```
 
 转动：
 
-$$\mathbf{I}\,\dot{\boldsymbol{\omega}} + \boldsymbol{\omega}\times(\mathbf{I}\boldsymbol{\omega}) = \mathbf{R}^{\top}\boldsymbol{\tau}_{\mathrm{mag}}$$
+```
+I · dω/dt + ω × (I · ω) = R^T · τ_mag
+```
 
 磁力与磁力矩：
 
-$$\mathbf{F}_{\mathrm{mag}} = \mathbf{G}^{\top}\mathbf{m}, \qquad \boldsymbol{\tau}_{\mathrm{mag}} = \mathbf{m}\times\mathbf{B}$$
+```
+F_mag = G^T · m        τ_mag = m × B
+```
 
-**磁场合成。** 给定需求转矩 $\boldsymbol{\tau}$，可控部分为其垂直分量（单偶极子无法直接实现绕磁轴的转矩）：
+**磁场合成。** 给定需求转矩 `τ`，只有垂直于磁矩的分量可控（单偶极子无法绕自身磁轴自旋）。记单位磁矩 `u = m / |m|`：
 
-$$\boldsymbol{\tau}_\perp = \boldsymbol{\tau} - (\boldsymbol{\tau}\cdot\hat{\mathbf{m}})\,\hat{\mathbf{m}}$$
+```
+τ_⊥ = τ − (τ · u) · u
+```
 
-$$\mathbf{B} = \frac{\boldsymbol{\tau}_\perp \times \mathbf{m}}{|\mathbf{m}|^2} + B_{\mathrm{bias}}\,\hat{\mathbf{m}}$$
+```
+B = (τ_⊥ × m) / |m|² + B_bias · u
+```
 
-实现需求力的最小范数对称无迹梯度，其中 $\mathbf{u}=\mathbf{m}/|\mathbf{m}|$、$a=(\mathbf{F}\cdot\mathbf{u})/|\mathbf{m}|$、$\mathbf{b}=[\mathbf{F}-(\mathbf{F}\cdot\mathbf{u})\mathbf{u}]/|\mathbf{m}|$：
+实现需求力的最小范数对称无迹梯度，其中 `a = (F · u)/|m|`、`b = [F − (F · u)·u]/|m|`：
 
-$$\mathbf{G} = a\left(\tfrac{3}{2}\mathbf{u}\mathbf{u}^{\top}-\tfrac{1}{2}\mathbf{I}\right) + \mathbf{b}\mathbf{u}^{\top} + \mathbf{u}\mathbf{b}^{\top}$$
+```
+G = a · (1.5 · u·u^T − 0.5 · I) + b · u^T + u · b^T
+```
 
 现有参数不改：质量 0.5276 g、磁矩 0.02587 A·m²、摩擦系数 0.2、偏置场 15 mT、重力和初始条件。关节反作用、接触和真实磁源限制没有求解。大范围磁场仍为局部仿射模型外推，不是实际线圈全空间解。箭头长度仅视觉增加 15%，数值和单位不变。
 
 ## 四项评价
 
-目标面积 $A_{\mathrm{total}}$ 在实验前固定为完整共享内表面，不随路径完成程度更改。评价 160×120，时间步 0.4 s；通过无抗锯齿、无光照的三角面 ID 离屏渲染获得每个像素首个可见面（包含遮挡）。两组使用相同渲染器，不以播放帧率计分。
+目标面积 `A_total` 在实验前固定为完整共享内表面，不随路径完成程度更改。评价 160×120，时间步 0.4 s；通过无抗锯齿、无光照的三角面 ID 离屏渲染获得每个像素首个可见面（包含遮挡）。两组使用相同渲染器，不以播放帧率计分。
 
 有效面需：距离 2–80 mm、面法线与视线夹角不超过 75°、至少 2 个可见像素；连续/容许小间隔的合格观察达到 0.4 s。距离和角度使用面中心近似；角度取绝对余弦，因 STL 法线朝向可能不统一。这是几何质量门槛，不是病灶可辨识验证。
 
 三角形面积（叉积）：
 
-$$S=\tfrac{1}{2}\left|(\mathbf{p}_2-\mathbf{p}_1)\times(\mathbf{p}_3-\mathbf{p}_1)\right|$$
+```
+S = ½ · | (p2 − p1) × (p3 − p1) |
+```
 
 覆盖率：
 
-$$C(T)=100\,\frac{\sum_i A_i\,O_i(T)}{A_{\mathrm{total}}}$$
+```
+C(T) = 100 · Σ_i A_i · O_i(T) / A_total
+```
 
-有效视野占比及其时间平均（梯形积分）：
+有效视野占比及其时间平均（对 [0, T] 梯形积分）：
 
-$$E(t)=100\,\frac{N_{\mathrm{valid\,wall\,pixels}}(t)}{N_{\mathrm{image\,pixels}}}, \qquad E_{\mathrm{mean}}(T)=\frac{1}{T}\int_0^T E(t)\,dt$$
+```
+E(t)      = 100 · N_valid(t) / N_image
+E_mean(T) = (1/T) · ∫ E(t) dt
+```
 
 重复观察率（同一面离开有效视野超过 0.8 s 后重新合格观察）：
 
-$$R(T)=100\,\frac{\sum_i A_i\,\max[n_i(T)-1,\,0]}{\sum_i A_i\,n_i(T)}$$
+```
+R(T) = 100 · Σ_i A_i · max[ n_i(T) − 1, 0 ] / Σ_i A_i · n_i(T)
+```
 
 仅相机对照使用当前运动方案相同的机器人位置和时间，只换相机策略；完整系统将原速 Endoscopy 与所选重定时方案比较。四种运动方案 × 两种相机，共八组评价。共同时间预算为原路径时间 286.99953 s，所有组均在这个精确时刻插入评价采样。所有指标预先计算，鼠标悬停、拖动、重复播放不会增加覆盖。
 

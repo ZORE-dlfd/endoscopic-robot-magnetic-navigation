@@ -62,95 +62,145 @@ The baseline is `Magnetic 1 - Field scopes/Magnetic_Viewer_v4.exe` and its corre
 
 The Endoscopy baseline calls the local 3D Slicer 5.10.0 `EndoscopyLogic` directly: same linear input path, 0.5 mm equal-arc-length resampling, no manual pose keyframes, keeping the default camera direction and quaternion interpolation. Exported poses are interpolated to the same camera positions along the path arc length. Fair evaluation uses the same 60° vertical FOV, 4:3 aspect, geometry and observation thresholds. This is not the user's custom keyframes, FOV or default 30° display setting in the current Slicer scene.
 
+> **Formula notation:** `_` means subscript (e.g. `F_mag` = F with subscript "mag"), `^T` means transpose, `·` is the dot product, `×` is the cross product, `|…|` is magnitude, `√` is square root, `d…/dt` is the time derivative, `clip[a, b, c]` means "clamp into [b, c]".
+
 ## Camera look-ahead and stabilization
 
 The camera sits at a fixed offset ahead of the capsule front:
 
-$$\mathbf{p}_{\mathrm{cam}} = \mathbf{p}_{\mathrm{robot}} + \mathbf{R}_{\mathrm{robot}}\,[5.8,\,0,\,0]^{\top}\ \mathrm{mm}$$
+```
+p_cam = p_robot + R_robot · [5.8, 0, 0]^T   (mm)
+```
 
-The robot body is 12 × 6 mm; the front lens is simplified to a steerable optical axis inside the shell. The look-ahead distance is a heuristic that reacts to speed $v$ (mm/s), curvature $\kappa$ (1/mm), normalized risk $r$ and clearance $c$:
+The robot body is 12 × 6 mm; the front lens is simplified to a steerable optical axis inside the shell. The look-ahead distance is a heuristic that reacts to speed `v` (mm/s), curvature `κ` (1/mm), normalized risk `r` and clearance `c`:
 
-$$L = \mathrm{clip}\!\left[\frac{12+1.8\,v}{1+25\,\kappa+0.8\,r},\;5,\;L_{\max}\right], \qquad L_{\max} = \mathrm{clip}[\,6+2c,\;5,\;45\,]$$
+```
+L     = clip[ (12 + 1.8·v) / (1 + 25·κ + 0.8·r),  5,  L_max ]
+L_max = clip[ 6 + 2·c,  5,  45 ]
+```
 
 The look-ahead is shortened step by step along the centerline and occluded targets are excluded by triangle-mesh ray casting. Direction selection uses hysteresis: the dot-product threshold for a new target is 0.50 (≈60°), for an already-tracked target 0.45 (≈63.3°); the look-ahead arc-length change is limited to 10 mm/s. If no new target exists, the previous look-ahead distance is kept along the centerline; when there is no candidate at all the nearest forward centerline point is taken, never a virtual point reset to the robot front. The target always comes from centerline interpolation; an occluded flag is still recorded separately, so it does not claim the camera can actually see that point. The target orientation uses an orthogonal frame with the previous up-vector projected onto the new view plane to reduce unnecessary roll.
 
-Relative orientation is $\mathbf{R}_{\mathrm{rel}} = \mathbf{R}_{\mathrm{robot}}^{\top}\mathbf{R}_{\mathrm{goal}}$, described by ZYX Euler joint angles (yaw / pitch / roll) for the steerable lens. The joint control law is:
+Relative orientation is `R_rel = R_robot^T · R_goal`, described by ZYX Euler joint angles (yaw / pitch / roll) for the steerable lens. The joint control law is:
 
-$$\ddot{\theta} = \mathrm{clip}\!\left[12\,e - 6\,\dot{\theta},\,-150,\,150\right]\ \text{deg/s}^2, \qquad |\dot{\theta}| \le 60\ \text{deg/s}$$
+```
+d²θ/dt² = clip[ 12·e − 6·(dθ/dt),  −150,  150 ]   (deg/s²)
+|dθ/dt| ≤ 60                                       (deg/s)
+```
 
-Yaw and pitch are limited to ±89°, roll is continuous. Numerical integration uses sub-steps ≤ 0.01 s with braking speed $\sqrt{2\,a_{\max}d}$ before the angle limit. These are joint-motion assumptions, not a finished mechanism design.
+Yaw and pitch are limited to ±89°, roll is continuous. Numerical integration uses sub-steps ≤ 0.01 s with braking speed `√(2 · a_max · d)` before the angle limit. These are joint-motion assumptions, not a finished mechanism design.
 
 Vertical FOV is 60°, horizontal ≈75.2°, rectangular frustum diagonal half-angle ≈43.9°. To keep the frustum from crossing the robot's rear half-space, the optical axis may deviate at most 45.0° from the body forward axis (≈1° of margin over the 90°−43.9° geometric limit); the camera target direction is first projected into this safety cone, then tracked by joint rate limits. Camera orientation and body orientation are kept separate; no active axial self-rotation is added to the single-dipole robot.
 
 ## Coordination: slowdown, waits, and magnetic dynamics
 
-Two errors are distinguished. The **cone error** $e_{\mathrm{cone}}=\arccos(\mathbf{u}_{\mathrm{target}}\cdot\mathbf{u}_{\mathrm{feasible}})$ is the geometric error left after the centerline direction exceeds the safety cone; the **tracking error** $e_{\mathrm{track}}=2\arccos(|\mathbf{q}_{\mathrm{goal}}\cdot\mathbf{q}_{\mathrm{actual}}|)$ is the quaternion angle between the actual camera and the reachable desired pose. Both arccos results are converted to degrees. Only the solvable (tracking) class slows the robot down; when the target is beyond the forward cone but the lens has caught up to the reachable pose, the robot does not keep waiting because of the cone residual. The quaternion is used for the error metric; the gimbal actuator is still the per-axis Euler PD above — do not describe it as a full quaternion gimbal controller.
+Two errors are distinguished. The **cone error** is the geometric error left after the centerline direction exceeds the safety cone:
+
+```
+e_cone = arccos( u_target · u_feasible )
+```
+
+The **tracking error** is the quaternion angle between the actual camera and the reachable desired pose:
+
+```
+e_track = 2 · arccos( | q_goal · q_actual | )
+```
+
+Both arccos results are converted to degrees. Only the solvable (tracking) class slows the robot down; when the target is beyond the forward cone but the lens has caught up to the reachable pose, the robot does not keep waiting because of the cone residual. The quaternion is used for the error metric; the gimbal actuator is still the per-axis Euler PD above — do not describe it as a full quaternion gimbal controller.
 
 Slowdown factor with a 15° deadband and a 50°/s rate soft-limit:
 
-$$f = \mathrm{clip}\!\left[1+\frac{\max(e_{\mathrm{track}}-15^\circ,\,0)}{80^\circ}+\frac{\max(\omega_{\mathrm{rel}}-50\ \text{deg/s},\,0)}{120\ \text{deg/s}},\;1,\;1.25\right]$$
+```
+f = clip[ 1 + max(e_track − 15°, 0)/80°  +  max(ω_rel − 50 deg/s, 0)/(120 deg/s),  1,  1.25 ]
+```
 
-$f$ is smoothed with a Gaussian ($\sigma=6$ replay samples), then $dt_{\mathrm{new}} = f\,dt_{\mathrm{old}}$. The 15° deadband avoids treating mild normal error as a full-trip slowdown reason; the 50°/s gives margin over the 60°/s joint-rate assumption; $f\le1.25$ caps the local speed reduction at ≈20%. These are engineering parameters, not literature-optimal values.
+`f` is smoothed with a Gaussian (σ = 6 replay samples), then `dt_new = f · dt_old`. The 15° deadband avoids treating mild normal error as a full-trip slowdown reason; the 50°/s gives margin over the 60°/s joint-rate assumption; `f ≤ 1.25` caps the local speed reduction at ≈20%. These are engineering parameters, not literature-optimal values.
 
 Waits are decided from the simulated joint angle and rate: when the per-axis maximum error exceeds 24° and at least 8 s have passed since the last wait ended, the current reachable target is frozen and the same PD dynamics is integrated with 0.01 s sub-steps. A wait is inserted only if the joint is predicted to settle to per-axis error ≤3° and per-axis rate ≤5°/s within at most 1.2 s; otherwise it keeps going rather than turning an unsolvable error into repeated stops. The total wait budget is 3% of the original duration (≈8.61 s in this case). That budget is an experiment-efficiency limit, not a safety guarantee; lag beyond the budget is kept in the results, never hidden.
 
 Candidate waits are additionally replay-verified: after recomputing magnetic dynamics and the camera, the start must exceed 24° per-axis error and the end must reach ≤3° error and ≤5°/s rate. Unnecessary or unsettled candidates are removed, motion and look-ahead targets recomputed, and remaining candidates re-checked until all pass. Each round only deletes candidates, so it terminates in finite rounds.
 
-Retiming keeps a monotonic clock $\tau(t)$ (allowing $\tau$ to stay constant during a wait) and rescales by the chain rule:
+Retiming keeps a monotonic clock `τ(t)` (allowing `τ` to stay constant during a wait) and rescales by the chain rule:
 
-$$\mathbf{v}_{\mathrm{new}}=\mathbf{v}_{\mathrm{old}}\,\dot{\tau}, \qquad \mathbf{a}_{\mathrm{new}}=\mathbf{a}_{\mathrm{old}}\,\dot{\tau}^2+\mathbf{v}_{\mathrm{old}}\,\ddot{\tau}, \qquad \boldsymbol{\omega}_{\mathrm{new}}=\boldsymbol{\omega}_{\mathrm{old}}\,\dot{\tau}, \qquad \boldsymbol{\alpha}_{\mathrm{new}}=\boldsymbol{\alpha}_{\mathrm{old}}\,\dot{\tau}^2+\boldsymbol{\omega}_{\mathrm{old}}\,\ddot{\tau}$$
+```
+v_new = v_old · (dτ/dt)
+a_new = a_old · (dτ/dt)² + v_old · (d²τ/dt²)
+```
 
 The dynamics are then re-solved with the original capsule model, rather than simply stretching the old field sequence.
 
-**Magnetic dynamics.** Translation:
+**Magnetic dynamics.** Translation (Newton's law):
 
-$$M\,\ddot{\mathbf{p}} = \mathbf{F}_{\mathrm{mag}} + \mathbf{F}_{\mathrm{res}} + M\,\mathbf{g}$$
+```
+M · d²p/dt² = F_mag + F_res + M · g
+```
 
 Resistive force:
 
-$$\mathbf{F}_{\mathrm{res}} = -\mu\,M\,|\mathbf{g}|\,\frac{\mathbf{v}}{\sqrt{\mathbf{v}\cdot\mathbf{v}+\varepsilon^2}}$$
+```
+F_res = −μ · M · |g| · v / √( v · v + ε² )
+```
 
 Rotation:
 
-$$\mathbf{I}\,\dot{\boldsymbol{\omega}} + \boldsymbol{\omega}\times(\mathbf{I}\boldsymbol{\omega}) = \mathbf{R}^{\top}\boldsymbol{\tau}_{\mathrm{mag}}$$
+```
+I · dω/dt + ω × (I · ω) = R^T · τ_mag
+```
 
 Magnetic force and torque:
 
-$$\mathbf{F}_{\mathrm{mag}} = \mathbf{G}^{\top}\mathbf{m}, \qquad \boldsymbol{\tau}_{\mathrm{mag}} = \mathbf{m}\times\mathbf{B}$$
+```
+F_mag = G^T · m        τ_mag = m × B
+```
 
-**Field synthesis.** Given a desired torque $\boldsymbol{\tau}$, the controllable part is the perpendicular component (a single dipole cannot spin about its own axis):
+**Field synthesis.** Given a desired torque `τ`, only the part perpendicular to the magnetic moment is controllable (a single dipole cannot spin about its own axis). Let `u = m / |m|` be the unit magnetic moment:
 
-$$\boldsymbol{\tau}_\perp = \boldsymbol{\tau} - (\boldsymbol{\tau}\cdot\hat{\mathbf{m}})\,\hat{\mathbf{m}}$$
+```
+τ_⊥ = τ − (τ · u) · u
+```
 
-$$\mathbf{B} = \frac{\boldsymbol{\tau}_\perp \times \mathbf{m}}{|\mathbf{m}|^2} + B_{\mathrm{bias}}\,\hat{\mathbf{m}}$$
+```
+B = (τ_⊥ × m) / |m|² + B_bias · u
+```
 
-The minimum-norm symmetric traceless gradient realizing a desired force, with $\mathbf{u}=\mathbf{m}/|\mathbf{m}|$, $a=(\mathbf{F}\cdot\mathbf{u})/|\mathbf{m}|$, $\mathbf{b}=[\mathbf{F}-(\mathbf{F}\cdot\mathbf{u})\mathbf{u}]/|\mathbf{m}|$:
+The minimum-norm symmetric traceless gradient that realizes a desired force, with `a = (F · u)/|m|` and `b = [F − (F · u)·u]/|m|`:
 
-$$\mathbf{G} = a\left(\tfrac{3}{2}\mathbf{u}\mathbf{u}^{\top}-\tfrac{1}{2}\mathbf{I}\right) + \mathbf{b}\mathbf{u}^{\top} + \mathbf{u}\mathbf{b}^{\top}$$
+```
+G = a · (1.5 · u·u^T − 0.5 · I) + b · u^T + u · b^T
+```
 
 Robot parameters are unchanged: mass 0.5276 g, magnetic moment 0.02587 A·m², friction coefficient 0.2, bias field 15 mT, gravity and initial conditions kept. Joint reaction, contact and real coil-field solutions are not solved. The large-range field is a local affine extrapolation, not a full-space coil solution. Arrow lengths are visually increased 15% only; values and units are unchanged.
 
 ## Four evaluation metrics
 
-The target area $A_{\mathrm{total}}$ is fixed before the experiment as the full shared inner surface, independent of how far the path completes. Evaluation resolution is 160×120 with a 0.4 s time step; each pixel's first visible face (occlusion included) is obtained by anti-aliasing-free, lighting-free per-face off-screen rendering. Both groups use the same renderer; play-back frame rate does not affect scoring.
+The target area `A_total` is fixed before the experiment as the full shared inner surface, independent of how far the path completes. Evaluation resolution is 160×120 with a 0.4 s time step; each pixel's first visible face (occlusion included) is obtained by anti-aliasing-free, lighting-free per-face off-screen rendering. Both groups use the same renderer; play-back frame rate does not affect scoring.
 
 A face is **validly observed** when: distance 2–80 mm, face-normal-to-ray angle ≤75°, at least 2 visible pixels, and a continuous/small-gap qualified observation reaching 0.4 s. Distance and angle use the face center approximation; angle uses the absolute cosine because STL normals may not be consistently oriented. This is a geometric quality gate, not a lesion-identifiability validation.
 
 Triangle area from the cross product:
 
-$$S=\tfrac{1}{2}\left|(\mathbf{p}_2-\mathbf{p}_1)\times(\mathbf{p}_3-\mathbf{p}_1)\right|$$
+```
+S = ½ · | (p2 − p1) × (p3 − p1) |
+```
 
 Coverage:
 
-$$C(T)=100\,\frac{\sum_i A_i\,O_i(T)}{A_{\mathrm{total}}}$$
+```
+C(T) = 100 · Σ_i A_i · O_i(T) / A_total
+```
 
-Effective field-of-view and its time average (trapezoidal integration):
+Effective field-of-view and its time average (trapezoidal integration over [0, T]):
 
-$$E(t)=100\,\frac{N_{\mathrm{valid\,wall\,pixels}}(t)}{N_{\mathrm{image\,pixels}}}, \qquad E_{\mathrm{mean}}(T)=\frac{1}{T}\int_0^T E(t)\,dt$$
+```
+E(t)      = 100 · N_valid(t) / N_image
+E_mean(T) = (1/T) · ∫ E(t) dt
+```
 
 Repeat rate (a face re-observed after leaving the valid view for more than 0.8 s):
 
-$$R(T)=100\,\frac{\sum_i A_i\,\max[n_i(T)-1,\,0]}{\sum_i A_i\,n_i(T)}$$
+```
+R(T) = 100 · Σ_i A_i · max[ n_i(T) − 1, 0 ] / Σ_i A_i · n_i(T)
+```
 
 The camera-only comparison uses the same robot positions and time as the current motion scheme, only swapping the camera strategy; the full system compares the original-speed Endoscopy with the chosen retimed scheme. Four motion schemes × two cameras give eight evaluation groups. The common time budget is the original path time 286.99953 s, and every group inserts evaluation samples at exactly this instant. All metrics are precomputed; hovering, dragging and replaying do not increase coverage.
 
