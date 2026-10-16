@@ -1,0 +1,20 @@
+{
+  "passed": true,
+  "original_motion_columns": 146,
+  "original_motion_samples": 3172,
+  "original_motion_unchanged": true,
+  "insertion_camera_and_coverage_unchanged": true,
+  "sample_count": 33414,
+  "visibility_observations": 3343,
+  "max_camera_rotation_error_rad": 1.7589240639276202e-15,
+  "max_mount_error_mm": 5.684341886080802e-14,
+  "independent_constraint_violating_steps": 0,
+  "max_cone_deg": 44.984960867840655,
+  "max_joint_speed_deg_s": 60.0,
+  "max_joint_acceleration_deg_s2": 150.0000000001368,
+  "independent_first_seen_matches": true,
+  "unique_added_faces": 2982,
+  "withdrawal_added_area_mm2": 20909.910963773727,
+  "final_coverage_pct": 80.3515779690823,
+  "limitation": "Same face-ID renderer, separate playback pose and independent dwell accumulator; sampled geometric validation only."
+}

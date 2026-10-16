@@ -72,7 +72,7 @@ class Frame:
 
 
 class Replay:
-    def __init__(self, path=None):
+    def __init__(self, path=None, load_predictive=True):
         self.path = Path(path) if path else assets_path()
         arrays = np.load(self.path / 'arrays.npz', allow_pickle=False)
 
@@ -96,12 +96,7 @@ class Replay:
         self.velocities = np.column_stack([self.data[f'actual_velocity_{axis}_mm_s'] for axis in 'xyz'])
         self.body_quaternions = np.column_stack([self.data['actual_q' + axis] for axis in 'xyzw'])
         self.body_quaternions /= np.linalg.norm(self.body_quaternions, axis=1, keepdims=True)
-        self.camera_times = self.camera['time_s']
-        self.camera_quaternions = self.camera['quaternion']
-        indices = np.clip(np.searchsorted(self.times, self.camera_times, side='right') - 1, 0, len(self.times)-2)
-        amounts = (self.camera_times - self.times[indices]) / (self.times[indices+1] - self.times[indices])
-        body_at_camera = slerp(self.body_quaternions[indices], self.body_quaternions[indices+1], amounts)
-        self.relative_quaternions = multiply(conjugate(body_at_camera), self.camera_quaternions)
+        self.prepare_camera()
         self.points = self.payload['geometry']['points']
         self.faces = self.payload['geometry']['faces'].astype(np.uint32)
         self.areas = self.payload['geometry']['areas_mm2']
@@ -116,14 +111,33 @@ class Replay:
         self.settings = self.payload['evaluation']['settings']
         self.registry = self.payload['registry']
         self.robot = self.registry['robots'][0]
+        self.prediction = None
+        if load_predictive:
+            from .predictive import apply_prediction
+            apply_prediction(self)
+            self.prepare_camera()
 
-    def frame(self, time):
+    def prepare_camera(self):
+        self.camera_times = self.camera['time_s']
+        self.camera_quaternions = self.camera['quaternion']
+        indices = np.clip(np.searchsorted(self.times, self.camera_times, side='right') - 1, 0, len(self.times)-2)
+        amounts = (self.camera_times - self.times[indices]) / (self.times[indices+1] - self.times[indices])
+        body_at_camera = slerp(self.body_quaternions[indices], self.body_quaternions[indices+1], amounts)
+        self.relative_quaternions = multiply(conjugate(body_at_camera), self.camera_quaternions)
+
+    def body_pose(self, time):
         time = float(np.clip(time, 0, self.duration))
         index, amount = interval(self.times, time)
         span = self.times[index+1] - self.times[index]
         position = ((2*amount**3 - 3*amount**2 + 1)*self.positions[index] + (amount**3 - 2*amount**2 + amount)*span*self.velocities[index]
                     + (-2*amount**3 + 3*amount**2)*self.positions[index+1] + (amount**3 - amount**2)*span*self.velocities[index+1])
         body_quaternion = slerp(self.body_quaternions[index], self.body_quaternions[index+1], amount)
+        return position, body_quaternion
+
+    def frame(self, time):
+        time = float(np.clip(time, 0, self.duration))
+        index, amount = interval(self.times, time)
+        position, body_quaternion = self.body_pose(time)
         body_rotation = rotation(body_quaternion)
         camera_index, camera_amount = interval(self.camera_times, time)
         relative = slerp(self.relative_quaternions[camera_index], self.relative_quaternions[camera_index+1], camera_amount)
@@ -142,7 +156,10 @@ class Replay:
 
     def camera_value(self, frame, key):
         values = np.asarray(self.camera[key])
-        return values[frame.camera_index] * (1-frame.camera_amount) + values[frame.camera_index+1] * frame.camera_amount
+        first, second = values[frame.camera_index], values[frame.camera_index + 1]
+        if key in {'joint_angle_deg', 'goal_joint_angle_deg'}:
+            return first + ((second - first + 180.) % 360. - 180.) * frame.camera_amount
+        return first * (1 - frame.camera_amount) + second * frame.camera_amount
 
     def vector(self, frame, prefix, unit):
         return np.array([self.value(frame, f'{prefix}_{axis}_{unit}') for axis in 'xyz'])
@@ -164,7 +181,7 @@ class Replay:
     def coverage(self, time):
         insertion = (self.insertion_seen >= 0) & (self.insertion_seen <= min(time, self.join_time))
         withdrawal = ((self.withdrawal_seen >= 0) & (self.withdrawal_seen + self.join_time <= time)
-                      & ~np.asarray(self.masks['insertion_covered'], dtype=bool) & np.asarray(self.masks['recoverable'], dtype=bool))
+                      & ~np.asarray(self.masks['insertion_covered'], dtype=bool))
         return insertion, withdrawal
 
     def metrics(self, time):

@@ -7,9 +7,10 @@ ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT/'构建'/'依赖'))
 sys.path.insert(0, str(ROOT/'源码'))
 
-from PySide6.QtCore import QPoint, Qt, QTimer
+from PySide6.QtCore import QEvent, QPoint, QPointF, Qt, QTimer
 from PySide6.QtTest import QTest
-from PySide6.QtWidgets import QApplication, QPlainTextEdit
+from PySide6.QtGui import QMouseEvent
+from PySide6.QtWidgets import QApplication, QComboBox, QPlainTextEdit, QToolTip
 
 from magnetic_app.domain.replay import Replay
 from magnetic_app.ui.window import MainWindow
@@ -63,8 +64,8 @@ def test_all_state_charts_and_final_values(window):
     window.seek(window.replay.duration)
     window.tick()
     window.update_readouts()
-    assert '194,069.35' in window.coverage_values['final_covered_area_mm2'][0].text()
-    assert '16,978.93' in window.coverage_values['withdrawal_added_area_mm2'][0].text()
+    assert '198,000.33' in window.coverage_values['final_covered_area_mm2'][0].text()
+    assert '20,909.91' in window.coverage_values['withdrawal_added_area_mm2'][0].text()
     assert window.state_table.rowCount() == 146
 
 
@@ -75,9 +76,48 @@ def test_native_formula_dialog(application, window):
         dialog = application.activeModalWidget()
         assert dialog is not None
         text = dialog.findChild(QPlainTextEdit)
-        contents.append(text.toPlainText())
+        selector = dialog.findChild(QComboBox, 'algorithm_selector')
+        assert selector.count() == 4
+        for index in range(selector.count()):
+            selector.setCurrentIndex(index)
+            contents.append(text.toPlainText())
         dialog.accept()
 
     QTimer.singleShot(50, inspect_dialog)
     window.show_docs()
-    assert len(contents) == 1 and len(contents[0]) > 1000
+    assert len(contents) == 4 and all(len(content) > 400 for content in contents)
+    assert all('$' not in content and chr(92) not in content for content in contents)
+    assert '1.2' in contents[-1] and '95%' in contents[-1]
+
+
+def test_real_centerline_hover_and_clear(application, window):
+    import numpy as np
+    window.show()
+    window.raise_()
+    window.activateWindow()
+    window.scroll.ensureWidgetVisible(window.main_view)
+    QTest.qWait(400)
+    view = window.main_view
+    assert view.ready and not view.error
+    screen = view.project(window.replay.centerline)
+    valid = np.flatnonzero((screen[:, 0] > 25) & (screen[:, 0] < view.width() - 25) &
+                          (screen[:, 1] > 25) & (screen[:, 1] < view.height() - 25))
+    assert len(valid)
+    point = QPoint(round(screen[valid[len(valid) // 2], 0]), round(screen[valid[len(valid) // 2], 1]))
+    event = QMouseEvent(QEvent.Type.MouseMove, QPointF(point), QPointF(view.mapToGlobal(point)),
+                        Qt.MouseButton.NoButton, Qt.MouseButton.NoButton, Qt.KeyboardModifier.NoModifier)
+    QApplication.sendEvent(view, event)
+    application.processEvents()
+    assert view.probe_index >= 0
+    assert '归一化风险' in QToolTip.text()
+    assert 'mm⁻¹' in QToolTip.text() and '限速' in QToolTip.text()
+    assert '限速' in window.probe_readout.text()
+    assert window.risk_chart.probe is not None
+    window.controls['path'].setChecked(False)
+    assert view.probe_index == -1
+    assert window.risk_chart.probe is None
+    assert view.probe_at(QPointF(point)) == -1
+    window.controls['path'].setChecked(True)
+    assert view.probe_at(QPointF(point)) >= 0
+    QApplication.sendEvent(view, QEvent(QEvent.Type.Leave))
+    assert view.probe_index == -1

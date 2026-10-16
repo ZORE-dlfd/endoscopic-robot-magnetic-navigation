@@ -11,6 +11,8 @@ from PySide6.QtWidgets import (QMainWindow, QWidget, QVBoxLayout, QHBoxLayout, Q
     QFileDialog, QMessageBox, QDialog, QPlainTextEdit, QAbstractItemView, QSizePolicy)
 
 from ..domain.clock import PlaybackClock
+from ..domain.algorithms import algorithm_sections
+from ..domain.probe import risk_description
 from ..domain.replay import INSERTION, WITHDRAWAL
 from ..rendering.view import SceneView
 from .chart import Chart, TimelineSlider
@@ -201,7 +203,7 @@ class MainWindow(QMainWindow):
         layout.addLayout(row('透明度', self.combo('opacity', [('0.12', .12), ('0.22', .22), ('0.45', .45)], .22), '视锥', self.combo('frustum_length', [('15 mm', 15.), ('25 mm', 25.), ('40 mm', 40.)], 25.), self.combo('slice_plane', [('XY', 'XY'), ('XZ', 'XZ'), ('YZ', 'YZ')], 'XY')))
         self.field_hint = label('局部仿射磁场外推；覆盖中心线 / 整体不是线圈系统全域求解。', 'muted', True)
         layout.addWidget(self.field_hint)
-        layout.addWidget(label(f'<span style="color:{INSERTION}">● 进镜有效覆盖</span>　<span style="color:{WITHDRAWAL}">● 退镜新增</span>　<span style="color:#687688">● 未覆盖 / 褶皱后</span>'))
+        layout.addWidget(label(f'<span style="color:{INSERTION}">● 进镜有效覆盖</span>　<span style="color:{WITHDRAWAL}">● 退镜新增</span>　<span style="color:#687688">● 尚未覆盖</span>'))
         layout.addWidget(self.main_view)
         layout.addWidget(label('场强颜色：紫→蓝→绿→黄→红（低→高）；箭头长度按当前显示范围缩放。', 'muted', True))
         return panel
@@ -211,9 +213,9 @@ class MainWindow(QMainWindow):
         self.phase_badge = label('进镜观察 · 0.00 s', 'badge')
         layout.addWidget(self.phase_badge, 0, Qt.AlignmentFlag.AlignRight)
         camera_method = QComboBox()
-        camera_method.addItem('前瞻稳定相机')
+        camera_method.addItem('进镜前瞻 / 退镜短时预测')
         camera_method.setEnabled(False)
-        camera_method.setToolTip('当前进退镜数据只提供此方法，不虚构其他轨迹。')
+        camera_method.setToolTip('进镜保留原前瞻控制，退镜采用密集搜索＋短时预测＋原PD。播放读取离线轨迹。')
         self.controls['camera_method'] = camera_method
         layout.addLayout(row(camera_method, 'FOV 60° · 4:3 · 同一几何 / 光照'))
         self.camera_view = SceneView(self.replay, first_person=True)
@@ -234,7 +236,7 @@ class MainWindow(QMainWindow):
         toolbar.addStretch()
         toolbar.addWidget(button('导出评价 JSON ↓', self.export_evaluation))
         layout.addLayout(toolbar)
-        layout.addWidget(label('A_in = Σ aᵢ Mᵢ　　A_new = Σ aᵢ Rᵢ (1−Mᵢ) Wᵢ　　A_final = A_in + A_new<br>覆盖率提升 = 100 × A_new / A_total；每个面片只计第一次有效观察，插值不增加有效面积。', 'muted', True))
+        layout.addWidget(label('A_in = Σ aᵢ Mᵢ　　A_new = Σ aᵢ (1−Mᵢ) Wᵢ　　A_final = A_in + A_new<br>覆盖率提升 = 100 × A_new / A_total；每个面片只计第一次有效观察，插值不增加有效面积。', 'muted', True))
         grid = QGridLayout()
         self.coverage_values = {}
         definitions = [('insertion_covered_area_mm2', '进镜有效覆盖', 'mm²', INSERTION), ('withdrawal_added_area_mm2', '退镜首次补拍', 'mm²', WITHDRAWAL), ('final_covered_area_mm2', '当前累计覆盖', 'mm²', '#273c56'), ('coverage_pct', '完整肠壁覆盖率', '%', '#273c56'), ('coverage_gain_percentage_points', '退镜覆盖率提升', '百分点', WITHDRAWAL), ('uncovered_area_mm2', '当前未覆盖面积', 'mm²', '#6c7e94')]
@@ -259,7 +261,7 @@ class MainWindow(QMainWindow):
         table.horizontalHeader().setSectionResizeMode(0, QHeaderView.ResizeMode.Stretch)
         table.setEditTriggers(QAbstractItemView.EditTrigger.NoEditTriggers)
         table.setAlternatingRowColors(True)
-        definitions = [('进镜有效覆盖', 'insertion_covered_area_mm2', 'mm²'), ('退镜首次补拍', 'withdrawal_added_area_mm2', 'mm²'), ('退镜结束累计覆盖', 'final_covered_area_mm2', 'mm²'), ('完整肠壁总面积', 'total_lumen_area_mm2', 'mm²'), ('当前采样下褶皱后不可见区域', 'fold_hidden_area_mm2', 'mm²'), ('退镜后未覆盖面积', 'uncovered_area_mm2', 'mm²'), ('进镜覆盖率', 'insertion_coverage_pct', '%'), ('退镜新增覆盖率', 'coverage_gain_percentage_points', '百分点'), ('退镜结束覆盖率', 'final_coverage_pct', '%'), ('退镜时长', 'duration_s', 's'), ('等待次数', 'wait_count', '次')]
+        definitions = [('进镜有效覆盖', 'insertion_covered_area_mm2', 'mm²'), ('退镜首次补拍', 'withdrawal_added_area_mm2', 'mm²'), ('退镜结束累计覆盖', 'final_covered_area_mm2', 'mm²'), ('完整肠壁总面积', 'total_lumen_area_mm2', 'mm²'), ('实际约束越限采样点', 'constraint_violating_steps', '点'), ('退镜后未覆盖面积', 'uncovered_area_mm2', 'mm²'), ('进镜覆盖率', 'insertion_coverage_pct', '%'), ('退镜新增覆盖率', 'coverage_gain_percentage_points', '百分点'), ('退镜结束覆盖率', 'final_coverage_pct', '%'), ('退镜时长', 'duration_s', 's'), ('等待次数', 'wait_count', '次')]
         table.setRowCount(len(definitions))
         for index, (title, key, unit) in enumerate(definitions):
             for column, text in enumerate([title, f'{self.replay.summary[key]:,.2f}', unit]):
@@ -273,7 +275,7 @@ class MainWindow(QMainWindow):
                 table.setItem(index, column, item)
         table.setFixedHeight(375)
         layout.addWidget(table)
-        layout.addWidget(label('进退镜交界处原始位置残差 0.500 mm，未改写轨迹。褶皱后区域不参与退镜选角，但仍计入总面积及未覆盖统计。', 'muted', True))
+        layout.addWidget(label('原运动与磁场不变，交界位置残差 0.500 mm保留。退镜采用密集搜索＋1.2 s预测；不再使用旧37方向可恢复掩膜。未覆盖不等于永远不可见；离散零越限不代表临床安全。', 'muted', True))
         return panel
 
     def make_force_chart(self):
@@ -442,7 +444,9 @@ class MainWindow(QMainWindow):
         velocities = replay.camera_value(frame, 'joint_velocity_deg_s')
         accelerations = replay.camera_value(frame, 'joint_acceleration_deg_s2')
         fmt = lambda values: ' / '.join(f'{value:.1f}' for value in values)
-        self.camera_readout.setText(f'相机位置　<b>{fmt(frame.camera_position)} mm</b><br>偏航 / 俯仰 / 滚转　<b>{fmt(angles)} °</b><br>前瞻　<b>{replay.camera_value(frame, "preview_mm"):.1f} mm</b>　目标偏差　<b>{replay.camera_value(frame, "aim_error_deg"):.1f} °</b><br>可达姿态跟踪滞后　<b>{replay.camera_value(frame, "tracking_error_deg"):.1f} °</b>　锥外剩余　<b>{replay.camera_value(frame, "cone_residual_deg"):.1f} °</b>')
+        preview_label = '前瞻' if frame.time < replay.join_time else '方向射线（仅示意）'
+        preview = replay.camera_value(frame, 'preview_mm') if frame.time < replay.join_time else 20.
+        self.camera_readout.setText(f'相机位置　<b>{fmt(frame.camera_position)} mm</b><br>偏航 / 俯仰 / 滚转　<b>{fmt(angles)} °</b><br>{preview_label}　<b>{preview:.1f} mm</b>　目标偏差　<b>{replay.camera_value(frame, "aim_error_deg"):.1f} °</b><br>可达姿态跟踪滞后　<b>{replay.camera_value(frame, "tracking_error_deg"):.1f} °</b>　锥外剩余　<b>{replay.camera_value(frame, "cone_residual_deg"):.1f} °</b>')
         roll_values = replay.payload['cameraMotion']['roundtrip_new']['roll_rate_deg_s']
         roll = roll_values[frame.camera_index]*(1-frame.camera_amount)+roll_values[frame.camera_index+1]*frame.camera_amount
         self.joint_readout.setText(f'关节角速度 {fmt(velocities)} °/s · 角加速度 {fmt(accelerations)} °/s²\n光轴滚转速率 {roll:.2f} °/s')
@@ -497,6 +501,9 @@ class MainWindow(QMainWindow):
         self.play_button.setText('▶ 播放')
 
     def set_probe(self, index):
+        if index < 0 or index >= len(self.replay.centerline):
+            self.clear_probe()
+            return
         self.main_view.probe_index = index
         source = self.replay.source
         arc = source['arc_s_mm'][index]
@@ -504,7 +511,7 @@ class MainWindow(QMainWindow):
         candidates = np.flatnonzero(phase_mask)
         nearest = candidates[np.argmin(abs(self.replay.data['arc_s_mm'][candidates]-arc))]
         time_value = self.replay.times[nearest]
-        self.probe_readout.setText(f'中心线取点 #{index}　弧长 {arc:.1f} mm　风险 {source["risk_norm"][index]:.3f}　净空 {source["clearance_mm"][index]:.2f} mm　对应当前阶段 t={time_value:.2f} s')
+        self.probe_readout.setText(risk_description(source, index).replace('\n', '　') + f'　对应当前阶段 t={time_value:.2f} s')
         self.risk_chart.probe = arc
         self.force_chart.probe = time_value
         self.state_chart.probe = time_value
@@ -521,7 +528,7 @@ class MainWindow(QMainWindow):
             chart.update()
 
     def write_evaluation(self, filename):
-        report = {'example': 'clon001', 'original_model': 'Colon001', 'summary': self.replay.summary, 'settings': self.replay.settings, 'round_trip': self.replay.payload['roundTrip'], 'rows': self.replay.metric_rows, 'display': {'insertion': INSERTION, 'withdrawal_added': WITHDRAWAL, 'pose_interpolation_used_for_area': False}}
+        report = {'example': 'clon001', 'original_model': 'Colon001', 'summary': self.replay.summary, 'prediction': self.replay.prediction, 'settings': self.replay.settings, 'round_trip': self.replay.payload['roundTrip'], 'rows': self.replay.metric_rows, 'display': {'insertion': INSERTION, 'withdrawal_added': WITHDRAWAL, 'pose_interpolation_used_for_area': True, 'area_sampling_s': {'insertion': 0.4, 'withdrawal': 0.1}, 'render_frames_add_coverage': False}}
         Path(filename).write_text(json.dumps(json_safe(report), ensure_ascii=False, indent=2, allow_nan=False), encoding='utf-8')
 
     def write_csv(self, filename):
@@ -549,13 +556,24 @@ class MainWindow(QMainWindow):
 
     def show_docs(self):
         dialog = QDialog(self)
-        dialog.setWindowTitle('参数、公式与适用边界')
+        dialog.setWindowTitle('算法、参数与适用边界')
         dialog.resize(980, 760)
         layout = QVBoxLayout(dialog)
-        text = QPlainTextEdit()
+        sections = algorithm_sections(self.replay.path)
+        selector = QComboBox(dialog)
+        selector.setObjectName('algorithm_selector')
+        selector.addItems(list(sections))
+        layout.addWidget(selector)
+        text = QPlainTextEdit(dialog)
         text.setReadOnly(True)
-        path = self.replay.path/'formulas.txt'
-        text.setPlainText(path.read_text(encoding='utf-8') if path.exists() else '参数文档缺失。')
+        text.setObjectName('algorithm_text')
+        text.setPlainText(sections[selector.currentText()])
+        selector.currentTextChanged.connect(lambda title: text.setPlainText(sections[title]))
         layout.addWidget(text)
+        if self.replay.prediction:
+            metrics = self.replay.prediction['metrics']
+            layout.addWidget(label(f'当前退镜：预测方案 · 新增 {metrics["withdrawal_added_area_mm2"]:,.2f} mm² · '
+                                  f'实际离散越限 {metrics["constraint_violating_steps"]} 点 · '
+                                  f'离线规划均值 {metrics["planning_mean_ms"]:.1f} ms（不是视频帧耗时）', 'muted', True))
         layout.addWidget(button('关闭', dialog.accept))
         dialog.exec()

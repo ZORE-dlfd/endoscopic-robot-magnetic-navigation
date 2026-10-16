@@ -6,9 +6,13 @@ import time
 import numpy as np
 from OpenGL import GL
 from OpenGL.GL.shaders import compileProgram, compileShader
-from PySide6.QtCore import Qt, Signal
+from PySide6.QtCore import QPoint, Qt, Signal
 from PySide6.QtGui import QColor, QLinearGradient, QPainter, QPen
 from PySide6.QtOpenGLWidgets import QOpenGLWidget
+from PySide6.QtWidgets import QToolTip
+
+from ..domain.probe import risk_description
+from .picking import pick_centerline
 
 from .geometry import COLORS, STOPS, Domains, arrows, capsule, field_lengths, risk_color, segments, vertices
 
@@ -159,6 +163,8 @@ class SceneView(QOpenGLWidget):
 
     def set_option(self, key, value):
         self.options[key] = value
+        if key == 'path' and not value:
+            self.clear_probe()
         self.last_dynamic = 0
         self.last_stream = 0
         self.update()
@@ -176,9 +182,7 @@ class SceneView(QOpenGLWidget):
                 np.add.at(smooth, faces[:, corner], face_normals)
             smooth /= np.maximum(np.linalg.norm(smooth, axis=1, keepdims=True), 1e-12)
             seen = np.column_stack([self.replay.insertion_seen, self.replay.withdrawal_seen]).copy()
-            seen[np.asarray(self.replay.masks['fold_hidden'], bool), 0] = -2
             seen[np.asarray(self.replay.masks['insertion_covered'], bool), 1] = -1
-            seen[~np.asarray(self.replay.masks['recoverable'], bool), 1] = -1
             self.wall = self.create_buffer(vertices(triangles.reshape(-1, 3), (.72, .77, .83), smooth[faces].reshape(-1, 3), np.repeat(seen, 3, axis=0)), GL.GL_TRIANGLES)
             if not self.first_person:
                 self.path = self.create_buffer(segments(self.replay.centerline, risk_color(self.replay.source['risk_norm'])))
@@ -435,6 +439,7 @@ class SceneView(QOpenGLWidget):
         if event.buttons() and self.last_mouse is not None:
             delta = event.position()-self.last_mouse
             self.drag_distance += abs(delta.x())+abs(delta.y())
+            self.clear_probe()
             if event.buttons() & Qt.MouseButton.LeftButton:
                 self.azimuth -= delta.x()*.4
                 self.elevation = float(np.clip(self.elevation+delta.y()*.4, -85, 85))
@@ -447,14 +452,32 @@ class SceneView(QOpenGLWidget):
         else:
             self.probe_at(event.position())
 
-    def probe_at(self, point):
-        screen = self.project(self.replay.centerline)
-        distances = np.linalg.norm(screen-[point.x(), point.y()], axis=1)
-        index = int(np.argmin(distances))
-        if distances[index] < 18:
-            self.probe_index = index
-            self.probed.emit(index)
+    def clear_probe(self):
+        QToolTip.hideText()
+        if self.probe_index >= 0:
+            self.probe_index = -1
+            self.probed.emit(-1)
             self.update()
+
+    def leaveEvent(self, event):
+        if not self.first_person:
+            self.clear_probe()
+        super().leaveEvent(event)
+
+    def probe_at(self, point):
+        if self.first_person or not self.ready or not self.options.get('path', True):
+            self.clear_probe()
+            return -1
+        clip = np.column_stack([self.replay.centerline, np.ones(len(self.replay.centerline))]) @ self.projection.T
+        index = pick_centerline(clip, (point.x(), point.y()), (self.width(), self.height()))
+        if index < 0:
+            self.clear_probe()
+            return -1
+        self.probe_index = index
+        self.probed.emit(index)
+        QToolTip.showText(self.mapToGlobal(point.toPoint()) + QPoint(14, 16), risk_description(self.replay.source, index), self)
+        self.update()
+        return index
 
     def mouseReleaseEvent(self, event):
         if self.drag_distance < 4 and not self.first_person:

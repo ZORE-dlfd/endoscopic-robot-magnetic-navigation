@@ -1,0 +1,6 @@
+*.py text eol=lf
+*.json text eol=lf
+*.npz binary
+*.exe binary
+*.dll binary
+*.pyd binary

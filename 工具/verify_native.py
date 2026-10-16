@@ -29,10 +29,21 @@ def validate_smoke(directory):
     assert all(len(row) == 146 for row in rows)
     evaluation = json.loads((directory/'export_check.json').read_text(encoding='utf-8'))
     assert evaluation['summary'] == result['scientific_summary']
-    assert evaluation['display']['pose_interpolation_used_for_area'] is False
+    assert evaluation['display']['pose_interpolation_used_for_area'] is True
+    assert evaluation['display']['render_frames_add_coverage'] is False
+    assert evaluation['prediction']['method'] == 'dense-short-horizon-pd-v1'
+    assert evaluation['prediction']['config']['visibility_s'] == .1
+    assert evaluation['prediction']['metrics']['constraint_violating_steps'] == 0
+    sections = result['algorithm_sections']
+    assert [section['title'] for section in sections] == ['机器人运动', '磁场解算', '进镜摄像头', '退镜摄像头']
+    assert all(section['characters'] > 400 and section['plain_formula'] for section in sections)
+    hover = result['centerline_hover']
+    assert hover['index'] >= 0 and hover['chart_linked']
+    assert hover['cleared_when_hidden'] and hover['cleared_on_leave']
+    assert '归一化风险' in hover['tooltip'] and '限速' in hover['readout']
     assert abs(result['scientific_summary']['insertion_covered_area_mm2']-177090.4177645445) < 1e-8
-    assert abs(result['scientific_summary']['withdrawal_added_area_mm2']-16978.93053162098) < 1e-8
-    assert abs(result['scientific_summary']['final_coverage_pct']-78.75632566461537) < 1e-10
+    assert abs(result['scientific_summary']['withdrawal_added_area_mm2']-20909.910963773727) < 1e-8
+    assert abs(result['scientific_summary']['final_coverage_pct']-80.3515779690823) < 1e-10
     return result
 
 
@@ -42,6 +53,9 @@ def main():
     forbidden = [str(path) for path in files if path.suffix.lower() in {'.html', '.htm', '.js', '.qml'} or any(name in path.name.lower() for name in ['webengine', 'qtquick', 'qtqml', 'msedge', 'chrome'])]
     assert not forbidden, forbidden
     isolated = ROOT/'构建'/'独立验收'/'给朋友的程序'
+    if isolated.exists():
+        archive = isolated.with_name('给朋友的程序_' + str(time.time_ns()))
+        isolated.rename(archive)
     shutil.copytree(software, isolated, dirs_exist_ok=True)
     report_dir = ROOT/'文档'/'验证'/'独立成品'
     report_dir.mkdir(parents=True, exist_ok=True)

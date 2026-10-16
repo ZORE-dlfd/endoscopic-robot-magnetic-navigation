@@ -8,9 +8,9 @@ import time
 import traceback
 
 import numpy as np
-from PySide6.QtCore import Qt, QTimer, qInstallMessageHandler
-from PySide6.QtGui import QSurfaceFormat
-from PySide6.QtWidgets import QApplication, QMessageBox
+from PySide6.QtCore import QEvent, QPointF, Qt, QTimer, qInstallMessageHandler
+from PySide6.QtGui import QMouseEvent, QSurfaceFormat
+from PySide6.QtWidgets import QApplication, QComboBox, QMessageBox, QPlainTextEdit, QToolTip
 
 from .domain.replay import Replay
 from .ui.window import MainWindow
@@ -120,8 +120,9 @@ class SmokeRun:
         window.scroll.verticalScrollBar().setValue(200)
         for mode in range(window.state_mode.count()):
             window.state_mode.setCurrentIndex(mode)
-        window.set_probe(200)
-        window.clear_probe()
+        self.exercise_hover()
+        QTimer.singleShot(50, self.inspect_algorithms)
+        window.show_docs()
         window.write_evaluation(self.path.parent/'export_check.json')
         window.write_csv(self.path.parent/'export_check.csv')
         window.controls['field_scope'].setCurrentIndex(1)
@@ -134,6 +135,48 @@ class SmokeRun:
         window.controls['view_mode'].setCurrentIndex(1)
         window.controls['scale'].setCurrentIndex(1)
         QTimer.singleShot(800, self.finish)
+
+    def exercise_hover(self):
+        window = self.window
+        view = window.main_view
+        screen = view.project(window.replay.centerline)
+        candidates = np.flatnonzero((screen[:, 0] > 25) & (screen[:, 0] < view.width() - 25) &
+                                   (screen[:, 1] > 25) & (screen[:, 1] < view.height() - 25))
+        if not len(candidates):
+            raise RuntimeError("No projected centerline available for hover check")
+        point = QPointF(*screen[candidates[len(candidates) // 2]])
+        event = QMouseEvent(QEvent.Type.MouseMove, point, QPointF(view.mapToGlobal(point.toPoint())),
+                            Qt.MouseButton.NoButton, Qt.MouseButton.NoButton, Qt.KeyboardModifier.NoModifier)
+        QApplication.sendEvent(view, event)
+        tooltip = QToolTip.text()
+        self.results["centerline_hover"] = dict(index=view.probe_index, tooltip=tooltip,
+            readout=window.probe_readout.text(), chart_linked=window.risk_chart.probe is not None,
+            event_source="Qt MouseMove sent to the native view; not a physical mouse test")
+        self.capture("native_risk_hover")
+        window.controls["path"].setChecked(False)
+        self.results["centerline_hover"]["cleared_when_hidden"] = view.probe_index == -1 and window.risk_chart.probe is None
+        window.controls["path"].setChecked(True)
+        QApplication.sendEvent(view, event)
+        QApplication.sendEvent(view, QEvent(QEvent.Type.Leave))
+        self.results["centerline_hover"]["cleared_on_leave"] = view.probe_index == -1 and window.risk_chart.probe is None
+
+    def inspect_algorithms(self):
+        dialog = QApplication.activeModalWidget()
+        if dialog is None:
+            raise RuntimeError("Algorithm dialog did not open")
+        try:
+            selector = dialog.findChild(QComboBox, "algorithm_selector")
+            text = dialog.findChild(QPlainTextEdit, "algorithm_text")
+            self.results["algorithm_sections"] = []
+            for index in range(selector.count()):
+                selector.setCurrentIndex(index)
+                content = text.toPlainText()
+                self.results["algorithm_sections"].append(dict(title=selector.currentText(),
+                    characters=len(content), plain_formula="$" not in content and chr(92) not in content))
+                if not dialog.grab().save(str(self.path.parent / f"native_algorithm_{index + 1}.png")):
+                    raise RuntimeError("Cannot save algorithm screenshot")
+        finally:
+            dialog.accept()
 
     def finish(self):
         window = self.window

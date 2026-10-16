@@ -50,7 +50,7 @@ def test_disjoint_coverage_exact_area(replay):
     assert not np.any(insertion & withdrawal)
     assert insertion.sum() > 0 and withdrawal.sum() > 0
     assert replay.areas[insertion].sum() == pytest.approx(177090.4177645445, abs=.01)
-    assert replay.areas[withdrawal].sum() == pytest.approx(16978.93053162098, abs=.01)
+    assert replay.areas[withdrawal].sum() == pytest.approx(20909.910963773727, abs=.01)
     assert replay.areas.sum() == pytest.approx(246417.473972328, abs=.01)
     assert not replay.coverage(-1)[0].any()
     assert not replay.coverage(replay.join_time - 1e-7)[1].any()
