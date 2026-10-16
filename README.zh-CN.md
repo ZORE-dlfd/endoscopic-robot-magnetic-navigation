@@ -27,8 +27,8 @@
 
 ## 快速开始
 
-- **Windows：** 双击 `Magnetic_Camera.exe`。它会解压内嵌的 HTML 到临时目录，再用 Edge 应用窗口打开。
-- **任意浏览器：** 直接打开 `Magnetic_Camera.html`。
+- **Windows：** 双击 `viewer/Magnetic_Camera.exe`。它会解压内嵌的 HTML 到临时目录，再用 Edge 应用窗口打开。
+- **任意浏览器：** 直接打开 `viewer/Magnetic_Camera.html`。
 
 两者是同一个自包含页面。运行时**不需要**安装、服务器或任何外部文件。
 
@@ -44,17 +44,25 @@ magnetic_model.py            (力/力矩物理)                  ├─┤
 build_simulation.py          (动力学求解器)                  ├─┤
 3D Slicer Endoscopy.py       (基线相机)                    ├─┤
                                                             ▼ ▼
- 1) prepare_geometry.py   → geometry.json (减面后网格, 33,696 面)
-                            endoscopy_baseline.json
- 2) build_trajectories.py → camera_trajectories.json
-                            capsule_{slowdown,wait,cooperative}_replay.csv
- 3) build_withdrawal.py   → capsule_withdrawal_replay.csv, withdrawal_camera.json
- 4) evaluate.py           → evaluation.json, withdrawal_visibility_masks.json
- 5) build_camera_viewer.py→ Magnetic_Camera.html (自包含, 约 35 MB)
- 6) build_exe.py          → Magnetic_Camera.exe (内嵌 gzip 后的 HTML)
+ 1) simulation/prepare_geometry.py   → data/geometry.json, data/endoscopy_baseline.json
+ 2) simulation/build_trajectories.py → data/camera_trajectories.json, data/capsule_{slowdown,wait,cooperative}_replay.csv
+ 3) simulation/build_withdrawal.py   → data/capsule_withdrawal_replay.csv, data/withdrawal_camera.json
+ 4) simulation/evaluate.py           → data/evaluation.json, data/withdrawal_visibility_masks.json
+ 5) simulation/build_camera_viewer.py→ viewer/Magnetic_Camera.html (自包含, 约 35 MB)
+ 6) simulation/build_exe.py          → viewer/Magnetic_Camera.exe (内嵌 gzip 后的 HTML)
 ```
 
 一个关键设计：**显示的网格和评价用的网格是同一张表面**，所以你在屏幕上看到的颜色，和后台打分的数字严格对应。
+
+## 仓库结构
+
+```
+viewer/      — 可运行的可视化：Magnetic_Camera.exe、自包含的 Magnetic_Camera.html，
+               以及它们的 JS/CSS/图标源码、C# 启动器和 Three.js。
+simulation/  — Python 计算流水线（建模、求解、评价、测试）。
+data/        — 查看器消费的中间与最终 JSON/CSV 结果。
+docs/        — 详细说明（说明与评价公式.md、WITHDRAWAL_METHOD.md、progress.md）。
+```
 
 ## 数据和基线
 
@@ -213,13 +221,15 @@ R(T) = 100 · Σ_i A_i · max[ n_i(T) − 1, 0 ] / Σ_i A_i · n_i(T)
 - 物理与求解器：`../Magnetic_shape_comparison/magnetic_model.py`、`../Magnetic 1/build_simulation.py`
 - 基线相机与射线遮挡：本机 3D Slicer 5.10.0（`Endoscopy.py`、`PythonSlicer.exe`）
 
-`prepare_geometry.py` 读入 STL，用 VTK 减面（187,206 → 33,696 面；二次误差度量、保体积）后写入 `geometry.json`。
+`simulation/prepare_geometry.py` 读入 STL，用 VTK 减面（187,206 → 33,696 面；二次误差度量、保体积）后写入 `data/geometry.json`。
+
+注意：`simulation/` 里的脚本按路径引用兄弟文件和外部输入，它们原本是按扁平目录写的，所以重跑需要调整这些路径。`viewer/` 和 `data/` 的预构建产物都已包含，查看器无需重建即可独立运行。
 
 ## 资料
 
 - 本机 `Endoscopy.py`：`D:/3dslicer/3D Slicer 5.10.0/lib/Slicer-5.10/qt-scripted-modules/Endoscopy.py`，来源哈希见 `endoscopy_baseline.json`。
 - Slicer 5.10 Endoscopy 官方文档：<https://slicer.readthedocs.io/en/5.10/user_guide/modules/endoscopy.html>
-- Three.js 官方 r160 固定版本：<https://github.com/mrdoob/three.js/tree/r160>，许可证见 `vendor/THREE_LICENSE.txt`。
+- Three.js 官方 r160 固定版本：<https://github.com/mrdoob/three.js/tree/r160>，许可证见 `viewer/vendor/THREE_LICENSE.txt`。
 - VTK 官方文档：<https://vtk.org/doc/nightly/html/classvtkWindowToImageFilter.html>
 - MagRobot: An Open Simulator for Magnetically Navigated Robots —— 借鉴模块化磁场/机器人/观测思路，没有运行 MagRobot 或 SOFA。
 - Image-Guided Control of an Endoscopic Robot for OCT Path Scanning，IEEE RA-L，2021，DOI:10.1109/LRA.2021.3087085。
@@ -239,4 +249,4 @@ R(T) = 100 · Σ_i A_i · max[ n_i(T) − 1, 0 ] / Σ_i A_i · n_i(T)
 
 ## 许可证
 
-查看器内置了 Three.js r160（见 `vendor/THREE_LICENSE.txt`，MIT）。发布前请为其余代码选择合适的许可证。
+查看器内置了 Three.js r160（见 `viewer/vendor/THREE_LICENSE.txt`，MIT）。发布前请为其余代码选择合适的许可证。

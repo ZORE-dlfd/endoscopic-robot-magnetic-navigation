@@ -27,8 +27,8 @@ The evaluation card is the cumulative result of the current motion/camera combin
 
 ## Quick start
 
-- **Windows:** double-click `Magnetic_Camera.exe`. It unpacks the embedded HTML into a temp folder and opens it in an Edge app window.
-- **Any browser:** open `Magnetic_Camera.html` directly.
+- **Windows:** double-click `viewer/Magnetic_Camera.exe`. It unpacks the embedded HTML into a temp folder and opens it in an Edge app window.
+- **Any browser:** open `viewer/Magnetic_Camera.html` directly.
 
 Both are the same self-contained page. No installation, no server, no external files are needed at run time.
 
@@ -44,17 +44,25 @@ magnetic_model.py          (force/torque physics)                  ├─┤
 build_simulation.py        (dynamics solver)                       ├─┤
 3D Slicer Endoscopy.py     (baseline camera)                       ├─┤
                                                                     ▼ ▼
- 1) prepare_geometry.py   → geometry.json (decimated mesh, 33,696 triangles)
-                            endoscopy_baseline.json
- 2) build_trajectories.py → camera_trajectories.json
-                            capsule_{slowdown,wait,cooperative}_replay.csv
- 3) build_withdrawal.py   → capsule_withdrawal_replay.csv, withdrawal_camera.json
- 4) evaluate.py           → evaluation.json, withdrawal_visibility_masks.json
- 5) build_camera_viewer.py→ Magnetic_Camera.html (self-contained, ~35 MB)
- 6) build_exe.py          → Magnetic_Camera.exe (embeds the gzipped HTML)
+ 1) simulation/prepare_geometry.py   → data/geometry.json, data/endoscopy_baseline.json
+ 2) simulation/build_trajectories.py → data/camera_trajectories.json, data/capsule_{slowdown,wait,cooperative}_replay.csv
+ 3) simulation/build_withdrawal.py   → data/capsule_withdrawal_replay.csv, data/withdrawal_camera.json
+ 4) simulation/evaluate.py           → data/evaluation.json, data/withdrawal_visibility_masks.json
+ 5) simulation/build_camera_viewer.py→ viewer/Magnetic_Camera.html (self-contained, ~35 MB)
+ 6) simulation/build_exe.py          → viewer/Magnetic_Camera.exe (embeds the gzipped HTML)
 ```
 
 The key design choice: the **displayed mesh and the evaluated mesh are the same surface**, so the colours you see are exactly the numbers that were scored.
+
+## Repository structure
+
+```
+viewer/      — the runnable visualization: Magnetic_Camera.exe, the self-contained
+               Magnetic_Camera.html, their JS/CSS/icon sources, the C# launcher, and Three.js.
+simulation/  — the Python calculation pipeline (modeling, solving, evaluation, tests).
+data/        — the intermediate and final JSON/CSV results consumed by the viewer.
+docs/        — detailed notes (说明与评价公式.md, WITHDRAWAL_METHOD.md, progress.md).
+```
 
 ## Data and baseline
 
@@ -213,13 +221,15 @@ The **pre-built results are included**, so the viewer runs standalone. Re-runnin
 - physics and solver: `../Magnetic_shape_comparison/magnetic_model.py`, `../Magnetic 1/build_simulation.py`
 - baseline camera and ray-casting: a local 3D Slicer 5.10.0 install (`Endoscopy.py`, `PythonSlicer.exe`)
 
-`prepare_geometry.py` reads the STL, decimates it with VTK (187,206 → 33,696 triangles; quadric error metrics, volume-preserving) and writes `geometry.json`.
+`simulation/prepare_geometry.py` reads the STL, decimates it with VTK (187,206 → 33,696 triangles; quadric error metrics, volume-preserving) and writes `data/geometry.json`.
+
+Note: the scripts in `simulation/` reference sibling files and external inputs by path; they were written for the original flat layout, so re-running them requires adjusting those paths. The pre-built `viewer/` and `data/` outputs are all included, so the viewer runs standalone without rebuilding.
 
 ## References
 
 - Local `Endoscopy.py`: `D:/3dslicer/3D Slicer 5.10.0/lib/Slicer-5.10/qt-scripted-modules/Endoscopy.py`; source hash in `endoscopy_baseline.json`.
 - 3D Slicer Endoscopy docs: <https://slicer.readthedocs.io/en/5.10/user_guide/modules/endoscopy.html>
-- Three.js r160 (fixed): <https://github.com/mrdoob/three.js/tree/r160>; license in `vendor/THREE_LICENSE.txt`.
+- Three.js r160 (fixed): <https://github.com/mrdoob/three.js/tree/r160>; license in `viewer/vendor/THREE_LICENSE.txt`.
 - VTK `vtkWindowToImageFilter` docs: <https://vtk.org/doc/nightly/html/classvtkWindowToImageFilter.html>
 - MagRobot: An Open Simulator for Magnetically Navigated Robots — referenced for its modular field/robot/observation decomposition; MagRobot/SOFA were not executed.
 - Image-Guided Control of an Endoscopic Robot for OCT Path Scanning, IEEE RA-L, 2021, DOI:10.1109/LRA.2021.3087085.
@@ -239,4 +249,4 @@ This implementation borrows the idea of considering visibility constraints toget
 
 ## License
 
-The viewer bundles Three.js r160 (see `vendor/THREE_LICENSE.txt`, MIT). Choose a license for the rest of the code before publishing.
+The viewer bundles Three.js r160 (see `viewer/vendor/THREE_LICENSE.txt`, MIT). Choose a license for the rest of the code before publishing.
