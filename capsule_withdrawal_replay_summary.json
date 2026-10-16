@@ -1,0 +1,10 @@
+{
+  "mode": "slowdown_only",
+  "duration_s": 334.1288445479114,
+  "source_duration_s": 299.92127815842514,
+  "max_time_dilation": 1.1897096794154505,
+  "wait_count": 0,
+  "start_arc_mm": 1722.3136,
+  "end_arc_mm": 0.0,
+  "replay_csv": "capsule_withdrawal_replay.csv"
+}
