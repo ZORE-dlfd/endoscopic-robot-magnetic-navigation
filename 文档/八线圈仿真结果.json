@@ -1,0 +1,169 @@
+{
+  "simulation": {
+    "method": "eight-coil-field-priority-dynamics-v1",
+    "reports": [
+      {
+        "complete": true,
+        "duration_s": 294.84000000000003,
+        "endpoint_distance_mm": 0.1255262931181219,
+        "progress_mm": 1722.1992197611667,
+        "route_length_mm": 1722.3136,
+        "wall_seconds": 35.73355439997977,
+        "step_s": 0.02,
+        "peak_current_a": 9.187308814081778,
+        "cross_track_max_mm": 0.586418202448022,
+        "camera_wait_count": 0,
+        "route_arc_unchanged": true
+      },
+      {
+        "complete": true,
+        "duration_s": 303.7,
+        "endpoint_distance_mm": 0.1457001332877296,
+        "progress_mm": 1722.1696041605453,
+        "route_length_mm": 1722.3136,
+        "wall_seconds": 239.9108343999833,
+        "step_s": 0.02,
+        "peak_current_a": 8.982046954996141,
+        "cross_track_max_mm": 0.5289225004175886,
+        "camera_wait_count": 0,
+        "route_arc_unchanged": true
+      }
+    ],
+    "step_s": 0.02,
+    "output_s": 0.1,
+    "coil_count": 8,
+    "field_model": "Point-dipole sources, not FEM or measured hardware",
+    "camera_method": "Original dense window search + 1.2 s prediction + original 0.01 s PD, replanned jointly with new magnetic withdrawal dynamics",
+    "constraints": "10 A current bounds; array translation bound; no inductance, thermal, joint or wall-contact model",
+    "no_position_forcing": true,
+    "no_camera_wait": true,
+    "patient_posture": {
+      "schema": 1,
+      "posture": "supine",
+      "label": "仰卧姿态假设",
+      "rotation_from_original": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ]
+      ],
+      "translation_mm": [
+        -17.47101593017578,
+        -316.43283462524414,
+        306.9086608886719
+      ],
+      "mapping": "original X -> world X; original Z -> world -Y; original Y -> world Z",
+      "gravity_m_s2": [
+        0.0,
+        0.0,
+        -9.81
+      ],
+      "gravity_frame": "fixed world -Z, not rotated with anatomy",
+      "table_z_mm": 0.0,
+      "table_clearance_mm": 20.0,
+      "array_frame": "fixed world +Z side; currents and motion recomputed",
+      "assumption": "Raw mesh has no verified anatomical orientation; assumed supine placement, not patient registration",
+      "contact_model": false
+    },
+    "route_direction": {
+      "schema": 1,
+      "insertion_start_label": "肛门入口",
+      "insertion_end_label": "肠道深部终点",
+      "withdrawal_start_label": "肠道深部终点",
+      "withdrawal_end_label": "肛门入口",
+      "entry_position_mm": [
+        -16.50084493017578,
+        189.81716537475586,
+        161.34166088867187
+      ],
+      "deep_position_mm": [
+        18.06218406982422,
+        25.767165374755848,
+        49.73666088867185
+      ],
+      "reference_entry_original_mm": [
+        0.970171,
+        -145.567,
+        -506.25
+      ],
+      "reference_deep_original_mm": [
+        35.5332,
+        -257.172,
+        -342.2
+      ],
+      "source": "Original confirmed insertion source; legacy reverse CSV is not used for magnetic generation",
+      "arc_definition": "0 at anal entry; increases to deep endpoint; decreases during withdrawal",
+      "verification": {
+        "passed": true,
+        "tolerance_mm": 1.0,
+        "insertion_start_error_mm": 0.0,
+        "insertion_end_error_mm": 0.12552629311812327,
+        "withdrawal_start_error_mm": 0.12552629311812327,
+        "withdrawal_end_error_mm": 0.14570013328774636
+      }
+    },
+    "coverage_renderer": {
+      "vendor": "NVIDIA Corporation",
+      "renderer": "NVIDIA GeForce RTX 5060 Laptop GPU/PCIe/SSE2",
+      "version": "3.3.0 NVIDIA 582.05"
+    },
+    "color_scale_notice": "99th percentile display scales sampled across the new source field; source equations are not clipped."
+  },
+  "coverage": {
+    "insertion_covered_area_mm2": 165529.21180272102,
+    "withdrawal_added_area_mm2": 31240.718517303467,
+    "final_covered_area_mm2": 196769.9303200245,
+    "total_lumen_area_mm2": 246417.473972328,
+    "uncovered_area_mm2": 49647.54365230352,
+    "insertion_coverage_pct": 67.17429942541716,
+    "withdrawal_added_pct_of_total_lumen": 12.677963950239873,
+    "withdrawal_added_pct_of_insertion_covered": 18.87323583376715,
+    "coverage_gain_percentage_points": 12.677963950239873,
+    "final_coverage_pct": 79.85226337565703,
+    "coverage_increased": true,
+    "duration_s": 303.69999999999993,
+    "wait_count": 0,
+    "forward_cone_limit_deg": 45.0,
+    "method_notice": "Eight-coil dynamics coupled with original dense window search + 1.2 s prediction + 0.01 s PD; actual wall coverage recomputed. Not measured or clinical coverage.",
+    "constraint_violating_steps": 0
+  },
+  "camera_planning": {
+    "method": "dense-short-horizon-pd-v1",
+    "config": {
+      "decision_s": 0.4,
+      "visibility_s": 0.1,
+      "integration_s": 0.01,
+      "horizon_s": 1.2,
+      "coarse_deg": 10.0,
+      "fine_deg": 2.0,
+      "peak_count": 3,
+      "candidate_count": 6,
+      "gain_tolerance": 0.05,
+      "atlas_size": 192,
+      "include_delayed": true
+    },
+    "metrics": {
+      "withdrawal_added_area_mm2": 31240.718517303467,
+      "constraint_violating_steps": 0,
+      "prediction_fallback_count": 0,
+      "planning_mean_ms": 260.63204684239616,
+      "planning_p95_ms": 325.88675497827353,
+      "planning_max_ms": 376.1664000048768,
+      "decision_count": 760,
+      "online_observed_added_area_mm2": 31240.718517303467
+    },
+    "minimum_searched_directions": 243,
+    "maximum_searched_directions": 381
+  }
+}

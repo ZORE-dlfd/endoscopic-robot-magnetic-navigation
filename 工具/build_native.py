@@ -12,7 +12,7 @@ environment['PYTHONIOENCODING'] = 'utf-8'
 interpreter = Path(sys.executable).parent
 library_bin = interpreter/'Library'/'bin'
 environment['PATH'] = os.pathsep.join([str(library_bin), str(interpreter/'DLLs'), str(interpreter), environment.get('PATH', '')])
-command = [sys.executable, '-m', 'PyInstaller', '--noconfirm', '--clean', '--windowed', '--onedir', '--name', 'Magnetic_Camera',
+command = [sys.executable, '-m', 'PyInstaller', '--noconfirm', '--windowed', '--onedir', '--name', 'Magnetic_Camera_8Coil',
     '--distpath', str(ROOT/'构建'/'dist'), '--workpath', str(ROOT/'构建'/'work'), '--specpath', str(ROOT/'构建'),
     '--paths', str(ROOT/'源码'), '--paths', str(DEPENDENCIES), '--icon', str(ROOT/'数据'/'clon001'/'app.ico'),
     '--add-data', str(ROOT/'数据'/'clon001') + ';assets', '--hidden-import', 'OpenGL.platform.win32',
@@ -25,4 +25,4 @@ for name in ['PyQt5', 'PyQt6', 'tkinter', 'matplotlib', 'scipy', 'pandas', 'IPyt
     command += ['--exclude-module', name]
 command.append(str(ROOT/'源码'/'main.py'))
 subprocess.run(command, env=environment, cwd=ROOT, check=True)
-print('Build ready:', ROOT/'构建'/'dist'/'Magnetic_Camera')
+print('Build ready:', ROOT/'构建'/'dist'/'Magnetic_Camera_8Coil')

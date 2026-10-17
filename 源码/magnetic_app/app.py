@@ -56,6 +56,10 @@ class SmokeRun:
         window = self.window
         window.scroll.verticalScrollBar().setValue(200)
         window.clear_probe()
+        if window.replay.payload.get('routeDirection'):
+            window.seek(0.)
+            window.main_view.grabFramebuffer().save(str(self.path.parent/'native_anal_entry_view.png'))
+            self.capture('native_anal_entry')
         window.seek(30)
         window.clock.set_speed(1)
         window.clock.set_playing(True)
@@ -187,6 +191,22 @@ class SmokeRun:
         self.results['scientific_summary'] = window.replay.summary
         self.results['mount_error_mm'] = float(np.linalg.norm(window.current_frame.camera_position-window.current_frame.position-window.current_frame.body_rotation[:, 0]*5.8))
         self.results['final_pose_time'] = window.current_frame.time
+        self.results['patient_posture'] = window.replay.payload.get('patientPosture')
+        direction = window.replay.payload.get('routeDirection')
+        if direction:
+            self.results['route_direction'] = direction
+            self.results['route_endpoints'] = dict(
+                actual_start_mm=window.replay.frame(0.).position.tolist(),
+                actual_turn_mm=window.replay.frame(window.replay.join_time).position.tolist(),
+                actual_finish_mm=window.replay.frame(window.replay.duration).position.tolist(),
+                timeline_captions=[window.entry_caption.text(),window.turn_caption.text(),window.exit_caption.text()])
+        if self.results['patient_posture']:
+            grid = window.main_view.make_grid()
+            self.results['posture_display'] = dict(window_title=window.windowTitle(),
+                grid_z_range=[float(grid[:, 2].min()),float(grid[:, 2].max())],
+                geometry_span_mm=np.ptp(window.replay.points,axis=0).tolist(),
+                gravity_origin_mm=window.main_view.gravity_origin.tolist(),
+                gravity_direction=[0.,0.,-1.],default_elevation_deg=window.main_view.default_view[1])
         self.path.write_text(json.dumps(self.results, ensure_ascii=False, indent=2), encoding='utf-8')
         QApplication.instance().exit(1 if window.render_errors or self.results['python_exceptions'] else 0)
 
@@ -197,7 +217,7 @@ def main():
     parser.add_argument('--benchmark-seconds', type=float, default=4.)
     parser.add_argument('--data', type=Path)
     arguments = parser.parse_args()
-    log_dir = Path(os.environ.get('LOCALAPPDATA', Path.home()))/'MagneticCapsule'/'logs'
+    log_dir = Path(os.environ.get('LOCALAPPDATA', Path.home()))/'MagneticCapsule8Coil'/'logs'
     log_dir.mkdir(parents=True, exist_ok=True)
     logging.basicConfig(filename=log_dir/'native.log', level=logging.INFO, encoding='utf-8', format='%(asctime)s %(levelname)s %(message)s')
     QApplication.setAttribute(Qt.ApplicationAttribute.AA_ShareOpenGLContexts)

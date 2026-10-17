@@ -1,7 +1,7 @@
 {
   "passed": true,
-  "isolated_executable": "C:\\Users\\老白给\\Desktop\\navigate-final software\\构建\\独立验收\\给朋友的程序\\Magnetic_Camera.exe",
-  "cwd": "C:\\Users\\老白给\\Desktop\\navigate-final software\\构建\\独立验收",
+  "isolated_executable": "C:\\Users\\老白给\\Desktop\\navigate software pt2\\构建\\独立验收\\给朋友的程序\\Magnetic_Camera_8Coil.exe",
+  "cwd": "C:\\Users\\老白给\\Desktop\\navigate software pt2\\构建\\独立验收",
   "path": "C:\\Windows\\System32;C:\\Windows",
   "exit_code": 0,
   "external_anaconda_modules": [],
@@ -17,75 +17,75 @@
     "C:\\ProgramData\\Kingsoft\\office6\\omath\\DejaVuMathTeXGyre.ttf",
     "C:\\Users\\老白给\\AppData\\Local\\Microsoft\\Windows\\Fonts\\UbuntuMono[wght].ttf",
     "C:\\Users\\老白给\\AppData\\Local\\Microsoft\\Windows\\Fonts\\yyb.ttf",
-    "C:\\Users\\老白给\\Desktop\\navigate-final software\\构建\\独立验收\\给朋友的程序\\Magnetic_Camera.exe",
-    "C:\\Users\\老白给\\Desktop\\navigate-final software\\构建\\独立验收\\给朋友的程序\\_internal\\PySide6\\QtCore.cp313-win_amd64.pyd",
-    "C:\\Users\\老白给\\Desktop\\navigate-final software\\构建\\独立验收\\给朋友的程序\\_internal\\PySide6\\QtGui.cp313-win_amd64.pyd",
-    "C:\\Users\\老白给\\Desktop\\navigate-final software\\构建\\独立验收\\给朋友的程序\\_internal\\PySide6\\QtOpenGLWidgets.cp313-win_amd64.pyd",
-    "C:\\Users\\老白给\\Desktop\\navigate-final software\\构建\\独立验收\\给朋友的程序\\_internal\\PySide6\\QtWidgets.cp313-win_amd64.pyd",
-    "C:\\Users\\老白给\\Desktop\\navigate-final software\\构建\\独立验收\\给朋友的程序\\_internal\\PySide6\\plugins\\imageformats\\qgif.dll",
-    "C:\\Users\\老白给\\Desktop\\navigate-final software\\构建\\独立验收\\给朋友的程序\\_internal\\PySide6\\plugins\\imageformats\\qico.dll",
-    "C:\\Users\\老白给\\Desktop\\navigate-final software\\构建\\独立验收\\给朋友的程序\\_internal\\PySide6\\plugins\\imageformats\\qjpeg.dll",
-    "C:\\Users\\老白给\\Desktop\\navigate-final software\\构建\\独立验收\\给朋友的程序\\_internal\\PySide6\\plugins\\imageformats\\qpdf.dll",
-    "C:\\Users\\老白给\\Desktop\\navigate-final software\\构建\\独立验收\\给朋友的程序\\_internal\\PySide6\\plugins\\imageformats\\qsvg.dll",
-    "C:\\Users\\老白给\\Desktop\\navigate-final software\\构建\\独立验收\\给朋友的程序\\_internal\\PySide6\\plugins\\platforms\\qwindows.dll",
-    "C:\\Users\\老白给\\Desktop\\navigate-final software\\构建\\独立验收\\给朋友的程序\\_internal\\PySide6\\plugins\\styles\\qmodernwindowsstyle.dll",
-    "C:\\Users\\老白给\\Desktop\\navigate-final software\\构建\\独立验收\\给朋友的程序\\_internal\\Qt6Core.dll",
-    "C:\\Users\\老白给\\Desktop\\navigate-final software\\构建\\独立验收\\给朋友的程序\\_internal\\Qt6Gui.dll",
-    "C:\\Users\\老白给\\Desktop\\navigate-final software\\构建\\独立验收\\给朋友的程序\\_internal\\Qt6Network.dll",
-    "C:\\Users\\老白给\\Desktop\\navigate-final software\\构建\\独立验收\\给朋友的程序\\_internal\\Qt6OpenGL.dll",
-    "C:\\Users\\老白给\\Desktop\\navigate-final software\\构建\\独立验收\\给朋友的程序\\_internal\\Qt6OpenGLWidgets.dll",
-    "C:\\Users\\老白给\\Desktop\\navigate-final software\\构建\\独立验收\\给朋友的程序\\_internal\\Qt6Pdf.dll",
-    "C:\\Users\\老白给\\Desktop\\navigate-final software\\构建\\独立验收\\给朋友的程序\\_internal\\Qt6Svg.dll",
-    "C:\\Users\\老白给\\Desktop\\navigate-final software\\构建\\独立验收\\给朋友的程序\\_internal\\Qt6Widgets.dll",
-    "C:\\Users\\老白给\\Desktop\\navigate-final software\\构建\\独立验收\\给朋友的程序\\_internal\\_bz2.pyd",
-    "C:\\Users\\老白给\\Desktop\\navigate-final software\\构建\\独立验收\\给朋友的程序\\_internal\\_ctypes.pyd",
-    "C:\\Users\\老白给\\Desktop\\navigate-final software\\构建\\独立验收\\给朋友的程序\\_internal\\_hashlib.pyd",
-    "C:\\Users\\老白给\\Desktop\\navigate-final software\\构建\\独立验收\\给朋友的程序\\_internal\\_lzma.pyd",
-    "C:\\Users\\老白给\\Desktop\\navigate-final software\\构建\\独立验收\\给朋友的程序\\_internal\\_socket.pyd",
-    "C:\\Users\\老白给\\Desktop\\navigate-final software\\构建\\独立验收\\给朋友的程序\\_internal\\_wmi.pyd",
-    "C:\\Users\\老白给\\Desktop\\navigate-final software\\构建\\独立验收\\给朋友的程序\\_internal\\charset.dll",
-    "C:\\Users\\老白给\\Desktop\\navigate-final software\\构建\\独立验收\\给朋友的程序\\_internal\\ffi.dll",
-    "C:\\Users\\老白给\\Desktop\\navigate-final software\\构建\\独立验收\\给朋友的程序\\_internal\\freetype.dll",
-    "C:\\Users\\老白给\\Desktop\\navigate-final software\\构建\\独立验收\\给朋友的程序\\_internal\\glib-2.0-0.dll",
-    "C:\\Users\\老白给\\Desktop\\navigate-final software\\构建\\独立验收\\给朋友的程序\\_internal\\graphite2.dll",
-    "C:\\Users\\老白给\\Desktop\\navigate-final software\\构建\\独立验收\\给朋友的程序\\_internal\\harfbuzz.dll",
-    "C:\\Users\\老白给\\Desktop\\navigate-final software\\构建\\独立验收\\给朋友的程序\\_internal\\iconv.dll",
-    "C:\\Users\\老白给\\Desktop\\navigate-final software\\构建\\独立验收\\给朋友的程序\\_internal\\icudt73.dll",
-    "C:\\Users\\老白给\\Desktop\\navigate-final software\\构建\\独立验收\\给朋友的程序\\_internal\\icuin73.dll",
-    "C:\\Users\\老白给\\Desktop\\navigate-final software\\构建\\独立验收\\给朋友的程序\\_internal\\icuuc73.dll",
-    "C:\\Users\\老白给\\Desktop\\navigate-final software\\构建\\独立验收\\给朋友的程序\\_internal\\intl-8.dll",
-    "C:\\Users\\老白给\\Desktop\\navigate-final software\\构建\\独立验收\\给朋友的程序\\_internal\\libbz2.dll",
-    "C:\\Users\\老白给\\Desktop\\navigate-final software\\构建\\独立验收\\给朋友的程序\\_internal\\libcrypto-3-x64.dll",
-    "C:\\Users\\老白给\\Desktop\\navigate-final software\\构建\\独立验收\\给朋友的程序\\_internal\\libiomp5md.dll",
-    "C:\\Users\\老白给\\Desktop\\navigate-final software\\构建\\独立验收\\给朋友的程序\\_internal\\libjpeg.dll",
-    "C:\\Users\\老白给\\Desktop\\navigate-final software\\构建\\独立验收\\给朋友的程序\\_internal\\liblzma.dll",
-    "C:\\Users\\老白给\\Desktop\\navigate-final software\\构建\\独立验收\\给朋友的程序\\_internal\\libpng16.dll",
-    "C:\\Users\\老白给\\Desktop\\navigate-final software\\构建\\独立验收\\给朋友的程序\\_internal\\mkl\\_mklinit.cp313-win_amd64.pyd",
-    "C:\\Users\\老白给\\Desktop\\navigate-final software\\构建\\独立验收\\给朋友的程序\\_internal\\mkl\\_py_mkl_service.cp313-win_amd64.pyd",
-    "C:\\Users\\老白给\\Desktop\\navigate-final software\\构建\\独立验收\\给朋友的程序\\_internal\\mkl_core.2.dll",
-    "C:\\Users\\老白给\\Desktop\\navigate-final software\\构建\\独立验收\\给朋友的程序\\_internal\\mkl_def.2.dll",
-    "C:\\Users\\老白给\\Desktop\\navigate-final software\\构建\\独立验收\\给朋友的程序\\_internal\\mkl_intel_thread.2.dll",
-    "C:\\Users\\老白给\\Desktop\\navigate-final software\\构建\\独立验收\\给朋友的程序\\_internal\\mkl_rt.2.dll",
-    "C:\\Users\\老白给\\Desktop\\navigate-final software\\构建\\独立验收\\给朋友的程序\\_internal\\mkl_vml_def.2.dll",
-    "C:\\Users\\老白给\\Desktop\\navigate-final software\\构建\\独立验收\\给朋友的程序\\_internal\\msvcp140.dll",
-    "C:\\Users\\老白给\\Desktop\\navigate-final software\\构建\\独立验收\\给朋友的程序\\_internal\\msvcp140_1.dll",
-    "C:\\Users\\老白给\\Desktop\\navigate-final software\\构建\\独立验收\\给朋友的程序\\_internal\\msvcp140_2.dll",
-    "C:\\Users\\老白给\\Desktop\\navigate-final software\\构建\\独立验收\\给朋友的程序\\_internal\\numpy\\_core\\_multiarray_umath.cp313-win_amd64.pyd",
-    "C:\\Users\\老白给\\Desktop\\navigate-final software\\构建\\独立验收\\给朋友的程序\\_internal\\numpy\\linalg\\_umath_linalg.cp313-win_amd64.pyd",
-    "C:\\Users\\老白给\\Desktop\\navigate-final software\\构建\\独立验收\\给朋友的程序\\_internal\\pcre2-16.dll",
-    "C:\\Users\\老白给\\Desktop\\navigate-final software\\构建\\独立验收\\给朋友的程序\\_internal\\pcre2-8.dll",
-    "C:\\Users\\老白给\\Desktop\\navigate-final software\\构建\\独立验收\\给朋友的程序\\_internal\\pyside6.cp313-win_amd64.dll",
-    "C:\\Users\\老白给\\Desktop\\navigate-final software\\构建\\独立验收\\给朋友的程序\\_internal\\python3.dll",
-    "C:\\Users\\老白给\\Desktop\\navigate-final software\\构建\\独立验收\\给朋友的程序\\_internal\\python313.dll",
-    "C:\\Users\\老白给\\Desktop\\navigate-final software\\构建\\独立验收\\给朋友的程序\\_internal\\select.pyd",
-    "C:\\Users\\老白给\\Desktop\\navigate-final software\\构建\\独立验收\\给朋友的程序\\_internal\\shiboken6.cp313-win_amd64.dll",
-    "C:\\Users\\老白给\\Desktop\\navigate-final software\\构建\\独立验收\\给朋友的程序\\_internal\\shiboken6\\Shiboken.cp313-win_amd64.pyd",
-    "C:\\Users\\老白给\\Desktop\\navigate-final software\\构建\\独立验收\\给朋友的程序\\_internal\\tbbmalloc.dll",
-    "C:\\Users\\老白给\\Desktop\\navigate-final software\\构建\\独立验收\\给朋友的程序\\_internal\\ucrtbase.dll",
-    "C:\\Users\\老白给\\Desktop\\navigate-final software\\构建\\独立验收\\给朋友的程序\\_internal\\vcruntime140.dll",
-    "C:\\Users\\老白给\\Desktop\\navigate-final software\\构建\\独立验收\\给朋友的程序\\_internal\\vcruntime140_1.dll",
-    "C:\\Users\\老白给\\Desktop\\navigate-final software\\构建\\独立验收\\给朋友的程序\\_internal\\zlib.dll",
-    "C:\\Users\\老白给\\Desktop\\navigate-final software\\构建\\独立验收\\给朋友的程序\\_internal\\zstd.dll",
+    "C:\\Users\\老白给\\Desktop\\navigate software pt2\\构建\\独立验收\\给朋友的程序\\Magnetic_Camera_8Coil.exe",
+    "C:\\Users\\老白给\\Desktop\\navigate software pt2\\构建\\独立验收\\给朋友的程序\\_internal\\PySide6\\QtCore.cp313-win_amd64.pyd",
+    "C:\\Users\\老白给\\Desktop\\navigate software pt2\\构建\\独立验收\\给朋友的程序\\_internal\\PySide6\\QtGui.cp313-win_amd64.pyd",
+    "C:\\Users\\老白给\\Desktop\\navigate software pt2\\构建\\独立验收\\给朋友的程序\\_internal\\PySide6\\QtOpenGLWidgets.cp313-win_amd64.pyd",
+    "C:\\Users\\老白给\\Desktop\\navigate software pt2\\构建\\独立验收\\给朋友的程序\\_internal\\PySide6\\QtWidgets.cp313-win_amd64.pyd",
+    "C:\\Users\\老白给\\Desktop\\navigate software pt2\\构建\\独立验收\\给朋友的程序\\_internal\\PySide6\\plugins\\imageformats\\qgif.dll",
+    "C:\\Users\\老白给\\Desktop\\navigate software pt2\\构建\\独立验收\\给朋友的程序\\_internal\\PySide6\\plugins\\imageformats\\qico.dll",
+    "C:\\Users\\老白给\\Desktop\\navigate software pt2\\构建\\独立验收\\给朋友的程序\\_internal\\PySide6\\plugins\\imageformats\\qjpeg.dll",
+    "C:\\Users\\老白给\\Desktop\\navigate software pt2\\构建\\独立验收\\给朋友的程序\\_internal\\PySide6\\plugins\\imageformats\\qpdf.dll",
+    "C:\\Users\\老白给\\Desktop\\navigate software pt2\\构建\\独立验收\\给朋友的程序\\_internal\\PySide6\\plugins\\imageformats\\qsvg.dll",
+    "C:\\Users\\老白给\\Desktop\\navigate software pt2\\构建\\独立验收\\给朋友的程序\\_internal\\PySide6\\plugins\\platforms\\qwindows.dll",
+    "C:\\Users\\老白给\\Desktop\\navigate software pt2\\构建\\独立验收\\给朋友的程序\\_internal\\PySide6\\plugins\\styles\\qmodernwindowsstyle.dll",
+    "C:\\Users\\老白给\\Desktop\\navigate software pt2\\构建\\独立验收\\给朋友的程序\\_internal\\Qt6Core.dll",
+    "C:\\Users\\老白给\\Desktop\\navigate software pt2\\构建\\独立验收\\给朋友的程序\\_internal\\Qt6Gui.dll",
+    "C:\\Users\\老白给\\Desktop\\navigate software pt2\\构建\\独立验收\\给朋友的程序\\_internal\\Qt6Network.dll",
+    "C:\\Users\\老白给\\Desktop\\navigate software pt2\\构建\\独立验收\\给朋友的程序\\_internal\\Qt6OpenGL.dll",
+    "C:\\Users\\老白给\\Desktop\\navigate software pt2\\构建\\独立验收\\给朋友的程序\\_internal\\Qt6OpenGLWidgets.dll",
+    "C:\\Users\\老白给\\Desktop\\navigate software pt2\\构建\\独立验收\\给朋友的程序\\_internal\\Qt6Pdf.dll",
+    "C:\\Users\\老白给\\Desktop\\navigate software pt2\\构建\\独立验收\\给朋友的程序\\_internal\\Qt6Svg.dll",
+    "C:\\Users\\老白给\\Desktop\\navigate software pt2\\构建\\独立验收\\给朋友的程序\\_internal\\Qt6Widgets.dll",
+    "C:\\Users\\老白给\\Desktop\\navigate software pt2\\构建\\独立验收\\给朋友的程序\\_internal\\_bz2.pyd",
+    "C:\\Users\\老白给\\Desktop\\navigate software pt2\\构建\\独立验收\\给朋友的程序\\_internal\\_ctypes.pyd",
+    "C:\\Users\\老白给\\Desktop\\navigate software pt2\\构建\\独立验收\\给朋友的程序\\_internal\\_hashlib.pyd",
+    "C:\\Users\\老白给\\Desktop\\navigate software pt2\\构建\\独立验收\\给朋友的程序\\_internal\\_lzma.pyd",
+    "C:\\Users\\老白给\\Desktop\\navigate software pt2\\构建\\独立验收\\给朋友的程序\\_internal\\_socket.pyd",
+    "C:\\Users\\老白给\\Desktop\\navigate software pt2\\构建\\独立验收\\给朋友的程序\\_internal\\_wmi.pyd",
+    "C:\\Users\\老白给\\Desktop\\navigate software pt2\\构建\\独立验收\\给朋友的程序\\_internal\\charset.dll",
+    "C:\\Users\\老白给\\Desktop\\navigate software pt2\\构建\\独立验收\\给朋友的程序\\_internal\\ffi.dll",
+    "C:\\Users\\老白给\\Desktop\\navigate software pt2\\构建\\独立验收\\给朋友的程序\\_internal\\freetype.dll",
+    "C:\\Users\\老白给\\Desktop\\navigate software pt2\\构建\\独立验收\\给朋友的程序\\_internal\\glib-2.0-0.dll",
+    "C:\\Users\\老白给\\Desktop\\navigate software pt2\\构建\\独立验收\\给朋友的程序\\_internal\\graphite2.dll",
+    "C:\\Users\\老白给\\Desktop\\navigate software pt2\\构建\\独立验收\\给朋友的程序\\_internal\\harfbuzz.dll",
+    "C:\\Users\\老白给\\Desktop\\navigate software pt2\\构建\\独立验收\\给朋友的程序\\_internal\\iconv.dll",
+    "C:\\Users\\老白给\\Desktop\\navigate software pt2\\构建\\独立验收\\给朋友的程序\\_internal\\icudt73.dll",
+    "C:\\Users\\老白给\\Desktop\\navigate software pt2\\构建\\独立验收\\给朋友的程序\\_internal\\icuin73.dll",
+    "C:\\Users\\老白给\\Desktop\\navigate software pt2\\构建\\独立验收\\给朋友的程序\\_internal\\icuuc73.dll",
+    "C:\\Users\\老白给\\Desktop\\navigate software pt2\\构建\\独立验收\\给朋友的程序\\_internal\\intl-8.dll",
+    "C:\\Users\\老白给\\Desktop\\navigate software pt2\\构建\\独立验收\\给朋友的程序\\_internal\\libbz2.dll",
+    "C:\\Users\\老白给\\Desktop\\navigate software pt2\\构建\\独立验收\\给朋友的程序\\_internal\\libcrypto-3-x64.dll",
+    "C:\\Users\\老白给\\Desktop\\navigate software pt2\\构建\\独立验收\\给朋友的程序\\_internal\\libiomp5md.dll",
+    "C:\\Users\\老白给\\Desktop\\navigate software pt2\\构建\\独立验收\\给朋友的程序\\_internal\\libjpeg.dll",
+    "C:\\Users\\老白给\\Desktop\\navigate software pt2\\构建\\独立验收\\给朋友的程序\\_internal\\liblzma.dll",
+    "C:\\Users\\老白给\\Desktop\\navigate software pt2\\构建\\独立验收\\给朋友的程序\\_internal\\libpng16.dll",
+    "C:\\Users\\老白给\\Desktop\\navigate software pt2\\构建\\独立验收\\给朋友的程序\\_internal\\mkl\\_mklinit.cp313-win_amd64.pyd",
+    "C:\\Users\\老白给\\Desktop\\navigate software pt2\\构建\\独立验收\\给朋友的程序\\_internal\\mkl\\_py_mkl_service.cp313-win_amd64.pyd",
+    "C:\\Users\\老白给\\Desktop\\navigate software pt2\\构建\\独立验收\\给朋友的程序\\_internal\\mkl_core.2.dll",
+    "C:\\Users\\老白给\\Desktop\\navigate software pt2\\构建\\独立验收\\给朋友的程序\\_internal\\mkl_def.2.dll",
+    "C:\\Users\\老白给\\Desktop\\navigate software pt2\\构建\\独立验收\\给朋友的程序\\_internal\\mkl_intel_thread.2.dll",
+    "C:\\Users\\老白给\\Desktop\\navigate software pt2\\构建\\独立验收\\给朋友的程序\\_internal\\mkl_rt.2.dll",
+    "C:\\Users\\老白给\\Desktop\\navigate software pt2\\构建\\独立验收\\给朋友的程序\\_internal\\mkl_vml_def.2.dll",
+    "C:\\Users\\老白给\\Desktop\\navigate software pt2\\构建\\独立验收\\给朋友的程序\\_internal\\msvcp140.dll",
+    "C:\\Users\\老白给\\Desktop\\navigate software pt2\\构建\\独立验收\\给朋友的程序\\_internal\\msvcp140_1.dll",
+    "C:\\Users\\老白给\\Desktop\\navigate software pt2\\构建\\独立验收\\给朋友的程序\\_internal\\msvcp140_2.dll",
+    "C:\\Users\\老白给\\Desktop\\navigate software pt2\\构建\\独立验收\\给朋友的程序\\_internal\\numpy\\_core\\_multiarray_umath.cp313-win_amd64.pyd",
+    "C:\\Users\\老白给\\Desktop\\navigate software pt2\\构建\\独立验收\\给朋友的程序\\_internal\\numpy\\linalg\\_umath_linalg.cp313-win_amd64.pyd",
+    "C:\\Users\\老白给\\Desktop\\navigate software pt2\\构建\\独立验收\\给朋友的程序\\_internal\\pcre2-16.dll",
+    "C:\\Users\\老白给\\Desktop\\navigate software pt2\\构建\\独立验收\\给朋友的程序\\_internal\\pcre2-8.dll",
+    "C:\\Users\\老白给\\Desktop\\navigate software pt2\\构建\\独立验收\\给朋友的程序\\_internal\\pyside6.cp313-win_amd64.dll",
+    "C:\\Users\\老白给\\Desktop\\navigate software pt2\\构建\\独立验收\\给朋友的程序\\_internal\\python3.dll",
+    "C:\\Users\\老白给\\Desktop\\navigate software pt2\\构建\\独立验收\\给朋友的程序\\_internal\\python313.dll",
+    "C:\\Users\\老白给\\Desktop\\navigate software pt2\\构建\\独立验收\\给朋友的程序\\_internal\\select.pyd",
+    "C:\\Users\\老白给\\Desktop\\navigate software pt2\\构建\\独立验收\\给朋友的程序\\_internal\\shiboken6.cp313-win_amd64.dll",
+    "C:\\Users\\老白给\\Desktop\\navigate software pt2\\构建\\独立验收\\给朋友的程序\\_internal\\shiboken6\\Shiboken.cp313-win_amd64.pyd",
+    "C:\\Users\\老白给\\Desktop\\navigate software pt2\\构建\\独立验收\\给朋友的程序\\_internal\\tbbmalloc.dll",
+    "C:\\Users\\老白给\\Desktop\\navigate software pt2\\构建\\独立验收\\给朋友的程序\\_internal\\ucrtbase.dll",
+    "C:\\Users\\老白给\\Desktop\\navigate software pt2\\构建\\独立验收\\给朋友的程序\\_internal\\vcruntime140.dll",
+    "C:\\Users\\老白给\\Desktop\\navigate software pt2\\构建\\独立验收\\给朋友的程序\\_internal\\vcruntime140_1.dll",
+    "C:\\Users\\老白给\\Desktop\\navigate software pt2\\构建\\独立验收\\给朋友的程序\\_internal\\zlib.dll",
+    "C:\\Users\\老白给\\Desktop\\navigate software pt2\\构建\\独立验收\\给朋友的程序\\_internal\\zstd.dll",
     "C:\\Windows\\Fonts\\AGENCYB.TTF",
     "C:\\Windows\\Fonts\\AGENCYR.TTF",
     "C:\\Windows\\Fonts\\ALGER.TTF",
@@ -447,10 +447,10 @@
     "C:\\Windows\\Fonts\\webdings.ttf",
     "C:\\Windows\\Fonts\\wingding.ttf",
     "C:\\Windows\\Globalization\\Sorting\\SortDefault.nls",
+    "C:\\Windows\\ServiceProfiles\\LocalService\\AppData\\Local\\FontCache\\FontCache-Obsolete-687.dat",
     "C:\\Windows\\ServiceProfiles\\LocalService\\AppData\\Local\\FontCache\\~FontCache-FontFace.dat",
     "C:\\Windows\\ServiceProfiles\\LocalService\\AppData\\Local\\FontCache\\~FontCache-S-1-5-21-2607683911-2917164295-2905597224-1001.dat",
     "C:\\Windows\\System32\\C_1252.NLS",
-    "C:\\Windows\\System32\\C_932.NLS",
     "C:\\Windows\\System32\\C_936.NLS",
     "C:\\Windows\\System32\\CoreMessaging.dll",
     "C:\\Windows\\System32\\D3D12.dll",
@@ -458,7 +458,6 @@
     "C:\\Windows\\System32\\DXCore.dll",
     "C:\\Windows\\System32\\DataExchange.dll",
     "C:\\Windows\\System32\\DriverStore\\FileRepository\\nvlt.inf_amd64_6f0602be9b031020\\nvgpucomp64.dll",
-    "C:\\Windows\\System32\\DriverStore\\FileRepository\\nvlt.inf_amd64_6f0602be9b031020\\nvldumdx.dll",
     "C:\\Windows\\System32\\DriverStore\\FileRepository\\nvlt.inf_amd64_6f0602be9b031020\\nvoglv64.dll",
     "C:\\Windows\\System32\\IPHLPAPI.DLL",
     "C:\\Windows\\System32\\KernelBase.dll",
@@ -546,28 +545,149 @@
     "C:\\Windows\\System32\\zh-CN\\kernel32.dll.mui",
     "C:\\Windows\\WinSxS\\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.26100.9711_none_3e07b8b0e334e825\\comctl32.dll"
   ],
-  "runtime_file_count": 244,
-  "runtime_bytes": 600215896,
+  "runtime_file_count": 233,
+  "runtime_bytes": 603929219,
   "forbidden_runtime_files": [],
-  "exe_sha256": "5f2e4f9ccc692dadfdefed2d54576a2d400167edad7c2d49bdc9167f641df4dc",
-  "csv_rows": 3172,
+  "exe_sha256": "151adc68f5166b96ab6234f7bc11f844a62043336a11c8905176b36a89d58ba4",
+  "patient_posture": {
+    "schema": 1,
+    "posture": "supine",
+    "label": "仰卧姿态假设",
+    "rotation_from_original": [
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0
+      ]
+    ],
+    "translation_mm": [
+      -17.47101593017578,
+      -316.43283462524414,
+      306.9086608886719
+    ],
+    "mapping": "original X -> world X; original Z -> world -Y; original Y -> world Z",
+    "gravity_m_s2": [
+      0.0,
+      0.0,
+      -9.81
+    ],
+    "gravity_frame": "fixed world -Z, not rotated with anatomy",
+    "table_z_mm": 0.0,
+    "table_clearance_mm": 20.0,
+    "array_frame": "fixed world +Z side; currents and motion recomputed",
+    "assumption": "Raw mesh has no verified anatomical orientation; assumed supine placement, not patient registration",
+    "contact_model": false
+  },
+  "posture_display": {
+    "window_title": "Magnetic · 胶囊视觉导航实验台 — clon001 八线圈仰卧版 · 肛门进镜",
+    "grid_z_range": [
+      0.0,
+      0.0
+    ],
+    "geometry_span_mm": [
+      247.6384735107422,
+      387.7299118041992,
+      194.8888931274414
+    ],
+    "gravity_origin_mm": [
+      -133.8192367553711,
+      -203.8649559020996,
+      229.8888931274414
+    ],
+    "gravity_direction": [
+      0.0,
+      0.0,
+      -1.0
+    ],
+    "default_elevation_deg": 48.0
+  },
+  "route_direction": {
+    "schema": 1,
+    "insertion_start_label": "肛门入口",
+    "insertion_end_label": "肠道深部终点",
+    "withdrawal_start_label": "肠道深部终点",
+    "withdrawal_end_label": "肛门入口",
+    "entry_position_mm": [
+      -16.50084493017578,
+      189.81716537475586,
+      161.34166088867187
+    ],
+    "deep_position_mm": [
+      18.06218406982422,
+      25.767165374755848,
+      49.73666088867185
+    ],
+    "reference_entry_original_mm": [
+      0.970171,
+      -145.567,
+      -506.25
+    ],
+    "reference_deep_original_mm": [
+      35.5332,
+      -257.172,
+      -342.2
+    ],
+    "source": "Original confirmed insertion source; legacy reverse CSV is not used for magnetic generation",
+    "arc_definition": "0 at anal entry; increases to deep endpoint; decreases during withdrawal",
+    "verification": {
+      "passed": true,
+      "tolerance_mm": 1.0,
+      "insertion_start_error_mm": 0.0,
+      "insertion_end_error_mm": 0.12552629311812327,
+      "withdrawal_start_error_mm": 0.12552629311812327,
+      "withdrawal_end_error_mm": 0.14570013328774636
+    }
+  },
+  "route_endpoints": {
+    "actual_start_mm": [
+      -16.50084493017578,
+      189.81716537475586,
+      161.34166088867187
+    ],
+    "actual_turn_mm": [
+      17.94770681229677,
+      25.715669668413813,
+      49.736659746034164
+    ],
+    "actual_finish_mm": [
+      -16.52483852964887,
+      189.67625669619414,
+      161.31341942393678
+    ],
+    "timeline_captions": [
+      "肛门入口 · 开始进镜",
+      "肠道深部 · 开始退镜　294.84 s",
+      "回到肛门入口"
+    ]
+  },
+  "csv_rows": 5987,
   "csv_columns": 146,
   "unique_pose_draw_fps": {
     "insertion_1x": {
-      "main": 62.42562414815559,
-      "camera": 62.47466532672492
+      "main": 62.34430264558891,
+      "camera": 62.37678855046753
     },
     "withdrawal_1x": {
-      "main": 62.5813980600095,
-      "camera": 62.58336260357269
+      "main": 62.54370838199657,
+      "camera": 62.54705472714095
     },
     "withdrawal_5x": {
-      "main": 62.505998002603015,
-      "camera": 62.505958775880124
+      "main": 62.20130831422055,
+      "camera": 62.206034161000304
     },
     "slider_16ms_requests": {
-      "main": 62.3260666082384,
-      "camera": 62.328447545309835
+      "main": 50.29550250524688,
+      "camera": 50.28852853719797
     }
   },
   "limitation": "Same computer, separate Unicode path and restricted environment; not a clean Windows VM or another physical computer."

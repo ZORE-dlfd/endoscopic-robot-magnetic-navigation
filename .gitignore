@@ -1,5 +1,6 @@
 # Python
 构建/
+发布/
 __pycache__/
 *.pyc
 *.pyo
@@ -35,3 +36,7 @@ exe_payload_check/
 
 # Local-only extraction cache from the EXE
 extraction.sha256
+
+# Regenerable validation exports and local logs
+文档/验证/**/export_check.csv
+文档/验证/**/*.log

@@ -1,72 +1,55 @@
 # Endoscopic Robot Magnetic Navigation
 
-[中文版](README.zh-CN.md)
+[中文说明](README.zh-CN.md)
 
-Native **Qt Widgets + OpenGL** desktop replay of the clon001 colon simulation. No HTML, browser, WebView, or JavaScript runtime. Research prototype: offline, one case, no clinical validation, no physical robot control, no real endoscopic video.
+Native **Qt Widgets + OpenGL** desktop visualization of the clon001 capsule-navigation simulation. No HTML, browser, WebView, or JavaScript runtime. The current version uses eight moving equivalent magnetic sources, a supine-placement assumption, and the corrected **anal entry → deep endpoint → anal entry** route.
 
-## Run and share
+## Download and run
 
-Open `软件/Magnetic_Camera.exe`. Share the **entire 软件 folder**, including `_internal`; extract a ZIP completely before launching. No Python, Anaconda, browser, or network is required on the receiving machine.
+Download the complete Windows ZIP from the [existing v2.1.0 release](https://github.com/ZORE-dlfd/endoscopic-robot-magnetic-navigation/releases/tag/v2.1.0). Extract it completely, then open `八线圈胶囊导航软件/Magnetic_Camera_8Coil.exe`. Keep `_internal`, the data, and third-party notices beside the executable. Do not launch from inside the ZIP or share the EXE alone.
 
-Target: 64-bit Windows 10/11 with OpenGL 3.3 Core support. The executable is unsigned. Delivery checks use a separate Unicode path and a restricted environment on the same computer, not another computer or a clean Windows VM. Do not disable security protection to run it.
+The repository also retains the complete application under `软件/`, following its existing layout. Open `软件/Magnetic_Camera_8Coil.exe` after downloading the full repository. Recipients do not need Python, Anaconda, Qt, or a browser.
 
-## Predictive-withdrawal revision
+Target: 64-bit Windows 10/11, with an OpenGL 3.3 Core-capable graphics driver. The executable is unsigned; do not disable security protection. Delivery checks were performed on the same computer in a separate Unicode path with Python/Conda/Qt environment variables removed, not on another physical computer or a clean Windows VM.
 
-Only the withdrawal camera-angle policy changes. All 3,172 original motion samples and 146 exported fields, magnetic states, body position/orientation, speed, duration, insertion camera, and insertion coverage remain unchanged.
+## What changed
 
-- Dense camera-FOV search: 10° coarse grid, 2° local refinement, 60° vertical FOV, 4:3 aspect ratio, within the original 45° forward cone.
-- Every 0.4 s, predict 1.2 s with the original PD controller. Among feasible plans with at least 95% of the maximum predicted new area, minimize normalized velocity, acceleration, and jerk cost. Future predicted coverage is never credited as actual coverage.
-- Original per-axis PD, 60°/s velocity limit, 150°/s² acceleration limit, 0.01 s integration. Discrete checks are not a continuous-time safety certificate.
-- The top-right algorithm button provides four readable sections: motion, magnetic-field synthesis, insertion camera, withdrawal camera. No raw LaTeX.
-- Hover near the centerline for risk, clearance, curvature, target speed, and speed caps, linked to the chart. Hiding the path or leaving the view clears the probe.
-- Blue = insertion coverage; orange = new withdrawal coverage; gray = not yet covered. Blue and orange are mutually exclusive.
+- **Eight-source dynamics:** bounded, field-priority current allocation, ±10 A per source, and an array translating at up to 0.2 m/s. Actual field and gradient produce force and torque, which are integrated into motion. The capsule is not snapped onto the centerline.
+- **Supine-placement assumption:** anatomy and reference states share one rigid transform; world gravity remains `(0, 0, -9.81) m/s²`. Currents, motion, camera planning, and coverage were recomputed. The horizontal grid is not a bed/contact model; anatomical registration has not been verified.
+- **Correct entry:** the generator now uses the original confirmed insertion source instead of the reverse-ordered legacy CSV. Generation and loading check actual start, turn, return, and initial camera direction; this is not a label swap or reversed playback.
+- **Preserved camera policy:** dense sliding-FOV search, 1.2 s short-horizon prediction, and the original PD controller. Every 0.4 s, search a 10° coarse grid with 2° local refinement. Among feasible candidates achieving at least 95% of the best predicted coverage gain, prefer smooth motion. This is not a trained CNN or the old fixed 37-direction policy.
+- **Preserved UI:** dual views, timeline dragging, risk hover, field/streamline/slice displays, charts, and status tables. Blue is insertion coverage, orange is additional withdrawal coverage; the two are mutually exclusive. Slowdown is allowed, but no waiting segment is commanded.
 
-This is dense sliding-FOV search inspired by a convolution window, **not a trained CNN**. Planning is precomputed, not run once per displayed frame. Measured planning mean/P95/max: 287.6/389.7/464.4 ms. The maximum exceeds the 0.4 s decision interval, so this is not an online real-time guarantee.
+Planning and dynamics are precomputed; the application smoothly replays their results rather than solving them per rendered frame. No live endoscopic video or physical robot is controlled.
 
-## Current clon001 results
+## Current clon001 validation
 
 | Quantity | Result |
 | --- | ---: |
-| Whole evaluated surface | 246,417.47 mm² |
-| Insertion coverage, unchanged | 177,090.42 mm² |
-| New withdrawal coverage | 20,909.91 mm² |
-| Final coverage | 198,000.33 mm² / 80.3516% |
-| Coverage gain | 8.4856 percentage points |
-| Actual sampled constraint violations / fallback | 0 / 0 |
+| Route length | 1,722.3136 mm |
+| Insertion / withdrawal / total duration | 294.84 / 303.70 / 598.54 s |
+| Start / deep turn / return position error | 0 / 0.126 / 0.146 mm |
+| Peak absolute source current | 9.19 A, below the 10 A limit |
+| Insertion coverage | 165,529.21 mm² |
+| New withdrawal coverage | 31,240.72 mm² |
+| Final coverage | 196,769.93 / 246,417.47 mm² = 79.8523% |
+| Withdrawal decisions / directions per decision | 760 / 243–381 |
+| Sampled constraint violations / fallback | 0 / 0 |
 
-Withdrawal visibility is evaluated every 0.1 s using face-ID depth rendering and 0.4 s qualified dwell. Insertion coverage is preserved. Playback and mouse events never add coverage. Independent dwell accumulation from the actual replay poses reproduces the per-face first-seen times and final area.
+Coverage is reevaluated from actual camera poses, including occlusion and qualified dwell. Playback and mouse events do not add coverage. Planning mean/P95/max was about 261/326/376 ms; these measurements are not a worst-case or hard real-time guarantee. Older release coverage numbers are not the results of this corrected route.
 
-The planner uses the same Hermite body position as the player. Do not substitute the older linear-body validation result of 20,968.55 mm². The previous 37-direction software also used different evaluation sampling/masks, so its area is not a strictly controlled ablation comparison.
+## Project layout and reproduction
 
-## Layout
+- `软件/`: complete distributable runtime and notices; `发布/` is ignored local packaging output.
+- `源码/magnetic_app/`: UI, rendering, and replay; `源码/coil_simulation/`: magnetic sources, dynamics, posture, and route checks.
+- `源码/retreat_planner/`: preserved dense predictive withdrawal planner; `源码/tests/`: numerical, integrity, and UI tests.
+- `数据/clon001/`: current results and hash manifests; `数据/参考原版/`: unchanged reference; `数据/仿真输入/`: model inputs and direction contract.
+- `工具/`: generation, audit, build, and delivery checks; `文档/`: reports and current evidence; `构建/`: ignored dependencies, caches, and local backups.
 
-- `软件/`: distributable application, native runtime, bundled data, third-party notices.
-- `源码/magnetic_app/`: domain, rendering, and UI modules.
-- `源码/retreat_planner/`: offline planner, separate from playback.
-- `源码/tests/`: numerical, controller, UI, picking, and integrity tests.
-- `数据/clon001/`: original arrays/metadata, separate prediction overlay and hash manifest, algorithm text.
-- `工具/`: generation, independent audit, native packaging, isolated delivery validation.
-- `文档/`: use/build instructions, changes, reports, evidence, screenshots.
-- `构建/`: ignored local build dependencies, cache, and previous-binary backup.
-
-## Reproduce
-
-Reuse installed libraries before creating environments. This machine uses Anaconda Python with NumPy 2.3.5, SciPy 1.16.3, PySide6 6.9.2; packaging dependencies are in `构建/依赖`. See [build instructions](文档/构建说明.md).
-
-```powershell
-$root = 'C:\Users\老白给\Desktop\navigate-final software'
-$env:PYTHONPATH = "$root\构建\依赖;$root\源码"
-& D:\anaconda\python.exe -m pytest "$root\源码\tests" -q
-& D:\anaconda\python.exe "$root\工具\audit_predictive.py"
-& D:\anaconda\python.exe "$root\工具\build_native.py"
-# After replacing 软件 with the complete newly built distribution:
-& D:\anaconda\python.exe "$root\工具\verify_native.py"
-```
-
-The original arrays/metadata are included and unchanged; normal use does not require the historical HTML, source anatomy, Slicer, or sibling projects. Re-running the original upstream motion solver is outside this revision. See [Chinese user guide](文档/使用说明.md), [validation](文档/验证报告.md), and [change log](文档/变更记录.md).
+Reuse an existing compatible environment first. The verified environment is Anaconda Python 3.13.9, NumPy 2.3.5, SciPy 1.16.3, pandas 2.3.3, PySide6 6.9.2, PyOpenGL 3.1.10, pytest 8.4.2, and PyInstaller 6.22.3. See [build instructions](文档/构建说明.md), [implementation](文档/实现说明.md), [validation](文档/验证报告.md), and [entry-direction repair](文档/肛门入口方向修复.md). Build dependencies and personal backups are not committed.
 
 ## Limits and licensing
 
-Known 3D geometry and future body trajectory, no online image feedback. Lower joint cost does not guarantee a lower world-camera angular-speed peak. Geometric visibility is not lesion recognition. Existing magnetic states are not a calibrated full-space coil solution. Existing non-positive clearance samples and the approximately 0.5 mm insertion/withdrawal position residual are not removed. No tissue or clinical safety claim is made.
+This is a single-case research simulation with point-dipole sources and idealized friction. It is not FEM, a measured coil field, a hardware demonstration, or clinical validation. Thermal/inductive effects, current slew, iron saturation, tissue contact/deformation, and manipulator joint/collision constraints are not modeled. Rendered rings do not establish real coil dimensions. Geometric coverage is not lesion detection.
 
-Bundled third-party notices are in `软件/第三方许可`. This revision does not add a license for the project as a whole.
+Third-party notices are in `软件/第三方许可` and `软件/第三方组件说明.md`. No project-wide license is added. Existing component-source records are not a complete commercial distribution audit.

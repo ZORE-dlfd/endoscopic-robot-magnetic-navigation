@@ -57,9 +57,9 @@ def test_predictive_preserves_original_motion_and_insertion():
 @pytest.mark.parametrize("problem", ["missing", "corrupted"])
 def test_prediction_never_silently_falls_back(tmp_path, problem):
     source = Replay(load_predictive=False).path
-    for filename in ["metadata.json", "arrays.npz", "predictive_camera.json", "predictive_camera.npz"]:
+    for filename in ["metadata.json", "arrays.npz", "algorithms.json", "magnetic_manifest.json"]:
         shutil.copy2(source / filename, tmp_path / filename)
-    track = tmp_path / "predictive_camera.npz"
+    track = tmp_path / "arrays.npz"
     if problem == "missing":
         track.unlink()
     else:

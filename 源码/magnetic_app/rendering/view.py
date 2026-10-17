@@ -133,7 +133,9 @@ class SceneView(QOpenGLWidget):
         self.center = bounds.mean(axis=0)
         self.radius = np.linalg.norm(bounds[1]-bounds[0])*.5
         self.distance = self.radius*2.6
-        self.azimuth, self.elevation = 42., 24.
+        self.posture = replay.payload.get('patientPosture')
+        self.default_view = (42., 48.) if self.posture else (42., 24.)
+        self.azimuth, self.elevation = self.default_view
         self.pan = np.zeros(3)
         self.ready = False
         self.error = None
@@ -186,6 +188,14 @@ class SceneView(QOpenGLWidget):
             self.wall = self.create_buffer(vertices(triangles.reshape(-1, 3), (.72, .77, .83), smooth[faces].reshape(-1, 3), np.repeat(seen, 3, axis=0)), GL.GL_TRIANGLES)
             if not self.first_person:
                 self.path = self.create_buffer(segments(self.replay.centerline, risk_color(self.replay.source['risk_norm'])))
+                direction = self.replay.payload.get('routeDirection')
+                if direction:
+                    markers = []
+                    for position, color in [(direction['entry_position_mm'], (.0, .60, .38)),
+                                            (direction['deep_position_mm'], (.55, .22, .75))]:
+                        for offset in np.eye(3)*5.:
+                            markers.append(segments([np.asarray(position)-offset,np.asarray(position)+offset],color))
+                    self.route_markers = self.create_buffer(np.concatenate(markers))
                 self.trajectory = self.create_buffer(segments(self.replay.positions, (.29, .47, .82)))
                 self.body = self.create_buffer(capsule(), GL.GL_TRIANGLES)
                 self.dynamic = self.create_buffer(vertices([]))
@@ -193,6 +203,11 @@ class SceneView(QOpenGLWidget):
                 self.stream = self.create_buffer(vertices([]))
                 self.slice = self.create_buffer(vertices([]), GL.GL_TRIANGLES)
                 self.grid = self.create_buffer(self.make_grid())
+                if self.posture:
+                    lower, upper = np.asarray(self.replay.payload['geometry']['bounds'])
+                    origin = np.array([lower[0]-10., lower[1]-10., upper[2]+15.])
+                    self.gravity_origin = origin
+                    self.gravity = self.create_buffer(arrows(origin, [0., 0., -1.], (.75, .18, .25), 60.))
             GL.glEnable(GL.GL_DEPTH_TEST)
             GL.glEnable(GL.GL_BLEND)
             GL.glBlendFunc(GL.GL_SRC_ALPHA, GL.GL_ONE_MINUS_SRC_ALPHA)
@@ -210,6 +225,8 @@ class SceneView(QOpenGLWidget):
     def make_grid(self):
         bounds = np.array(self.replay.payload['geometry']['bounds'])
         lower, upper = bounds[0]-15, bounds[1]+15
+        if self.posture:
+            lower[2] = upper[2] = self.posture['table_z_mm']
         coordinates = []
         for axis in [0, 1]:
             for value in np.arange(math.floor(lower[axis]/50)*50, upper[axis]+1, 50):
@@ -289,8 +306,12 @@ class SceneView(QOpenGLWidget):
             self.draw(self.wall, lighting=2)
         else:
             self.draw(self.grid)
+            if self.posture:
+                self.draw(self.gravity)
             if self.options['path']:
                 self.draw(self.path)
+                if self.replay.payload.get('routeDirection'):
+                    self.draw(self.route_markers)
             if self.options['trajectory']:
                 self.draw(self.trajectory)
             if self.options['robot']:
@@ -324,8 +345,33 @@ class SceneView(QOpenGLWidget):
             painter = QPainter(self)
             painter.setPen(QColor('#718198'))
             painter.drawText(12, height-12, 'X / Y / Z  [mm]    左键旋转 · 右键平移 · 滚轮缩放 · 双击复位')
+            if self.posture:
+                painter.drawText(12, height-32, '仰卧（模型假设） · 水平参考面 Z=0 · 重力 −Z（9.81 m/s²）')
+                point = self.project(self.gravity_origin[None])[0]
+                if 5 < point[0] < width-80 and 14 < point[1] < height-50:
+                    painter.setPen(QColor('#bf2e40'))
+                    painter.drawText(int(point[0])+9, int(point[1])+15, '重力 g')
+                    painter.setPen(QColor('#718198'))
+            if self.replay.coils is not None and self.options['field']:
+                positions, currents, moments = self.replay.coils.at(frame)
+                painter.drawText(12, 22, '八线圈磁源 · 圆环仅示意 · 电流 [A]')
+                for row_index in range(2):
+                    values = '   '.join(f'C{index+1} {currents[index]:+.2f}' for index in range(row_index*4,row_index*4+4))
+                    painter.drawText(12, 40+row_index*17, values)
+                projected = self.project(positions)
+                for index, point in enumerate(projected):
+                    if 8 < point[0] < width-80 and 70 < point[1] < height-40:
+                        painter.drawText(int(point[0])+8,int(point[1]),f'C{index+1}')
             if self.options['path']:
                 self.paint_colorbar(painter, width-48, 35, 105, '风险', 0., 1.)
+                direction = self.replay.payload.get('routeDirection')
+                if direction:
+                    points = self.project(np.asarray([direction['entry_position_mm'],direction['deep_position_mm']]))
+                    for point, text, color in zip(points,['肛门入口','肠道深部终点'],['#009961','#8c38bf']):
+                        if 5 < point[0] < width-90 and 15 < point[1] < height-40:
+                            painter.setPen(QColor(color))
+                            painter.drawText(int(point[0])+8,int(point[1])-8,text)
+                    painter.setPen(QColor('#718198'))
             if self.options['field'] or self.options['slice']:
                 field_range = self.replay.registry['field_scope_ranges'][self.options['field_scope']][self.options['field_mode']]
                 unit = 'μT' if self.options['field_mode'] == 'turning' else 'mT'
@@ -370,6 +416,18 @@ class SceneView(QOpenGLWidget):
             magnitudes = np.linalg.norm(field, axis=1)
             maximum = self.replay.registry['field_scope_ranges'][options['field_scope']][options['field_mode']][1]
             data.append(arrows(points, field, risk_color(magnitudes/maximum), field_lengths(magnitudes, options['field_mode'], options['field_scope'])))
+            if self.replay.coils is not None:
+                positions, currents, moments = self.replay.coils.at(frame)
+                ring_angles = np.linspace(0., 2*np.pi, 33)
+                for position, axis, current in zip(positions, self.replay.coils.axes, currents):
+                    reference = np.array([0., 0., 1.]) if abs(axis[2]) < .9 else np.array([0., 1., 0.])
+                    horizontal = np.cross(axis, reference)
+                    horizontal /= np.linalg.norm(horizontal)
+                    vertical = np.cross(axis, horizontal)
+                    ring = position + 12.*(np.cos(ring_angles)[:,None]*horizontal + np.sin(ring_angles)[:,None]*vertical)
+                    color = (.08, .57, .71) if current >= 0 else (.91, .38, .12)
+                    data.append(segments(ring, color))
+                    data.append(arrows(position, axis*np.sign(current), color, 18.))
         for key, prefix, unit, color, gain in [('force', 'applied_force', 'mN', (.10, .51, .37), 3), ('torque', 'applied_torque', 'uN_m', (.72, .13, .40), 450)]:
             if options[key]:
                 vector = self.replay.vector(frame, prefix, unit)
@@ -491,7 +549,7 @@ class SceneView(QOpenGLWidget):
             event.accept()
 
     def mouseDoubleClickEvent(self, event):
-        self.azimuth, self.elevation = 42., 24.
+        self.azimuth, self.elevation = self.default_view
         self.distance = self.radius*2.6
         self.pan[:] = 0
         self.update()

@@ -1,0 +1,12 @@
+{
+  "example_display_name": "clon001",
+  "original_model_name": "Colon001",
+  "source_html_sha256": "bc02afe23b136994a3a7b9c0614991e0238ba444452259fd4ee0031c4b2095c5",
+  "source_file": "C:\\Users\\老白给\\Desktop\\navigate\\Magnetic-Capsule Camera - Round Trip\\viewer\\Magnetic_Camera.html",
+  "migration": "Lossless numeric array extraction; original simulation not recomputed.",
+  "files": {
+    "metadata.json": "5dbb9a7302772e064ca6be2f1739ed2f82bfc68a38c902b4bdf1812e440fa82a",
+    "arrays.npz": "c88c0ef45a481ef718b04593ee27a0547252666f7f0443d35c3e738a47794fdf",
+    "formulas.txt": "e5dda87649f682f66cb6f8fd97d28177564fafed5475e21b68a099cfc384598f"
+  }
+}

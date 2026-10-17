@@ -1,0 +1,57 @@
+{
+  "volume_ratio": 0.10224852071005919,
+  "mass_kg": 0.0005276023668639054,
+  "magnetic_moment_A_m2": 0.025868875739644973,
+  "robot_length_m": 0.012,
+  "robot_diameter_m": 0.006,
+  "friction_coefficient": 0.2,
+  "gravity_m_s2": [
+    0.0,
+    0.0,
+    -9.81
+  ],
+  "friction_smooth_speed_m_s": 0.0005,
+  "bias_field_T": 0.015,
+  "position_kp_s2": 16.0,
+  "position_kd_s": 8.0,
+  "axis_kp_s2": 25.0,
+  "axis_kd_s": 10.0,
+  "initial_position_offset_mm": [
+    0.5,
+    0.0,
+    0.0
+  ],
+  "initial_axis_rotation_deg": [
+    0.0,
+    0.0,
+    3.0
+  ],
+  "ode_method": "DOP853",
+  "max_step_s": 0.08,
+  "rtol": 2e-07,
+  "atol": 1e-10,
+  "display_time_step_s": 0.2,
+  "friction_scan": [
+    0.1,
+    0.2,
+    0.6
+  ],
+  "mass_scale_scan": [
+    0.5,
+    1.0,
+    2.0
+  ],
+  "moment_scale_scan": [
+    0.5,
+    1.0,
+    2.0
+  ],
+  "normal_load_model": "N_eff = M * norm(g), not solved contact load",
+  "gravity_frame_assumption": "world -z; patient orientation not verified",
+  "field_model": "ideal co-moving local affine field, no actuator limits",
+  "reference_model": "clamped position CubicSpline + RotationSpline; derivatives rebuilt",
+  "friction_model": "smooth equivalent sliding drag, no static friction or contact",
+  "magrobot_runtime_used": false,
+  "sofa_runtime_used": false,
+  "source_state_csv": "C:\\Users\\老白给\\Desktop\\navigate\\dynamic_sim_colon_001\\trajectory_state.csv"
+}

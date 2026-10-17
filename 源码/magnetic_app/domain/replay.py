@@ -74,6 +74,14 @@ class Frame:
 class Replay:
     def __init__(self, path=None, load_predictive=True):
         self.path = Path(path) if path else assets_path()
+        manifest_path = self.path / 'magnetic_manifest.json'
+        if manifest_path.is_file():
+            import hashlib
+            manifest = json.loads(manifest_path.read_text('utf-8'))
+            for name, expected in manifest['sha256'].items():
+                filename = self.path / name
+                if not filename.is_file() or hashlib.sha256(filename.read_bytes()).hexdigest() != expected:
+                    raise ValueError('八线圈仿真数据校验失败，请重新完整复制软件文件夹：' + name)
         arrays = np.load(self.path / 'arrays.npz', allow_pickle=False)
 
         def decode(value):
@@ -111,11 +119,32 @@ class Replay:
         self.settings = self.payload['evaluation']['settings']
         self.registry = self.payload['registry']
         self.robot = self.registry['robots'][0]
-        self.prediction = None
-        if load_predictive:
+        self.coils = None
+        if 'coilSources' in self.payload:
+            from .coil_sources import CoilSources
+            self.coils = CoilSources(self.payload['coilSources'])
+        self.prediction = self.payload.get('cameraPrediction')
+        if load_predictive and self.coils is None:
             from .predictive import apply_prediction
             apply_prediction(self)
             self.prepare_camera()
+        self.validate_route_direction()
+
+    def validate_route_direction(self):
+        direction = self.payload.get('routeDirection')
+        if direction is None:
+            return
+        expected = np.asarray([direction['entry_position_mm'],direction['deep_position_mm']],dtype=float)
+        if (expected.shape != (2,3) or not np.isfinite(expected).all()
+                or not np.allclose(expected,self.centerline[[0,-1]],atol=1e-6,rtol=0.)):
+            raise ValueError('肛门入口与路线方向标记不一致，请重新生成完整数据。')
+        actual = np.asarray([self.positions[0],self.body_pose(self.join_time)[0],self.positions[-1]])
+        if np.any(np.linalg.norm(actual-expected[[0,1,0]],axis=1)>1.):
+            raise ValueError('进退镜方向错误：必须从肛门入口进镜，在深部换向并退回肛门入口。')
+        tangent = self.centerline[1]-self.centerline[0]
+        tangent /= max(np.linalg.norm(tangent),1e-12)
+        if np.dot(rotation(self.body_quaternions[0])[:,0],tangent)<.95:
+            raise ValueError('肛门入口处机身朝向错误：进镜必须面向肠道内部。')
 
     def prepare_camera(self):
         self.camera_times = self.camera['time_s']
@@ -165,9 +194,23 @@ class Replay:
         return np.array([self.value(frame, f'{prefix}_{axis}_{unit}') for axis in 'xyz'])
 
     def gradient(self, frame):
+        if self.coils is not None:
+            from .coil_sources import source_gradient
+            positions, currents, moments = self.coils.at(frame)
+            return source_gradient(frame.position, positions, moments)
         return np.array([[self.value(frame, f'applied_G_{first}{second}_T_m') for second in 'xyz'] for first in 'xyz'])
 
     def field(self, frame, points, mode='total'):
+        if self.coils is not None:
+            from .coil_sources import source_field
+            positions, currents, moments = self.coils.at(frame)
+            result = source_field(points, positions, moments)
+            axis = frame.body_rotation[:, 0]
+            if mode == 'turning':
+                return (result - np.sum(result * axis, axis=-1, keepdims=True) * axis) * 1000.
+            if mode == 'residual':
+                result = result - self.robot['config']['bias_field_T'] * 1000. * axis
+            return result
         field = self.vector(frame, 'applied_field', 'mT')
         if mode == 'turning':
             axis = frame.body_rotation[:, 0]

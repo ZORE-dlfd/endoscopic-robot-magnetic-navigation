@@ -1,0 +1,10 @@
+{
+  "schema": 1,
+  "reference": "数据/参考原版/source; original navigate-final software insertion",
+  "entry_label": "肛门入口",
+  "deep_label": "肠道深部终点",
+  "entry_original_mm": [0.970171, -145.567, -506.25],
+  "deep_original_mm": [35.5332, -257.172, -342.2],
+  "landmark_tolerance_mm": 0.001,
+  "notice": "Use the original confirmed anal-entry route, not the oppositely ordered legacy trajectory_state.csv. These coordinates are in the unrotated original model."
+}

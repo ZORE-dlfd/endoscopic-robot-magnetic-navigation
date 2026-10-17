@@ -10,7 +10,7 @@ sys.path.insert(0, str(ROOT/'源码'))
 from PySide6.QtCore import QEvent, QPoint, QPointF, Qt, QTimer
 from PySide6.QtTest import QTest
 from PySide6.QtGui import QMouseEvent
-from PySide6.QtWidgets import QApplication, QComboBox, QPlainTextEdit, QToolTip
+from PySide6.QtWidgets import QApplication, QComboBox, QLabel, QPlainTextEdit, QToolTip
 
 from magnetic_app.domain.replay import Replay
 from magnetic_app.ui.window import MainWindow
@@ -34,6 +34,27 @@ def window(application):
     application.processEvents()
 
 
+def test_supine_reference_plane_and_default_view(window):
+    import numpy as np
+    posture = window.replay.payload['patientPosture']
+    view = window.main_view
+    assert posture['posture'] == 'supine'
+    assert '仰卧' in window.windowTitle()
+    grid = view.make_grid()
+    np.testing.assert_allclose(grid[:, 2], posture['table_z_mm'])
+    assert view.elevation >= 40.
+    np.testing.assert_allclose(window.replay.robot['config']['gravity_m_s2'], [0., 0., -9.81])
+
+
+def test_timeline_and_scene_explicitly_identify_anal_entry(window):
+    texts = [widget.text() for widget in window.findChildren(QLabel)]
+    assert any('肛门入口 · 开始进镜' in text for text in texts)
+    assert any('肠道深部 · 开始退镜' in text for text in texts)
+    assert any('回到肛门入口' in text for text in texts)
+    assert '肛门入口 → 肠道深部 → 肛门入口' in window.field_hint.text()
+    assert window.replay.payload['routeDirection']['verification']['passed']
+
+
 @pytest.mark.parametrize('playing', [False, True])
 def test_real_slider_drag_preserves_play_state(window, playing):
     slider = window.slider
@@ -50,6 +71,8 @@ def test_real_slider_drag_preserves_play_state(window, playing):
 
 
 def test_parameter_visibility_toggles(window):
+    assert '八线圈' in window.field_hint.text()
+    assert '仿射' not in window.field_hint.text()
     for key, readout in [('propulsion_parameters', window.propulsion_readout), ('turning_parameters', window.turning_readout)]:
         window.controls[key].setChecked(False)
         assert readout.isHidden()
@@ -64,8 +87,8 @@ def test_all_state_charts_and_final_values(window):
     window.seek(window.replay.duration)
     window.tick()
     window.update_readouts()
-    assert '198,000.33' in window.coverage_values['final_covered_area_mm2'][0].text()
-    assert '20,909.91' in window.coverage_values['withdrawal_added_area_mm2'][0].text()
+    assert f'{window.replay.summary["final_covered_area_mm2"]:,.2f}' in window.coverage_values['final_covered_area_mm2'][0].text()
+    assert f'{window.replay.summary["withdrawal_added_area_mm2"]:,.2f}' in window.coverage_values['withdrawal_added_area_mm2'][0].text()
     assert window.state_table.rowCount() == 146
 
 

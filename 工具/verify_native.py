@@ -1,6 +1,7 @@
 import csv
 import hashlib
 import json
+import math
 import os
 from pathlib import Path
 import shutil
@@ -25,7 +26,7 @@ def validate_smoke(directory):
             assert measurement['unique_pose_interval_ms']['count'] > 10, (stage, view, measurement)
     with (directory/'export_check.csv').open(encoding='utf-8-sig', newline='') as stream:
         rows = list(csv.reader(stream))
-    assert len(rows) == 3173 and len(rows[0]) == 146
+    assert len(rows) > 5000 and len(rows[0]) == 146
     assert all(len(row) == 146 for row in rows)
     evaluation = json.loads((directory/'export_check.json').read_text(encoding='utf-8'))
     assert evaluation['summary'] == result['scientific_summary']
@@ -41,9 +42,31 @@ def validate_smoke(directory):
     assert hover['index'] >= 0 and hover['chart_linked']
     assert hover['cleared_when_hidden'] and hover['cleared_on_leave']
     assert '归一化风险' in hover['tooltip'] and '限速' in hover['readout']
-    assert abs(result['scientific_summary']['insertion_covered_area_mm2']-177090.4177645445) < 1e-8
-    assert abs(result['scientific_summary']['withdrawal_added_area_mm2']-20909.910963773727) < 1e-8
-    assert abs(result['scientific_summary']['final_coverage_pct']-80.3515779690823) < 1e-10
+    reference = json.loads((ROOT/'文档'/'八线圈仿真结果.json').read_text('utf-8'))['coverage']
+    for key in ['insertion_covered_area_mm2','withdrawal_added_area_mm2','final_coverage_pct']:
+        assert abs(result['scientific_summary'][key]-reference[key]) < 1e-8
+    assert evaluation['magnetic_simulation']['coil_count'] == 8
+    posture = evaluation['magnetic_simulation']['patient_posture']
+    assert posture['posture'] == 'supine' and posture['gravity_m_s2'] == [0., 0., -9.81]
+    assert posture['gravity_frame'] == 'fixed world -Z, not rotated with anatomy'
+    assert result['patient_posture'] == posture
+    display = result['posture_display']
+    assert '仰卧' in display['window_title']
+    assert display['grid_z_range'] == [0.,0.]
+    assert display['gravity_direction'] == [0.,0.,-1.]
+    assert display['geometry_span_mm'][1] > display['geometry_span_mm'][2]
+    assert display['default_elevation_deg'] >= 40.
+    direction = evaluation['magnetic_simulation']['route_direction']
+    assert result['route_direction'] == direction and direction['verification']['passed']
+    assert direction['reference_entry_original_mm'] == [.970171,-145.567,-506.25]
+    assert direction['insertion_start_label'] == direction['withdrawal_end_label'] == '肛门入口'
+    endpoints = result['route_endpoints']
+    assert math.dist(endpoints['actual_start_mm'],direction['entry_position_mm']) < 1.
+    assert math.dist(endpoints['actual_turn_mm'],direction['deep_position_mm']) < 1.
+    assert math.dist(endpoints['actual_finish_mm'],direction['entry_position_mm']) < 1.
+    assert '肛门入口 · 开始进镜' in endpoints['timeline_captions'][0]
+    assert '肠道深部 · 开始退镜' in endpoints['timeline_captions'][1]
+    assert '回到肛门入口' in endpoints['timeline_captions'][2]
     return result
 
 
@@ -62,7 +85,7 @@ def main():
     environment = {key: value for key, value in os.environ.items() if not key.upper().startswith(('PYTHON', 'QT_', 'QML', 'CONDA'))}
     windows = Path(environment.get('SystemRoot', r'C:\Windows'))
     environment['PATH'] = os.pathsep.join([str(windows/'System32'), str(windows)])
-    executable = isolated/'Magnetic_Camera.exe'
+    executable = isolated/'Magnetic_Camera_8Coil.exe'
     with (report_dir/'process.log').open('w', encoding='utf-8') as output:
         process = subprocess.Popen([str(executable), '--smoke-report', str(report_dir/'smoke.json')], cwd=isolated.parent, env=environment, stdout=output, stderr=output)
         inspected = psutil.Process(process.pid)
@@ -97,8 +120,12 @@ def main():
         'runtime_file_count': len(files),
         'runtime_bytes': sum(path.stat().st_size for path in files),
         'forbidden_runtime_files': forbidden,
-        'exe_sha256': hashlib.sha256((software/'Magnetic_Camera.exe').read_bytes()).hexdigest(),
-        'csv_rows': 3172,
+        'exe_sha256': hashlib.sha256((software/'Magnetic_Camera_8Coil.exe').read_bytes()).hexdigest(),
+        'patient_posture': smoke['patient_posture'],
+        'posture_display': smoke['posture_display'],
+        'route_direction': smoke['route_direction'],
+        'route_endpoints': smoke['route_endpoints'],
+        'csv_rows': sum(1 for line in (report_dir/'export_check.csv').open(encoding='utf-8-sig'))-1,
         'csv_columns': 146,
         'unique_pose_draw_fps': {key: {view: smoke[key][view]['unique_pose_draw_fps'] for view in ['main', 'camera']} for key in ['insertion_1x', 'withdrawal_1x', 'withdrawal_5x', 'slider_16ms_requests']},
         'limitation': 'Same computer, separate Unicode path and restricted environment; not a clean Windows VM or another physical computer.'

@@ -49,8 +49,8 @@ def test_disjoint_coverage_exact_area(replay):
     insertion, withdrawal = replay.coverage(replay.duration)
     assert not np.any(insertion & withdrawal)
     assert insertion.sum() > 0 and withdrawal.sum() > 0
-    assert replay.areas[insertion].sum() == pytest.approx(177090.4177645445, abs=.01)
-    assert replay.areas[withdrawal].sum() == pytest.approx(20909.910963773727, abs=.01)
+    assert replay.areas[insertion].sum() == pytest.approx(replay.summary['insertion_covered_area_mm2'], abs=1e-7)
+    assert replay.areas[withdrawal].sum() == pytest.approx(replay.summary['withdrawal_added_area_mm2'], abs=1e-7)
     assert replay.areas.sum() == pytest.approx(246417.473972328, abs=.01)
     assert not replay.coverage(-1)[0].any()
     assert not replay.coverage(replay.join_time - 1e-7)[1].any()
@@ -64,11 +64,15 @@ def test_clamping_and_metadata(replay):
 
 
 def test_same_time_field_formula(replay):
-    frame = replay.frame(400.123)
+    frame = replay.frame(replay.times[4000])
     points = np.array([frame.position, frame.position + [10, 20, 30]])
     field = replay.field(frame, points, 'total')
     np.testing.assert_allclose(field[0], replay.vector(frame, 'applied_field', 'mT'))
-    np.testing.assert_allclose(field[1] - field[0], replay.gradient(frame) @ np.array([10, 20, 30]))
+    affine = field[0] + replay.gradient(frame) @ np.array([10, 20, 30])
+    assert np.linalg.norm(field[1] - affine) > .001
+    from magnetic_app.domain.coil_sources import source_field
+    positions, currents, moments = replay.coils.at(frame)
+    np.testing.assert_allclose(field, source_field(points,positions,moments),atol=1e-12)
 
 
 def test_all_recorded_columns_readable(replay):

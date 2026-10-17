@@ -76,7 +76,10 @@ class MainWindow(QMainWindow):
         self.replay = replay
         self.clock = PlaybackClock(replay.duration)
         self.current_frame = replay.frame(0)
-        self.setWindowTitle('Magnetic · 胶囊视觉导航实验台 — clon001 原生桌面版')
+        version = '八线圈仰卧版' if replay.payload.get('patientPosture') else '八线圈磁源版'
+        if replay.payload.get('routeDirection'):
+            version += ' · 肛门进镜'
+        self.setWindowTitle('Magnetic · 胶囊视觉导航实验台 — clon001 '+version)
         self.setWindowIcon(QIcon(str(replay.path / 'app.ico')))
         self.setStyleSheet(STYLE)
         self.resize(1650, 985)
@@ -121,7 +124,7 @@ class MainWindow(QMainWindow):
         brand_layout = QVBoxLayout(brand)
         brand_layout.setContentsMargins(0, 0, 0, 0)
         brand_layout.addWidget(label('<b style="font-size:22px">Magnetic</b>　胶囊视觉导航实验台'))
-        brand_layout.addWidget(label('双视角 · 前瞻稳定 · 同条件观察覆盖评价', 'muted'))
+        brand_layout.addWidget(label('双视角 · 八线圈磁源驱动 · 原生可视化仿真', 'muted'))
         header = row(logo, brand)
         header.addStretch()
         header.addWidget(label('离线回放', 'badge'))
@@ -201,7 +204,8 @@ class MainWindow(QMainWindow):
             line.addStretch()
             layout.addLayout(line)
         layout.addLayout(row('透明度', self.combo('opacity', [('0.12', .12), ('0.22', .22), ('0.45', .45)], .22), '视锥', self.combo('frustum_length', [('15 mm', 15.), ('25 mm', 25.), ('40 mm', 40.)], 25.), self.combo('slice_plane', [('XY', 'XY'), ('XZ', 'XZ'), ('YZ', 'YZ')], 'XY')))
-        self.field_hint = label('局部仿射磁场外推；覆盖中心线 / 整体不是线圈系统全域求解。', 'muted', True)
+        route_hint = '肛门入口 → 肠道深部 → 肛门入口。' if self.replay.payload.get('routeDirection') else ''
+        self.field_hint = label(route_hint+'八线圈磁源空间叠加；含电流限幅，仍是点偶极仿真，非有限元或实测场。', 'muted', True)
         layout.addWidget(self.field_hint)
         layout.addWidget(label(f'<span style="color:{INSERTION}">● 进镜有效覆盖</span>　<span style="color:{WITHDRAWAL}">● 退镜新增</span>　<span style="color:#687688">● 尚未覆盖</span>'))
         layout.addWidget(self.main_view)
@@ -275,7 +279,7 @@ class MainWindow(QMainWindow):
                 table.setItem(index, column, item)
         table.setFixedHeight(375)
         layout.addWidget(table)
-        layout.addWidget(label('原运动与磁场不变，交界位置残差 0.500 mm保留。退镜采用密集搜索＋1.2 s预测；不再使用旧37方向可恢复掩膜。未覆盖不等于永远不可见；离散零越限不代表临床安全。', 'muted', True))
+        layout.addWidget(label('本版重算八线圈磁驱动进退镜，交界不重置位置或姿态。退镜保留滑窗密集搜索＋1.2 s预测＋原PD；蓝橙面积按新轨迹重算。未覆盖不等于永远不可见；离散零越限不代表临床安全。', 'muted', True))
         return panel
 
     def make_force_chart(self):
@@ -368,7 +372,7 @@ class MainWindow(QMainWindow):
             self.state_table.setItem(index, 1, QTableWidgetItem(''))
         layout.addWidget(self.state_table)
         layout.addWidget(button('导出回放 CSV ↓', self.export_csv))
-        layout.addWidget(label('6 DOF 刚体仿真，单偶极无法直接控制轴向滚转。全域箭头只是局部仿射场外推；未验证真实线圈限幅。', 'muted', True))
+        layout.addWidget(label('6 DOF 刚体仿真，单偶极无法直接控制轴向滚转。全空间箭头由八磁源直接计算，单路±10 A；未模拟热、电感或肠壁接触。', 'muted', True))
         return panel
 
     def make_timeline(self):
@@ -395,13 +399,17 @@ class MainWindow(QMainWindow):
         self.status_badge = label('clon001 已加载', 'badge')
         toolbar.addWidget(self.status_badge)
         layout.addLayout(toolbar)
-        captions = row(label('起点 · 进镜', 'muted'))
+        directed = bool(self.replay.payload.get('routeDirection'))
+        self.entry_caption = label('肛门入口 · 开始进镜' if directed else '起点 · 进镜', 'muted')
+        captions = row(self.entry_caption)
         captions.addStretch(1)
-        marker = label(f'交接 / 开始退镜　{self.replay.join_time:.2f} s')
+        marker = label(('肠道深部 · 开始退镜' if directed else '交接 / 开始退镜')+f'　{self.replay.join_time:.2f} s')
+        self.turn_caption = marker
         marker.setStyleSheet('color:#d74e60;font-size:11px;font-weight:600;')
         captions.addWidget(marker)
         captions.addStretch(1)
-        captions.addWidget(label('退镜终点', 'muted'))
+        self.exit_caption = label('回到肛门入口' if directed else '退镜终点', 'muted')
+        captions.addWidget(self.exit_caption)
         layout.addLayout(captions)
         return panel
 
@@ -528,7 +536,7 @@ class MainWindow(QMainWindow):
             chart.update()
 
     def write_evaluation(self, filename):
-        report = {'example': 'clon001', 'original_model': 'Colon001', 'summary': self.replay.summary, 'prediction': self.replay.prediction, 'settings': self.replay.settings, 'round_trip': self.replay.payload['roundTrip'], 'rows': self.replay.metric_rows, 'display': {'insertion': INSERTION, 'withdrawal_added': WITHDRAWAL, 'pose_interpolation_used_for_area': True, 'area_sampling_s': {'insertion': 0.4, 'withdrawal': 0.1}, 'render_frames_add_coverage': False}}
+        report = {'example': 'clon001', 'original_model': 'Colon001', 'summary': self.replay.summary, 'prediction': self.replay.prediction, 'magnetic_simulation': self.replay.payload.get('magneticSimulation'), 'settings': self.replay.settings, 'round_trip': self.replay.payload['roundTrip'], 'rows': self.replay.metric_rows, 'display': {'insertion': INSERTION, 'withdrawal_added': WITHDRAWAL, 'pose_interpolation_used_for_area': True, 'area_sampling_s': {'insertion': 0.1, 'withdrawal': 0.1}, 'render_frames_add_coverage': False}}
         Path(filename).write_text(json.dumps(json_safe(report), ensure_ascii=False, indent=2, allow_nan=False), encoding='utf-8')
 
     def write_csv(self, filename):
