@@ -1,89 +1,16 @@
 {
   "example": "clon001",
-  "data": "Supine-assumption placement; recomputed eight-coil dynamics and dense predictive camera planning; original UI and mesh topology retained",
-  "patient_posture": {
-    "schema": 1,
-    "posture": "supine",
-    "label": "仰卧姿态假设",
-    "rotation_from_original": [
-      [
-        1.0,
-        0.0,
-        0.0
-      ],
-      [
-        0.0,
-        0.0,
-        -1.0
-      ],
-      [
-        0.0,
-        1.0,
-        0.0
-      ]
-    ],
-    "translation_mm": [
-      -17.47101593017578,
-      -316.43283462524414,
-      306.9086608886719
-    ],
-    "mapping": "original X -> world X; original Z -> world -Y; original Y -> world Z",
-    "gravity_m_s2": [
-      0.0,
-      0.0,
-      -9.81
-    ],
-    "gravity_frame": "fixed world -Z, not rotated with anatomy",
-    "table_z_mm": 0.0,
-    "table_clearance_mm": 20.0,
-    "array_frame": "fixed world +Z side; currents and motion recomputed",
-    "assumption": "Raw mesh has no verified anatomical orientation; assumed supine placement, not patient registration",
-    "contact_model": false
-  },
-  "route_direction": {
-    "schema": 1,
-    "insertion_start_label": "肛门入口",
-    "insertion_end_label": "肠道深部终点",
-    "withdrawal_start_label": "肠道深部终点",
-    "withdrawal_end_label": "肛门入口",
-    "entry_position_mm": [
-      -16.50084493017578,
-      189.81716537475586,
-      161.34166088867187
-    ],
-    "deep_position_mm": [
-      18.06218406982422,
-      25.767165374755848,
-      49.73666088867185
-    ],
-    "reference_entry_original_mm": [
-      0.970171,
-      -145.567,
-      -506.25
-    ],
-    "reference_deep_original_mm": [
-      35.5332,
-      -257.172,
-      -342.2
-    ],
-    "source": "Original confirmed insertion source; legacy reverse CSV is not used for magnetic generation",
-    "arc_definition": "0 at anal entry; increases to deep endpoint; decreases during withdrawal",
-    "verification": {
-      "passed": true,
-      "tolerance_mm": 1.0,
-      "insertion_start_error_mm": 0.0,
-      "insertion_end_error_mm": 0.12552629311812327,
-      "withdrawal_start_error_mm": 0.12552629311812327,
-      "withdrawal_end_error_mm": 0.14570013328774636
-    }
-  },
+  "magnetic_model": "finite-winding-core-coupled-v1",
+  "data": "Recorded compact-source dynamics; same original camera and slowdown logic; hypothetical hardware parameters",
+  "magnetic_validation": "Model-consistent feasibility; no independent FEM or hardware measurements",
   "manifest": {
-    "schema": 1,
-    "method": "eight-coil-field-priority-dynamics-v1",
+    "schema": 2,
+    "method": "finite-winding-core-coupled-v1",
     "sha256": {
-      "metadata.json": "fe4e6bb2689eaea5da24129a7514dd53df41257fdc5e90d2f8f470f77fdb33e3",
-      "arrays.npz": "5cbbf563456eaa8f9c74cdff607d5e69d1feca9e5d814578e7648aba152dab37",
-      "algorithms.json": "90769190fd115b692c05149004ac76db7d877b6eb5a4ee51ea52857dd5f1c79f"
+      "metadata.json": "5a503207ca02aae2fb75b7b88fa3e418fd9f8f593b3b65becda6e497fe3fab6a",
+      "arrays.npz": "73824ee61dd6208ed64b21e261eb6382769754ceccf0c4b003e57df603adbcd0",
+      "algorithms.json": "d36b6ff78bc220bbff3c66c23c634290ed67da6122f89686c67ad219abef7289",
+      "finite_field.npz": "46dfc093c1f157c686ea20ee321142a39c420d55b1f68b5f09fe3333276bb566"
     }
   }
 }

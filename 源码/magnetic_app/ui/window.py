@@ -205,7 +205,10 @@ class MainWindow(QMainWindow):
             layout.addLayout(line)
         layout.addLayout(row('透明度', self.combo('opacity', [('0.12', .12), ('0.22', .22), ('0.45', .45)], .22), '视锥', self.combo('frustum_length', [('15 mm', 15.), ('25 mm', 25.), ('40 mm', 40.)], 25.), self.combo('slice_plane', [('XY', 'XY'), ('XZ', 'XZ'), ('YZ', 'YZ')], 'XY')))
         route_hint = '肛门入口 → 肠道深部 → 肛门入口。' if self.replay.payload.get('routeDirection') else ''
-        self.field_hint = label(route_hint+'八线圈磁源空间叠加；含电流限幅，仍是点偶极仿真，非有限元或实测场。', 'muted', True)
+        source_hint = ('八线圈有限绕组＋有限铁芯＋近似互耦；磁场显示同源查表，非有限元或实测场。'
+                       if self.replay.coils is not None and self.replay.coils.finite
+                       else '八线圈磁源空间叠加；含电流限幅，仍是点偶极仿真，非有限元或实测场。')
+        self.field_hint = label(route_hint+source_hint, 'muted', True)
         layout.addWidget(self.field_hint)
         layout.addWidget(label(f'<span style="color:{INSERTION}">● 进镜有效覆盖</span>　<span style="color:{WITHDRAWAL}">● 退镜新增</span>　<span style="color:#687688">● 尚未覆盖</span>'))
         layout.addWidget(self.main_view)
@@ -336,6 +339,22 @@ class MainWindow(QMainWindow):
             grid.addWidget(tile, index//2, index%2)
             self.live_values[key] = (value, unit)
         layout.addLayout(grid)
+        self.coil_table = None
+        if self.replay.coils is not None and self.replay.coils.finite:
+            layout.addWidget(label('八路线圈 · 铁芯 52×32 mm\n绕组长 44 mm / 外径 56 mm · 1200 匝\n每路 ±10 A · 电阻 12.310 Ω', 'muted', True))
+            self.coil_table = QTableWidget(8, 4)
+            self.coil_table.setHorizontalHeaderLabels(['线圈', 'I / A', 'P / W', '磁化 / %'])
+            self.coil_table.verticalHeader().hide()
+            self.coil_table.horizontalHeader().setSectionResizeMode(QHeaderView.ResizeMode.Stretch)
+            self.coil_table.setEditTriggers(QAbstractItemView.EditTrigger.NoEditTriggers)
+            self.coil_table.setFixedHeight(262)
+            for coil_index in range(8):
+                for column in range(4):
+                    self.coil_table.setItem(coil_index, column, QTableWidgetItem(''))
+            layout.addWidget(self.coil_table)
+            self.coil_power = label('', 'muted', True)
+            layout.addWidget(self.coil_power)
+            layout.addWidget(button('各路线圈完整参数 ↗', self.show_coil_parameters))
         propulsion_toggle = QCheckBox('推进参数 · 需求 / 施加')
         propulsion_toggle.setChecked(True)
         self.controls['propulsion_parameters'] = propulsion_toggle
@@ -372,7 +391,7 @@ class MainWindow(QMainWindow):
             self.state_table.setItem(index, 1, QTableWidgetItem(''))
         layout.addWidget(self.state_table)
         layout.addWidget(button('导出回放 CSV ↓', self.export_csv))
-        layout.addWidget(label('6 DOF 刚体仿真，单偶极无法直接控制轴向滚转。全空间箭头由八磁源直接计算，单路±10 A；未模拟热、电感或肠壁接触。', 'muted', True))
+        layout.addWidget(label('6 DOF 刚体仿真，胶囊单磁矩无法直接控制轴向滚转。全空间箭头由八个有限磁源同模型查表叠加，单路±10 A；未模拟热、电感或肠壁接触。', 'muted', True))
         return panel
 
     def make_timeline(self):
@@ -448,6 +467,15 @@ class MainWindow(QMainWindow):
         self.phase_badge.setText(f'{replay.phase(frame.time)} · {frame.time:.2f} s')
         for key, (widget, unit) in self.live_values.items():
             widget.setText(f'{replay.value(frame, key):.3f}<small> {unit}</small>')
+        if self.coil_table is not None:
+            coil_rows = replay.coils.parameter_rows(frame)
+            for coil_index, coil in enumerate(coil_rows):
+                values = [coil['coil'], f'{coil["current_a"]:+.3f}', f'{coil["power_w"]:.1f}',
+                          f'{coil["saturation_fraction"]*100:.1f}']
+                for column, text in enumerate(values):
+                    self.coil_table.item(coil_index, column).setText(text)
+            total_power = sum(coil['power_w'] for coil in coil_rows)
+            self.coil_power.setText(f'当前总阻性功耗 {total_power:.1f} W\n磁化为均匀铁芯模型的饱和占比；假设主动冷却，未计算温升或电感。')
         angles = replay.camera_value(frame, 'joint_angle_deg')
         velocities = replay.camera_value(frame, 'joint_velocity_deg_s')
         accelerations = replay.camera_value(frame, 'joint_acceleration_deg_s2')
@@ -561,6 +589,37 @@ class MainWindow(QMainWindow):
             QMessageBox.information(self, '导出完成', f'已保存到：\n{filename}')
         except Exception as exception:
             QMessageBox.warning(self, '导出失败', str(exception))
+
+    def show_coil_parameters(self):
+        dialog = QDialog(self)
+        dialog.setWindowTitle('八路线圈参数 · 仿真假设，不是实测硬件')
+        dialog.resize(1100, 700)
+        layout = QVBoxLayout(dialog)
+        layout.addWidget(label('铁芯尺寸：长 52 mm、直径 32 mm；绕组外径是 56 mm，不是 32 mm。各路独立调电流，阵列保持相对布局整体平移。', wrap=True))
+        rows = self.replay.coils.parameter_rows(self.current_frame)
+        definitions = [('线圈', 'coil'), ('铁芯长 / mm', 'core_length_mm'), ('铁芯直径 / mm', 'core_diameter_mm'),
+            ('绕组长 / mm', 'winding_length_mm'), ('绕组内径 / mm', 'winding_inner_diameter_mm'),
+            ('绕组外径 / mm', 'winding_outer_diameter_mm'), ('匝数', 'turns'), ('铜线直径 / mm', 'copper_diameter_mm'),
+            ('含绝缘直径 / mm', 'insulated_diameter_mm'), ('相对磁导率', 'relative_permeability'),
+            ('假设饱和极化 / T', 'saturation_polarization_t'), ('电流上限 / A', 'current_limit_a'),
+            ('电阻 / Ω', 'resistance_ohm'), ('理想驱动电压上限 / V', 'ideal_driver_voltage_limit_v'),
+            ('距阵列中心 / mm', 'anchor_distance_mm'), ('相对中心 XYZ / mm', 'offset_mm'), ('轴线单位向量', 'axis'),
+            ('当前中心 XYZ / mm', 'position_mm'), ('当前电流 / A', 'current_a'), ('当前阻性电压 / V', 'voltage_v'),
+            ('当前阻性功耗 / W', 'power_w'), ('平均磁化饱和占比', 'saturation_fraction')]
+        table = QTableWidget(len(definitions), 8)
+        table.setHorizontalHeaderLabels([coil['coil'] for coil in rows])
+        table.setVerticalHeaderLabels([title for title, key in definitions])
+        table.setEditTriggers(QAbstractItemView.EditTrigger.NoEditTriggers)
+        for row_index, (title, key) in enumerate(definitions):
+            for column, coil in enumerate(rows):
+                value = coil[key]
+                text = ' / '.join(f'{component:.4g}' for component in value) if isinstance(value, list) else (f'{value:.6g}' if isinstance(value, (float, int)) else value)
+                table.setItem(row_index, column, QTableWidgetItem(text))
+        table.resizeColumnsToContents()
+        layout.addWidget(table)
+        layout.addWidget(label('此表固定在打开时刻。仅铁芯尺寸由用户指定，其余为假设；近似考虑铁芯互耦和平均磁化饱和检查，不含非线性 B–H、温升、电感动态、人体/机械臂碰撞。未做实物或独立有限元验证。', 'muted', True))
+        layout.addWidget(button('关闭', dialog.accept))
+        dialog.exec()
 
     def show_docs(self):
         dialog = QDialog(self)

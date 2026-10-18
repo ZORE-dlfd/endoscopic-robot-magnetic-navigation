@@ -1,9 +1,10 @@
 {
-  "schema": 1,
-  "method": "eight-coil-field-priority-dynamics-v1",
+  "schema": 2,
+  "method": "finite-winding-core-coupled-v1",
   "sha256": {
-    "metadata.json": "fe4e6bb2689eaea5da24129a7514dd53df41257fdc5e90d2f8f470f77fdb33e3",
-    "arrays.npz": "5cbbf563456eaa8f9c74cdff607d5e69d1feca9e5d814578e7648aba152dab37",
-    "algorithms.json": "90769190fd115b692c05149004ac76db7d877b6eb5a4ee51ea52857dd5f1c79f"
+    "metadata.json": "5a503207ca02aae2fb75b7b88fa3e418fd9f8f593b3b65becda6e497fe3fab6a",
+    "arrays.npz": "73824ee61dd6208ed64b21e261eb6382769754ceccf0c4b003e57df603adbcd0",
+    "algorithms.json": "d36b6ff78bc220bbff3c66c23c634290ed67da6122f89686c67ad219abef7289",
+    "finite_field.npz": "46dfc093c1f157c686ea20ee321142a39c420d55b1f68b5f09fe3333276bb566"
   }
 }

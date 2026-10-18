@@ -67,12 +67,15 @@ def test_same_time_field_formula(replay):
     frame = replay.frame(replay.times[4000])
     points = np.array([frame.position, frame.position + [10, 20, 30]])
     field = replay.field(frame, points, 'total')
-    np.testing.assert_allclose(field[0], replay.vector(frame, 'applied_field', 'mT'))
+    np.testing.assert_allclose(field[0], replay.vector(frame, 'applied_field', 'mT'), rtol=.002, atol=.002)
     affine = field[0] + replay.gradient(frame) @ np.array([10, 20, 30])
     assert np.linalg.norm(field[1] - affine) > .001
-    from magnetic_app.domain.coil_sources import source_field
+    from coil_simulation.finite_sources import CoilDesign, FiniteArray
+    array = FiniteArray(CoilDesign(turns=1200), layout_scale=.75)
     positions, currents, moments = replay.coils.at(frame)
-    np.testing.assert_allclose(field, source_field(points,positions,moments),atol=1e-12)
+    anchor = positions[0]/1000.-array.offsets[0]
+    exact = np.array([array.responses(point/1000.-anchor)[0]@currents for point in points])*1000.
+    np.testing.assert_allclose(field, exact, rtol=.002, atol=.002)
 
 
 def test_all_recorded_columns_readable(replay):

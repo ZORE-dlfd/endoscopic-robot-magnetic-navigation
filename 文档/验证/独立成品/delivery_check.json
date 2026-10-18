@@ -7,6 +7,7 @@
   "external_anaconda_modules": [],
   "child_process_names": [],
   "loaded_module_paths": [
+    "C:\\$Extend\\$Deleted\\000500000014678A08F0BF22",
     "C:\\Program Files\\WindowsApps\\Microsoft.LanguageExperiencePackzh-CN_26100.163.263.0_neutral__8wekyb3d8bbwe\\Windows\\System32\\zh-CN\\a284960c04c9bcd1d23289321f222b5f\\user32.dll.mui",
     "C:\\Program Files\\WindowsApps\\Microsoft.WindowsTerminal_1.24.12741.0_x64__8wekyb3d8bbwe\\CascadiaCode.ttf",
     "C:\\Program Files\\WindowsApps\\Microsoft.WindowsTerminal_1.24.12741.0_x64__8wekyb3d8bbwe\\CascadiaCodeItalic.ttf",
@@ -447,10 +448,11 @@
     "C:\\Windows\\Fonts\\webdings.ttf",
     "C:\\Windows\\Fonts\\wingding.ttf",
     "C:\\Windows\\Globalization\\Sorting\\SortDefault.nls",
-    "C:\\Windows\\ServiceProfiles\\LocalService\\AppData\\Local\\FontCache\\FontCache-Obsolete-687.dat",
+    "C:\\Windows\\ServiceProfiles\\LocalService\\AppData\\Local\\FontCache\\FontCache-Obsolete-765.dat",
     "C:\\Windows\\ServiceProfiles\\LocalService\\AppData\\Local\\FontCache\\~FontCache-FontFace.dat",
     "C:\\Windows\\ServiceProfiles\\LocalService\\AppData\\Local\\FontCache\\~FontCache-S-1-5-21-2607683911-2917164295-2905597224-1001.dat",
     "C:\\Windows\\System32\\C_1252.NLS",
+    "C:\\Windows\\System32\\C_932.NLS",
     "C:\\Windows\\System32\\C_936.NLS",
     "C:\\Windows\\System32\\CoreMessaging.dll",
     "C:\\Windows\\System32\\D3D12.dll",
@@ -545,10 +547,10 @@
     "C:\\Windows\\System32\\zh-CN\\kernel32.dll.mui",
     "C:\\Windows\\WinSxS\\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.26100.9711_none_3e07b8b0e334e825\\comctl32.dll"
   ],
-  "runtime_file_count": 233,
-  "runtime_bytes": 603929219,
+  "runtime_file_count": 234,
+  "runtime_bytes": 644560646,
   "forbidden_runtime_files": [],
-  "exe_sha256": "151adc68f5166b96ab6234f7bc11f844a62043336a11c8905176b36a89d58ba4",
+  "exe_sha256": "7c5ecce5095eebbdfdee5fa523aececec3bb69a9e89c29e7011cd41d1855cef3",
   "patient_posture": {
     "schema": 1,
     "posture": "supine",
@@ -643,9 +645,9 @@
       "passed": true,
       "tolerance_mm": 1.0,
       "insertion_start_error_mm": 0.0,
-      "insertion_end_error_mm": 0.12552629311812327,
-      "withdrawal_start_error_mm": 0.12552629311812327,
-      "withdrawal_end_error_mm": 0.14570013328774636
+      "insertion_end_error_mm": 0.12146883165292541,
+      "withdrawal_start_error_mm": 0.12146883165292541,
+      "withdrawal_end_error_mm": 0.13157557712171078
     }
   },
   "route_endpoints": {
@@ -655,39 +657,39 @@
       161.34166088867187
     ],
     "actual_turn_mm": [
-      17.94770681229677,
-      25.715669668413813,
-      49.736659746034164
+      17.951244413377598,
+      25.71769750953089,
+      49.736660041522384
     ],
     "actual_finish_mm": [
-      -16.52483852964887,
-      189.67625669619414,
-      161.31341942393678
+      -16.521141610031602,
+      189.6895677929457,
+      161.31678048678725
     ],
     "timeline_captions": [
       "肛门入口 · 开始进镜",
-      "肠道深部 · 开始退镜　294.84 s",
+      "肠道深部 · 开始退镜　295.78 s",
       "回到肛门入口"
     ]
   },
-  "csv_rows": 5987,
+  "csv_rows": 6014,
   "csv_columns": 146,
   "unique_pose_draw_fps": {
     "insertion_1x": {
-      "main": 62.34430264558891,
-      "camera": 62.37678855046753
+      "main": 52.367834286463655,
+      "camera": 52.38284130527966
     },
     "withdrawal_1x": {
-      "main": 62.54370838199657,
-      "camera": 62.54705472714095
+      "main": 57.17209298664792,
+      "camera": 57.18499049679542
     },
     "withdrawal_5x": {
-      "main": 62.20130831422055,
-      "camera": 62.206034161000304
+      "main": 57.6647987868734,
+      "camera": 57.66953979652269
     },
     "slider_16ms_requests": {
-      "main": 50.29550250524688,
-      "camera": 50.28852853719797
+      "main": 40.24184997497769,
+      "camera": 40.24161877811318
     }
   },
   "limitation": "Same computer, separate Unicode path and restricted environment; not a clean Windows VM or another physical computer."

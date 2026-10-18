@@ -22,15 +22,16 @@ def test_complete_route_has_independent_endpoint_checks(replay):
         assert phase['complete'] and phase['route_arc_unchanged']
         assert phase['endpoint_distance_mm'] < 1.
         assert phase['route_length_mm']-phase['progress_mm'] < .151
-        assert phase['peak_current_a'] <= 10.
+        assert phase['peak_current_a'] <= 10.+1e-7
 
 
 def test_recorded_motion_uses_source_field_force_and_torque(replay):
     config = replay.robot['config']
     for index in np.linspace(0,len(replay.times)-1,50,dtype=int):
         frame = replay.frame(replay.times[index])
-        field = replay.field(frame,frame.position)/1000.
-        gradient = replay.gradient(frame)
+        field = replay.vector(frame, 'applied_field', 'mT')/1000.
+        gradient = np.array([[replay.value(frame, f'applied_G_{first}{second}_T_m')
+                              for second in 'xyz'] for first in 'xyz'])
         moment = config['magnetic_moment_A_m2']*frame.body_rotation[:,0]
         force = replay.vector(frame,'applied_force','mN')/1000.
         torque = replay.vector(frame,'applied_torque','uN_m')/1e6
@@ -72,7 +73,8 @@ def test_supine_posture_keeps_world_gravity_and_array_above_capsule(replay):
     np.testing.assert_allclose(posture['gravity_m_s2'], [0., 0., -9.81])
     span = np.ptp(replay.points, axis=0)
     assert span[1] > span[2] and replay.points[:, 2].min() == pytest.approx(20.)
-    assert np.all(replay.coils.positions[:, :, 2]-replay.positions[:, None, 2] > 60.)
+    assert np.all(replay.coils.positions[:, :, 2]-replay.positions[:, None, 2] > 40.)
+    assert np.min(replay.coils.offsets[:, 2])*1000. == pytest.approx(48.75)
     assert np.all(replay.payload['coilSources']['axes'][:, 2] < 0.)
     assert replay.payload['magneticSimulation']['patient_posture'] == posture
 

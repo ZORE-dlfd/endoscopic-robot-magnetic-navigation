@@ -92,5 +92,7 @@ def test_replay_rejects_wrong_actual_entry_even_with_valid_serialized_data(contr
     for index, axis in enumerate('xyz'):
         payload['datasets']['capsule_roundtrip'][f'actual_position_{axis}_mm'][0] = deep[index]
     save_payload(payload, tmp_path)
+    import shutil
+    shutil.copy2(ROOT/'数据'/'clon001'/'finite_field.npz', tmp_path/'finite_field.npz')
     with pytest.raises(ValueError, match='入口|方向'):
         Replay(tmp_path, load_predictive=False)

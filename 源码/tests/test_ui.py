@@ -10,7 +10,7 @@ sys.path.insert(0, str(ROOT/'源码'))
 from PySide6.QtCore import QEvent, QPoint, QPointF, Qt, QTimer
 from PySide6.QtTest import QTest
 from PySide6.QtGui import QMouseEvent
-from PySide6.QtWidgets import QApplication, QComboBox, QLabel, QPlainTextEdit, QToolTip
+from PySide6.QtWidgets import QApplication, QComboBox, QLabel, QPlainTextEdit, QTableWidget, QToolTip
 
 from magnetic_app.domain.replay import Replay
 from magnetic_app.ui.window import MainWindow
@@ -78,6 +78,29 @@ def test_parameter_visibility_toggles(window):
         assert readout.isHidden()
         window.controls[key].setChecked(True)
         assert not readout.isHidden()
+
+
+def test_compact_coil_live_table_and_full_parameters(application, window):
+    assert window.coil_table.rowCount() == 8 and window.coil_table.columnCount() == 4
+    window.seek(window.replay.duration*.6)
+    window.update_readouts()
+    for index in range(8):
+        assert window.coil_table.item(index, 0).text() == f'C{index+1}'
+        assert abs(float(window.coil_table.item(index, 1).text())) <= 10.0001
+    captured = []
+
+    def inspect_dialog():
+        dialog = application.activeModalWidget()
+        try:
+            table = dialog.findChild(QTableWidget)
+            captured.append((table.rowCount(), table.columnCount(), table.item(1, 0).text(),
+                             table.item(2, 0).text(), table.item(5, 0).text(), table.item(6, 0).text()))
+        finally:
+            dialog.accept()
+
+    QTimer.singleShot(50, inspect_dialog)
+    window.show_coil_parameters()
+    assert captured == [(22, 8, '52', '32', '56', '1200')]
 
 
 def test_all_state_charts_and_final_values(window):

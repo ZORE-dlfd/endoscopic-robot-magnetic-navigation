@@ -122,7 +122,7 @@ class Replay:
         self.coils = None
         if 'coilSources' in self.payload:
             from .coil_sources import CoilSources
-            self.coils = CoilSources(self.payload['coilSources'])
+            self.coils = CoilSources(self.payload['coilSources'], self.path)
         self.prediction = self.payload.get('cameraPrediction')
         if load_predictive and self.coils is None:
             from .predictive import apply_prediction
@@ -195,16 +195,12 @@ class Replay:
 
     def gradient(self, frame):
         if self.coils is not None:
-            from .coil_sources import source_gradient
-            positions, currents, moments = self.coils.at(frame)
-            return source_gradient(frame.position, positions, moments)
+            return self.coils.gradient(frame)
         return np.array([[self.value(frame, f'applied_G_{first}{second}_T_m') for second in 'xyz'] for first in 'xyz'])
 
     def field(self, frame, points, mode='total'):
         if self.coils is not None:
-            from .coil_sources import source_field
-            positions, currents, moments = self.coils.at(frame)
-            result = source_field(points, positions, moments)
+            result = self.coils.field(frame, points)
             axis = frame.body_rotation[:, 0]
             if mode == 'turning':
                 return (result - np.sum(result * axis, axis=-1, keepdims=True) * axis) * 1000.

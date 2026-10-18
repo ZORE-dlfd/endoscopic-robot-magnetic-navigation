@@ -1,0 +1,263 @@
+{
+  "passed": true,
+  "modified_original_files": [
+    "源码\\magnetic_app\\domain\\coil_sources.py",
+    "源码\\magnetic_app\\domain\\replay.py",
+    "源码\\magnetic_app\\rendering\\view.py",
+    "源码\\magnetic_app\\ui\\window.py",
+    "源码\\tests\\test_magnetic_dynamics.py",
+    "源码\\tests\\test_replay.py",
+    "源码\\tests\\test_route_direction.py",
+    "源码\\tests\\test_ui.py"
+  ],
+  "protected_code_unchanged": true,
+  "tests": "83 passed",
+  "source_records": [
+    {
+      "path": "源码\\main.py",
+      "sha256_before": "0e8662355e991f532b6424b2cfbf938c4f61fdc923cd7174309dd9730f017931",
+      "sha256_after": "0e8662355e991f532b6424b2cfbf938c4f61fdc923cd7174309dd9730f017931"
+    },
+    {
+      "path": "源码\\coil_simulation\\__init__.py",
+      "sha256_before": "45dbc823431544e2b5dc1eb9f1ec57606d9ab7b236c112c21b93392f047baaba",
+      "sha256_after": "45dbc823431544e2b5dc1eb9f1ec57606d9ab7b236c112c21b93392f047baaba"
+    },
+    {
+      "path": "源码\\coil_simulation\\coil_physics.py",
+      "sha256_before": "2eed1db11cbe446ec384619379d4c8257b3662422efee283b87f7b5c64352a55",
+      "sha256_after": "2eed1db11cbe446ec384619379d4c8257b3662422efee283b87f7b5c64352a55"
+    },
+    {
+      "path": "源码\\coil_simulation\\coupled_camera.py",
+      "sha256_before": "0d26e9d6996bdb66785231f310818781bde1cf44f5b96cff97b0373467c7cc23",
+      "sha256_after": "0d26e9d6996bdb66785231f310818781bde1cf44f5b96cff97b0373467c7cc23"
+    },
+    {
+      "path": "源码\\coil_simulation\\export.py",
+      "sha256_before": "3788c23415ce3c68202198b243abf8182b5ea2c7c5de0309c04a5ca0b86d741c",
+      "sha256_after": "3788c23415ce3c68202198b243abf8182b5ea2c7c5de0309c04a5ca0b86d741c"
+    },
+    {
+      "path": "源码\\coil_simulation\\model.py",
+      "sha256_before": "dbf145d26482af6bc4c386d2ce7a6e0740f4f9b4b0a51092c3fd6d45b266d167",
+      "sha256_after": "dbf145d26482af6bc4c386d2ce7a6e0740f4f9b4b0a51092c3fd6d45b266d167"
+    },
+    {
+      "path": "源码\\coil_simulation\\path_guidance.py",
+      "sha256_before": "3d668726114266d889877bacea0f1b2e8682a09406d0500d9dc350d9d16e7afb",
+      "sha256_after": "3d668726114266d889877bacea0f1b2e8682a09406d0500d9dc350d9d16e7afb"
+    },
+    {
+      "path": "源码\\coil_simulation\\posture.py",
+      "sha256_before": "2bb8347cd8f19ea6cc84b728c4a31a7b8d4ca6fd9e5af2cf51af87723d848a31",
+      "sha256_after": "2bb8347cd8f19ea6cc84b728c4a31a7b8d4ca6fd9e5af2cf51af87723d848a31"
+    },
+    {
+      "path": "源码\\coil_simulation\\redundant_actuator.py",
+      "sha256_before": "0b392e8d52c13b51fe099f9003f77dd39e091c0e9307ec621c0470c5c7b71df8",
+      "sha256_after": "0b392e8d52c13b51fe099f9003f77dd39e091c0e9307ec621c0470c5c7b71df8"
+    },
+    {
+      "path": "源码\\coil_simulation\\route_direction.py",
+      "sha256_before": "70fead05f01b461216947b6a104031af007ab56a6500049c0dbb32251d1e6325",
+      "sha256_after": "70fead05f01b461216947b6a104031af007ab56a6500049c0dbb32251d1e6325"
+    },
+    {
+      "path": "源码\\coil_simulation\\simulation.py",
+      "sha256_before": "641b380b20518e3b8ad6d5c53dec84205744e46155fe7b2f1288738c4096c105",
+      "sha256_after": "641b380b20518e3b8ad6d5c53dec84205744e46155fe7b2f1288738c4096c105"
+    },
+    {
+      "path": "源码\\magnetic_app\\__init__.py",
+      "sha256_before": "46c663463329acd7039bdef0a9145293aad32e04d7f0dd06ca2719c99f0eb014",
+      "sha256_after": "46c663463329acd7039bdef0a9145293aad32e04d7f0dd06ca2719c99f0eb014"
+    },
+    {
+      "path": "源码\\magnetic_app\\app.py",
+      "sha256_before": "59c5e3a4e1a58aec5ea47ca96682c4c9aaaf2ad46f8c36236f2c6be6402cb17b",
+      "sha256_after": "59c5e3a4e1a58aec5ea47ca96682c4c9aaaf2ad46f8c36236f2c6be6402cb17b"
+    },
+    {
+      "path": "源码\\magnetic_app\\domain\\__init__.py",
+      "sha256_before": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sha256_after": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "源码\\magnetic_app\\domain\\algorithms.py",
+      "sha256_before": "9bc4ee4837c3501aed8ca642a62bce1adf5ccb58d036fd429db44b573fb84fa4",
+      "sha256_after": "9bc4ee4837c3501aed8ca642a62bce1adf5ccb58d036fd429db44b573fb84fa4"
+    },
+    {
+      "path": "源码\\magnetic_app\\domain\\clock.py",
+      "sha256_before": "6daa2105de469c31762cbed7b9355152dd4de329515fb10ad413174d9916235d",
+      "sha256_after": "6daa2105de469c31762cbed7b9355152dd4de329515fb10ad413174d9916235d"
+    },
+    {
+      "path": "源码\\magnetic_app\\domain\\coil_sources.py",
+      "sha256_before": "be71e0d01cacd24d9ad78a123a4774cbf3e9236b11316bde6b4f9734ef230bef",
+      "sha256_after": "c347909f9adf6691eb43da80ba2df8fffaf9e414adf9df6f660feb2c9604ad86"
+    },
+    {
+      "path": "源码\\magnetic_app\\domain\\predictive.py",
+      "sha256_before": "ca119ba3541e959da05ddcfbb74841ba3c445f75d4d395832099b888f8264b10",
+      "sha256_after": "ca119ba3541e959da05ddcfbb74841ba3c445f75d4d395832099b888f8264b10"
+    },
+    {
+      "path": "源码\\magnetic_app\\domain\\probe.py",
+      "sha256_before": "ed30a0183093ec080a6c90b4dc36749de4aef36060184fa23d6e135f1d8c5030",
+      "sha256_after": "ed30a0183093ec080a6c90b4dc36749de4aef36060184fa23d6e135f1d8c5030"
+    },
+    {
+      "path": "源码\\magnetic_app\\domain\\replay.py",
+      "sha256_before": "fbcf197627a04d58c4849448a634a49fc096052a740936abe91e8e3646aff388",
+      "sha256_after": "fdd616062da98a2ff2f12dd3399166a8c42ce7eea4e47adf90172de37c96d175"
+    },
+    {
+      "path": "源码\\magnetic_app\\rendering\\__init__.py",
+      "sha256_before": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sha256_after": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "源码\\magnetic_app\\rendering\\geometry.py",
+      "sha256_before": "b1f84d8c59668f8cee23409bd727be15f6016fe3a7a6a4f4639732031eb97657",
+      "sha256_after": "b1f84d8c59668f8cee23409bd727be15f6016fe3a7a6a4f4639732031eb97657"
+    },
+    {
+      "path": "源码\\magnetic_app\\rendering\\picking.py",
+      "sha256_before": "21e02cfb59c0edccf264f319335963178147507fc93e189a1192a3aabba74008",
+      "sha256_after": "21e02cfb59c0edccf264f319335963178147507fc93e189a1192a3aabba74008"
+    },
+    {
+      "path": "源码\\magnetic_app\\rendering\\view.py",
+      "sha256_before": "877a545bc3b4fa5aebee3fc925883859131d8463ae9eba1edd34b922e7067c63",
+      "sha256_after": "1a510ee5ee529101f3a11566e847edebab7d02cdfd765f4b7bd41e2e5f1ae2e1"
+    },
+    {
+      "path": "源码\\magnetic_app\\ui\\__init__.py",
+      "sha256_before": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sha256_after": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "源码\\magnetic_app\\ui\\chart.py",
+      "sha256_before": "dbe7b790ae759974d6e71e320ab8667a2ea46b5e4e58120097fee45147c5fe22",
+      "sha256_after": "dbe7b790ae759974d6e71e320ab8667a2ea46b5e4e58120097fee45147c5fe22"
+    },
+    {
+      "path": "源码\\magnetic_app\\ui\\style.py",
+      "sha256_before": "f124b566900262abf30c8e15eeb6213820f4e93746d11de1ed80226bfa95c079",
+      "sha256_after": "f124b566900262abf30c8e15eeb6213820f4e93746d11de1ed80226bfa95c079"
+    },
+    {
+      "path": "源码\\magnetic_app\\ui\\window.py",
+      "sha256_before": "df78cc43e5613c201859807ee29b46b551acf08f81f30cc331d0ac841a1dd4dd",
+      "sha256_after": "3acc9b082e03db39f1497d800562118ad361a3e88700ae585b43afe340a64c58"
+    },
+    {
+      "path": "源码\\retreat_planner\\__init__.py",
+      "sha256_before": "d6fd330e3e5fac72ab6aed6fc09bf29ef6738764b9a90b98997940804f09982e",
+      "sha256_after": "d6fd330e3e5fac72ab6aed6fc09bf29ef6738764b9a90b98997940804f09982e"
+    },
+    {
+      "path": "源码\\retreat_planner\\config.py",
+      "sha256_before": "ade9b12aa3a7ed717bd1a2c97166ca804e13bf4326cb17d4a990df9e63510f23",
+      "sha256_after": "ade9b12aa3a7ed717bd1a2c97166ca804e13bf4326cb17d4a990df9e63510f23"
+    },
+    {
+      "path": "源码\\retreat_planner\\controller.py",
+      "sha256_before": "1255c7d8b7a25ad195eb323513b04737d442f66f5f3e619d42bb6a7b608f4d0b",
+      "sha256_after": "1255c7d8b7a25ad195eb323513b04737d442f66f5f3e619d42bb6a7b608f4d0b"
+    },
+    {
+      "path": "源码\\retreat_planner\\coverage.py",
+      "sha256_before": "54d9404339363f443732ece22e8b0373710965af0a5fdea736d49e62d2a6e762",
+      "sha256_after": "54d9404339363f443732ece22e8b0373710965af0a5fdea736d49e62d2a6e762"
+    },
+    {
+      "path": "源码\\retreat_planner\\experiment.py",
+      "sha256_before": "bf68709df34cd173b367a6ce801e60a074b0f24318ce9cfa269875b3e44def76",
+      "sha256_after": "bf68709df34cd173b367a6ce801e60a074b0f24318ce9cfa269875b3e44def76"
+    },
+    {
+      "path": "源码\\retreat_planner\\geometry.py",
+      "sha256_before": "b776844bce4dcce3da9cac588a696fcf1c70f1f38e7b1a8e44aa714994aa1e96",
+      "sha256_after": "b776844bce4dcce3da9cac588a696fcf1c70f1f38e7b1a8e44aa714994aa1e96"
+    },
+    {
+      "path": "源码\\retreat_planner\\planning.py",
+      "sha256_before": "3a105fee93329550e5a59e280998b047f6cfe6a42da7a26cd393d8eebdb5d1da",
+      "sha256_after": "3a105fee93329550e5a59e280998b047f6cfe6a42da7a26cd393d8eebdb5d1da"
+    },
+    {
+      "path": "源码\\retreat_planner\\scene.py",
+      "sha256_before": "a849222b8a379af55e1d4a549efa4879843a940200d6f1118e1e1afa8ead0361",
+      "sha256_after": "a849222b8a379af55e1d4a549efa4879843a940200d6f1118e1e1afa8ead0361"
+    },
+    {
+      "path": "源码\\retreat_planner\\search.py",
+      "sha256_before": "5c161cccf87b7dd875eb6cd7f5f37c0c332340a5e8fd4903bf48120b602f80c9",
+      "sha256_after": "5c161cccf87b7dd875eb6cd7f5f37c0c332340a5e8fd4903bf48120b602f80c9"
+    },
+    {
+      "path": "源码\\retreat_planner\\visibility.py",
+      "sha256_before": "12d9c61b585c623e03f412c81ed052156e1b787e063dd9b2d5b4e3c76a8df382",
+      "sha256_after": "12d9c61b585c623e03f412c81ed052156e1b787e063dd9b2d5b4e3c76a8df382"
+    },
+    {
+      "path": "源码\\tests\\test_clock.py",
+      "sha256_before": "5a506a368e830612b33e2a2a8d21262dcf76c56be76e516720a42735825c284b",
+      "sha256_after": "5a506a368e830612b33e2a2a8d21262dcf76c56be76e516720a42735825c284b"
+    },
+    {
+      "path": "源码\\tests\\test_coil_sources.py",
+      "sha256_before": "279f36b1f092403ac91cd3cf39b2d2aec07f05380b9f52d08ae714623bc069e4",
+      "sha256_after": "279f36b1f092403ac91cd3cf39b2d2aec07f05380b9f52d08ae714623bc069e4"
+    },
+    {
+      "path": "源码\\tests\\test_geometry.py",
+      "sha256_before": "4f24547eb71d96accee33a46c46cf99abd08899524af9602d862b463cd7a5dc0",
+      "sha256_after": "4f24547eb71d96accee33a46c46cf99abd08899524af9602d862b463cd7a5dc0"
+    },
+    {
+      "path": "源码\\tests\\test_magnetic_dynamics.py",
+      "sha256_before": "aa225f6daf5d0732306e9ac23b31be89500598fea13e650a321949731dd8434e",
+      "sha256_after": "eee0944ffacae26f1f29ee9342fbc70e587b0a10be664abd561e7ee998d2fdea"
+    },
+    {
+      "path": "源码\\tests\\test_planner_core.py",
+      "sha256_before": "71c677fd569b9f245e54fe49b8072294ecae14bad3569bf0429bd920e61f2c04",
+      "sha256_after": "71c677fd569b9f245e54fe49b8072294ecae14bad3569bf0429bd920e61f2c04"
+    },
+    {
+      "path": "源码\\tests\\test_planner_prediction.py",
+      "sha256_before": "4d838973197e2a5ab0f5b9431e848f1f138d82f5d1db8b7ab8dec15c792c1bec",
+      "sha256_after": "4d838973197e2a5ab0f5b9431e848f1f138d82f5d1db8b7ab8dec15c792c1bec"
+    },
+    {
+      "path": "源码\\tests\\test_posture.py",
+      "sha256_before": "326f80fb09e7de0c1d45f02d5cbb773320a476cbde0e9a6f7d5a996c79afe792",
+      "sha256_after": "326f80fb09e7de0c1d45f02d5cbb773320a476cbde0e9a6f7d5a996c79afe792"
+    },
+    {
+      "path": "源码\\tests\\test_predictive.py",
+      "sha256_before": "cc9af6fc9024c2283c8e0ae12c0e9e4b904697ad70cbab4ec3bf8f333b8ff625",
+      "sha256_after": "cc9af6fc9024c2283c8e0ae12c0e9e4b904697ad70cbab4ec3bf8f333b8ff625"
+    },
+    {
+      "path": "源码\\tests\\test_replay.py",
+      "sha256_before": "9639076298e606388f1d138c29348d0ed7217900c81ad3d3ad71897c4bc44210",
+      "sha256_after": "7f3c776d971978859023b232fbf515a448819b7e60d5680e07b5d55853c6896d"
+    },
+    {
+      "path": "源码\\tests\\test_route_direction.py",
+      "sha256_before": "d32adca52545ea3f29c93363d6eb3ffc805c7d8aae2262b23bfabed10f27af9d",
+      "sha256_after": "6fab8667c0335183c1ed782353d156af3626c2dd1ae75f9a059b909fb3502412"
+    },
+    {
+      "path": "源码\\tests\\test_ui.py",
+      "sha256_before": "ecf5d6403de34d5dba02780ee9cd91756ef6236298f6e50129d76459cb246bec",
+      "sha256_after": "bd912653c0674ac11d16681a4eca228e420c518a8ebc556b651e4c9e65b768d2"
+    }
+  ],
+  "scope": "Only source evaluation/display, source data and related tests/docs changed; controller, risk/path, friction, gravity and camera planner code unchanged"
+}

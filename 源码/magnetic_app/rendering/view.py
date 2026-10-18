@@ -354,7 +354,8 @@ class SceneView(QOpenGLWidget):
                     painter.setPen(QColor('#718198'))
             if self.replay.coils is not None and self.options['field']:
                 positions, currents, moments = self.replay.coils.at(frame)
-                painter.drawText(12, 22, '八线圈磁源 · 圆环仅示意 · 电流 [A]')
+                description = '有限铁芯 52×32 mm · 绕组外径 56 mm' if self.replay.coils.finite else '圆环仅示意'
+                painter.drawText(12, 22, '八线圈磁源 · '+description+' · 电流 [A]')
                 for row_index in range(2):
                     values = '   '.join(f'C{index+1} {currents[index]:+.2f}' for index in range(row_index*4,row_index*4+4))
                     painter.drawText(12, 40+row_index*17, values)
@@ -424,9 +425,21 @@ class SceneView(QOpenGLWidget):
                     horizontal = np.cross(axis, reference)
                     horizontal /= np.linalg.norm(horizontal)
                     vertical = np.cross(axis, horizontal)
-                    ring = position + 12.*(np.cos(ring_angles)[:,None]*horizontal + np.sin(ring_angles)[:,None]*vertical)
                     color = (.08, .57, .71) if current >= 0 else (.91, .38, .12)
-                    data.append(segments(ring, color))
+                    if self.replay.coils.finite:
+                        design = self.replay.coils.design
+                        for radius, length, outline in [
+                            (design['winding_outer_radius_m']*1000., design['winding_length_m']*1000., color),
+                            (design['core_radius_m']*1000., design['core_length_m']*1000., (.40, .43, .49))]:
+                            circle = radius*(np.cos(ring_angles)[:, None]*horizontal+np.sin(ring_angles)[:, None]*vertical)
+                            for side in [-1., 1.]:
+                                data.append(segments(position+side*length/2*axis+circle, outline))
+                            for direction in [horizontal, -horizontal, vertical, -vertical]:
+                                data.append(segments(np.array([position-length/2*axis+radius*direction,
+                                                               position+length/2*axis+radius*direction]), outline))
+                    else:
+                        ring = position + 12.*(np.cos(ring_angles)[:,None]*horizontal + np.sin(ring_angles)[:,None]*vertical)
+                        data.append(segments(ring, color))
                     data.append(arrows(position, axis*np.sign(current), color, 18.))
         for key, prefix, unit, color, gain in [('force', 'applied_force', 'mN', (.10, .51, .37), 3), ('torque', 'applied_torque', 'uN_m', (.72, .13, .40), 450)]:
             if options[key]:

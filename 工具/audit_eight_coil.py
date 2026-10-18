@@ -53,13 +53,24 @@ def main():
     assert all(value<1. for value in direction_errors.values())
     assert direction['verification']['passed']
     assert direction['insertion_start_label']=='肛门入口' and direction['withdrawal_end_label']=='肛门入口'
-    assert np.all(replay.coils.positions[:,:,2]-replay.positions[:,None,2]>60.)
+    assert np.all(replay.coils.positions[:,:,2]-replay.positions[:,None,2]>40.)
+    from coil_simulation.finite_sources import CoilDesign, FiniteArray
+    array = FiniteArray(CoilDesign(turns=1200), layout_scale=.75)
+    maximum_lookup_field_error_mt = 0.
+    maximum_lookup_gradient_error_t_m = 0.
     maximum_force_error = 0.
     maximum_dynamics_error = 0.
     for index in range(0,len(replay.times),11):
         frame = replay.frame(replay.times[index])
         moment = config['magnetic_moment_A_m2']*frame.body_rotation[:,0]
-        field_force = replay.gradient(frame).T@moment
+        positions, currents, moments = replay.coils.at(frame)
+        anchor = positions[0]/1000.-array.offsets[0]
+        exact_field, exact_gradient = array.responses(frame.position/1000.-anchor)
+        exact_field = exact_field@currents
+        exact_gradient = np.einsum('i,ijk->jk', currents, exact_gradient)
+        maximum_lookup_field_error_mt = max(maximum_lookup_field_error_mt, float(np.linalg.norm(replay.field(frame, frame.position)-exact_field*1000.)))
+        maximum_lookup_gradient_error_t_m = max(maximum_lookup_gradient_error_t_m, float(np.linalg.norm(replay.gradient(frame)-exact_gradient)))
+        field_force = exact_gradient.T@moment
         recorded_force = replay.vector(frame,'applied_force','mN')/1000.
         maximum_force_error = max(maximum_force_error,float(np.linalg.norm(field_force-recorded_force)))
         resistance = replay.vector(frame,'applied_resistance','mN')/1000.
@@ -77,9 +88,11 @@ def main():
         minimum_searched_directions=min(row['searched_direction_count'] for row in replay.prediction['decisions']),
         maximum_searched_directions=max(row['searched_direction_count'] for row in replay.prediction['decisions']),
         maximum_force_reconstruction_error_n=maximum_force_error,maximum_dynamics_reconstruction_error_m_s2=maximum_dynamics_error,
+        maximum_lookup_field_error_mt=maximum_lookup_field_error_mt,
+        maximum_lookup_gradient_error_t_m=maximum_lookup_gradient_error_t_m,
         simulation_reports=replay.payload['magneticSimulation']['reports'],coverage=replay.summary,
         replay_rows=len(replay.times),replay_columns=len(replay.data),duration_s=replay.duration,
-        limitation='Internal consistency of the same point-dipole model; not independent FEM, hardware or clinical validation')
+        limitation='Internal consistency of the same finite winding, uniform-core and approximate mutual-coupling model; not independent FEM, hardware or clinical validation')
     destination = ROOT/'文档'/'验证'/'磁源与相机逻辑核验.json'
     destination.parent.mkdir(parents=True,exist_ok=True)
     destination.write_text(json.dumps(report,ensure_ascii=False,indent=2,allow_nan=False),'utf-8')

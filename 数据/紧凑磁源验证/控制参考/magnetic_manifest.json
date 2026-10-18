@@ -1,0 +1,9 @@
+{
+  "schema": 1,
+  "method": "eight-coil-field-priority-dynamics-v1",
+  "sha256": {
+    "metadata.json": "fe4e6bb2689eaea5da24129a7514dd53df41257fdc5e90d2f8f470f77fdb33e3",
+    "arrays.npz": "5cbbf563456eaa8f9c74cdff607d5e69d1feca9e5d814578e7648aba152dab37",
+    "algorithms.json": "90769190fd115b692c05149004ac76db7d877b6eb5a4ee51ea52857dd5f1c79f"
+  }
+}

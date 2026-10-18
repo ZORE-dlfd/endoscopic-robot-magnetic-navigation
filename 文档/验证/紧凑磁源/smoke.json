@@ -1,0 +1,466 @@
+{
+  "insertion_1x": {
+    "tick_ms": {
+      "count": 235,
+      "median": 0.4121000019949861,
+      "p95": 1.8051199956971684,
+      "max": 2.236500004073605
+    },
+    "readout_ms": {
+      "count": 35,
+      "median": 1.240899997355882,
+      "p95": 1.6710599964426363,
+      "max": 1.7511999976704828
+    },
+    "main": {
+      "draw_cpu_ms": {
+        "count": 233,
+        "median": 2.2570000000996515,
+        "p95": 9.454659998300478,
+        "max": 11.050200002500787
+      },
+      "swap_interval_ms": {
+        "count": 233,
+        "median": 14.885800002957694,
+        "p95": 28.475260002596766,
+        "max": 228.17389999545412
+      },
+      "swap_fps": 58.38820488090287,
+      "driver": {
+        "vendor": "NVIDIA Corporation",
+        "renderer": "NVIDIA GeForce RTX 5060 Laptop GPU/PCIe/SSE2",
+        "version": "3.3.0 NVIDIA 582.05"
+      },
+      "ready": true,
+      "error": null,
+      "unique_pose_interval_ms": {
+        "count": 232,
+        "median": 15.470750000531552,
+        "p95": 25.792039998486867,
+        "max": 229.86609999497887
+      },
+      "unique_pose_draw_fps": 58.17127513970473
+    },
+    "camera": {
+      "draw_cpu_ms": {
+        "count": 233,
+        "median": 0.2730999985942617,
+        "p95": 0.5588800006080418,
+        "max": 0.7744000031379983
+      },
+      "swap_interval_ms": {
+        "count": 233,
+        "median": 14.885899996443186,
+        "p95": 28.475720000278667,
+        "max": 228.17380000196863
+      },
+      "swap_fps": 58.38820195454386,
+      "driver": {
+        "vendor": "NVIDIA Corporation",
+        "renderer": "NVIDIA GeForce RTX 5060 Laptop GPU/PCIe/SSE2",
+        "version": "3.3.0 NVIDIA 582.05"
+      },
+      "ready": true,
+      "error": null,
+      "unique_pose_interval_ms": {
+        "count": 232,
+        "median": 15.440750001289416,
+        "p95": 26.0663149983884,
+        "max": 229.56849999900442
+      },
+      "unique_pose_draw_fps": 58.18854981271033
+    }
+  },
+  "withdrawal_1x": {
+    "tick_ms": {
+      "count": 223,
+      "median": 0.43960000039078295,
+      "p95": 1.9278799947642253,
+      "max": 2.3557999957120046
+    },
+    "readout_ms": {
+      "count": 37,
+      "median": 1.4283999989856966,
+      "p95": 1.5592799987643955,
+      "max": 1.8209999980172142
+    },
+    "main": {
+      "draw_cpu_ms": {
+        "count": 217,
+        "median": 1.8998000014107674,
+        "p95": 9.357899994938634,
+        "max": 10.197499999776483
+      },
+      "swap_interval_ms": {
+        "count": 217,
+        "median": 16.521499994269107,
+        "p95": 33.29304000362754,
+        "max": 50.54699999891454
+      },
+      "swap_fps": 54.487221014136765,
+      "driver": {
+        "vendor": "NVIDIA Corporation",
+        "renderer": "NVIDIA GeForce RTX 5060 Laptop GPU/PCIe/SSE2",
+        "version": "3.3.0 NVIDIA 582.05"
+      },
+      "ready": true,
+      "error": null,
+      "unique_pose_interval_ms": {
+        "count": 216,
+        "median": 16.726700003346195,
+        "p95": 30.466475000139326,
+        "max": 39.77879999729339
+      },
+      "unique_pose_draw_fps": 54.269015580395475
+    },
+    "camera": {
+      "draw_cpu_ms": {
+        "count": 217,
+        "median": 0.22340000577969477,
+        "p95": 0.29139999678591255,
+        "max": 0.4291000004741363
+      },
+      "swap_interval_ms": {
+        "count": 217,
+        "median": 16.522199999599252,
+        "p95": 33.293419994879514,
+        "max": 50.549199993838556
+      },
+      "swap_fps": 54.487188178818016,
+      "driver": {
+        "vendor": "NVIDIA Corporation",
+        "renderer": "NVIDIA GeForce RTX 5060 Laptop GPU/PCIe/SSE2",
+        "version": "3.3.0 NVIDIA 582.05"
+      },
+      "ready": true,
+      "error": null,
+      "unique_pose_interval_ms": {
+        "count": 216,
+        "median": 16.602550000243355,
+        "p95": 30.67607500088343,
+        "max": 40.18029999861028
+      },
+      "unique_pose_draw_fps": 54.27723318089916
+    }
+  },
+  "withdrawal_5x": {
+    "tick_ms": {
+      "count": 248,
+      "median": 0.4195000001345761,
+      "p95": 1.9081949994870224,
+      "max": 2.3201000003609806
+    },
+    "readout_ms": {
+      "count": 36,
+      "median": 1.2915999977849424,
+      "p95": 1.663399996687076,
+      "max": 1.8016000030911528
+    },
+    "main": {
+      "draw_cpu_ms": {
+        "count": 248,
+        "median": 1.850599997851532,
+        "p95": 8.992900003431712,
+        "max": 10.418800004117656
+      },
+      "swap_interval_ms": {
+        "count": 248,
+        "median": 14.749750000191852,
+        "p95": 28.539905000798168,
+        "max": 38.652399998682085
+      },
+      "swap_fps": 62.22589711874627,
+      "driver": {
+        "vendor": "NVIDIA Corporation",
+        "renderer": "NVIDIA GeForce RTX 5060 Laptop GPU/PCIe/SSE2",
+        "version": "3.3.0 NVIDIA 582.05"
+      },
+      "ready": true,
+      "error": null,
+      "unique_pose_interval_ms": {
+        "count": 247,
+        "median": 15.510699995502364,
+        "p95": 25.123350001376817,
+        "max": 33.743200001481455
+      },
+      "unique_pose_draw_fps": 62.12310671966595
+    },
+    "camera": {
+      "draw_cpu_ms": {
+        "count": 248,
+        "median": 0.22329999774228781,
+        "p95": 0.2881300013541477,
+        "max": 0.3907999998773448
+      },
+      "swap_interval_ms": {
+        "count": 248,
+        "median": 14.748300000064773,
+        "p95": 28.541844998835582,
+        "max": 38.65300000325078
+      },
+      "swap_fps": 62.225892434651044,
+      "driver": {
+        "vendor": "NVIDIA Corporation",
+        "renderer": "NVIDIA GeForce RTX 5060 Laptop GPU/PCIe/SSE2",
+        "version": "3.3.0 NVIDIA 582.05"
+      },
+      "ready": true,
+      "error": null,
+      "unique_pose_interval_ms": {
+        "count": 247,
+        "median": 15.475300002435688,
+        "p95": 25.325309998879675,
+        "max": 34.45279999868944
+      },
+      "unique_pose_draw_fps": 62.125502065851066
+    }
+  },
+  "slider_16ms_requests": {
+    "tick_ms": {
+      "count": 208,
+      "median": 0.3696999992826022,
+      "p95": 1.8031250005151378,
+      "max": 2.0319999966886826
+    },
+    "readout_ms": {
+      "count": 36,
+      "median": 1.2558500020531937,
+      "p95": 1.5012250005383976,
+      "max": 1.6880999974091537
+    },
+    "main": {
+      "draw_cpu_ms": {
+        "count": 207,
+        "median": 7.311000001209322,
+        "p95": 9.856730001047254,
+        "max": 10.505600002943538
+      },
+      "swap_interval_ms": {
+        "count": 222,
+        "median": 17.506500000308733,
+        "p95": 27.62522499506302,
+        "max": 34.22409999620868
+      },
+      "swap_fps": 55.55917051662135,
+      "driver": {
+        "vendor": "NVIDIA Corporation",
+        "renderer": "NVIDIA GeForce RTX 5060 Laptop GPU/PCIe/SSE2",
+        "version": "3.3.0 NVIDIA 582.05"
+      },
+      "ready": true,
+      "error": null,
+      "unique_pose_interval_ms": {
+        "count": 206,
+        "median": 18.71345000108704,
+        "p95": 26.162374997511506,
+        "max": 34.587699999974575
+      },
+      "unique_pose_draw_fps": 51.92175129950461
+    },
+    "camera": {
+      "draw_cpu_ms": {
+        "count": 207,
+        "median": 0.2201999959652312,
+        "p95": 0.3136699968308676,
+        "max": 0.42440000106580555
+      },
+      "swap_interval_ms": {
+        "count": 222,
+        "median": 17.50624999840511,
+        "p95": 27.625900000202805,
+        "max": 34.225199997308664
+      },
+      "swap_fps": 55.55916356426877,
+      "driver": {
+        "vendor": "NVIDIA Corporation",
+        "renderer": "NVIDIA GeForce RTX 5060 Laptop GPU/PCIe/SSE2",
+        "version": "3.3.0 NVIDIA 582.05"
+      },
+      "ready": true,
+      "error": null,
+      "unique_pose_interval_ms": {
+        "count": 206,
+        "median": 18.771999999444233,
+        "p95": 26.20277499590884,
+        "max": 34.65670000150567
+      },
+      "unique_pose_draw_fps": 51.92595771824402
+    },
+    "requests": 213
+  },
+  "centerline_hover": {
+    "index": 431,
+    "tooltip": "中心线 #431  ·  弧长 860.3 mm\n归一化风险 0.542  ·  净空 10.26 mm\n曲率 0.05424 mm⁻¹\n目标速度 6.35 mm/s\n风险 / 净空 / 曲率限速 6.35 / 13.33 / 27.16 mm/s",
+    "readout": "中心线 #431  ·  弧长 860.3 mm　归一化风险 0.542  ·  净空 10.26 mm　曲率 0.05424 mm⁻¹　目标速度 6.35 mm/s　风险 / 净空 / 曲率限速 6.35 / 13.33 / 27.16 mm/s　对应当前阶段 t=461.38 s",
+    "chart_linked": true,
+    "event_source": "Qt MouseMove sent to the native view; not a physical mouse test",
+    "cleared_when_hidden": true,
+    "cleared_on_leave": true
+  },
+  "algorithm_sections": [
+    {
+      "title": "机器人运动",
+      "characters": 979,
+      "plain_formula": true
+    },
+    {
+      "title": "磁场解算",
+      "characters": 931,
+      "plain_formula": true
+    },
+    {
+      "title": "进镜摄像头",
+      "characters": 1210,
+      "plain_formula": true
+    },
+    {
+      "title": "退镜摄像头",
+      "characters": 1572,
+      "plain_formula": true
+    }
+  ],
+  "render_errors": [],
+  "python_exceptions": [],
+  "format": "Native Qt Widgets + OpenGL; no HTML / JavaScript / browser runtime.",
+  "scientific_summary": {
+    "insertion_covered_area_mm2": 167744.7258195877,
+    "withdrawal_added_area_mm2": 32974.74844574928,
+    "final_covered_area_mm2": 200719.474265337,
+    "total_lumen_area_mm2": 246417.473972328,
+    "uncovered_area_mm2": 45697.99970699102,
+    "insertion_coverage_pct": 68.0733890805264,
+    "withdrawal_added_pct_of_total_lumen": 13.381659958681443,
+    "withdrawal_added_pct_of_insertion_covered": 19.6576961121354,
+    "coverage_gain_percentage_points": 13.381659958681443,
+    "final_coverage_pct": 81.45504903920784,
+    "coverage_increased": true,
+    "duration_s": 305.42,
+    "wait_count": 0,
+    "forward_cone_limit_deg": 45.0,
+    "method_notice": "Eight-coil dynamics coupled with original dense window search + 1.2 s prediction + 0.01 s PD; actual wall coverage recomputed. Not measured or clinical coverage.",
+    "constraint_violating_steps": 0
+  },
+  "mount_error_mm": 1.6110097386971715e-14,
+  "final_pose_time": 601.2,
+  "patient_posture": {
+    "schema": 1,
+    "posture": "supine",
+    "label": "仰卧姿态假设",
+    "rotation_from_original": [
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0
+      ]
+    ],
+    "translation_mm": [
+      -17.47101593017578,
+      -316.43283462524414,
+      306.9086608886719
+    ],
+    "mapping": "original X -> world X; original Z -> world -Y; original Y -> world Z",
+    "gravity_m_s2": [
+      0.0,
+      0.0,
+      -9.81
+    ],
+    "gravity_frame": "fixed world -Z, not rotated with anatomy",
+    "table_z_mm": 0.0,
+    "table_clearance_mm": 20.0,
+    "array_frame": "fixed world +Z side; currents and motion recomputed",
+    "assumption": "Raw mesh has no verified anatomical orientation; assumed supine placement, not patient registration",
+    "contact_model": false
+  },
+  "route_direction": {
+    "schema": 1,
+    "insertion_start_label": "肛门入口",
+    "insertion_end_label": "肠道深部终点",
+    "withdrawal_start_label": "肠道深部终点",
+    "withdrawal_end_label": "肛门入口",
+    "entry_position_mm": [
+      -16.50084493017578,
+      189.81716537475586,
+      161.34166088867187
+    ],
+    "deep_position_mm": [
+      18.06218406982422,
+      25.767165374755848,
+      49.73666088867185
+    ],
+    "reference_entry_original_mm": [
+      0.970171,
+      -145.567,
+      -506.25
+    ],
+    "reference_deep_original_mm": [
+      35.5332,
+      -257.172,
+      -342.2
+    ],
+    "source": "Original confirmed insertion source; legacy reverse CSV is not used for magnetic generation",
+    "arc_definition": "0 at anal entry; increases to deep endpoint; decreases during withdrawal",
+    "verification": {
+      "passed": true,
+      "tolerance_mm": 1.0,
+      "insertion_start_error_mm": 0.0,
+      "insertion_end_error_mm": 0.12146883165292541,
+      "withdrawal_start_error_mm": 0.12146883165292541,
+      "withdrawal_end_error_mm": 0.13157557712171078
+    }
+  },
+  "route_endpoints": {
+    "actual_start_mm": [
+      -16.50084493017578,
+      189.81716537475586,
+      161.34166088867187
+    ],
+    "actual_turn_mm": [
+      17.951244413377598,
+      25.71769750953089,
+      49.736660041522384
+    ],
+    "actual_finish_mm": [
+      -16.521141610031602,
+      189.6895677929457,
+      161.31678048678725
+    ],
+    "timeline_captions": [
+      "肛门入口 · 开始进镜",
+      "肠道深部 · 开始退镜　295.78 s",
+      "回到肛门入口"
+    ]
+  },
+  "posture_display": {
+    "window_title": "Magnetic · 胶囊视觉导航实验台 — clon001 八线圈仰卧版 · 肛门进镜",
+    "grid_z_range": [
+      0.0,
+      0.0
+    ],
+    "geometry_span_mm": [
+      247.6384735107422,
+      387.7299118041992,
+      194.8888931274414
+    ],
+    "gravity_origin_mm": [
+      -133.8192367553711,
+      -203.8649559020996,
+      229.8888931274414
+    ],
+    "gravity_direction": [
+      0.0,
+      0.0,
+      -1.0
+    ],
+    "default_elevation_deg": 48.0
+  }
+}
