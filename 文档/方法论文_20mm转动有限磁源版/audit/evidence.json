@@ -1,0 +1,403 @@
+{
+  "case": "clon001",
+  "date": "2026-10-18",
+  "replay_rows": 5987,
+  "replay_columns": 146,
+  "face_count": 33696,
+  "route_points": 863,
+  "join_time_s": 294.84000000000003,
+  "duration_s": 598.54,
+  "effective_robot": {
+    "id": "capsule_roundtrip",
+    "shape": "capsule",
+    "name": "胶囊 · 只减速 · 进镜→退镜",
+    "length_mm": 12.0,
+    "diameter_mm": 6.0,
+    "mass_g": 0.5276023668639054,
+    "magnetic_moment_A_m2": 0.025868875739644973,
+    "inertia_kg_m2": [
+      2.1842737988165687e-09,
+      5.745589775147931e-09,
+      5.745589775147931e-09
+    ],
+    "config": {
+      "volume_ratio": 0.10224852071005919,
+      "mass_kg": 0.0005276023668639054,
+      "magnetic_moment_A_m2": 0.025868875739644973,
+      "robot_length_m": 0.012,
+      "robot_diameter_m": 0.006,
+      "friction_coefficient": 0.2,
+      "gravity_m_s2": [
+        0.0,
+        0.0,
+        -9.81
+      ],
+      "friction_smooth_speed_m_s": 0.0005,
+      "bias_field_T": 0.01,
+      "position_kp_s2": 16.0,
+      "position_kd_s": 8.0,
+      "axis_kp_s2": 25.0,
+      "axis_kd_s": 10.0,
+      "initial_position_offset_mm": [
+        0.5,
+        0.0,
+        0.0
+      ],
+      "initial_axis_rotation_deg": [
+        0.0,
+        0.0,
+        3.0
+      ],
+      "ode_method": "DOP853",
+      "max_step_s": 0.08,
+      "rtol": 2e-07,
+      "atol": 1e-10,
+      "display_time_step_s": 0.2,
+      "friction_scan": [
+        0.1,
+        0.2,
+        0.6
+      ],
+      "mass_scale_scan": [
+        0.5,
+        1.0,
+        2.0
+      ],
+      "moment_scale_scan": [
+        0.5,
+        1.0,
+        2.0
+      ],
+      "normal_load_model": "N_eff = M * norm(g), not solved contact load",
+      "gravity_frame_assumption": "Assumed supine anatomy; gravity fixed in world -Z; source anatomical axes unverified",
+      "field_model": "Eight point-dipole coils with bounded currents",
+      "reference_model": "clamped position CubicSpline + RotationSpline; derivatives rebuilt",
+      "friction_model": "smooth equivalent sliding drag, no static friction or contact",
+      "magrobot_runtime_used": false,
+      "sofa_runtime_used": false,
+      "source_state_csv": "C:\\Users\\老白给\\Desktop\\navigate\\dynamic_sim_colon_001\\trajectory_state.csv"
+    },
+    "csv": "capsule_roundtrip_replay.csv",
+    "sample_count": 3172,
+    "state_count": 143
+  },
+  "camera_settings": {
+    "fov_vertical_deg": 60.0,
+    "aspect": 1.3333333333333333,
+    "near_mm": 0.2,
+    "far_mm": 150.0,
+    "max_camera_axis_angle_deg": 45.0,
+    "max_joint_angle_deg": 89.0,
+    "target_alignment_enter_cos": 0.5,
+    "target_alignment_hold_cos": 0.45,
+    "preview_slew_mm_s": 10.0,
+    "max_joint_speed_deg_s": 60.0,
+    "max_joint_acceleration_deg_s2": 150.0,
+    "joint_gain_s2": 12.0,
+    "joint_damping_s": 6.0,
+    "mount_offset_mm": 5.8,
+    "evaluation_step_s": 0.4,
+    "evaluation_width": 160,
+    "evaluation_height": 120,
+    "min_observation_distance_mm": 2.0,
+    "max_observation_distance_mm": 80.0,
+    "max_incidence_deg": 75.0,
+    "min_projected_pixels": 2,
+    "minimum_dwell_s": 0.4,
+    "repeat_gap_s": 0.8,
+    "preview_min_mm": 5.0,
+    "preview_max_mm": 45.0,
+    "visibility_step_mm": 3.0
+  },
+  "report": {
+    "simulation": {
+      "method": "eight-coil-field-priority-dynamics-v1",
+      "reports": [
+        {
+          "complete": true,
+          "duration_s": 294.84000000000003,
+          "endpoint_distance_mm": 0.1255262931181219,
+          "progress_mm": 1722.1992197611667,
+          "route_length_mm": 1722.3136,
+          "wall_seconds": 35.73355439997977,
+          "step_s": 0.02,
+          "peak_current_a": 9.187308814081778,
+          "cross_track_max_mm": 0.586418202448022,
+          "camera_wait_count": 0,
+          "route_arc_unchanged": true
+        },
+        {
+          "complete": true,
+          "duration_s": 303.7,
+          "endpoint_distance_mm": 0.1457001332877296,
+          "progress_mm": 1722.1696041605453,
+          "route_length_mm": 1722.3136,
+          "wall_seconds": 239.9108343999833,
+          "step_s": 0.02,
+          "peak_current_a": 8.982046954996141,
+          "cross_track_max_mm": 0.5289225004175886,
+          "camera_wait_count": 0,
+          "route_arc_unchanged": true
+        }
+      ],
+      "step_s": 0.02,
+      "output_s": 0.1,
+      "coil_count": 8,
+      "field_model": "Point-dipole sources, not FEM or measured hardware",
+      "camera_method": "Original dense window search + 1.2 s prediction + original 0.01 s PD, replanned jointly with new magnetic withdrawal dynamics",
+      "constraints": "10 A current bounds; array translation bound; no inductance, thermal, joint or wall-contact model",
+      "no_position_forcing": true,
+      "no_camera_wait": true,
+      "patient_posture": {
+        "schema": 1,
+        "posture": "supine",
+        "label": "仰卧姿态假设",
+        "rotation_from_original": [
+          [
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0
+          ]
+        ],
+        "translation_mm": [
+          -17.47101593017578,
+          -316.43283462524414,
+          306.9086608886719
+        ],
+        "mapping": "original X -> world X; original Z -> world -Y; original Y -> world Z",
+        "gravity_m_s2": [
+          0.0,
+          0.0,
+          -9.81
+        ],
+        "gravity_frame": "fixed world -Z, not rotated with anatomy",
+        "table_z_mm": 0.0,
+        "table_clearance_mm": 20.0,
+        "array_frame": "fixed world +Z side; currents and motion recomputed",
+        "assumption": "Raw mesh has no verified anatomical orientation; assumed supine placement, not patient registration",
+        "contact_model": false
+      },
+      "route_direction": {
+        "schema": 1,
+        "insertion_start_label": "肛门入口",
+        "insertion_end_label": "肠道深部终点",
+        "withdrawal_start_label": "肠道深部终点",
+        "withdrawal_end_label": "肛门入口",
+        "entry_position_mm": [
+          -16.50084493017578,
+          189.81716537475586,
+          161.34166088867187
+        ],
+        "deep_position_mm": [
+          18.06218406982422,
+          25.767165374755848,
+          49.73666088867185
+        ],
+        "reference_entry_original_mm": [
+          0.970171,
+          -145.567,
+          -506.25
+        ],
+        "reference_deep_original_mm": [
+          35.5332,
+          -257.172,
+          -342.2
+        ],
+        "source": "Original confirmed insertion source; legacy reverse CSV is not used for magnetic generation",
+        "arc_definition": "0 at anal entry; increases to deep endpoint; decreases during withdrawal",
+        "verification": {
+          "passed": true,
+          "tolerance_mm": 1.0,
+          "insertion_start_error_mm": 0.0,
+          "insertion_end_error_mm": 0.12552629311812327,
+          "withdrawal_start_error_mm": 0.12552629311812327,
+          "withdrawal_end_error_mm": 0.14570013328774636
+        }
+      },
+      "coverage_renderer": {
+        "vendor": "NVIDIA Corporation",
+        "renderer": "NVIDIA GeForce RTX 5060 Laptop GPU/PCIe/SSE2",
+        "version": "3.3.0 NVIDIA 582.05"
+      },
+      "color_scale_notice": "99th percentile display scales sampled across the new source field; source equations are not clipped."
+    },
+    "coverage": {
+      "insertion_covered_area_mm2": 165529.21180272102,
+      "withdrawal_added_area_mm2": 31240.718517303467,
+      "final_covered_area_mm2": 196769.9303200245,
+      "total_lumen_area_mm2": 246417.473972328,
+      "uncovered_area_mm2": 49647.54365230352,
+      "insertion_coverage_pct": 67.17429942541716,
+      "withdrawal_added_pct_of_total_lumen": 12.677963950239873,
+      "withdrawal_added_pct_of_insertion_covered": 18.87323583376715,
+      "coverage_gain_percentage_points": 12.677963950239873,
+      "final_coverage_pct": 79.85226337565703,
+      "coverage_increased": true,
+      "duration_s": 303.69999999999993,
+      "wait_count": 0,
+      "forward_cone_limit_deg": 45.0,
+      "method_notice": "Eight-coil dynamics coupled with original dense window search + 1.2 s prediction + 0.01 s PD; actual wall coverage recomputed. Not measured or clinical coverage.",
+      "constraint_violating_steps": 0
+    },
+    "camera_planning": {
+      "method": "dense-short-horizon-pd-v1",
+      "config": {
+        "decision_s": 0.4,
+        "visibility_s": 0.1,
+        "integration_s": 0.01,
+        "horizon_s": 1.2,
+        "coarse_deg": 10.0,
+        "fine_deg": 2.0,
+        "peak_count": 3,
+        "candidate_count": 6,
+        "gain_tolerance": 0.05,
+        "atlas_size": 192,
+        "include_delayed": true
+      },
+      "metrics": {
+        "withdrawal_added_area_mm2": 31240.718517303467,
+        "constraint_violating_steps": 0,
+        "prediction_fallback_count": 0,
+        "planning_mean_ms": 260.63204684239616,
+        "planning_p95_ms": 325.88675497827353,
+        "planning_max_ms": 376.1664000048768,
+        "decision_count": 760,
+        "online_observed_added_area_mm2": 31240.718517303467
+      },
+      "minimum_searched_directions": 243,
+      "maximum_searched_directions": 381
+    }
+  },
+  "current_min_a": [
+    -8.812865377994465,
+    -3.75867528120037,
+    -8.715252009887685,
+    -3.756037016977219,
+    -8.892121887276247,
+    -3.7835468082737895,
+    -8.85698720256908,
+    -3.8067795712967603
+  ],
+  "current_max_a": [
+    9.132528862374198,
+    3.7293155067747845,
+    9.187308814081778,
+    3.88205368210053,
+    8.925551090358457,
+    3.740870534067573,
+    8.982046954996141,
+    3.8078545326401927
+  ],
+  "current_initial_a": [
+    2.572504521659117,
+    0.9460531838802424,
+    4.274851114657926,
+    0.2064302054225282,
+    0.9809784106124726,
+    -2.6338299896966553,
+    -1.3481965743715438,
+    -1.8205896942536053
+  ],
+  "sampled_statistics": {
+    "actual_speed_mm_s": {
+      "min": 0.0,
+      "max": 14.467214701227205,
+      "median": 5.57132809411843,
+      "p95": 11.0041263258372
+    },
+    "ref_speed_mm_s": {
+      "min": 0.09150419106660479,
+      "max": 14.694275905629372,
+      "median": 5.542090386808395,
+      "p95": 11.241808274831556
+    },
+    "position_error_mm": {
+      "min": 0.0,
+      "max": 0.586418202448022,
+      "median": 0.11343837476750505,
+      "p95": 0.30587759103218376
+    },
+    "axis_error_deg": {
+      "min": 0.010796414973506386,
+      "max": 24.7986042466152,
+      "median": 7.563274342633975,
+      "p95": 14.996267099650343
+    },
+    "applied_field_norm_mT": {
+      "min": 10.0,
+      "max": 10.000000012843943,
+      "median": 10.000000000265041,
+      "p95": 10.00000000281165
+    },
+    "applied_field_perpendicular_mT": {
+      "min": 3.6282886889540075e-07,
+      "max": 0.0005068321919466687,
+      "median": 7.280698341243407e-05,
+      "p95": 0.00023713515845173676
+    },
+    "applied_force_norm_mN": {
+      "min": 4.156655988517496,
+      "max": 6.199265179285722,
+      "median": 5.278141538310629,
+      "p95": 6.015105529458294
+    },
+    "applied_gradient_norm_T_m": {
+      "min": 0.1972118802218699,
+      "max": 0.3213696489718823,
+      "median": 0.28846298597273884,
+      "p95": 0.3071177286440592
+    },
+    "time_dilation": {
+      "min": 1.0,
+      "max": 1.25,
+      "median": 1.0,
+      "p95": 1.25
+    },
+    "clearance_mm": {
+      "min": 0.0,
+      "max": 28.60580801893628,
+      "median": 11.288698576026581,
+      "p95": 17.805847190589223
+    }
+  },
+  "inherited_metadata_not_active": {
+    "raw_input_bias_field_T": 0.015,
+    "effective_bias_field_T": 0.01,
+    "raw_config_ode_method": "DOP853",
+    "active_integrator": "RK4, step 0.02 s",
+    "raw_camera_evaluation_step_s": 0.4,
+    "active_final_coverage_step_s": 0.1,
+    "registry_sample_count": 3172,
+    "actual_replay_sample_count": 5987,
+    "insertion_goal": "Inherited look-ahead goal indexed by arc, transformed to actual body; not recomputed from live images",
+    "velocity_policy": "Acceleration actively drives tangent speed toward an upper envelope; not unconstrained speed emergence"
+  },
+  "sampled_field_tracking_error_max_T": 1.1204279235649719e-16,
+  "sampled_force_tracking_error_max_N": 4.250843201608819e-17,
+  "audit_reconstruction": {
+    "maximum_rigid_geometry_error_mm": 0.0,
+    "actual_direction_errors_mm": {
+      "insertion_start_mm": 0.0,
+      "deep_turn_mm": 0.12552629311812327,
+      "withdrawal_finish_mm": 0.14570013328774636
+    },
+    "maximum_force_reconstruction_error_n": 1.2204018722742967e-17,
+    "maximum_dynamics_reconstruction_error_m_s2": 2.3207822569711708e-14
+  },
+  "environment": {
+    "python": "3.13.9 | packaged by Anaconda, Inc. | (main, Oct 21 2025, 19:09:58) [MSC v.1929 64 bit (AMD64)]",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "numpy": "2.3.5",
+    "matplotlib": "3.10.6"
+  }
+}

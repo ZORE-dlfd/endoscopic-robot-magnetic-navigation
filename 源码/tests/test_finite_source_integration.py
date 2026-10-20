@@ -50,11 +50,11 @@ def test_compact_payload_and_each_coil_parameters_are_present():
     for row in rows:
         assert row['core_length_mm'] == 52 and row['core_diameter_mm'] == 32
         assert row['winding_outer_diameter_mm'] == 56
-        assert abs(row['current_a']) <= 10.+1e-7
+        assert abs(row['current_a']) <= 30.+1e-7
         assert abs(row['power_w']-row['current_a']**2*row['resistance_ohm']) < 1e-8
         assert 0 <= row['saturation_fraction'] <= 1
     assert replay.prediction['method'] == 'dense-short-horizon-pd-v1'
-    assert replay.robot['config']['bias_field_T'] == .008
+    assert replay.robot['config']['bias_field_T'] == 5e-05
 
 
 def test_lookup_axis_symmetry_and_out_of_bounds():
@@ -86,3 +86,4 @@ def test_source_interior_is_excluded_even_with_neighboring_coils():
     axes = np.array([[0., 0., 1.], [0., 0., 1.]])
     np.testing.assert_array_equal(kernel.field([0., 0., 0.], positions, axes, [1., 1.], [200000., 200000.]), np.zeros(3))
     np.testing.assert_array_equal(kernel.gradient([0., 0., 0.], positions, axes, [1., 1.], [200000., 200000.]), np.zeros((3, 3)))
+

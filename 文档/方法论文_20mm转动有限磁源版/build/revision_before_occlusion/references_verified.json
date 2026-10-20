@@ -1,0 +1,426 @@
+{
+  "retrieved": "2026-10-18",
+  "records": [
+    {
+      "DOI": "10.1109/tie.2024.3426055",
+      "title": [
+        "Magnetic Field-Priority Force Control for Automated Manipulation in Large Workspaces With Reconfigurable Electromagnetic Actuation System"
+      ],
+      "author": [
+        {
+          "ORCID": "https://orcid.org/0000-0002-4569-1250",
+          "authenticated-orcid": false,
+          "given": "Mingxue",
+          "family": "Cai",
+          "sequence": "first",
+          "affiliation": [
+            {
+              "name": "Guangdong Provincial Key Laboratory of Robotics and Intelligent System, Shenzhen Institutes of Advanced Technology, Chinese Academy of Sciences, Shenzhen, China"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "ORCID": "https://orcid.org/0000-0002-2736-5347",
+          "authenticated-orcid": false,
+          "given": "Zhaoyang",
+          "family": "Qi",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Department of Mechanical and Automation Engineering, The Chinese University of Hong Kong (CUHK), Hong Kong, Shatin NT, China"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "ORCID": "https://orcid.org/0000-0001-6835-6837",
+          "authenticated-orcid": false,
+          "given": "Yanfei",
+          "family": "Cao",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Department of Mechanical and Automation Engineering, The Chinese University of Hong Kong (CUHK), Hong Kong, Shatin NT, China"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "ORCID": "https://orcid.org/0000-0001-6130-7821",
+          "authenticated-orcid": false,
+          "given": "Xinyu",
+          "family": "Wu",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Guangdong Provincial Key Laboratory of Robotics and Intelligent System, Shenzhen Institutes of Advanced Technology, Chinese Academy of Sciences, Shenzhen, China"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "ORCID": "https://orcid.org/0000-0001-8974-4572",
+          "authenticated-orcid": false,
+          "given": "Tiantian",
+          "family": "Xu",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Guangdong Provincial Key Laboratory of Robotics and Intelligent System, Shenzhen Institutes of Advanced Technology, Chinese Academy of Sciences, Shenzhen, China"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "ORCID": "https://orcid.org/0000-0003-1152-8962",
+          "authenticated-orcid": false,
+          "given": "Li",
+          "family": "Zhang",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Department of Mechanical and Automation Engineering, Chow Yuk Ho Technology Centre for Innovative Medicine, and CUHK T Stone Robotics Institute, The Chinese University of Hong Kong, Hong Kong, Shatin NT, China"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        }
+      ],
+      "container-title": [
+        "IEEE Transactions on Industrial Electronics"
+      ],
+      "volume": "72",
+      "issue": "2",
+      "page": "1732-1742",
+      "published": {
+        "date-parts": [
+          [
+            2025,
+            2
+          ]
+        ]
+      },
+      "URL": "https://doi.org/10.1109/tie.2024.3426055"
+    },
+    {
+      "DOI": "10.1109/tro.2010.2073030",
+      "title": [
+        "OctoMag: An Electromagnetic System for 5-DOF Wireless Micromanipulation"
+      ],
+      "author": [
+        {
+          "given": "Michael P.",
+          "family": "Kummer",
+          "sequence": "first",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Jake J.",
+          "family": "Abbott",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Bradley E.",
+          "family": "Kratochvil",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Ruedi",
+          "family": "Borer",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Ali",
+          "family": "Sengul",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Bradley J.",
+          "family": "Nelson",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        }
+      ],
+      "container-title": [
+        "IEEE Transactions on Robotics"
+      ],
+      "volume": "26",
+      "issue": "6",
+      "page": "1006-1017",
+      "published": {
+        "date-parts": [
+          [
+            2010,
+            12
+          ]
+        ]
+      },
+      "URL": "https://doi.org/10.1109/tro.2010.2073030"
+    },
+    {
+      "DOI": "10.1038/s42256-020-00231-9",
+      "title": [
+        "Enabling the future of colonoscopy with intelligent and autonomous magnetic manipulation"
+      ],
+      "author": [
+        {
+          "ORCID": "https://orcid.org/0000-0002-4450-8127",
+          "authenticated-orcid": false,
+          "given": "James W.",
+          "family": "Martin",
+          "sequence": "first",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "ORCID": "https://orcid.org/0000-0003-4891-8411",
+          "authenticated-orcid": false,
+          "given": "Bruno",
+          "family": "Scaglioni",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Joseph C.",
+          "family": "Norton",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Venkataraman",
+          "family": "Subramanian",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "ORCID": "https://orcid.org/0000-0002-2110-4082",
+          "authenticated-orcid": false,
+          "given": "Alberto",
+          "family": "Arezzo",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "ORCID": "https://orcid.org/0000-0001-8654-7290",
+          "authenticated-orcid": false,
+          "given": "Keith L.",
+          "family": "Obstein",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "ORCID": "https://orcid.org/0000-0002-2280-5438",
+          "authenticated-orcid": false,
+          "given": "Pietro",
+          "family": "Valdastri",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        }
+      ],
+      "container-title": [
+        "Nature Machine Intelligence"
+      ],
+      "volume": "2",
+      "issue": "10",
+      "page": "595-606",
+      "published": {
+        "date-parts": [
+          [
+            2020,
+            10,
+            12
+          ]
+        ]
+      },
+      "URL": "https://doi.org/10.1038/s42256-020-00231-9"
+    },
+    {
+      "DOI": "10.1016/j.jcp.2018.10.045",
+      "title": [
+        "Physics-informed neural networks: A deep learning framework for solving forward and inverse problems involving nonlinear partial differential equations"
+      ],
+      "author": [
+        {
+          "ORCID": "https://orcid.org/0000-0002-8467-4568",
+          "authenticated-orcid": false,
+          "given": "M.",
+          "family": "Raissi",
+          "sequence": "first",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "ORCID": "https://orcid.org/0000-0002-2816-3229",
+          "authenticated-orcid": false,
+          "given": "P.",
+          "family": "Perdikaris",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "G.E.",
+          "family": "Karniadakis",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        }
+      ],
+      "container-title": [
+        "Journal of Computational Physics"
+      ],
+      "volume": "378",
+      "issue": null,
+      "page": "686-707",
+      "published": {
+        "date-parts": [
+          [
+            2019,
+            2
+          ]
+        ]
+      },
+      "URL": "https://doi.org/10.1016/j.jcp.2018.10.045"
+    }
+  ],
+  "local_primary_paper": {
+    "path": "C:\\Users\\老白给\\Desktop\\Magnetic_Field-Priority_Force_Control_for_Automated_Manipulation_in_Large_Workspaces_With_Reconfigurable_Electromagnetic_Actuation_System.pdf",
+    "sha256": "8a7bb6568dfa761bfdb314a471fed9900282f19a745be5ec67259d861bdfec27",
+    "pages": 11,
+    "read_sections": "Title, abstract, III (field-priority configuration optimization), IV (experiments)",
+    "scope": "Three independently mobile coils and manipulability-aware multiobjective pose optimization; not the same implementation as our fixed-relative eight-source array"
+  },
+  "fno_primary": {
+    "url": "https://arxiv.org/abs/2010.08895",
+    "title": "Fourier Neural Operator for Parametric Partial Differential Equations",
+    "venue": "ICLR 2021",
+    "scope": "Future work only; no FNO implementation or benchmark in this project"
+  },
+  "citation_policy": "Literature supports background or design principles; all project parameters and results come from local code and data, not from the cited papers."
+}

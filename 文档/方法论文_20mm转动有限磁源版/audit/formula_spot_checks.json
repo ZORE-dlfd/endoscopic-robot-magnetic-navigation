@@ -1,0 +1,24 @@
+{
+  "seed": 20261018,
+  "random_algebra_checks": 100,
+  "max_force_inverse_error_N": 3.903127820947816e-18,
+  "max_gradient_symmetry_error_T_m": 2.220446049250313e-16,
+  "max_gradient_trace_error_T_m": 2.498001805406602e-16,
+  "max_torque_inverse_error_N_m": 5.628263509210544e-20,
+  "max_relative_dipole_gradient_finite_difference_error": 5.164937465070341e-10,
+  "closed_loop_poles": {
+    "lateral": [
+      -4,
+      -4
+    ],
+    "axis": [
+      -5,
+      -5
+    ],
+    "gimbal": [
+      "-3+sqrt(3)j",
+      "-3-sqrt(3)j"
+    ]
+  },
+  "scope": "Algebra and analytic derivative spot-checks only; not new trajectory, hardware, or clinical experiments"
+}

@@ -71,10 +71,13 @@ def test_same_time_field_formula(replay):
     affine = field[0] + replay.gradient(frame) @ np.array([10, 20, 30])
     assert np.linalg.norm(field[1] - affine) > .001
     from coil_simulation.finite_sources import CoilDesign, FiniteArray
-    array = FiniteArray(CoilDesign(turns=1200), layout_scale=.75)
+    from dataclasses import fields
+    design = CoilDesign(**{item.name: replay.coils.design[item.name] for item in fields(CoilDesign)})
+    array = FiniteArray(design, layout_scale=.75)
     positions, currents, moments = replay.coils.at(frame)
-    anchor = positions[0]/1000.-array.offsets[0]
-    exact = np.array([array.responses(point/1000.-anchor)[0]@currents for point in points])*1000.
+    orientation, anchor_mm = replay.coils.pose_at(frame)
+    exact = np.array([orientation @ (array.responses(orientation.T @ ((point-anchor_mm)/1000.))[0]@currents)
+                      for point in points])*1000.
     np.testing.assert_allclose(field, exact, rtol=.002, atol=.002)
 
 

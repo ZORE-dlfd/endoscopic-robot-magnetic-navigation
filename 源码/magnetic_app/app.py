@@ -116,6 +116,20 @@ class SmokeRun:
 
     def exercise_controls(self):
         window = self.window
+        window.clock.set_playing(False)
+        self.visibility_time = window.current_frame.time
+        self.visibility_field = window.replay.field(window.current_frame, [window.current_frame.position]).copy()
+        window.controls['field'].setChecked(False)
+        self.results['coil_visibility'] = dict(independent_of_field=window.main_view.options['coils'])
+        window.main_view.grabFramebuffer().save(str(self.path.parent/'20mm_coils_visible.png'))
+        window.controls['coils'].setChecked(False)
+        window.main_view.grabFramebuffer().save(str(self.path.parent/'20mm_coils_hidden.png'))
+        self.results['coil_visibility'].update(hidden=not window.main_view.options['coils'],
+            time_unchanged=window.current_frame.time == self.visibility_time,
+            field_unchanged=bool(np.array_equal(self.visibility_field,
+                window.replay.field(window.current_frame, [window.current_frame.position]))))
+        window.controls['coils'].setChecked(True)
+        window.controls['field'].setChecked(True)
         self.capture('native_coverage')
         window.scroll.verticalScrollBar().setValue(0)
         self.capture('native_overview')

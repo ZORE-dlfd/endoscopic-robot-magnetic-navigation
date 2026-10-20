@@ -194,3 +194,4 @@ class SpatialRoute:
         return float(self.arc_m[index] + fractions[index]
                      * (self.arc_m[index + 1] - self.arc_m[index]))
 
+

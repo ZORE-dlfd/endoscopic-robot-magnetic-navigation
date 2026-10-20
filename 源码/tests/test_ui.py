@@ -80,13 +80,23 @@ def test_parameter_visibility_toggles(window):
         assert not readout.isHidden()
 
 
+def test_coil_visibility_is_independent_of_field(window):
+    assert window.controls['coils'].isChecked()
+    window.controls['field'].setChecked(False)
+    assert window.main_view.options['coils']
+    window.controls['coils'].setChecked(False)
+    assert not window.main_view.options['coils']
+    window.controls['field'].setChecked(True)
+    assert not window.main_view.options['coils']
+
+
 def test_compact_coil_live_table_and_full_parameters(application, window):
     assert window.coil_table.rowCount() == 8 and window.coil_table.columnCount() == 4
     window.seek(window.replay.duration*.6)
     window.update_readouts()
     for index in range(8):
         assert window.coil_table.item(index, 0).text() == f'C{index+1}'
-        assert abs(float(window.coil_table.item(index, 1).text())) <= 10.0001
+        assert abs(float(window.coil_table.item(index, 1).text())) <= window.replay.coils.limit+1e-4
     captured = []
 
     def inspect_dialog():

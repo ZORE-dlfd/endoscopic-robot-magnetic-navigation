@@ -79,6 +79,8 @@ class MainWindow(QMainWindow):
         version = '八线圈仰卧版' if replay.payload.get('patientPosture') else '八线圈磁源版'
         if replay.payload.get('routeDirection'):
             version += ' · 肛门进镜'
+        if replay.coils is not None and replay.coils.quaternions is not None:
+            version += ' · 转动阵列 · 肠道净距20 mm'
         self.setWindowTitle('Magnetic · 胶囊视觉导航实验台 — clon001 '+version)
         self.setWindowIcon(QIcon(str(replay.path / 'app.ico')))
         self.setStyleSheet(STYLE)
@@ -196,7 +198,7 @@ class MainWindow(QMainWindow):
         layout.addLayout(row(self.combo('field_mode', [('完整场 · mT', 'total'), ('去偏置场 · mT', 'residual'), ('转向分量 · μT', 'turning')]), self.combo('field_scope', [('覆盖中心线', 'centerline'), ('局部', 'local'), ('整体', 'whole')], 'centerline')))
         layers = [
             [('coverage', '已观测 / 退镜补拍', False), ('frustum', '相机视锥', True), ('target', '相机目标', True), ('path', '风险中心线', True)],
-            [('trajectory', '实际轨迹', False), ('robot', '机器人', True), ('field', '磁场箭头', True), ('lines', '磁感线', False), ('slice', '切片', False)],
+            [('trajectory', '实际轨迹', False), ('robot', '机器人', True), ('coils', '磁铁模型', True), ('field', '磁场箭头', True), ('lines', '磁感线', False), ('slice', '切片', False)],
             [('force', '总磁力', True), ('tangent', '沿路径推进', False), ('steering', '转向分量', True), ('torque', '转矩', False), ('gradient', '梯度', True)],
         ]
         for group in layers:
@@ -209,6 +211,8 @@ class MainWindow(QMainWindow):
                        if self.replay.coils is not None and self.replay.coils.finite
                        else '八线圈磁源空间叠加；含电流限幅，仍是点偶极仿真，非有限元或实测场。')
         self.field_hint = label(route_hint+source_hint, 'muted', True)
+        if self.replay.coils is not None and self.replay.coils.quaternions is not None:
+            self.field_hint.setText(self.field_hint.text()+' 八阵列整体转动；记录验证线圈包络到肠道网格净距≥20 mm。磁铁模型可独立隐藏，不改变磁场或轨迹。仅避肠道，不代表人体外表面避碰。')
         layout.addWidget(self.field_hint)
         layout.addWidget(label(f'<span style="color:{INSERTION}">● 进镜有效覆盖</span>　<span style="color:{WITHDRAWAL}">● 退镜新增</span>　<span style="color:#687688">● 尚未覆盖</span>'))
         layout.addWidget(self.main_view)
@@ -341,7 +345,7 @@ class MainWindow(QMainWindow):
         layout.addLayout(grid)
         self.coil_table = None
         if self.replay.coils is not None and self.replay.coils.finite:
-            layout.addWidget(label('八路线圈 · 铁芯 52×32 mm\n绕组长 44 mm / 外径 56 mm · 1200 匝\n每路 ±10 A · 电阻 12.310 Ω', 'muted', True))
+            layout.addWidget(label(f'八路线圈 · 铁芯 52×32 mm\n绕组长 44 mm / 外径 56 mm · 1200 匝\n每路 ±{self.replay.coils.limit:g} A · 电阻 12.310 Ω', 'muted', True))
             self.coil_table = QTableWidget(8, 4)
             self.coil_table.setHorizontalHeaderLabels(['线圈', 'I / A', 'P / W', '磁化 / %'])
             self.coil_table.verticalHeader().hide()
@@ -391,7 +395,7 @@ class MainWindow(QMainWindow):
             self.state_table.setItem(index, 1, QTableWidgetItem(''))
         layout.addWidget(self.state_table)
         layout.addWidget(button('导出回放 CSV ↓', self.export_csv))
-        layout.addWidget(label('6 DOF 刚体仿真，胶囊单磁矩无法直接控制轴向滚转。全空间箭头由八个有限磁源同模型查表叠加，单路±10 A；未模拟热、电感或肠壁接触。', 'muted', True))
+        layout.addWidget(label('6 DOF 刚体仿真，胶囊单磁矩无法直接控制轴向滚转。全空间箭头由八个有限磁源同模型查表叠加；电流上限见线圈参数。未模拟完整温升、电感或肠壁接触；胶囊磁矩4.0 A·m²为理想化假设。', 'muted', True))
         return panel
 
     def make_timeline(self):

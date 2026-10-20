@@ -1,0 +1,134 @@
+[
+  {
+    "path": "源码\\coil_simulation\\__init__.py",
+    "sha256": "45dbc823431544e2b5dc1eb9f1ec57606d9ab7b236c112c21b93392f047baaba"
+  },
+  {
+    "path": "源码\\coil_simulation\\coil_physics.py",
+    "sha256": "2eed1db11cbe446ec384619379d4c8257b3662422efee283b87f7b5c64352a55"
+  },
+  {
+    "path": "源码\\coil_simulation\\coupled_camera.py",
+    "sha256": "0d26e9d6996bdb66785231f310818781bde1cf44f5b96cff97b0373467c7cc23"
+  },
+  {
+    "path": "源码\\coil_simulation\\export.py",
+    "sha256": "3788c23415ce3c68202198b243abf8182b5ea2c7c5de0309c04a5ca0b86d741c"
+  },
+  {
+    "path": "源码\\coil_simulation\\model.py",
+    "sha256": "dbf145d26482af6bc4c386d2ce7a6e0740f4f9b4b0a51092c3fd6d45b266d167"
+  },
+  {
+    "path": "源码\\coil_simulation\\path_guidance.py",
+    "sha256": "3d668726114266d889877bacea0f1b2e8682a09406d0500d9dc350d9d16e7afb"
+  },
+  {
+    "path": "源码\\coil_simulation\\posture.py",
+    "sha256": "2bb8347cd8f19ea6cc84b728c4a31a7b8d4ca6fd9e5af2cf51af87723d848a31"
+  },
+  {
+    "path": "源码\\coil_simulation\\redundant_actuator.py",
+    "sha256": "0b392e8d52c13b51fe099f9003f77dd39e091c0e9307ec621c0470c5c7b71df8"
+  },
+  {
+    "path": "源码\\coil_simulation\\route_direction.py",
+    "sha256": "70fead05f01b461216947b6a104031af007ab56a6500049c0dbb32251d1e6325"
+  },
+  {
+    "path": "源码\\coil_simulation\\simulation.py",
+    "sha256": "641b380b20518e3b8ad6d5c53dec84205744e46155fe7b2f1288738c4096c105"
+  },
+  {
+    "path": "源码\\retreat_planner\\__init__.py",
+    "sha256": "d6fd330e3e5fac72ab6aed6fc09bf29ef6738764b9a90b98997940804f09982e"
+  },
+  {
+    "path": "源码\\retreat_planner\\config.py",
+    "sha256": "ade9b12aa3a7ed717bd1a2c97166ca804e13bf4326cb17d4a990df9e63510f23"
+  },
+  {
+    "path": "源码\\retreat_planner\\controller.py",
+    "sha256": "1255c7d8b7a25ad195eb323513b04737d442f66f5f3e619d42bb6a7b608f4d0b"
+  },
+  {
+    "path": "源码\\retreat_planner\\coverage.py",
+    "sha256": "54d9404339363f443732ece22e8b0373710965af0a5fdea736d49e62d2a6e762"
+  },
+  {
+    "path": "源码\\retreat_planner\\experiment.py",
+    "sha256": "bf68709df34cd173b367a6ce801e60a074b0f24318ce9cfa269875b3e44def76"
+  },
+  {
+    "path": "源码\\retreat_planner\\geometry.py",
+    "sha256": "b776844bce4dcce3da9cac588a696fcf1c70f1f38e7b1a8e44aa714994aa1e96"
+  },
+  {
+    "path": "源码\\retreat_planner\\planning.py",
+    "sha256": "3a105fee93329550e5a59e280998b047f6cfe6a42da7a26cd393d8eebdb5d1da"
+  },
+  {
+    "path": "源码\\retreat_planner\\scene.py",
+    "sha256": "a849222b8a379af55e1d4a549efa4879843a940200d6f1118e1e1afa8ead0361"
+  },
+  {
+    "path": "源码\\retreat_planner\\search.py",
+    "sha256": "5c161cccf87b7dd875eb6cd7f5f37c0c332340a5e8fd4903bf48120b602f80c9"
+  },
+  {
+    "path": "源码\\retreat_planner\\visibility.py",
+    "sha256": "12d9c61b585c623e03f412c81ed052156e1b787e063dd9b2d5b4e3c76a8df382"
+  },
+  {
+    "path": "工具\\audit_eight_coil.py",
+    "sha256": "c71befc00ee7500cd69ca9a1539fd86db1ef5475b01d8b1ba71fb83251ddf546"
+  },
+  {
+    "path": "工具\\audit_predictive.py",
+    "sha256": "e2379ee7da9bf68eaa0681092740938a61372f9d4a83ff38ea29b07bd4b49bcf"
+  },
+  {
+    "path": "工具\\build_native.py",
+    "sha256": "d46eed39497585568694319699de7a2f39bd526319366ec4a13914ded14c5f37"
+  },
+  {
+    "path": "工具\\collect_licenses.py",
+    "sha256": "0242b9418c037c9473411ee892ff0d0510f871b429a6df66d923325473b11420"
+  },
+  {
+    "path": "工具\\finalize_eight_coil_assets.py",
+    "sha256": "226e86384260d79173f80b63d362385d72049dd2c3c95e189f8002a8e7f92df0"
+  },
+  {
+    "path": "工具\\generate_eight_coil.py",
+    "sha256": "ecb59e67b5db3dbddce01ae68493e0ed202d7ac2e33642b91076c26c350705ce"
+  },
+  {
+    "path": "工具\\generate_predictive.py",
+    "sha256": "1b717001a5a515d210d1f1d547f3802c9575bb913922dbfcdb3115564625f818"
+  },
+  {
+    "path": "工具\\migrate_data.py",
+    "sha256": "bb67a3625657602208eb35bc92608c331c01129b49003ece7c16518781e52c73"
+  },
+  {
+    "path": "工具\\verify_native.py",
+    "sha256": "9e9f129ba1d5053200dd5d58ad67ac9914d1ca981e29f46b84f756fb6d20ab10"
+  },
+  {
+    "path": "数据/clon001/arrays.npz",
+    "sha256": "5cbbf563456eaa8f9c74cdff607d5e69d1feca9e5d814578e7648aba152dab37"
+  },
+  {
+    "path": "数据/clon001/metadata.json",
+    "sha256": "fe4e6bb2689eaea5da24129a7514dd53df41257fdc5e90d2f8f470f77fdb33e3"
+  },
+  {
+    "path": "文档/八线圈仿真结果.json",
+    "sha256": "24c1f5ad8a37ac0520e1a773606d6c38466cb926db90a365a8b1bcc3589ef02d"
+  },
+  {
+    "path": "数据/仿真输入/route_direction.json",
+    "sha256": "99cc78ff3e564a7ffd167813404821e5a0d51279ac31d5ad4fa26c20059b9c51"
+  }
+]

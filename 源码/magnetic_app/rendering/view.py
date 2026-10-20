@@ -128,6 +128,7 @@ class SceneView(QOpenGLWidget):
         self.first_person = first_person
         self.frame = replay.frame(0)
         self.options = {'bowel': True, 'coverage': False, 'frustum': True, 'target': True, 'path': True, 'trajectory': False, 'robot': True, 'field': True, 'lines': False, 'slice': False, 'force': True, 'tangent': False, 'steering': True, 'torque': False, 'gradient': True, 'opacity': .22, 'scale': 1., 'frustum_length': 25., 'field_mode': 'total', 'field_scope': 'centerline', 'slice_plane': 'XY', 'view_mode': 'path'}
+        self.options['coils'] = True
         self.domains = Domains(replay)
         bounds = np.array(replay.payload['geometry']['bounds'])
         self.center = bounds.mean(axis=0)
@@ -199,6 +200,7 @@ class SceneView(QOpenGLWidget):
                 self.trajectory = self.create_buffer(segments(self.replay.positions, (.29, .47, .82)))
                 self.body = self.create_buffer(capsule(), GL.GL_TRIANGLES)
                 self.dynamic = self.create_buffer(vertices([]))
+                self.coil_buffer = self.create_buffer(vertices([]))
                 self.onboard = self.create_buffer(vertices([]))
                 self.stream = self.create_buffer(vertices([]))
                 self.slice = self.create_buffer(vertices([]), GL.GL_TRIANGLES)
@@ -324,6 +326,12 @@ class SceneView(QOpenGLWidget):
                 self.last_dynamic = started
                 self.last_dynamic_time = frame.time
             self.draw(self.dynamic)
+            if self.options['coils'] and self.replay.coils is not None:
+                orientation, anchor = self.replay.coils.pose_at(frame)
+                transform = np.eye(4)
+                transform[:3, :3] = orientation
+                transform[:3, 3] = anchor
+                self.draw(self.coil_buffer, transform)
             self.update_onboard()
             self.draw(self.onboard)
             if self.options['lines']:
@@ -352,7 +360,7 @@ class SceneView(QOpenGLWidget):
                     painter.setPen(QColor('#bf2e40'))
                     painter.drawText(int(point[0])+9, int(point[1])+15, '重力 g')
                     painter.setPen(QColor('#718198'))
-            if self.replay.coils is not None and self.options['field']:
+            if self.replay.coils is not None and self.options['coils']:
                 positions, currents, moments = self.replay.coils.at(frame)
                 description = '有限铁芯 52×32 mm · 绕组外径 56 mm' if self.replay.coils.finite else '圆环仅示意'
                 painter.drawText(12, 22, '八线圈磁源 · '+description+' · 电流 [A]')
@@ -417,30 +425,7 @@ class SceneView(QOpenGLWidget):
             magnitudes = np.linalg.norm(field, axis=1)
             maximum = self.replay.registry['field_scope_ranges'][options['field_scope']][options['field_mode']][1]
             data.append(arrows(points, field, risk_color(magnitudes/maximum), field_lengths(magnitudes, options['field_mode'], options['field_scope'])))
-            if self.replay.coils is not None:
-                positions, currents, moments = self.replay.coils.at(frame)
-                ring_angles = np.linspace(0., 2*np.pi, 33)
-                for position, axis, current in zip(positions, self.replay.coils.axes, currents):
-                    reference = np.array([0., 0., 1.]) if abs(axis[2]) < .9 else np.array([0., 1., 0.])
-                    horizontal = np.cross(axis, reference)
-                    horizontal /= np.linalg.norm(horizontal)
-                    vertical = np.cross(axis, horizontal)
-                    color = (.08, .57, .71) if current >= 0 else (.91, .38, .12)
-                    if self.replay.coils.finite:
-                        design = self.replay.coils.design
-                        for radius, length, outline in [
-                            (design['winding_outer_radius_m']*1000., design['winding_length_m']*1000., color),
-                            (design['core_radius_m']*1000., design['core_length_m']*1000., (.40, .43, .49))]:
-                            circle = radius*(np.cos(ring_angles)[:, None]*horizontal+np.sin(ring_angles)[:, None]*vertical)
-                            for side in [-1., 1.]:
-                                data.append(segments(position+side*length/2*axis+circle, outline))
-                            for direction in [horizontal, -horizontal, vertical, -vertical]:
-                                data.append(segments(np.array([position-length/2*axis+radius*direction,
-                                                               position+length/2*axis+radius*direction]), outline))
-                    else:
-                        ring = position + 12.*(np.cos(ring_angles)[:,None]*horizontal + np.sin(ring_angles)[:,None]*vertical)
-                        data.append(segments(ring, color))
-                    data.append(arrows(position, axis*np.sign(current), color, 18.))
+        self.update_coils()
         for key, prefix, unit, color, gain in [('force', 'applied_force', 'mN', (.10, .51, .37), 3), ('torque', 'applied_torque', 'uN_m', (.72, .13, .40), 450)]:
             if options[key]:
                 vector = self.replay.vector(frame, prefix, unit)
@@ -460,6 +445,34 @@ class SceneView(QOpenGLWidget):
         self.dynamic.upload(np.concatenate(data) if data else vertices([]))
         if options['slice']:
             self.update_slice()
+
+    def update_coils(self):
+        source = self.replay.coils
+        data = []
+        if source is not None:
+            positions, currents, moments = source.at(self.frame)
+            if source.quaternions is not None:
+                positions = source.offsets*1000.
+            ring_angles = np.linspace(0., 2*np.pi, 33)
+            for position, axis, current in zip(positions, source.axes, currents):
+                reference = np.array([0., 0., 1.]) if abs(axis[2]) < .9 else np.array([0., 1., 0.])
+                horizontal = np.cross(axis, reference)
+                horizontal /= np.linalg.norm(horizontal)
+                vertical = np.cross(axis, horizontal)
+                color = (.08, .57, .71) if current >= 0 else (.91, .38, .12)
+                sizes = [(12., 0., color)]
+                if source.finite:
+                    sizes = [(source.design['winding_outer_radius_m']*1000., source.design['winding_length_m']*1000., color),
+                             (source.design['core_radius_m']*1000., source.design['core_length_m']*1000., (.40, .43, .49))]
+                for radius, length, outline in sizes:
+                    circle = radius*(np.cos(ring_angles)[:, None]*horizontal+np.sin(ring_angles)[:, None]*vertical)
+                    for side in [-1., 1.]:
+                        data.append(segments(position+side*length/2*axis+circle, outline))
+                    for direction in [horizontal, -horizontal, vertical, -vertical]:
+                        data.append(segments([position-length/2*axis+radius*direction,
+                                              position+length/2*axis+radius*direction], outline))
+                data.append(arrows(position, axis*np.sign(current), color, 18.))
+        self.coil_buffer.upload(np.concatenate(data) if data else vertices([]))
 
     def update_onboard(self):
         frame, options = self.frame, self.options

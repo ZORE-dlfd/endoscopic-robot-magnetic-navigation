@@ -1,0 +1,38 @@
+[
+  {
+    "file": "fig01_architecture",
+    "description_zh": "导航、线圈、动力学、相机、覆盖和减速之间的反馈结构；实际硬件传感闭环尚未实现。",
+    "source": "当前 clon001 回放；无平滑、无统计推断",
+    "width_mm": 174
+  },
+  {
+    "file": "fig02_geometry",
+    "description_zh": "同一真实坐标比例下的仰卧摆放假设、路线和初始八磁源位置；点标记不表示线圈尺寸。",
+    "source": "当前 clon001 回放；无平滑、无统计推断",
+    "width_mm": 174
+  },
+  {
+    "file": "fig03_motion",
+    "description_zh": "实际动力学速度、速度上限、几何风险、路径偏差和长轴误差。曲线为保存样本，不代表连续时间极值。",
+    "source": "当前 clon001 回放；无平滑、无统计推断",
+    "width_mm": 174
+  },
+  {
+    "file": "fig04_currents",
+    "description_zh": "八路电流在进退镜全程独立变化；灰色横虚线为 ±10 A 约束。",
+    "source": "当前 clon001 回放；无平滑、无统计推断",
+    "width_mm": 174
+  },
+  {
+    "file": "fig05_field_force",
+    "description_zh": "总场幅值接近10 mT而方向、梯度与磁力变化。总场轴从零起，避免放大数值舍入误差。",
+    "source": "当前 clon001 回放；无平滑、无统计推断",
+    "width_mm": 174
+  },
+  {
+    "file": "fig06_camera_coverage",
+    "description_zh": "云台关节运动及蓝色进镜、橙色退镜新增去重覆盖；roll包角会出现表示跳变，不等价于真实瞬转。",
+    "source": "当前 clon001 回放；无平滑、无统计推断",
+    "width_mm": 174
+  }
+]
