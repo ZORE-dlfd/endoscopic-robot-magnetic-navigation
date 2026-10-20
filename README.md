@@ -4,9 +4,13 @@
 
 Native **Qt Widgets + OpenGL** desktop visualization of the clon001 capsule-navigation simulation. No HTML, browser, WebView, or JavaScript runtime. The 2026-10-20 update replaces equivalent point dipoles with eight compact finite windings, uniformly magnetized finite cores and approximate mutual coupling. The supine-placement assumption and **anal entry → deep endpoint → anal entry** route are unchanged.
 
+## v2.2.1 display fix
+
+This v2.2.1 update fixes first-person far-plane clipping: the camera far distance is derived from the model bounds (minimum 2000 mm), so valid deep wall geometry is less likely to be clipped. It also fixes a double-click reset regression. Magnetic fields, route data, camera-direction policy, and motion results are unchanged. See `文档/发布说明_v2.2.1.md`.
+
 ## Download and run
 
-Download the complete Windows ZIP from the [v2.2.0 release](https://github.com/ZORE-dlfd/endoscopic-robot-magnetic-navigation/releases/tag/v2.2.0). Extract it completely, then open `八线圈胶囊导航软件/Magnetic_Camera_8Coil.exe`. Keep `_internal`, the data, and third-party notices beside the executable. Do not launch from inside the ZIP or share the EXE alone.
+Download the complete Windows ZIP from the [v2.2.1 release](https://github.com/ZORE-dlfd/endoscopic-robot-magnetic-navigation/releases/tag/v2.2.1). Extract it completely, then open `八线圈胶囊导航软件/Magnetic_Camera_8Coil.exe`. Keep `_internal`, the data, and third-party notices beside the executable. Do not launch from inside the ZIP or share the EXE alone.
 
 The repository also retains the complete application under `软件/`, following its existing layout. Open `软件/Magnetic_Camera_8Coil.exe` after downloading the full repository. Recipients do not need Python, Anaconda, Qt, or a browser.
 
@@ -56,6 +60,4 @@ Reuse an existing compatible environment first. The verified environment is Anac
 This is a single-case, model-consistent research simulation with finite windings, uniform finite cores, approximate mutual coupling and idealized friction. Controller and plant share the same model: it is not independent FEM, measured coil fields, a hardware demonstration or clinical validation. Mean-core saturation is bounded, but nonlinear B–H, hysteresis, heating, inductive dynamics, current slew, tissue contact/deformation, and manipulator/body collisions are absent. Mean resistive power in this run was 69.05 W during insertion and 8.67 W during withdrawal, with ideal cooling assumed; physical continuous operation is not established. The 32 mm diameter is the core only; winding diameter is 56 mm. Geometric coverage is not lesion detection.
 
 Third-party notices are in `软件/第三方许可` and `软件/第三方组件说明.md`. No project-wide license is added. Existing component-source records are not a complete commercial distribution audit.
-
-
 

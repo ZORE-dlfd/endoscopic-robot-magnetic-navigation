@@ -134,6 +134,7 @@ class SceneView(QOpenGLWidget):
         self.center = bounds.mean(axis=0)
         self.radius = np.linalg.norm(bounds[1]-bounds[0])*.5
         self.distance = self.radius*2.6
+        self.first_person_far = max(2000., float(np.linalg.norm(bounds[1] - bounds[0]) * 2.0))
         self.posture = replay.payload.get('patientPosture')
         self.default_view = (42., 48.) if self.posture else (42., 24.)
         self.azimuth, self.elevation = self.default_view
@@ -290,7 +291,7 @@ class SceneView(QOpenGLWidget):
             viewport_height = viewport_width*3/4
             GL.glViewport(int((width-viewport_width)/2*ratio), int((height-viewport_height)/2*ratio), int(viewport_width*ratio), int(viewport_height*ratio))
             eye = frame.camera_position
-            self.projection = perspective(60, 4/3, .2, 150) @ look_at(eye, eye+frame.camera_rotation[:, 0], frame.camera_rotation[:, 2])
+            self.projection = perspective(60, 4/3, .2, self.first_person_far) @ look_at(eye, eye+frame.camera_rotation[:, 0], frame.camera_rotation[:, 2])
         else:
             ratio = self.devicePixelRatioF()
             GL.glViewport(0, 0, int(width*ratio), int(height*ratio))

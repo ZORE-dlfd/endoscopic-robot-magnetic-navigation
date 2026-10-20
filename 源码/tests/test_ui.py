@@ -177,3 +177,18 @@ def test_real_centerline_hover_and_clear(application, window):
     assert view.probe_at(QPointF(point)) >= 0
     QApplication.sendEvent(view, QEvent(QEvent.Type.Leave))
     assert view.probe_index == -1
+
+
+def test_main_view_double_click_resets_without_changing_camera_clip(window):
+    view = window.main_view
+    expected_far = view.first_person_far
+    view.azimuth, view.elevation = 12., 18.
+    view.distance = 10.
+    view.pan[:] = 1.
+
+    view.mouseDoubleClickEvent(None)
+
+    assert (view.azimuth, view.elevation) == view.default_view
+    assert view.distance == view.radius * 2.6
+    assert view.first_person_far == expected_far
+    assert not view.pan.any()
