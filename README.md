@@ -1,63 +1,28 @@
-# Endoscopic Robot Magnetic Navigation
+# 内镜机器人八线圈磁导航
 
-[中文说明](README.zh-CN.md)
+肠道磁导航仿真、磁场代理网络和内镜深度估计的代码与配套资料。
 
-Native **Qt Widgets + OpenGL** desktop visualization of the clon001 capsule-navigation simulation. No HTML, browser, WebView, or JavaScript runtime. The 2026-10-20 update replaces equivalent point dipoles with eight compact finite windings, uniformly magnetized finite cores and approximate mutual coupling. The supine-placement assumption and **anal entry → deep endpoint → anal entry** route are unchanged.
+## 下载即用
 
-## v2.2.1 display fix
+前往 [最新 Release](https://github.com/ZORE-dlfd/endoscopic-robot-magnetic-navigation/releases/latest)，下载 `Windows-Portable-Heatmap-v3.0.0.zip`（若为分卷，下载该名称的全部 `.partNNN` 文件及 `Join-ReleaseParts.ps1`）。完整解压后，进入“软件”目录，双击 `Magnetic_Camera_8Coil.exe`，点击“播放”或按空格。
 
-This v2.2.1 update fixes first-person far-plane clipping: the camera far distance is derived from the model bounds (minimum 2000 mm), so valid deep wall geometry is less likely to be clipped. It also fixes a double-click reset regression. Magnetic fields, route data, camera-direction policy, and motion results are unchanged. See `文档/发布说明_v2.2.1.md`.
+软件内含八线圈与机器人运动回放、内镜视角，以及 **6037 帧模型预测深度缓存**。热力图随播放和时间轴更新，无需安装 Python、CUDA、模型权重或启动深度服务。请保留 EXE 同级的 `_internal` 与 `缓存数据`，不要直接在压缩包中运行。运行环境为 Windows 64 位，显卡驱动需支持 OpenGL 3.3。
 
-## Download and run
+只看演示可下载 `Navigation-Heatmap-Demo.mp4`。
 
-Download the complete Windows ZIP from the [v2.2.1 release](https://github.com/ZORE-dlfd/endoscopic-robot-magnetic-navigation/releases/tag/v2.2.1). Extract it completely, then open `八线圈胶囊导航软件/Magnetic_Camera_8Coil.exe`. Keep `_internal`, the data, and third-party notices beside the executable. Do not launch from inside the ZIP or share the EXE alone.
+## 五个板块
 
-The repository also retains the complete application under `软件/`, following its existing layout. Open `软件/Magnetic_Camera_8Coil.exe` after downloading the full repository. Recipients do not need Python, Anaconda, Qt, or a browser.
+| 板块 | 用途 | 获取方式 |
+|---|---|---|
+| [总仿真软件+代码](总仿真软件+代码) | 八线圈磁场、机器人进退镜、相机与深度热力图；含源码、回放资产、构建工具和深度服务 | 代码在仓库；完整 Windows 软件在 Release |
+| [磁场神经网络训练代码](磁场神经网络训练代码) | 训练与评估 MLP，以局部三维坐标预测八线圈单位电流磁场和梯度；含中线优先加权训练 | 仓库 |
+| [肠道磁场数据包](肠道磁场数据包) | 肠道掩膜、各病例磁响应样本、仿真配置及验证记录，供磁场网络训练与复核 | Release 的 `Magnetic-Field-Dataset-v3.0.0` |
+| [深度模型代码](深度模型代码) | EndoStreamDepth 深度模型与训练代码，供内镜深度估计和深度服务使用 | 仓库 |
+| [深度模型预训练权重](深度模型预训练权重) | `iter_20001_C3VD.pth`，用于搭建深度推理或训练环境；观看缓存无需下载 | Release 的 `Depth-Pretrained-Weights-v3.0.0` |
 
-Target: 64-bit Windows 10/11, with an OpenGL 3.3 Core-capable graphics driver. The executable is unsigned; do not disable security protection. Delivery checks were performed on the same computer in a separate Unicode path with Python/Conda/Qt environment variables removed, not on another physical computer or a clean Windows VM.
+## 开发与资料
 
-## What changed
-
-- **Compact finite sources:** 52 mm long × 32 mm diameter cores; 44 mm long, 34 mm inner and 56 mm outer-diameter windings; 1200 turns per coil, ±30 A. The assumed drive voltage is 400 V, relative permeability 2000 and saturation polarization 2.4 T. Capsule moment is 4.0 A·m²; bias field is 0.05 mT. Only core size was user-specified; other values are hypothetical. Only core size was specified; the remaining hardware parameters are hypotheses. Finite winding/core fields include center-sampled mutual coupling. Field-priority allocation is preserved, with the validated 0.05 mT bias and array translation up to 0.2 m/s. The capsule is not snapped onto the centerline.
-- **Per-coil parameters:** C1–C8 live currents, resistive power and mean magnetization fractions; a separate table lists geometry, wire, material assumptions, resistance, layout, position and voltage. Source outlines use assumed dimensions. Field arrows, slices and streamlines use an axisymmetric response lookup of the same finite model; recorded dynamics use direct source integration.
-- **Supine-placement assumption:** anatomy and reference states share one rigid transform; world gravity remains `(0, 0, -9.81) m/s²`. Currents, motion, camera planning, and coverage were recomputed. The horizontal grid is not a bed/contact model; anatomical registration has not been verified.
-- **Correct entry:** the generator now uses the original confirmed insertion source instead of the reverse-ordered legacy CSV. Generation and loading check actual start, turn, return, and initial camera direction; this is not a label swap or reversed playback.
-- **Preserved camera policy:** dense sliding-FOV search, 1.2 s short-horizon prediction, and the original PD controller. Every 0.4 s, search a 10° coarse grid with 2° local refinement. Among feasible candidates achieving at least 95% of the best predicted coverage gain, prefer smooth motion. This is not a trained CNN or the old fixed 37-direction policy.
-- **Preserved UI:** dual views, timeline dragging, risk hover, field/streamline/slice displays, charts, and status tables. Blue is insertion coverage, orange is additional withdrawal coverage; the two are mutually exclusive. Slowdown is allowed, but no waiting segment is commanded.
-
-Planning and dynamics are precomputed; the application smoothly replays their results rather than solving them per rendered frame. No live endoscopic video or physical robot is controlled.
-
-## Current clon001 validation
-
-| Quantity | Result |
-| --- | ---: |
-| Route length | 1,722.3136 mm |
-| Insertion / withdrawal / total duration | 297.68 / 305.82 / 603.50 s |
-| Start / deep turn / return position error | 0 / 0.1309 / 0.1259 mm |
-| Peak insertion source current | 20.61 A, model bound ±30 A |
-| Insertion coverage | 167,988.41 mm² = 68.1723% |
-| New withdrawal coverage | 32,978.22 mm² = 13.3831 percentage points |
-| Final coverage | 200,966.63 / 246,417.47 mm² = 81.5553% |
-| Withdrawal decisions / directions per decision | 1,530 / 248–301 |
-| Sampled constraint violations / fallback | 0 / 0 |
-| Mean total resistive power, insertion / withdrawal | 69.05 / 8.67 W |
-| Peak mean-core saturation fraction | 98% |
-
-Coverage is reevaluated from actual camera poses, including occlusion and qualified dwell. Playback and mouse events do not add coverage. Planning mean/P95/max was about 345/475/519 ms; this is precomputed offline, not a per-frame cost or hard real-time guarantee. Older point-dipole coverage numbers do not describe this magnetic-source update.
-
-## Project layout and reproduction
-
-- `软件/`: complete distributable runtime and notices; `发布/` is ignored local packaging output.
-- `源码/magnetic_app/`: UI, rendering, and replay; `源码/coil_simulation/`: magnetic sources, dynamics, posture, and route checks.
-- `源码/retreat_planner/`: preserved dense predictive withdrawal planner; `源码/tests/`: numerical, integrity, and UI tests.
-- `数据/clon001/`: current results and hash manifests; `数据/参考原版/`: unchanged reference; `数据/仿真输入/`: model inputs and direction contract.
-- `工具/`: generation, audit, build, and delivery checks; `文档/`: reports and current evidence; `构建/`: ignored dependencies, caches, and local backups.
-
-Reuse an existing compatible environment first. The verified environment is Anaconda Python 3.13.9, NumPy 2.3.5, SciPy 1.16.3, pandas 2.3.3, PySide6 6.9.2, PyOpenGL 3.1.10, pytest 8.4.2, and PyInstaller 6.22.3; offline finite-source integration additionally uses the existing Numba installation. See [current source model and import reproduction](文档/紧凑磁源接入说明.md), [build instructions](文档/构建说明.md), and [validation](文档/验证报告.md). The import reproduces exports from the included completed experiment, not a new full experiment optimization. Build dependencies and personal backups are not committed.
-
-## Limits and licensing
-
-This is a single-case, model-consistent research simulation with finite windings, uniform finite cores, approximate mutual coupling and idealized friction. Controller and plant share the same model: it is not independent FEM, measured coil fields, a hardware demonstration or clinical validation. Mean-core saturation is bounded, but nonlinear B–H, hysteresis, heating, inductive dynamics, current slew, tissue contact/deformation, and manipulator/body collisions are absent. Mean resistive power in this run was 69.05 W during insertion and 8.67 W during withdrawal, with ideal cooling assumed; physical continuous operation is not established. The 32 mm diameter is the core only; winding diameter is 56 mm. Geometric coverage is not lesion detection.
-
-Third-party notices are in `软件/第三方许可` and `软件/第三方组件说明.md`. No project-wide license is added. Existing component-source records are not a complete commercial distribution audit.
-
+- 仿真入口：`总仿真软件+代码/源码/main.py`；磁场训练入口：`磁场神经网络训练代码/train_field.py`。具体配置见各目录说明，本地绝对路径需按解压位置调整。
+- `Source-Snapshot-v3.0.0.zip` 保存本次源码与配套资料快照；与软件、数据、权重包合起来对应本次提供的全部文件。逐文件分发位置见 [资料分发清单](资料分发清单.json)。
+- 超过单附件限制的 ZIP 按字节分卷。把同名全部分卷与 `Join-ReleaseParts.ps1` 放在同一目录，在 PowerShell 运行 `powershell -ExecutionPolicy Bypass -File .\Join-ReleaseParts.ps1`，合并后再解压 ZIP。校验值见 Release 的 `SHA256SUMS.txt`。
+- 深度缓存用于离线回放；重新推理需配置深度服务与权重。保留 EndoStreamDepth、Mamba 等第三方代码的原有许可证与来源说明，软件第三方组件见包内说明。

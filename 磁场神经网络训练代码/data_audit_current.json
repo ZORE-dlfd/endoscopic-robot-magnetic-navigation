@@ -1,0 +1,218 @@
+{
+  "training": {
+    "root": "D:\\mag\\��Ӧ���ݰ�",
+    "records": [
+      {
+        "case_id": "colon_018",
+        "run_name": "baseline_30A_long_4h",
+        "run_folder": "D:\\mag\\��Ӧ���ݰ�\\colon_018\\baseline_30A_long_4h",
+        "samples": 17079,
+        "navigation_status": "complete",
+        "phases": {
+          "smoke": "time_limit_incomplete",
+          "insertion": "complete",
+          "withdrawal": "complete"
+        },
+        "sha256": "ad1db3d7751cbd06a1f509778d5d6dd549dd972ec56cf0eb56faa2a3683aa3f9",
+        "config_hash": "75efc074e0ed00ee97a18cea1f73bde8de196eedce5522eb194206be6239eeb0",
+        "solver_hash": "1750e95e4a51b152bf62a6219cf63ad045ce8e9dd6444f9f1fdf2264f120e505",
+        "package_validation_present": false,
+        "internal_reconstruction_passed": true
+      },
+      {
+        "case_id": "colon_031",
+        "run_name": "baseline_30A_long_4h",
+        "run_folder": "D:\\mag\\��Ӧ���ݰ�\\colon_031\\baseline_30A_long_4h",
+        "samples": 21855,
+        "navigation_status": "complete",
+        "phases": {
+          "smoke": "time_limit_incomplete",
+          "insertion": "complete",
+          "withdrawal": "complete"
+        },
+        "sha256": "472cfae10323159b1a159bd86c927fb1e21f08206f682aa2dc49bdaa7b3d2d5a",
+        "config_hash": "d5918933a1116ea33843bf6b6cfcf56106c01ee514e27dbefc633fe4f4986e49",
+        "solver_hash": "ba9ae0618c186ceb2b65b54a0a0c3f0312ad15e06dbe7228524e78ab1b51dbd0",
+        "package_validation_present": true,
+        "internal_reconstruction_passed": true
+      },
+      {
+        "case_id": "colon_047",
+        "run_name": "baseline_30A_long_4h",
+        "run_folder": "D:\\mag\\��Ӧ���ݰ�\\colon_047\\baseline_30A_long_4h",
+        "samples": 18626,
+        "navigation_status": "complete",
+        "phases": {
+          "smoke": "time_limit_incomplete",
+          "insertion": "complete",
+          "withdrawal": "complete"
+        },
+        "sha256": "0f86beffc0fee524a818452316217f9503ce7112891a41d87a3fadb12c048471",
+        "config_hash": "2f6aaaa245a8121c00a4d02e5495a416a9a0a82970d347fd4a7ac64f499a169b",
+        "solver_hash": "1750e95e4a51b152bf62a6219cf63ad045ce8e9dd6444f9f1fdf2264f120e505",
+        "package_validation_present": false,
+        "internal_reconstruction_passed": true
+      },
+      {
+        "case_id": "colon_048",
+        "run_name": "baseline_30A_long_4h",
+        "run_folder": "D:\\mag\\��Ӧ���ݰ�\\colon_048\\baseline_30A_long_4h",
+        "samples": 19753,
+        "navigation_status": "complete",
+        "phases": {
+          "smoke": "time_limit_incomplete",
+          "insertion": "complete",
+          "withdrawal": "complete"
+        },
+        "sha256": "13624eb5c800317ce675d8ea1a93a825f3545604175a228eb8b3a2d9bdb6eac6",
+        "config_hash": "734c3ed3dfa790875fb4ceffb8612008daa3f67f3dbd7191e7172a1f2a1f5b60",
+        "solver_hash": "1750e95e4a51b152bf62a6219cf63ad045ce8e9dd6444f9f1fdf2264f120e505",
+        "package_validation_present": false,
+        "internal_reconstruction_passed": true
+      },
+      {
+        "case_id": "colon_123",
+        "run_name": "baseline_30A_long_4h",
+        "run_folder": "D:\\mag\\��Ӧ���ݰ�\\colon_123\\baseline_30A_long_4h",
+        "samples": 11803,
+        "navigation_status": "complete",
+        "phases": {
+          "smoke": "time_limit_incomplete",
+          "insertion": "complete",
+          "withdrawal": "complete"
+        },
+        "sha256": "17c0374f8184c1795a6eafafb6e695f2e903602b9cada4693cc13487dead70f5",
+        "config_hash": "b6f93b134a3b987f956c99f8aca14e71377dccab595af9ec76ddfc4d6fd35784",
+        "solver_hash": "1750e95e4a51b152bf62a6219cf63ad045ce8e9dd6444f9f1fdf2264f120e505",
+        "package_validation_present": false,
+        "internal_reconstruction_passed": true
+      },
+      {
+        "case_id": "colon_201",
+        "run_name": "baseline_30A_long_4h",
+        "run_folder": "D:\\mag\\��Ӧ���ݰ�\\colon_201\\baseline_30A_long_4h",
+        "samples": 10951,
+        "navigation_status": "incomplete",
+        "phases": {
+          "smoke": "time_limit_incomplete",
+          "insertion": "invalid_trial"
+        },
+        "sha256": "b19be2de95e245ab29c190d2beff6c174e01f0973ddbc02a04717a88b06d5111",
+        "config_hash": "e4f26c6d0dd20802931d26df697bf197da9f231906b631c597e10c193d200b21",
+        "solver_hash": "1750e95e4a51b152bf62a6219cf63ad045ce8e9dd6444f9f1fdf2264f120e505",
+        "package_validation_present": false,
+        "internal_reconstruction_passed": true
+      },
+      {
+        "case_id": "colon_222",
+        "run_name": "baseline_30A_long_4h",
+        "run_folder": "D:\\mag\\��Ӧ���ݰ�\\colon_222\\baseline_30A_long_4h",
+        "samples": 17751,
+        "navigation_status": "complete",
+        "phases": {
+          "smoke": "time_limit_incomplete",
+          "insertion": "complete",
+          "withdrawal": "complete"
+        },
+        "sha256": "8fde0b45ddc35784b55351f1853b47409bba19710a6cb180d17d22bd108a32ee",
+        "config_hash": "dbcff50601f1edd719f80f0f01fe98200c1004756b160e5fce6776fa73640953",
+        "solver_hash": "1750e95e4a51b152bf62a6219cf63ad045ce8e9dd6444f9f1fdf2264f120e505",
+        "package_validation_present": false,
+        "internal_reconstruction_passed": true
+      },
+      {
+        "case_id": "colon_293",
+        "run_name": "baseline_30A_long_4h",
+        "run_folder": "D:\\mag\\��Ӧ���ݰ�\\colon_293\\baseline_30A_long_4h",
+        "samples": 14670,
+        "navigation_status": "incomplete",
+        "phases": {
+          "smoke": "time_limit_incomplete",
+          "insertion": "complete",
+          "withdrawal": "invalid_trial"
+        },
+        "sha256": "fe3321cb161b561b9eb066a8f1be43112019fe508bf9c389571c6bddb19ab5ad",
+        "config_hash": "6a97584c0b240d43bb458dd90d5b6c7f314936191906f7314fe1df559427eb08",
+        "solver_hash": "1750e95e4a51b152bf62a6219cf63ad045ce8e9dd6444f9f1fdf2264f120e505",
+        "package_validation_present": false,
+        "internal_reconstruction_passed": true
+      },
+      {
+        "case_id": "colon_324",
+        "run_name": "baseline_30A_long_4h",
+        "run_folder": "D:\\mag\\��Ӧ���ݰ�\\colon_324\\baseline_30A_long_4h",
+        "samples": 20227,
+        "navigation_status": "complete",
+        "phases": {
+          "smoke": "time_limit_incomplete",
+          "insertion": "complete",
+          "withdrawal": "complete"
+        },
+        "sha256": "cd066a97e8a2b069b372d75f99c31186e91212fd53a34dc8a5a9ad678a54c89c",
+        "config_hash": "2c593298091d05d8366481848dec9d4ff38e319f42f5ee7298f0c3b6a243a200",
+        "solver_hash": "1750e95e4a51b152bf62a6219cf63ad045ce8e9dd6444f9f1fdf2264f120e505",
+        "package_validation_present": false,
+        "internal_reconstruction_passed": true
+      },
+      {
+        "case_id": "colon_347",
+        "run_name": "baseline_30A_long_4h",
+        "run_folder": "D:\\mag\\��Ӧ���ݰ�\\colon_347\\baseline_30A_long_4h",
+        "samples": 9557,
+        "navigation_status": "incomplete",
+        "phases": {
+          "smoke": "time_limit_incomplete",
+          "insertion": "invalid_trial"
+        },
+        "sha256": "df66fd886b140e6c7ec3bd86463cea5f78cefe855de318c8db20adf70e3ba767",
+        "config_hash": "6c1995d716b3e9e8a7b203af5de85a5d46b2bcbbe8a8ee662a45beb82a3f6c81",
+        "solver_hash": "1750e95e4a51b152bf62a6219cf63ad045ce8e9dd6444f9f1fdf2264f120e505",
+        "package_validation_present": false,
+        "internal_reconstruction_passed": true
+      }
+    ],
+    "skipped": [
+      {
+        "case_id": "colon_046",
+        "reason": "not finalized with a dataset",
+        "status": "preparing"
+      },
+      {
+        "case_id": "colon_175",
+        "reason": "not finalized with a dataset",
+        "status": "preparing"
+      },
+      {
+        "case_id": "colon_356",
+        "reason": "not finalized with a dataset",
+        "status": "preparing"
+      },
+      {
+        "case_id": "colon_363",
+        "reason": "not finalized with a dataset",
+        "status": "preparing"
+      }
+    ],
+    "raw_samples": 162272,
+    "unique_samples": 162272,
+    "exact_duplicates_removed": 0,
+    "case_ids": [
+      "colon_018",
+      "colon_031",
+      "colon_047",
+      "colon_048",
+      "colon_123",
+      "colon_201",
+      "colon_222",
+      "colon_293",
+      "colon_324",
+      "colon_347"
+    ],
+    "physics_signature": "dab65bc9ac3c767f63fe49b3e07ac5ed4767d991f7884d520974758f78b19ae7",
+    "solver_signature": "5e7515848ed41904efc5f452a2e714a0cf86d2125af16e8f5439ad1adbd0f875",
+    "target_order": "coil-major fields[8,3], then gradients[8,3,3]; G[component,coordinate]",
+    "scope": "All local packages are training data; no internal holdout. Incomplete navigation is not a successful trial.",
+    "validation_scope": "Structural/provenance audit plus saved internal reconstruction; not independent solver or hardware validation."
+  },
+  "validation": null
+}

@@ -1,0 +1,19 @@
+{
+  "train_root": "D:/mag/对应数据包",
+  "validation_root": null,
+  "run_name": "baseline_30A_long_4h",
+  "output_dir": "D:/mag/训练结果/field_mlp_v1",
+  "device": "cuda",
+  "include_incomplete": true,
+  "hidden": [128, 128, 128],
+  "epochs": 500,
+  "batch_size": 2048,
+  "learning_rate": 0.001,
+  "weight_decay": 0.000001,
+  "field_weight": 1.0,
+  "gradient_weight": 1.0,
+  "patience": 50,
+  "validation_overlap_radius_m": 0.000001,
+  "cpu_threads": 2,
+  "seed": 20261023
+}

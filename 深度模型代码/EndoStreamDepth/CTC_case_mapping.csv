@@ -1,0 +1,436 @@
+﻿病例号,编号,原始影像文件,原始影像完整路径,受试者编号,性别,体位,数据划分,第0折,NNUNet图像名,标签名
+colon_001,1,1.3.6.1.4.1.9328.50.4.563.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.563.mha,sub001,F,supine,test,test,colon_001_0000.mha,colon_001.mha
+colon_002,2,1.3.6.1.4.1.9328.50.4.2320.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.2320.mha,sub003,M,prone,train,train,colon_002_0000.mha,colon_002.mha
+colon_003,3,1.3.6.1.4.1.9328.50.4.3114.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.3114.mha,sub003,M,supine,train,train,colon_003_0000.mha,colon_003.mha
+colon_004,4,1.3.6.1.4.1.9328.50.4.3828.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.3828.mha,sub004,M,prone,train,train,colon_004_0000.mha,colon_004.mha
+colon_005,5,1.3.6.1.4.1.9328.50.4.4371.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.4371.mha,sub004,M,supine,train,train,colon_005_0000.mha,colon_005.mha
+colon_006,6,1.3.6.1.4.1.9328.50.4.4716.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.4716.mha,sub005,M,prone,test,test,colon_006_0000.mha,colon_006.mha
+colon_007,7,1.3.6.1.4.1.9328.50.4.5094.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.5094.mha,sub005,M,supine,test,test,colon_007_0000.mha,colon_007.mha
+colon_008,8,1.3.6.1.4.1.9328.50.4.5980.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.5980.mha,sub006,M,supine,train,train,colon_008_0000.mha,colon_008.mha
+colon_009,9,1.3.6.1.4.1.9328.50.4.6651.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.6651.mha,sub007,M,prone,train,train,colon_009_0000.mha,colon_009.mha
+colon_010,10,1.3.6.1.4.1.9328.50.4.7198.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.7198.mha,sub007,M,supine,train,train,colon_010_0000.mha,colon_010.mha
+colon_011,11,1.3.6.1.4.1.9328.50.4.8980.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.8980.mha,sub009,F,supine,test,test,colon_011_0000.mha,colon_011.mha
+colon_012,12,1.3.6.1.4.1.9328.50.4.11767.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.11767.mha,sub012,F,prone,train,train,colon_012_0000.mha,colon_012.mha
+colon_013,13,1.3.6.1.4.1.9328.50.4.13405.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.13405.mha,sub014,F,supine,test,test,colon_013_0000.mha,colon_013.mha
+colon_014,14,1.3.6.1.4.1.9328.50.81.16147424463095033147395563721259311594.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.81.16147424463095033147395563721259311594.mha,sub015,Not available,prone,test,test,colon_014_0000.mha,colon_014.mha
+colon_015,15,1.3.6.1.4.1.9328.50.81.14835698028210066058042817534487996959.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.81.14835698028210066058042817534487996959.mha,sub016,Not available,prone,train,train,colon_015_0000.mha,colon_015.mha
+colon_016,16,1.3.6.1.4.1.9328.50.81.316367195976111085537225089376237779522.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.81.316367195976111085537225089376237779522.mha,sub016,Not available,supine,train,train,colon_016_0000.mha,colon_016.mha
+colon_017,17,1.3.6.1.4.1.9328.50.81.244598165500235167607945260439315226607.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.81.244598165500235167607945260439315226607.mha,sub017,Not available,prone,test,test,colon_017_0000.mha,colon_017.mha
+colon_018,18,1.3.6.1.4.1.9328.50.81.247304474367213263725895819840408266553.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.81.247304474367213263725895819840408266553.mha,sub017,Not available,supine,test,test,colon_018_0000.mha,colon_018.mha
+colon_019,19,1.3.6.1.4.1.9328.50.81.183020887400290055792502179161804595407.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.81.183020887400290055792502179161804595407.mha,sub018,Not available,supine,train,val,colon_019_0000.mha,colon_019.mha
+colon_020,20,1.3.6.1.4.1.9328.50.81.235580168017166531253098150149352322118.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.81.235580168017166531253098150149352322118.mha,sub022,Not available,supine,train,val,colon_020_0000.mha,colon_020.mha
+colon_021,21,1.3.6.1.4.1.9328.50.81.131683369680395009923636498848550711748.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.81.131683369680395009923636498848550711748.mha,sub024,Not available,prone,test,test,colon_021_0000.mha,colon_021.mha
+colon_022,22,1.3.6.1.4.1.9328.50.81.243897352348810131074434872239759130394.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.81.243897352348810131074434872239759130394.mha,sub024,Not available,supine,test,test,colon_022_0000.mha,colon_022.mha
+colon_023,23,1.3.6.1.4.1.9328.50.81.162592286720989154437136271657481961716.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.81.162592286720989154437136271657481961716.mha,sub026,Not available,supine,train,train,colon_023_0000.mha,colon_023.mha
+colon_024,24,1.3.6.1.4.1.9328.50.81.239747130624807277606704295350419546441.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.81.239747130624807277606704295350419546441.mha,sub026,Not available,prone,train,train,colon_024_0000.mha,colon_024.mha
+colon_025,25,1.3.6.1.4.1.9328.50.81.239867248289954895093405743459694607985.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.81.239867248289954895093405743459694607985.mha,sub027,Not available,supine,train,train,colon_025_0000.mha,colon_025.mha
+colon_026,26,1.3.6.1.4.1.9328.50.81.165205051423169566133599724326828512137.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.81.165205051423169566133599724326828512137.mha,sub028,Not available,supine,train,train,colon_026_0000.mha,colon_026.mha
+colon_027,27,1.3.6.1.4.1.9328.50.81.45686375776262410491043226958432859102.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.81.45686375776262410491043226958432859102.mha,sub028,Not available,prone,train,val,colon_027_0000.mha,colon_027.mha
+colon_028,28,1.3.6.1.4.1.9328.50.81.202700814695273699097907559082771609192.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.81.202700814695273699097907559082771609192.mha,sub030,Not available,prone,test,test,colon_028_0000.mha,colon_028.mha
+colon_029,29,1.3.6.1.4.1.9328.50.81.286653870544878029780374942870162904320.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.81.286653870544878029780374942870162904320.mha,sub030,Not available,supine,test,test,colon_029_0000.mha,colon_029.mha
+colon_030,30,1.3.6.1.4.1.9328.50.81.126176802968045195225845807202100360498.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.81.126176802968045195225845807202100360498.mha,sub031,Not available,prone,train,train,colon_030_0000.mha,colon_030.mha
+colon_031,31,1.3.6.1.4.1.9328.50.81.227030126177196698172147334675513768539.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.81.227030126177196698172147334675513768539.mha,sub031,Not available,supine,train,val,colon_031_0000.mha,colon_031.mha
+colon_032,32,1.3.6.1.4.1.9328.50.81.316416432079973627163331295452731592624.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.81.316416432079973627163331295452731592624.mha,sub032,Not available,prone,train,train,colon_032_0000.mha,colon_032.mha
+colon_033,33,1.3.6.1.4.1.9328.50.81.270760939283860520829423859070163619830.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.81.270760939283860520829423859070163619830.mha,sub034,Not available,prone,test,test,colon_033_0000.mha,colon_033.mha
+colon_034,34,1.3.6.1.4.1.9328.50.81.240075623079727663514033800158947146079.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.81.240075623079727663514033800158947146079.mha,sub036,Not available,prone,train,val,colon_034_0000.mha,colon_034.mha
+colon_035,35,1.3.6.1.4.1.9328.50.81.79657547344856447242255592892530612695.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.81.79657547344856447242255592892530612695.mha,sub036,Not available,supine,train,train,colon_035_0000.mha,colon_035.mha
+colon_036,36,1.3.6.1.4.1.9328.50.81.169976026111121045093796385071177867514.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.81.169976026111121045093796385071177867514.mha,sub037,Not available,supine,train,train,colon_036_0000.mha,colon_036.mha
+colon_037,37,1.3.6.1.4.1.9328.50.81.250002963618447055515097593782745309731.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.81.250002963618447055515097593782745309731.mha,sub038,Not available,supine,test,test,colon_037_0000.mha,colon_037.mha
+colon_038,38,1.3.6.1.4.1.9328.50.81.96050024675818554164803850463325255384.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.81.96050024675818554164803850463325255384.mha,sub038,Not available,prone,test,test,colon_038_0000.mha,colon_038.mha
+colon_039,39,1.3.6.1.4.1.9328.50.81.122561967696656085051648349468394700413.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.81.122561967696656085051648349468394700413.mha,sub041,Not available,prone,test,test,colon_039_0000.mha,colon_039.mha
+colon_040,40,1.3.6.1.4.1.9328.50.81.161676443489911742319977398074239606186.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.81.161676443489911742319977398074239606186.mha,sub043,Not available,prone,train,train,colon_040_0000.mha,colon_040.mha
+colon_041,41,1.3.6.1.4.1.9328.50.81.290528159187093396266519371012081328234.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.81.290528159187093396266519371012081328234.mha,sub043,Not available,supine,train,train,colon_041_0000.mha,colon_041.mha
+colon_042,42,1.3.6.1.4.1.9328.50.81.185378259796875845670902036934193453758.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.81.185378259796875845670902036934193453758.mha,sub044,Not available,prone,test,test,colon_042_0000.mha,colon_042.mha
+colon_043,43,1.3.6.1.4.1.9328.50.81.267883635263665773685790223274229183088.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.81.267883635263665773685790223274229183088.mha,sub046,Not available,supine,test,test,colon_043_0000.mha,colon_043.mha
+colon_044,44,1.3.6.1.4.1.9328.50.81.21658624596201999075083110032884153126.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.81.21658624596201999075083110032884153126.mha,sub047,Not available,supine,train,train,colon_044_0000.mha,colon_044.mha
+colon_045,45,1.3.6.1.4.1.9328.50.81.110548544753077057252109824187666181642.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.81.110548544753077057252109824187666181642.mha,sub048,Not available,supine,train,train,colon_045_0000.mha,colon_045.mha
+colon_046,46,1.3.6.1.4.1.9328.50.4.31759.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.31759.mha,sub051,M,prone,test,test,colon_046_0000.mha,colon_046.mha
+colon_047,47,1.3.6.1.4.1.9328.50.4.47843.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.47843.mha,sub052,F,supine,test,test,colon_047_0000.mha,colon_047.mha
+colon_048,48,1.3.6.1.4.1.9328.50.4.47864.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.47864.mha,sub052,F,prone,test,test,colon_048_0000.mha,colon_048.mha
+colon_049,49,1.3.6.1.4.1.9328.50.4.65220.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.65220.mha,sub053,M,supine,train,train,colon_049_0000.mha,colon_049.mha
+colon_050,50,1.3.6.1.4.1.9328.50.4.65788.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.65788.mha,sub053,M,prone,train,train,colon_050_0000.mha,colon_050.mha
+colon_051,51,1.3.6.1.4.1.9328.50.4.131891.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.131891.mha,sub057,M,prone,train,train,colon_051_0000.mha,colon_051.mha
+colon_052,52,1.3.6.1.4.1.9328.50.4.169736.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.169736.mha,sub059,F,supine,train,val,colon_052_0000.mha,colon_052.mha
+colon_053,53,1.3.6.1.4.1.9328.50.4.170211.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.170211.mha,sub059,F,prone,train,train,colon_053_0000.mha,colon_053.mha
+colon_054,54,1.3.6.1.4.1.9328.50.4.202946.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.202946.mha,sub061,F,prone,train,train,colon_054_0000.mha,colon_054.mha
+colon_055,55,1.3.6.1.4.1.9328.50.4.221673.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.221673.mha,sub062,F,supine,train,val,colon_055_0000.mha,colon_055.mha
+colon_056,56,1.3.6.1.4.1.9328.50.4.222209.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.222209.mha,sub062,F,prone,train,train,colon_056_0000.mha,colon_056.mha
+colon_057,57,1.3.6.1.4.1.9328.50.4.275517.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.275517.mha,sub065,F,prone,train,val,colon_057_0000.mha,colon_057.mha
+colon_058,58,1.3.6.1.4.1.9328.50.4.292812.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.292812.mha,sub066,M,supine,test,test,colon_058_0000.mha,colon_058.mha
+colon_059,59,1.3.6.1.4.1.9328.50.4.293405.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.293405.mha,sub066,M,prone,test,test,colon_059_0000.mha,colon_059.mha
+colon_060,60,1.3.6.1.4.1.9328.50.4.324882.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.324882.mha,sub068,F,prone,train,train,colon_060_0000.mha,colon_060.mha
+colon_061,61,1.3.6.1.4.1.9328.50.4.884378.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.884378.mha,sub071,F,supine,test,test,colon_061_0000.mha,colon_061.mha
+colon_062,62,1.3.6.1.4.1.9328.50.4.884792.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.884792.mha,sub071,F,prone,test,test,colon_062_0000.mha,colon_062.mha
+colon_063,63,1.3.6.1.4.1.9328.50.4.682942.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.682942.mha,sub076,M,supine,train,train,colon_063_0000.mha,colon_063.mha
+colon_064,64,1.3.6.1.4.1.9328.50.4.683517.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.683517.mha,sub076,M,prone,train,train,colon_064_0000.mha,colon_064.mha
+colon_065,65,1.3.6.1.4.1.9328.50.4.621816.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.621816.mha,sub083,F,prone,train,train,colon_065_0000.mha,colon_065.mha
+colon_066,66,1.3.6.1.4.1.9328.50.4.624049.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.624049.mha,sub085,F,prone,test,test,colon_066_0000.mha,colon_066.mha
+colon_067,67,1.3.6.1.4.1.9328.50.4.626281.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.626281.mha,sub087,M,prone,train,val,colon_067_0000.mha,colon_067.mha
+colon_068,68,1.3.6.1.4.1.9328.50.4.626827.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.626827.mha,sub088,F,supine,train,train,colon_068_0000.mha,colon_068.mha
+colon_069,69,1.3.6.1.4.1.9328.50.4.627329.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.627329.mha,sub088,F,prone,train,train,colon_069_0000.mha,colon_069.mha
+colon_070,70,1.3.6.1.4.1.9328.50.4.629890.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.629890.mha,sub091,M,supine,train,train,colon_070_0000.mha,colon_070.mha
+colon_071,71,1.3.6.1.4.1.9328.50.4.630892.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.630892.mha,sub092,M,supine,test,test,colon_071_0000.mha,colon_071.mha
+colon_072,72,1.3.6.1.4.1.9328.50.4.631416.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.631416.mha,sub092,M,prone,test,test,colon_072_0000.mha,colon_072.mha
+colon_073,73,1.3.6.1.4.1.9328.50.4.633975.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.633975.mha,sub095,M,supine,train,train,colon_073_0000.mha,colon_073.mha
+colon_074,74,1.3.6.1.4.1.9328.50.4.634489.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.634489.mha,sub095,M,prone,train,train,colon_074_0000.mha,colon_074.mha
+colon_075,75,1.3.6.1.4.1.9328.50.4.604333.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.604333.mha,sub098,M,prone,train,train,colon_075_0000.mha,colon_075.mha
+colon_076,76,1.3.6.1.4.1.9328.50.4.604806.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.604806.mha,sub098,M,supine,train,val,colon_076_0000.mha,colon_076.mha
+colon_077,77,1.3.6.1.4.1.9328.50.4.618649.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.618649.mha,sub101,F,prone,train,train,colon_077_0000.mha,colon_077.mha
+colon_078,78,1.3.6.1.4.1.9328.50.4.609118.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.609118.mha,sub103,M,prone,test,test,colon_078_0000.mha,colon_078.mha
+colon_079,79,1.3.6.1.4.1.9328.50.4.610803.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.610803.mha,sub105,M,prone,test,test,colon_079_0000.mha,colon_079.mha
+colon_080,80,1.3.6.1.4.1.9328.50.4.612598.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.612598.mha,sub106,F,supine,train,train,colon_080_0000.mha,colon_080.mha
+colon_081,81,1.3.6.1.4.1.9328.50.4.614399.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.614399.mha,sub108,M,supine,test,test,colon_081_0000.mha,colon_081.mha
+colon_082,82,1.3.6.1.4.1.9328.50.4.864187.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.864187.mha,sub111,F,prone,train,val,colon_082_0000.mha,colon_082.mha
+colon_083,83,1.3.6.1.4.1.9328.50.4.864742.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.864742.mha,sub111,F,supine,train,train,colon_083_0000.mha,colon_083.mha
+colon_084,84,1.3.6.1.4.1.9328.50.4.882179.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.882179.mha,sub112,M,supine,train,val,colon_084_0000.mha,colon_084.mha
+colon_085,85,1.3.6.1.4.1.9328.50.4.585003.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.585003.mha,sub113,F,supine,test,test,colon_085_0000.mha,colon_085.mha
+colon_086,86,1.3.6.1.4.1.9328.50.4.585441.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.585441.mha,sub113,F,prone,test,test,colon_086_0000.mha,colon_086.mha
+colon_087,87,1.3.6.1.4.1.9328.50.4.587076.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.587076.mha,sub115,F,supine,test,test,colon_087_0000.mha,colon_087.mha
+colon_088,88,1.3.6.1.4.1.9328.50.4.593601.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.593601.mha,sub120,F,prone,train,train,colon_088_0000.mha,colon_088.mha
+colon_089,89,1.3.6.1.4.1.9328.50.4.598606.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.598606.mha,sub125,F,supine,train,val,colon_089_0000.mha,colon_089.mha
+colon_090,90,1.3.6.1.4.1.9328.50.4.599079.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.599079.mha,sub125,F,prone,train,val,colon_090_0000.mha,colon_090.mha
+colon_091,91,1.3.6.1.4.1.9328.50.4.600050.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.600050.mha,sub126,F,prone,train,train,colon_091_0000.mha,colon_091.mha
+colon_092,92,1.3.6.1.4.1.9328.50.4.568100.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.568100.mha,sub128,F,prone,test,test,colon_092_0000.mha,colon_092.mha
+colon_093,93,1.3.6.1.4.1.9328.50.4.574805.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.574805.mha,sub134,M,supine,train,val,colon_093_0000.mha,colon_093.mha
+colon_094,94,1.3.6.1.4.1.9328.50.4.575375.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.575375.mha,sub134,M,prone,train,train,colon_094_0000.mha,colon_094.mha
+colon_095,95,1.3.6.1.4.1.9328.50.4.577737.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.577737.mha,sub136,M,prone,train,train,colon_095_0000.mha,colon_095.mha
+colon_096,96,1.3.6.1.4.1.9328.50.4.578331.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.578331.mha,sub137,M,supine,train,train,colon_096_0000.mha,colon_096.mha
+colon_097,97,1.3.6.1.4.1.9328.50.4.580594.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.580594.mha,sub139,F,supine,train,train,colon_097_0000.mha,colon_097.mha
+colon_098,98,1.3.6.1.4.1.9328.50.4.581140.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.581140.mha,sub139,F,prone,train,train,colon_098_0000.mha,colon_098.mha
+colon_099,99,1.3.6.1.4.1.9328.50.4.582294.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.582294.mha,sub140,M,prone,train,train,colon_099_0000.mha,colon_099.mha
+colon_100,100,1.3.6.1.4.1.9328.50.4.551501.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.551501.mha,sub141,M,supine,test,test,colon_100_0000.mha,colon_100.mha
+colon_101,101,1.3.6.1.4.1.9328.50.4.552059.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.552059.mha,sub141,M,prone,test,test,colon_101_0000.mha,colon_101.mha
+colon_102,102,1.3.6.1.4.1.9328.50.4.552639.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.552639.mha,sub142,F,supine,train,train,colon_102_0000.mha,colon_102.mha
+colon_103,103,1.3.6.1.4.1.9328.50.4.553141.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.553141.mha,sub142,F,prone,train,train,colon_103_0000.mha,colon_103.mha
+colon_104,104,1.3.6.1.4.1.9328.50.4.554555.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.554555.mha,sub144,M,supine,train,train,colon_104_0000.mha,colon_104.mha
+colon_105,105,1.3.6.1.4.1.9328.50.4.555693.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.555693.mha,sub145,M,supine,test,test,colon_105_0000.mha,colon_105.mha
+colon_106,106,1.3.6.1.4.1.9328.50.4.556195.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.556195.mha,sub145,M,prone,test,test,colon_106_0000.mha,colon_106.mha
+colon_107,107,1.3.6.1.4.1.9328.50.4.557363.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.557363.mha,sub146,M,prone,train,train,colon_107_0000.mha,colon_107.mha
+colon_108,108,1.3.6.1.4.1.9328.50.4.557971.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.557971.mha,sub147,M,supine,test,test,colon_108_0000.mha,colon_108.mha
+colon_109,109,1.3.6.1.4.1.9328.50.4.558374.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.558374.mha,sub147,M,prone,test,test,colon_109_0000.mha,colon_109.mha
+colon_110,110,1.3.6.1.4.1.9328.50.4.560654.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.560654.mha,sub149,M,prone,train,val,colon_110_0000.mha,colon_110.mha
+colon_111,111,1.3.6.1.4.1.9328.50.4.533960.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.533960.mha,sub155,M,supine,train,train,colon_111_0000.mha,colon_111.mha
+colon_112,112,1.3.6.1.4.1.9328.50.4.537465.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.537465.mha,sub158,M,supine,train,train,colon_112_0000.mha,colon_112.mha
+colon_113,113,1.3.6.1.4.1.9328.50.4.537992.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.537992.mha,sub158,M,prone,train,val,colon_113_0000.mha,colon_113.mha
+colon_114,114,1.3.6.1.4.1.9328.50.4.540752.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.540752.mha,sub161,M,supine,train,train,colon_114_0000.mha,colon_114.mha
+colon_115,115,1.3.6.1.4.1.9328.50.4.541287.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.541287.mha,sub161,M,supine,train,train,colon_115_0000.mha,colon_115.mha
+colon_116,116,1.3.6.1.4.1.9328.50.4.541857.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.541857.mha,sub162,F,supine,test,test,colon_116_0000.mha,colon_116.mha
+colon_117,117,1.3.6.1.4.1.9328.50.4.541878.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.541878.mha,sub162,F,prone,test,test,colon_117_0000.mha,colon_117.mha
+colon_118,118,1.3.6.1.4.1.9328.50.4.545261.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.545261.mha,sub165,F,supine,train,train,colon_118_0000.mha,colon_118.mha
+colon_119,119,1.3.6.1.4.1.9328.50.4.545834.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.545834.mha,sub165,F,prone,train,val,colon_119_0000.mha,colon_119.mha
+colon_120,120,1.3.6.1.4.1.9328.50.4.520332.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.520332.mha,sub173,M,supine,test,test,colon_120_0000.mha,colon_120.mha
+colon_121,121,1.3.6.1.4.1.9328.50.4.524690.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.524690.mha,sub177,F,supine,train,train,colon_121_0000.mha,colon_121.mha
+colon_122,122,1.3.6.1.4.1.9328.50.4.525143.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.525143.mha,sub177,F,prone,train,train,colon_122_0000.mha,colon_122.mha
+colon_123,123,1.3.6.1.4.1.9328.50.4.531406.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.531406.mha,sub182,F,prone,train,train,colon_123_0000.mha,colon_123.mha
+colon_124,124,1.3.6.1.4.1.9328.50.4.531869.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.531869.mha,sub182,F,prone,train,train,colon_124_0000.mha,colon_124.mha
+colon_125,125,1.3.6.1.4.1.9328.50.4.497547.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.497547.mha,sub183,F,supine,test,test,colon_125_0000.mha,colon_125.mha
+colon_126,126,1.3.6.1.4.1.9328.50.4.505999.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.505999.mha,sub191,M,supine,train,train,colon_126_0000.mha,colon_126.mha
+colon_127,127,1.3.6.1.4.1.9328.50.4.507248.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.507248.mha,sub192,F,supine,train,train,colon_127_0000.mha,colon_127.mha
+colon_128,128,1.3.6.1.4.1.9328.50.4.507799.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.507799.mha,sub192,F,prone,train,train,colon_128_0000.mha,colon_128.mha
+colon_129,129,1.3.6.1.4.1.9328.50.4.480155.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.480155.mha,sub197,M,prone,train,train,colon_129_0000.mha,colon_129.mha
+colon_130,130,1.3.6.1.4.1.9328.50.4.480722.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.480722.mha,sub198,F,supine,test,test,colon_130_0000.mha,colon_130.mha
+colon_131,131,1.3.6.1.4.1.9328.50.4.481214.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.481214.mha,sub198,F,prone,test,test,colon_131_0000.mha,colon_131.mha
+colon_132,132,1.3.6.1.4.1.9328.50.4.482787.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.482787.mha,sub200,F,supine,train,train,colon_132_0000.mha,colon_132.mha
+colon_133,133,1.3.6.1.4.1.9328.50.4.485146.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.485146.mha,sub202,F,supine,test,test,colon_133_0000.mha,colon_133.mha
+colon_134,134,1.3.6.1.4.1.9328.50.4.485661.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.485661.mha,sub202,F,prone,test,test,colon_134_0000.mha,colon_134.mha
+colon_135,135,1.3.6.1.4.1.9328.50.4.491027.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.491027.mha,sub207,F,supine,train,val,colon_135_0000.mha,colon_135.mha
+colon_136,136,1.3.6.1.4.1.9328.50.4.491556.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.491556.mha,sub208,F,prone,train,train,colon_136_0000.mha,colon_136.mha
+colon_137,137,1.3.6.1.4.1.9328.50.4.491993.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.491993.mha,sub208,F,supine,train,train,colon_137_0000.mha,colon_137.mha
+colon_138,138,1.3.6.1.4.1.9328.50.4.493181.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.493181.mha,sub209,M,supine,train,train,colon_138_0000.mha,colon_138.mha
+colon_139,139,1.3.6.1.4.1.9328.50.4.464487.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.464487.mha,sub213,M,supine,test,test,colon_139_0000.mha,colon_139.mha
+colon_140,140,1.3.6.1.4.1.9328.50.4.465704.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.465704.mha,sub214,M,supine,test,test,colon_140_0000.mha,colon_140.mha
+colon_141,141,1.3.6.1.4.1.9328.50.4.466883.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.466883.mha,sub215,M,prone,train,train,colon_141_0000.mha,colon_141.mha
+colon_142,142,1.3.6.1.4.1.9328.50.4.469064.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.469064.mha,sub217,M,prone,train,train,colon_142_0000.mha,colon_142.mha
+colon_143,143,1.3.6.1.4.1.9328.50.4.469636.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.469636.mha,sub217,M,supine,train,train,colon_143_0000.mha,colon_143.mha
+colon_144,144,1.3.6.1.4.1.9328.50.4.470088.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.470088.mha,sub218,F,prone,train,train,colon_144_0000.mha,colon_144.mha
+colon_145,145,1.3.6.1.4.1.9328.50.4.470731.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.470731.mha,sub218,F,supine,train,train,colon_145_0000.mha,colon_145.mha
+colon_146,146,1.3.6.1.4.1.9328.50.4.472337.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.472337.mha,sub220,F,prone,test,test,colon_146_0000.mha,colon_146.mha
+colon_147,147,1.3.6.1.4.1.9328.50.4.473394.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.473394.mha,sub221,M,supine,train,train,colon_147_0000.mha,colon_147.mha
+colon_148,148,1.3.6.1.4.1.9328.50.4.474004.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.474004.mha,sub221,M,prone,train,train,colon_148_0000.mha,colon_148.mha
+colon_149,149,1.3.6.1.4.1.9328.50.4.476240.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.476240.mha,sub223,F,prone,train,train,colon_149_0000.mha,colon_149.mha
+colon_150,150,1.3.6.1.4.1.9328.50.4.448857.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.448857.mha,sub228,F,prone,train,val,colon_150_0000.mha,colon_150.mha
+colon_151,151,1.3.6.1.4.1.9328.50.4.450254.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.450254.mha,sub231,M,supine,test,test,colon_151_0000.mha,colon_151.mha
+colon_152,152,1.3.6.1.4.1.9328.50.4.456307.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.456307.mha,sub235,F,supine,train,train,colon_152_0000.mha,colon_152.mha
+colon_153,153,1.3.6.1.4.1.9328.50.4.456809.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.456809.mha,sub235,F,prone,train,val,colon_153_0000.mha,colon_153.mha
+colon_154,154,1.3.6.1.4.1.9328.50.4.428383.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.428383.mha,sub239,F,prone,test,test,colon_154_0000.mha,colon_154.mha
+colon_155,155,1.3.6.1.4.1.9328.50.4.434283.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.434283.mha,sub244,M,prone,train,train,colon_155_0000.mha,colon_155.mha
+colon_156,156,1.3.6.1.4.1.9328.50.4.434878.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.434878.mha,sub245,F,supine,train,val,colon_156_0000.mha,colon_156.mha
+colon_157,157,1.3.6.1.4.1.9328.50.4.435380.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.435380.mha,sub245,F,prone,train,train,colon_157_0000.mha,colon_157.mha
+colon_158,158,1.3.6.1.4.1.9328.50.4.435917.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.435917.mha,sub246,F,supine,train,train,colon_158_0000.mha,colon_158.mha
+colon_159,159,1.3.6.1.4.1.9328.50.4.440750.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.440750.mha,sub250,M,prone,train,train,colon_159_0000.mha,colon_159.mha
+colon_160,160,1.3.6.1.4.1.9328.50.4.412761.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.412761.mha,sub257,F,prone,test,test,colon_160_0000.mha,colon_160.mha
+colon_161,161,1.3.6.1.4.1.9328.50.4.420297.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.420297.mha,sub264,F,supine,train,train,colon_161_0000.mha,colon_161.mha
+colon_162,162,1.3.6.1.4.1.9328.50.4.420849.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.420849.mha,sub264,F,prone,train,val,colon_162_0000.mha,colon_162.mha
+colon_163,163,1.3.6.1.4.1.9328.50.4.422576.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.422576.mha,sub266,M,supine,test,test,colon_163_0000.mha,colon_163.mha
+colon_164,164,1.3.6.1.4.1.9328.50.4.398010.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.398010.mha,sub274,F,supine,train,train,colon_164_0000.mha,colon_164.mha
+colon_165,165,1.3.6.1.4.1.9328.50.4.398446.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.398446.mha,sub274,F,prone,train,train,colon_165_0000.mha,colon_165.mha
+colon_166,166,1.3.6.1.4.1.9328.50.4.400622.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.400622.mha,sub276,M,supine,test,test,colon_166_0000.mha,colon_166.mha
+colon_167,167,1.3.6.1.4.1.9328.50.4.406772.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.406772.mha,sub282,F,prone,train,train,colon_167_0000.mha,colon_167.mha
+colon_168,168,1.3.6.1.4.1.9328.50.4.380287.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.380287.mha,sub286,F,prone,train,val,colon_168_0000.mha,colon_168.mha
+colon_169,169,1.3.6.1.4.1.9328.50.4.380955.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.380955.mha,sub286,F,supine,train,train,colon_169_0000.mha,colon_169.mha
+colon_170,170,1.3.6.1.4.1.9328.50.4.382486.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.382486.mha,sub288,M,supine,test,test,colon_170_0000.mha,colon_170.mha
+colon_171,171,1.3.6.1.4.1.9328.50.4.384117.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.384117.mha,sub290,F,supine,train,train,colon_171_0000.mha,colon_171.mha
+colon_172,172,1.3.6.1.4.1.9328.50.4.388144.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.388144.mha,sub294,M,supine,train,train,colon_172_0000.mha,colon_172.mha
+colon_173,173,1.3.6.1.4.1.9328.50.4.389235.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.389235.mha,sub294,M,prone,train,train,colon_173_0000.mha,colon_173.mha
+colon_174,174,1.3.6.1.4.1.9328.50.4.389792.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.389792.mha,sub295,M,supine,train,train,colon_174_0000.mha,colon_174.mha
+colon_175,175,1.3.6.1.4.1.9328.50.4.390843.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.390843.mha,sub296,M,supine,test,test,colon_175_0000.mha,colon_175.mha
+colon_176,176,1.3.6.1.4.1.9328.50.4.362173.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.362173.mha,sub298,F,supine,test,test,colon_176_0000.mha,colon_176.mha
+colon_177,177,1.3.6.1.4.1.9328.50.4.362675.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.362675.mha,sub298,F,prone,test,test,colon_177_0000.mha,colon_177.mha
+colon_178,178,1.3.6.1.4.1.9328.50.4.366850.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.366850.mha,sub301,F,prone,train,train,colon_178_0000.mha,colon_178.mha
+colon_179,179,1.3.6.1.4.1.9328.50.4.366464.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.366464.mha,sub302,F,prone,test,test,colon_179_0000.mha,colon_179.mha
+colon_180,180,1.3.6.1.4.1.9328.50.4.367269.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.367269.mha,sub303,M,supine,train,train,colon_180_0000.mha,colon_180.mha
+colon_181,181,1.3.6.1.4.1.9328.50.4.367807.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.367807.mha,sub303,M,prone,train,train,colon_181_0000.mha,colon_181.mha
+colon_182,182,1.3.6.1.4.1.9328.50.4.368423.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.368423.mha,sub304,M,supine,train,train,colon_182_0000.mha,colon_182.mha
+colon_183,183,1.3.6.1.4.1.9328.50.4.370070.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.370070.mha,sub305,F,prone,train,train,colon_183_0000.mha,colon_183.mha
+colon_184,184,1.3.6.1.4.1.9328.50.4.619898.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.619898.mha,sub312,M,supine,train,train,colon_184_0000.mha,colon_184.mha
+colon_185,185,1.3.6.1.4.1.9328.50.4.743987.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.743987.mha,sub319,F,supine,train,val,colon_185_0000.mha,colon_185.mha
+colon_186,186,1.3.6.1.4.1.9328.50.4.744480.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.744480.mha,sub319,F,prone,train,train,colon_186_0000.mha,colon_186.mha
+colon_187,187,1.3.6.1.4.1.9328.50.4.796062.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.796062.mha,sub322,F,prone,train,train,colon_187_0000.mha,colon_187.mha
+colon_188,188,1.3.6.1.4.1.9328.50.4.811499.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.811499.mha,sub323,M,supine,train,train,colon_188_0000.mha,colon_188.mha
+colon_189,189,1.3.6.1.4.1.9328.50.4.360975.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.360975.mha,sub325,Not available,supine,test,test,colon_189_0000.mha,colon_189.mha
+colon_190,190,1.3.6.1.4.1.9328.50.4.601643.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.601643.mha,sub326,F,prone,train,train,colon_190_0000.mha,colon_190.mha
+colon_191,191,1.3.6.1.4.1.9328.50.4.344738.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.344738.mha,sub328,M,prone,test,test,colon_191_0000.mha,colon_191.mha
+colon_192,192,1.3.6.1.4.1.9328.50.4.347498.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.347498.mha,sub330,M,prone,train,val,colon_192_0000.mha,colon_192.mha
+colon_193,193,1.3.6.1.4.1.9328.50.4.349012.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.349012.mha,sub332,F,supine,test,test,colon_193_0000.mha,colon_193.mha
+colon_194,194,1.3.6.1.4.1.9328.50.4.358818.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.358818.mha,sub340,M,supine,train,train,colon_194_0000.mha,colon_194.mha
+colon_195,195,1.3.6.1.4.1.9328.50.4.359350.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.359350.mha,sub340,M,prone,train,train,colon_195_0000.mha,colon_195.mha
+colon_196,196,1.3.6.1.4.1.9328.50.4.327194.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.327194.mha,sub343,M,supine,train,train,colon_196_0000.mha,colon_196.mha
+colon_197,197,1.3.6.1.4.1.9328.50.4.332208.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.332208.mha,sub346,M,supine,train,train,colon_197_0000.mha,colon_197.mha
+colon_198,198,1.3.6.1.4.1.9328.50.4.332229.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.332229.mha,sub346,M,prone,train,train,colon_198_0000.mha,colon_198.mha
+colon_199,199,1.3.6.1.4.1.9328.50.4.335820.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.335820.mha,sub349,F,prone,train,train,colon_199_0000.mha,colon_199.mha
+colon_200,200,1.3.6.1.4.1.9328.50.4.336371.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.336371.mha,sub349,F,supine,train,val,colon_200_0000.mha,colon_200.mha
+colon_201,201,1.3.6.1.4.1.9328.50.4.340293.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.340293.mha,sub353,F,supine,test,test,colon_201_0000.mha,colon_201.mha
+colon_202,202,1.3.6.1.4.1.9328.50.4.340888.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.340888.mha,sub353,F,prone,test,test,colon_202_0000.mha,colon_202.mha
+colon_203,203,1.3.6.1.4.1.9328.50.4.310145.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.310145.mha,sub357,M,supine,train,train,colon_203_0000.mha,colon_203.mha
+colon_204,204,1.3.6.1.4.1.9328.50.4.311342.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.311342.mha,sub358,Not available,supine,test,test,colon_204_0000.mha,colon_204.mha
+colon_205,205,1.3.6.1.4.1.9328.50.4.311948.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.311948.mha,sub358,Not available,prone,test,test,colon_205_0000.mha,colon_205.mha
+colon_206,206,1.3.6.1.4.1.9328.50.4.312547.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.312547.mha,sub359,F,supine,train,train,colon_206_0000.mha,colon_206.mha
+colon_207,207,1.3.6.1.4.1.9328.50.4.313062.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.313062.mha,sub359,F,prone,train,train,colon_207_0000.mha,colon_207.mha
+colon_208,208,1.3.6.1.4.1.9328.50.4.321325.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.321325.mha,sub367,M,supine,train,train,colon_208_0000.mha,colon_208.mha
+colon_209,209,1.3.6.1.4.1.9328.50.4.295520.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.295520.mha,sub371,M,prone,test,test,colon_209_0000.mha,colon_209.mha
+colon_210,210,1.3.6.1.4.1.9328.50.4.303840.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.303840.mha,sub380,M,prone,train,train,colon_210_0000.mha,colon_210.mha
+colon_211,211,1.3.6.1.4.1.9328.50.4.305514.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.305514.mha,sub381,M,supine,test,test,colon_211_0000.mha,colon_211.mha
+colon_212,212,1.3.6.1.4.1.9328.50.4.306133.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.306133.mha,sub382,F,prone,train,val,colon_212_0000.mha,colon_212.mha
+colon_213,213,1.3.6.1.4.1.9328.50.4.307189.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.307189.mha,sub383,F,prone,train,val,colon_213_0000.mha,colon_213.mha
+colon_214,214,1.3.6.1.4.1.9328.50.4.278119.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.278119.mha,sub384,M,prone,train,train,colon_214_0000.mha,colon_214.mha
+colon_215,215,1.3.6.1.4.1.9328.50.4.278676.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.278676.mha,sub385,F,supine,test,test,colon_215_0000.mha,colon_215.mha
+colon_216,216,1.3.6.1.4.1.9328.50.4.279249.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.279249.mha,sub385,F,prone,test,test,colon_216_0000.mha,colon_216.mha
+colon_217,217,1.3.6.1.4.1.9328.50.4.282052.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.282052.mha,sub388,M,supine,train,train,colon_217_0000.mha,colon_217.mha
+colon_218,218,1.3.6.1.4.1.9328.50.4.282662.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.282662.mha,sub388,M,prone,train,train,colon_218_0000.mha,colon_218.mha
+colon_219,219,1.3.6.1.4.1.9328.50.4.287961.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.287961.mha,sub393,F,supine,train,val,colon_219_0000.mha,colon_219.mha
+colon_220,220,1.3.6.1.4.1.9328.50.4.290273.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.290273.mha,sub396,M,supine,train,train,colon_220_0000.mha,colon_220.mha
+colon_221,221,1.3.6.1.4.1.9328.50.4.291953.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.291953.mha,sub397,M,prone,test,test,colon_221_0000.mha,colon_221.mha
+colon_222,222,1.3.6.1.4.1.9328.50.4.16589.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.16589.mha,sub399,F,supine,train,train,colon_222_0000.mha,colon_222.mha
+colon_223,223,1.3.6.1.4.1.9328.50.4.17087.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.17087.mha,sub399,F,prone,train,train,colon_223_0000.mha,colon_223.mha
+colon_224,224,1.3.6.1.4.1.9328.50.4.18086.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.18086.mha,sub400,F,prone,test,test,colon_224_0000.mha,colon_224.mha
+colon_225,225,1.3.6.1.4.1.9328.50.4.20549.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.20549.mha,sub402,M,prone,train,train,colon_225_0000.mha,colon_225.mha
+colon_226,226,1.3.6.1.4.1.9328.50.4.22105.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.22105.mha,sub404,F,prone,train,val,colon_226_0000.mha,colon_226.mha
+colon_227,227,1.3.6.1.4.1.9328.50.4.22612.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.22612.mha,sub404,F,supine,train,val,colon_227_0000.mha,colon_227.mha
+colon_228,228,1.3.6.1.4.1.9328.50.4.25478.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.25478.mha,sub407,M,prone,train,train,colon_228_0000.mha,colon_228.mha
+colon_229,229,1.3.6.1.4.1.9328.50.4.27293.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.27293.mha,sub408,M,prone,test,test,colon_229_0000.mha,colon_229.mha
+colon_230,230,1.3.6.1.4.1.9328.50.4.27863.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.27863.mha,sub408,M,supine,test,test,colon_230_0000.mha,colon_230.mha
+colon_231,231,1.3.6.1.4.1.9328.50.4.28971.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.28971.mha,sub410,M,prone,test,test,colon_231_0000.mha,colon_231.mha
+colon_232,232,1.3.6.1.4.1.9328.50.4.29500.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.29500.mha,sub410,M,supine,test,test,colon_232_0000.mha,colon_232.mha
+colon_233,233,1.3.6.1.4.1.9328.50.4.32905.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.32905.mha,sub412,M,prone,test,test,colon_233_0000.mha,colon_233.mha
+colon_234,234,1.3.6.1.4.1.9328.50.4.41262.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.41262.mha,sub420,F,supine,train,train,colon_234_0000.mha,colon_234.mha
+colon_235,235,1.3.6.1.4.1.9328.50.4.48748.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.48748.mha,sub426,M,supine,train,train,colon_235_0000.mha,colon_235.mha
+colon_236,236,1.3.6.1.4.1.9328.50.4.49894.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.49894.mha,sub427,F,supine,train,train,colon_236_0000.mha,colon_236.mha
+colon_237,237,1.3.6.1.4.1.9328.50.4.53349.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.53349.mha,sub430,M,supine,test,test,colon_237_0000.mha,colon_237.mha
+colon_238,238,1.3.6.1.4.1.9328.50.4.57517.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.57517.mha,sub433,M,prone,test,test,colon_238_0000.mha,colon_238.mha
+colon_239,239,1.3.6.1.4.1.9328.50.4.61055.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.61055.mha,sub436,F,prone,train,train,colon_239_0000.mha,colon_239.mha
+colon_240,240,1.3.6.1.4.1.9328.50.4.63276.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.63276.mha,sub438,F,prone,train,val,colon_240_0000.mha,colon_240.mha
+colon_241,241,1.3.6.1.4.1.9328.50.4.66960.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.66960.mha,sub440,F,prone,test,test,colon_241_0000.mha,colon_241.mha
+colon_242,242,1.3.6.1.4.1.9328.50.4.67946.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.67946.mha,sub441,F,supine,train,train,colon_242_0000.mha,colon_242.mha
+colon_243,243,1.3.6.1.4.1.9328.50.4.68461.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.68461.mha,sub441,F,prone,train,val,colon_243_0000.mha,colon_243.mha
+colon_244,244,1.3.6.1.4.1.9328.50.4.74961.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.74961.mha,sub447,Not available,prone,train,val,colon_244_0000.mha,colon_244.mha
+colon_245,245,1.3.6.1.4.1.9328.50.4.75403.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.75403.mha,sub448,F,supine,train,train,colon_245_0000.mha,colon_245.mha
+colon_246,246,1.3.6.1.4.1.9328.50.4.76877.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.76877.mha,sub449,F,prone,test,test,colon_246_0000.mha,colon_246.mha
+colon_247,247,1.3.6.1.4.1.9328.50.4.77373.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.77373.mha,sub450,F,supine,train,train,colon_247_0000.mha,colon_247.mha
+colon_248,248,1.3.6.1.4.1.9328.50.4.80461.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.80461.mha,sub453,M,supine,train,val,colon_248_0000.mha,colon_248.mha
+colon_249,249,1.3.6.1.4.1.9328.50.4.84050.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.84050.mha,sub456,F,supine,train,train,colon_249_0000.mha,colon_249.mha
+colon_250,250,1.3.6.1.4.1.9328.50.4.84560.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.84560.mha,sub456,F,prone,train,train,colon_250_0000.mha,colon_250.mha
+colon_251,251,1.3.6.1.4.1.9328.50.4.85116.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.85116.mha,sub457,M,supine,train,train,colon_251_0000.mha,colon_251.mha
+colon_252,252,1.3.6.1.4.1.9328.50.4.85651.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.85651.mha,sub457,M,prone,train,train,colon_252_0000.mha,colon_252.mha
+colon_253,253,1.3.6.1.4.1.9328.50.4.86213.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.86213.mha,sub458,M,supine,train,train,colon_253_0000.mha,colon_253.mha
+colon_254,254,1.3.6.1.4.1.9328.50.4.86741.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.86741.mha,sub458,M,prone,train,train,colon_254_0000.mha,colon_254.mha
+colon_255,255,1.3.6.1.4.1.9328.50.4.87287.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.87287.mha,sub459,M,supine,test,test,colon_255_0000.mha,colon_255.mha
+colon_256,256,1.3.6.1.4.1.9328.50.4.87813.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.87813.mha,sub459,M,prone,test,test,colon_256_0000.mha,colon_256.mha
+colon_257,257,1.3.6.1.4.1.9328.50.4.89488.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.89488.mha,sub461,M,supine,train,val,colon_257_0000.mha,colon_257.mha
+colon_258,258,1.3.6.1.4.1.9328.50.4.90029.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.90029.mha,sub461,M,prone,train,train,colon_258_0000.mha,colon_258.mha
+colon_259,259,1.3.6.1.4.1.9328.50.4.91599.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.91599.mha,sub464,M,supine,test,test,colon_259_0000.mha,colon_259.mha
+colon_260,260,1.3.6.1.4.1.9328.50.4.92131.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.92131.mha,sub464,M,prone,test,test,colon_260_0000.mha,colon_260.mha
+colon_261,261,1.3.6.1.4.1.9328.50.4.92772.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.92772.mha,sub465,M,prone,train,train,colon_261_0000.mha,colon_261.mha
+colon_262,262,1.3.6.1.4.1.9328.50.4.93678.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.93678.mha,sub466,F,prone,test,test,colon_262_0000.mha,colon_262.mha
+colon_263,263,1.3.6.1.4.1.9328.50.81.121768350542525429109545683064463722194.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.81.121768350542525429109545683064463722194.mha,sub468,Not available,supine,train,train,colon_263_0000.mha,colon_263.mha
+colon_264,264,1.3.6.1.4.1.9328.50.81.300324581985139743623004866907662114461.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.81.300324581985139743623004866907662114461.mha,sub468,Not available,prone,train,val,colon_264_0000.mha,colon_264.mha
+colon_265,265,1.3.6.1.4.1.9328.50.4.103082.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.103082.mha,sub473,M,supine,train,train,colon_265_0000.mha,colon_265.mha
+colon_266,266,1.3.6.1.4.1.9328.50.4.106662.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.106662.mha,sub477,M,prone,test,test,colon_266_0000.mha,colon_266.mha
+colon_267,267,1.3.6.1.4.1.9328.50.4.109567.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.109567.mha,sub479,M,supine,train,train,colon_267_0000.mha,colon_267.mha
+colon_268,268,1.3.6.1.4.1.9328.50.4.111140.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.111140.mha,sub480,F,supine,train,train,colon_268_0000.mha,colon_268.mha
+colon_269,269,1.3.6.1.4.1.9328.50.4.111716.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.111716.mha,sub481,F,supine,test,test,colon_269_0000.mha,colon_269.mha
+colon_270,270,1.3.6.1.4.1.9328.50.4.112806.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.112806.mha,sub481,F,prone,test,test,colon_270_0000.mha,colon_270.mha
+colon_271,271,1.3.6.1.4.1.9328.50.4.113397.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.113397.mha,sub481,F,prone,test,test,colon_271_0000.mha,colon_271.mha
+colon_272,272,1.3.6.1.4.1.9328.50.4.118730.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.118730.mha,sub486,F,supine,train,train,colon_272_0000.mha,colon_272.mha
+colon_273,273,1.3.6.1.4.1.9328.50.4.119648.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.119648.mha,sub487,F,supine,train,val,colon_273_0000.mha,colon_273.mha
+colon_274,274,1.3.6.1.4.1.9328.50.4.119669.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.119669.mha,sub487,F,prone,train,val,colon_274_0000.mha,colon_274.mha
+colon_275,275,1.3.6.1.4.1.9328.50.4.120486.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.120486.mha,sub488,M,prone,test,test,colon_275_0000.mha,colon_275.mha
+colon_276,276,1.3.6.1.4.1.9328.50.4.121083.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.121083.mha,sub488,M,supine,test,test,colon_276_0000.mha,colon_276.mha
+colon_277,277,1.3.6.1.4.1.9328.50.4.122847.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.122847.mha,sub490,F,prone,test,test,colon_277_0000.mha,colon_277.mha
+colon_278,278,1.3.6.1.4.1.9328.50.4.127287.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.127287.mha,sub494,M,supine,train,train,colon_278_0000.mha,colon_278.mha
+colon_279,279,1.3.6.1.4.1.9328.50.4.128412.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.128412.mha,sub495,M,supine,train,train,colon_279_0000.mha,colon_279.mha
+colon_280,280,1.3.6.1.4.1.9328.50.4.138242.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.138242.mha,sub502,M,supine,train,train,colon_280_0000.mha,colon_280.mha
+colon_281,281,1.3.6.1.4.1.9328.50.4.138263.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.138263.mha,sub502,M,prone,train,train,colon_281_0000.mha,colon_281.mha
+colon_282,282,1.3.6.1.4.1.9328.50.4.149685.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.149685.mha,sub511,M,supine,train,train,colon_282_0000.mha,colon_282.mha
+colon_283,283,1.3.6.1.4.1.9328.50.4.150311.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.150311.mha,sub511,M,prone,train,train,colon_283_0000.mha,colon_283.mha
+colon_284,284,1.3.6.1.4.1.9328.50.4.152153.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.152153.mha,sub512,M,supine,test,test,colon_284_0000.mha,colon_284.mha
+colon_285,285,1.3.6.1.4.1.9328.50.4.152719.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.152719.mha,sub512,M,prone,test,test,colon_285_0000.mha,colon_285.mha
+colon_286,286,1.3.6.1.4.1.9328.50.4.153318.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.153318.mha,sub513,M,supine,train,train,colon_286_0000.mha,colon_286.mha
+colon_287,287,1.3.6.1.4.1.9328.50.4.153884.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.153884.mha,sub513,M,prone,train,train,colon_287_0000.mha,colon_287.mha
+colon_288,288,1.3.6.1.4.1.9328.50.4.158668.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.158668.mha,sub517,M,prone,train,train,colon_288_0000.mha,colon_288.mha
+colon_289,289,1.3.6.1.4.1.9328.50.4.159275.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.159275.mha,sub518,M,supine,train,train,colon_289_0000.mha,colon_289.mha
+colon_290,290,1.3.6.1.4.1.9328.50.4.161177.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.161177.mha,sub519,F,prone,train,train,colon_290_0000.mha,colon_290.mha
+colon_291,291,1.3.6.1.4.1.9328.50.4.165254.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.165254.mha,sub523,F,supine,train,train,colon_291_0000.mha,colon_291.mha
+colon_292,292,1.3.6.1.4.1.9328.50.4.376569.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.376569.mha,sub526,F,supine,test,test,colon_292_0000.mha,colon_292.mha
+colon_293,293,1.3.6.1.4.1.9328.50.4.379824.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.379824.mha,sub526,F,prone,test,test,colon_293_0000.mha,colon_293.mha
+colon_294,294,1.3.6.1.4.1.9328.50.4.409981.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.409981.mha,sub528,M,supine,train,train,colon_294_0000.mha,colon_294.mha
+colon_295,295,1.3.6.1.4.1.9328.50.4.170708.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.170708.mha,sub539,M,supine,train,train,colon_295_0000.mha,colon_295.mha
+colon_296,296,1.3.6.1.4.1.9328.50.4.171235.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.171235.mha,sub539,M,prone,train,train,colon_296_0000.mha,colon_296.mha
+colon_297,297,1.3.6.1.4.1.9328.50.4.172304.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.172304.mha,sub540,F,prone,train,train,colon_297_0000.mha,colon_297.mha
+colon_298,298,1.3.6.1.4.1.9328.50.4.172806.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.172806.mha,sub541,F,supine,test,test,colon_298_0000.mha,colon_298.mha
+colon_299,299,1.3.6.1.4.1.9328.50.4.173794.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.173794.mha,sub542,M,supine,test,test,colon_299_0000.mha,colon_299.mha
+colon_300,300,1.3.6.1.4.1.9328.50.4.174327.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.174327.mha,sub542,M,prone,test,test,colon_300_0000.mha,colon_300.mha
+colon_301,301,1.3.6.1.4.1.9328.50.4.174877.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.174877.mha,sub543,M,supine,test,test,colon_301_0000.mha,colon_301.mha
+colon_302,302,1.3.6.1.4.1.9328.50.4.176490.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.176490.mha,sub544,F,supine,train,train,colon_302_0000.mha,colon_302.mha
+colon_303,303,1.3.6.1.4.1.9328.50.4.179631.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.179631.mha,sub547,F,prone,train,train,colon_303_0000.mha,colon_303.mha
+colon_304,304,1.3.6.1.4.1.9328.50.4.181142.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.181142.mha,sub549,M,supine,train,train,colon_304_0000.mha,colon_304.mha
+colon_305,305,1.3.6.1.4.1.9328.50.4.182259.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.182259.mha,sub550,M,supine,train,train,colon_305_0000.mha,colon_305.mha
+colon_306,306,1.3.6.1.4.1.9328.50.4.184290.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.184290.mha,sub552,M,supine,train,train,colon_306_0000.mha,colon_306.mha
+colon_307,307,1.3.6.1.4.1.9328.50.4.186887.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.186887.mha,sub553,F,prone,test,test,colon_307_0000.mha,colon_307.mha
+colon_308,308,1.3.6.1.4.1.9328.50.4.188583.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.188583.mha,sub555,M,supine,train,train,colon_308_0000.mha,colon_308.mha
+colon_309,309,1.3.6.1.4.1.9328.50.4.190292.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.190292.mha,sub556,F,prone,train,train,colon_309_0000.mha,colon_309.mha
+colon_310,310,1.3.6.1.4.1.9328.50.4.193406.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.193406.mha,sub559,M,supine,test,test,colon_310_0000.mha,colon_310.mha
+colon_311,311,1.3.6.1.4.1.9328.50.4.199536.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.199536.mha,sub564,M,prone,train,train,colon_311_0000.mha,colon_311.mha
+colon_312,312,1.3.6.1.4.1.9328.50.4.200028.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.200028.mha,sub564,M,supine,train,train,colon_312_0000.mha,colon_312.mha
+colon_313,313,1.3.6.1.4.1.9328.50.4.205973.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.205973.mha,sub568,M,supine,train,train,colon_313_0000.mha,colon_313.mha
+colon_314,314,1.3.6.1.4.1.9328.50.4.208319.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.208319.mha,sub570,M,prone,train,val,colon_314_0000.mha,colon_314.mha
+colon_315,315,1.3.6.1.4.1.9328.50.4.210003.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.210003.mha,sub571,M,prone,train,train,colon_315_0000.mha,colon_315.mha
+colon_316,316,1.3.6.1.4.1.9328.50.4.210670.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.210670.mha,sub571,M,prone,train,train,colon_316_0000.mha,colon_316.mha
+colon_317,317,1.3.6.1.4.1.9328.50.4.216806.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.216806.mha,sub577,F,supine,train,train,colon_317_0000.mha,colon_317.mha
+colon_318,318,1.3.6.1.4.1.9328.50.4.220343.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.220343.mha,sub580,M,supine,test,test,colon_318_0000.mha,colon_318.mha
+colon_319,319,1.3.6.1.4.1.9328.50.4.220996.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.220996.mha,sub580,M,prone,test,test,colon_319_0000.mha,colon_319.mha
+colon_320,320,1.3.6.1.4.1.9328.50.4.223361.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.223361.mha,sub581,F,prone,train,train,colon_320_0000.mha,colon_320.mha
+colon_321,321,1.3.6.1.4.1.9328.50.4.228840.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.228840.mha,sub587,F,supine,test,test,colon_321_0000.mha,colon_321.mha
+colon_322,322,1.3.6.1.4.1.9328.50.4.228862.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.228862.mha,sub587,F,prone,test,test,colon_322_0000.mha,colon_322.mha
+colon_323,323,1.3.6.1.4.1.9328.50.4.230820.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.230820.mha,sub589,M,supine,train,train,colon_323_0000.mha,colon_323.mha
+colon_324,324,1.3.6.1.4.1.9328.50.4.232057.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.232057.mha,sub590,M,prone,train,val,colon_324_0000.mha,colon_324.mha
+colon_325,325,1.3.6.1.4.1.9328.50.4.240454.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.240454.mha,sub597,Not available,supine,train,train,colon_325_0000.mha,colon_325.mha
+colon_326,326,1.3.6.1.4.1.9328.50.4.243656.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.243656.mha,sub600,F,supine,test,test,colon_326_0000.mha,colon_326.mha
+colon_327,327,1.3.6.1.4.1.9328.50.4.245220.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.245220.mha,sub601,F,prone,train,train,colon_327_0000.mha,colon_327.mha
+colon_328,328,1.3.6.1.4.1.9328.50.4.245764.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.245764.mha,sub602,F,supine,train,train,colon_328_0000.mha,colon_328.mha
+colon_329,329,1.3.6.1.4.1.9328.50.4.248017.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.248017.mha,sub604,M,supine,test,test,colon_329_0000.mha,colon_329.mha
+colon_330,330,1.3.6.1.4.1.9328.50.4.248597.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.248597.mha,sub604,M,prone,test,test,colon_330_0000.mha,colon_330.mha
+colon_331,331,1.3.6.1.4.1.9328.50.4.249801.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.249801.mha,sub605,M,prone,test,test,colon_331_0000.mha,colon_331.mha
+colon_332,332,1.3.6.1.4.1.9328.50.4.251624.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.251624.mha,sub607,M,supine,train,train,colon_332_0000.mha,colon_332.mha
+colon_333,333,1.3.6.1.4.1.9328.50.4.258345.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.258345.mha,sub612,Not available,supine,train,val,colon_333_0000.mha,colon_333.mha
+colon_334,334,1.3.6.1.4.1.9328.50.4.259440.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.259440.mha,sub613,Not available,supine,train,val,colon_334_0000.mha,colon_334.mha
+colon_335,335,1.3.6.1.4.1.9328.50.4.263216.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.263216.mha,sub616,F,supine,test,test,colon_335_0000.mha,colon_335.mha
+colon_336,336,1.3.6.1.4.1.9328.50.4.264230.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.264230.mha,sub617,M,supine,test,test,colon_336_0000.mha,colon_336.mha
+colon_337,337,1.3.6.1.4.1.9328.50.4.264773.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.264773.mha,sub617,M,prone,test,test,colon_337_0000.mha,colon_337.mha
+colon_338,338,1.3.6.1.4.1.9328.50.4.265339.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.265339.mha,sub618,M,supine,train,val,colon_338_0000.mha,colon_338.mha
+colon_339,339,1.3.6.1.4.1.9328.50.4.265824.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.265824.mha,sub618,M,prone,train,train,colon_339_0000.mha,colon_339.mha
+colon_340,340,1.3.6.1.4.1.9328.50.4.267331.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.267331.mha,sub620,F,supine,train,train,colon_340_0000.mha,colon_340.mha
+colon_341,341,1.3.6.1.4.1.9328.50.4.273104.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.273104.mha,sub627,M,supine,train,train,colon_341_0000.mha,colon_341.mha
+colon_342,342,1.3.6.1.4.1.9328.50.4.273749.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.273749.mha,sub627,M,prone,train,train,colon_342_0000.mha,colon_342.mha
+colon_343,343,1.3.6.1.4.1.9328.50.4.274421.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.274421.mha,sub628,Not available,supine,test,test,colon_343_0000.mha,colon_343.mha
+colon_344,344,1.3.6.1.4.1.9328.50.4.275382.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.275382.mha,sub629,M,supine,train,train,colon_344_0000.mha,colon_344.mha
+colon_345,345,1.3.6.1.4.1.9328.50.4.287020.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.287020.mha,sub629,M,prone,train,train,colon_345_0000.mha,colon_345.mha
+colon_346,346,1.3.6.1.4.1.9328.50.4.638278.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.638278.mha,sub631,F,prone,test,test,colon_346_0000.mha,colon_346.mha
+colon_347,347,1.3.6.1.4.1.9328.50.4.638756.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.638756.mha,sub631,F,supine,test,test,colon_347_0000.mha,colon_347.mha
+colon_348,348,1.3.6.1.4.1.9328.50.4.639424.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.639424.mha,sub632,F,prone,test,test,colon_348_0000.mha,colon_348.mha
+colon_349,349,1.3.6.1.4.1.9328.50.4.641021.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.641021.mha,sub633,F,supine,test,test,colon_349_0000.mha,colon_349.mha
+colon_350,350,1.3.6.1.4.1.9328.50.4.645956.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.645956.mha,sub636,M,prone,train,val,colon_350_0000.mha,colon_350.mha
+colon_351,351,1.3.6.1.4.1.9328.50.4.662053.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.662053.mha,sub642,F,prone,train,train,colon_351_0000.mha,colon_351.mha
+colon_352,352,1.3.6.1.4.1.9328.50.4.663236.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.663236.mha,sub643,F,supine,train,train,colon_352_0000.mha,colon_352.mha
+colon_353,353,1.3.6.1.4.1.9328.50.4.663774.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.663774.mha,sub643,F,prone,train,val,colon_353_0000.mha,colon_353.mha
+colon_354,354,1.3.6.1.4.1.9328.50.4.666872.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.666872.mha,sub646,F,supine,test,test,colon_354_0000.mha,colon_354.mha
+colon_355,355,1.3.6.1.4.1.9328.50.4.670269.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.670269.mha,sub649,M,supine,train,train,colon_355_0000.mha,colon_355.mha
+colon_356,356,1.3.6.1.4.1.9328.50.4.673525.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.673525.mha,sub651,M,supine,train,train,colon_356_0000.mha,colon_356.mha
+colon_357,357,1.3.6.1.4.1.9328.50.4.679938.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.679938.mha,sub074,M,supine,train,train,colon_357_0000.mha,colon_357.mha
+colon_358,358,1.3.6.1.4.1.9328.50.4.684675.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.684675.mha,sub656,F,prone,train,train,colon_358_0000.mha,colon_358.mha
+colon_359,359,1.3.6.1.4.1.9328.50.4.686773.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.686773.mha,sub658,F,prone,train,train,colon_359_0000.mha,colon_359.mha
+colon_360,360,1.3.6.1.4.1.9328.50.4.687308.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.687308.mha,sub659,M,supine,test,test,colon_360_0000.mha,colon_360.mha
+colon_361,361,1.3.6.1.4.1.9328.50.4.687861.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.687861.mha,sub659,M,prone,test,test,colon_361_0000.mha,colon_361.mha
+colon_362,362,1.3.6.1.4.1.9328.50.4.691902.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.691902.mha,sub661,M,prone,train,train,colon_362_0000.mha,colon_362.mha
+colon_363,363,1.3.6.1.4.1.9328.50.4.692452.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.692452.mha,sub661,M,prone,train,train,colon_363_0000.mha,colon_363.mha
+colon_364,364,1.3.6.1.4.1.9328.50.4.699592.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.699592.mha,sub669,M,supine,test,test,colon_364_0000.mha,colon_364.mha
+colon_365,365,1.3.6.1.4.1.9328.50.4.699038.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.699038.mha,sub666,M,prone,train,val,colon_365_0000.mha,colon_365.mha
+colon_366,366,1.3.6.1.4.1.9328.50.4.791356.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.791356.mha,sub674,M,supine,train,val,colon_366_0000.mha,colon_366.mha
+colon_367,367,1.3.6.1.4.1.9328.50.4.809359.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.809359.mha,sub676,M,supine,test,test,colon_367_0000.mha,colon_367.mha
+colon_368,368,1.3.6.1.4.1.9328.50.4.828332.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.828332.mha,sub678,M,supine,train,train,colon_368_0000.mha,colon_368.mha
+colon_369,369,1.3.6.1.4.1.9328.50.4.828962.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.828962.mha,sub678,M,prone,train,train,colon_369_0000.mha,colon_369.mha
+colon_370,370,1.3.6.1.4.1.9328.50.4.700094.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.700094.mha,sub669,M,prone,test,test,colon_370_0000.mha,colon_370.mha
+colon_371,371,1.3.6.1.4.1.9328.50.4.706673.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.706673.mha,sub686,F,supine,train,train,colon_371_0000.mha,colon_371.mha
+colon_372,372,1.3.6.1.4.1.9328.50.4.709949.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.709949.mha,sub688,F,prone,train,train,colon_372_0000.mha,colon_372.mha
+colon_373,373,1.3.6.1.4.1.9328.50.4.712865.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.712865.mha,sub690,M,supine,train,train,colon_373_0000.mha,colon_373.mha
+colon_374,374,1.3.6.1.4.1.9328.50.4.715650.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.715650.mha,sub693,F,supine,train,train,colon_374_0000.mha,colon_374.mha
+colon_375,375,1.3.6.1.4.1.9328.50.4.723653.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.723653.mha,sub698,M,prone,train,train,colon_375_0000.mha,colon_375.mha
+colon_376,376,1.3.6.1.4.1.9328.50.4.725373.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.725373.mha,sub700,F,supine,train,train,colon_376_0000.mha,colon_376.mha
+colon_377,377,1.3.6.1.4.1.9328.50.4.725927.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.725927.mha,sub700,F,prone,train,train,colon_377_0000.mha,colon_377.mha
+colon_378,378,1.3.6.1.4.1.9328.50.4.727587.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.727587.mha,sub701,F,supine,test,test,colon_378_0000.mha,colon_378.mha
+colon_379,379,1.3.6.1.4.1.9328.50.4.728119.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.728119.mha,sub701,F,prone,test,test,colon_379_0000.mha,colon_379.mha
+colon_380,380,1.3.6.1.4.1.9328.50.4.730780.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.730780.mha,sub703,F,prone,train,train,colon_380_0000.mha,colon_380.mha
+colon_381,381,1.3.6.1.4.1.9328.50.4.733250.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.733250.mha,sub706,F,supine,train,train,colon_381_0000.mha,colon_381.mha
+colon_382,382,1.3.6.1.4.1.9328.50.4.733788.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.733788.mha,sub706,F,prone,train,train,colon_382_0000.mha,colon_382.mha
+colon_383,383,1.3.6.1.4.1.9328.50.4.742447.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.742447.mha,sub712,M,prone,test,test,colon_383_0000.mha,colon_383.mha
+colon_384,384,1.3.6.1.4.1.9328.50.4.743476.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.743476.mha,sub713,F,prone,train,train,colon_384_0000.mha,colon_384.mha
+colon_385,385,1.3.6.1.4.1.9328.50.4.745410.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.745410.mha,sub714,M,supine,train,val,colon_385_0000.mha,colon_385.mha
+colon_386,386,1.3.6.1.4.1.9328.50.4.750346.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.750346.mha,sub718,F,prone,test,test,colon_386_0000.mha,colon_386.mha
+colon_387,387,1.3.6.1.4.1.9328.50.4.750902.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.750902.mha,sub719,M,supine,train,train,colon_387_0000.mha,colon_387.mha
+colon_388,388,1.3.6.1.4.1.9328.50.4.751428.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.751428.mha,sub719,M,prone,train,train,colon_388_0000.mha,colon_388.mha
+colon_389,389,1.3.6.1.4.1.9328.50.4.758865.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.758865.mha,sub726,F,prone,train,train,colon_389_0000.mha,colon_389.mha
+colon_390,390,1.3.6.1.4.1.9328.50.4.759385.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.759385.mha,sub726,F,supine,train,train,colon_390_0000.mha,colon_390.mha
+colon_391,391,1.3.6.1.4.1.9328.50.4.762826.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.762826.mha,sub728,M,supine,test,test,colon_391_0000.mha,colon_391.mha
+colon_392,392,1.3.6.1.4.1.9328.50.4.764558.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.764558.mha,sub729,M,supine,test,test,colon_392_0000.mha,colon_392.mha
+colon_393,393,1.3.6.1.4.1.9328.50.4.767828.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.767828.mha,sub732,F,supine,train,train,colon_393_0000.mha,colon_393.mha
+colon_394,394,1.3.6.1.4.1.9328.50.4.786032.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.786032.mha,sub746,M,prone,train,train,colon_394_0000.mha,colon_394.mha
+colon_395,395,1.3.6.1.4.1.9328.50.4.786562.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.786562.mha,sub746,M,supine,train,train,colon_395_0000.mha,colon_395.mha
+colon_396,396,1.3.6.1.4.1.9328.50.4.787083.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.787083.mha,sub747,F,supine,train,val,colon_396_0000.mha,colon_396.mha
+colon_397,397,1.3.6.1.4.1.9328.50.4.787633.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.787633.mha,sub747,F,prone,train,train,colon_397_0000.mha,colon_397.mha
+colon_398,398,1.3.6.1.4.1.9328.50.4.789216.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.789216.mha,sub749,M,supine,test,test,colon_398_0000.mha,colon_398.mha
+colon_399,399,1.3.6.1.4.1.9328.50.4.802572.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.802572.mha,sub758,Not available,supine,test,test,colon_399_0000.mha,colon_399.mha
+colon_400,400,1.3.6.1.4.1.9328.50.4.805763.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.805763.mha,sub761,M,supine,train,train,colon_400_0000.mha,colon_400.mha
+colon_401,401,1.3.6.1.4.1.9328.50.4.806165.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.806165.mha,sub761,M,prone,train,val,colon_401_0000.mha,colon_401.mha
+colon_402,402,1.3.6.1.4.1.9328.50.4.806945.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.806945.mha,sub762,F,prone,train,val,colon_402_0000.mha,colon_402.mha
+colon_403,403,1.3.6.1.4.1.9328.50.4.814938.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.814938.mha,sub768,M,prone,train,train,colon_403_0000.mha,colon_403.mha
+colon_404,404,1.3.6.1.4.1.9328.50.4.816803.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.816803.mha,sub769,M,prone,train,train,colon_404_0000.mha,colon_404.mha
+colon_405,405,1.3.6.1.4.1.9328.50.4.818160.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.818160.mha,sub771,F,prone,train,train,colon_405_0000.mha,colon_405.mha
+colon_406,406,1.3.6.1.4.1.9328.50.4.818743.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.818743.mha,sub771,F,supine,train,val,colon_406_0000.mha,colon_406.mha
+colon_407,407,1.3.6.1.4.1.9328.50.4.819324.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.819324.mha,sub772,F,prone,test,test,colon_407_0000.mha,colon_407.mha
+colon_408,408,1.3.6.1.4.1.9328.50.4.822323.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.822323.mha,sub775,M,supine,train,train,colon_408_0000.mha,colon_408.mha
+colon_409,409,1.3.6.1.4.1.9328.50.4.822883.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.822883.mha,sub775,M,prone,train,train,colon_409_0000.mha,colon_409.mha
+colon_410,410,1.3.6.1.4.1.9328.50.4.825740.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.825740.mha,sub777,F,prone,test,test,colon_410_0000.mha,colon_410.mha
+colon_411,411,1.3.6.1.4.1.9328.50.4.826329.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.826329.mha,sub778,M,supine,train,train,colon_411_0000.mha,colon_411.mha
+colon_412,412,1.3.6.1.4.1.9328.50.4.835138.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.835138.mha,sub783,F,prone,train,val,colon_412_0000.mha,colon_412.mha
+colon_413,413,1.3.6.1.4.1.9328.50.4.835761.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.835761.mha,sub783,F,supine,train,train,colon_413_0000.mha,colon_413.mha
+colon_414,414,1.3.6.1.4.1.9328.50.4.839386.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.839386.mha,sub786,F,prone,test,test,colon_414_0000.mha,colon_414.mha
+colon_415,415,1.3.6.1.4.1.9328.50.4.841059.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.841059.mha,sub788,F,supine,train,train,colon_415_0000.mha,colon_415.mha
+colon_416,416,1.3.6.1.4.1.9328.50.4.842123.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.842123.mha,sub789,F,supine,train,train,colon_416_0000.mha,colon_416.mha
+colon_417,417,1.3.6.1.4.1.9328.50.4.842654.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.842654.mha,sub789,F,prone,train,train,colon_417_0000.mha,colon_417.mha
+colon_418,418,1.3.6.1.4.1.9328.50.4.844287.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.844287.mha,sub791,M,prone,train,train,colon_418_0000.mha,colon_418.mha
+colon_419,419,1.3.6.1.4.1.9328.50.4.848623.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.848623.mha,sub793,F,supine,test,test,colon_419_0000.mha,colon_419.mha
+colon_420,420,1.3.6.1.4.1.9328.50.4.849142.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.849142.mha,sub793,F,prone,test,test,colon_420_0000.mha,colon_420.mha
+colon_421,421,1.3.6.1.4.1.9328.50.4.849687.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.849687.mha,sub793,F,supine,test,test,colon_421_0000.mha,colon_421.mha
+colon_422,422,1.3.6.1.4.1.9328.50.4.850207.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.850207.mha,sub793,F,prone,test,test,colon_422_0000.mha,colon_422.mha
+colon_423,423,1.3.6.1.4.1.9328.50.4.854506.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.854506.mha,sub797,M,supine,test,test,colon_423_0000.mha,colon_423.mha
+colon_424,424,1.3.6.1.4.1.9328.50.4.856140.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.856140.mha,sub799,Not available,prone,train,val,colon_424_0000.mha,colon_424.mha
+colon_425,425,1.3.6.1.4.1.9328.50.4.856653.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.856653.mha,sub799,Not available,supine,train,train,colon_425_0000.mha,colon_425.mha
+colon_426,426,1.3.6.1.4.1.9328.50.4.865305.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.865305.mha,sub807,M,supine,train,train,colon_426_0000.mha,colon_426.mha
+colon_427,427,1.3.6.1.4.1.9328.50.4.865866.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.865866.mha,sub807,M,prone,train,train,colon_427_0000.mha,colon_427.mha
+colon_428,428,1.3.6.1.4.1.9328.50.4.869774.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.869774.mha,sub809,F,prone,train,val,colon_428_0000.mha,colon_428.mha
+colon_429,429,1.3.6.1.4.1.9328.50.4.872174.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.872174.mha,sub811,M,supine,train,train,colon_429_0000.mha,colon_429.mha
+colon_430,430,1.3.6.1.4.1.9328.50.4.878212.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.878212.mha,sub815,M,prone,train,train,colon_430_0000.mha,colon_430.mha
+colon_431,431,1.3.6.1.4.1.9328.50.4.887561.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.887561.mha,sub819,F,supine,test,test,colon_431_0000.mha,colon_431.mha
+colon_432,432,1.3.6.1.4.1.9328.50.4.888102.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.888102.mha,sub819,F,prone,test,test,colon_432_0000.mha,colon_432.mha
+colon_433,433,1.3.6.1.4.1.9328.50.4.889542.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.889542.mha,sub820,F,supine,test,test,colon_433_0000.mha,colon_433.mha
+colon_434,434,1.3.6.1.4.1.9328.50.4.892137.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.892137.mha,sub822,M,prone,train,val,colon_434_0000.mha,colon_434.mha
+colon_435,435,1.3.6.1.4.1.9328.50.4.894941.mha,/mnt/data/HQcolon/data/CTC Scans/1.3.6.1.4.1.9328.50.4.894941.mha,sub825,M,prone,train,train,colon_435_0000.mha,colon_435.mha

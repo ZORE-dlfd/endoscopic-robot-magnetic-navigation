@@ -1,0 +1,316 @@
+﻿受试者编号,扫描次数,病例号,体位,性别,数据划分
+sub001,1,colon_001,supine,F,test
+sub003,2,colon_002;colon_003,prone;supine,M,train
+sub004,2,colon_004;colon_005,prone;supine,M,train
+sub005,2,colon_006;colon_007,prone;supine,M,test
+sub006,1,colon_008,supine,M,train
+sub007,2,colon_009;colon_010,prone;supine,M,train
+sub009,1,colon_011,supine,F,test
+sub012,1,colon_012,prone,F,train
+sub014,1,colon_013,supine,F,test
+sub015,1,colon_014,prone,Not available,test
+sub016,2,colon_015;colon_016,prone;supine,Not available,train
+sub017,2,colon_017;colon_018,prone;supine,Not available,test
+sub018,1,colon_019,supine,Not available,train
+sub022,1,colon_020,supine,Not available,train
+sub024,2,colon_021;colon_022,prone;supine,Not available,test
+sub026,2,colon_023;colon_024,supine;prone,Not available,train
+sub027,1,colon_025,supine,Not available,train
+sub028,2,colon_026;colon_027,supine;prone,Not available,train
+sub030,2,colon_028;colon_029,prone;supine,Not available,test
+sub031,2,colon_030;colon_031,prone;supine,Not available,train
+sub032,1,colon_032,prone,Not available,train
+sub034,1,colon_033,prone,Not available,test
+sub036,2,colon_034;colon_035,prone;supine,Not available,train
+sub037,1,colon_036,supine,Not available,train
+sub038,2,colon_037;colon_038,supine;prone,Not available,test
+sub041,1,colon_039,prone,Not available,test
+sub043,2,colon_040;colon_041,prone;supine,Not available,train
+sub044,1,colon_042,prone,Not available,test
+sub046,1,colon_043,supine,Not available,test
+sub047,1,colon_044,supine,Not available,train
+sub048,1,colon_045,supine,Not available,train
+sub051,1,colon_046,prone,M,test
+sub052,2,colon_047;colon_048,supine;prone,F,test
+sub053,2,colon_049;colon_050,supine;prone,M,train
+sub057,1,colon_051,prone,M,train
+sub059,2,colon_052;colon_053,supine;prone,F,train
+sub061,1,colon_054,prone,F,train
+sub062,2,colon_055;colon_056,supine;prone,F,train
+sub065,1,colon_057,prone,F,train
+sub066,2,colon_058;colon_059,supine;prone,M,test
+sub068,1,colon_060,prone,F,train
+sub071,2,colon_061;colon_062,supine;prone,F,test
+sub074,1,colon_357,supine,M,train
+sub076,2,colon_063;colon_064,supine;prone,M,train
+sub083,1,colon_065,prone,F,train
+sub085,1,colon_066,prone,F,test
+sub087,1,colon_067,prone,M,train
+sub088,2,colon_068;colon_069,supine;prone,F,train
+sub091,1,colon_070,supine,M,train
+sub092,2,colon_071;colon_072,supine;prone,M,test
+sub095,2,colon_073;colon_074,supine;prone,M,train
+sub098,2,colon_075;colon_076,prone;supine,M,train
+sub101,1,colon_077,prone,F,train
+sub103,1,colon_078,prone,M,test
+sub105,1,colon_079,prone,M,test
+sub106,1,colon_080,supine,F,train
+sub108,1,colon_081,supine,M,test
+sub111,2,colon_082;colon_083,prone;supine,F,train
+sub112,1,colon_084,supine,M,train
+sub113,2,colon_085;colon_086,supine;prone,F,test
+sub115,1,colon_087,supine,F,test
+sub120,1,colon_088,prone,F,train
+sub125,2,colon_089;colon_090,supine;prone,F,train
+sub126,1,colon_091,prone,F,train
+sub128,1,colon_092,prone,F,test
+sub134,2,colon_093;colon_094,supine;prone,M,train
+sub136,1,colon_095,prone,M,train
+sub137,1,colon_096,supine,M,train
+sub139,2,colon_097;colon_098,supine;prone,F,train
+sub140,1,colon_099,prone,M,train
+sub141,2,colon_100;colon_101,supine;prone,M,test
+sub142,2,colon_102;colon_103,supine;prone,F,train
+sub144,1,colon_104,supine,M,train
+sub145,2,colon_105;colon_106,supine;prone,M,test
+sub146,1,colon_107,prone,M,train
+sub147,2,colon_108;colon_109,supine;prone,M,test
+sub149,1,colon_110,prone,M,train
+sub155,1,colon_111,supine,M,train
+sub158,2,colon_112;colon_113,supine;prone,M,train
+sub161,2,colon_114;colon_115,supine;supine,M,train
+sub162,2,colon_116;colon_117,supine;prone,F,test
+sub165,2,colon_118;colon_119,supine;prone,F,train
+sub173,1,colon_120,supine,M,test
+sub177,2,colon_121;colon_122,supine;prone,F,train
+sub182,2,colon_123;colon_124,prone;prone,F,train
+sub183,1,colon_125,supine,F,test
+sub191,1,colon_126,supine,M,train
+sub192,2,colon_127;colon_128,supine;prone,F,train
+sub197,1,colon_129,prone,M,train
+sub198,2,colon_130;colon_131,supine;prone,F,test
+sub200,1,colon_132,supine,F,train
+sub202,2,colon_133;colon_134,supine;prone,F,test
+sub207,1,colon_135,supine,F,train
+sub208,2,colon_136;colon_137,prone;supine,F,train
+sub209,1,colon_138,supine,M,train
+sub213,1,colon_139,supine,M,test
+sub214,1,colon_140,supine,M,test
+sub215,1,colon_141,prone,M,train
+sub217,2,colon_142;colon_143,prone;supine,M,train
+sub218,2,colon_144;colon_145,prone;supine,F,train
+sub220,1,colon_146,prone,F,test
+sub221,2,colon_147;colon_148,supine;prone,M,train
+sub223,1,colon_149,prone,F,train
+sub228,1,colon_150,prone,F,train
+sub231,1,colon_151,supine,M,test
+sub235,2,colon_152;colon_153,supine;prone,F,train
+sub239,1,colon_154,prone,F,test
+sub244,1,colon_155,prone,M,train
+sub245,2,colon_156;colon_157,supine;prone,F,train
+sub246,1,colon_158,supine,F,train
+sub250,1,colon_159,prone,M,train
+sub257,1,colon_160,prone,F,test
+sub264,2,colon_161;colon_162,supine;prone,F,train
+sub266,1,colon_163,supine,M,test
+sub274,2,colon_164;colon_165,supine;prone,F,train
+sub276,1,colon_166,supine,M,test
+sub282,1,colon_167,prone,F,train
+sub286,2,colon_168;colon_169,prone;supine,F,train
+sub288,1,colon_170,supine,M,test
+sub290,1,colon_171,supine,F,train
+sub294,2,colon_172;colon_173,supine;prone,M,train
+sub295,1,colon_174,supine,M,train
+sub296,1,colon_175,supine,M,test
+sub298,2,colon_176;colon_177,supine;prone,F,test
+sub301,1,colon_178,prone,F,train
+sub302,1,colon_179,prone,F,test
+sub303,2,colon_180;colon_181,supine;prone,M,train
+sub304,1,colon_182,supine,M,train
+sub305,1,colon_183,prone,F,train
+sub312,1,colon_184,supine,M,train
+sub319,2,colon_185;colon_186,supine;prone,F,train
+sub322,1,colon_187,prone,F,train
+sub323,1,colon_188,supine,M,train
+sub325,1,colon_189,supine,Not available,test
+sub326,1,colon_190,prone,F,train
+sub328,1,colon_191,prone,M,test
+sub330,1,colon_192,prone,M,train
+sub332,1,colon_193,supine,F,test
+sub340,2,colon_194;colon_195,supine;prone,M,train
+sub343,1,colon_196,supine,M,train
+sub346,2,colon_197;colon_198,supine;prone,M,train
+sub349,2,colon_199;colon_200,prone;supine,F,train
+sub353,2,colon_201;colon_202,supine;prone,F,test
+sub357,1,colon_203,supine,M,train
+sub358,2,colon_204;colon_205,supine;prone,Not available,test
+sub359,2,colon_206;colon_207,supine;prone,F,train
+sub367,1,colon_208,supine,M,train
+sub371,1,colon_209,prone,M,test
+sub380,1,colon_210,prone,M,train
+sub381,1,colon_211,supine,M,test
+sub382,1,colon_212,prone,F,train
+sub383,1,colon_213,prone,F,train
+sub384,1,colon_214,prone,M,train
+sub385,2,colon_215;colon_216,supine;prone,F,test
+sub388,2,colon_217;colon_218,supine;prone,M,train
+sub393,1,colon_219,supine,F,train
+sub396,1,colon_220,supine,M,train
+sub397,1,colon_221,prone,M,test
+sub399,2,colon_222;colon_223,supine;prone,F,train
+sub400,1,colon_224,prone,F,test
+sub402,1,colon_225,prone,M,train
+sub404,2,colon_226;colon_227,prone;supine,F,train
+sub407,1,colon_228,prone,M,train
+sub408,2,colon_229;colon_230,prone;supine,M,test
+sub410,2,colon_231;colon_232,prone;supine,M,test
+sub412,1,colon_233,prone,M,test
+sub420,1,colon_234,supine,F,train
+sub426,1,colon_235,supine,M,train
+sub427,1,colon_236,supine,F,train
+sub430,1,colon_237,supine,M,test
+sub433,1,colon_238,prone,M,test
+sub436,1,colon_239,prone,F,train
+sub438,1,colon_240,prone,F,train
+sub440,1,colon_241,prone,F,test
+sub441,2,colon_242;colon_243,supine;prone,F,train
+sub447,1,colon_244,prone,Not available,train
+sub448,1,colon_245,supine,F,train
+sub449,1,colon_246,prone,F,test
+sub450,1,colon_247,supine,F,train
+sub453,1,colon_248,supine,M,train
+sub456,2,colon_249;colon_250,supine;prone,F,train
+sub457,2,colon_251;colon_252,supine;prone,M,train
+sub458,2,colon_253;colon_254,supine;prone,M,train
+sub459,2,colon_255;colon_256,supine;prone,M,test
+sub461,2,colon_257;colon_258,supine;prone,M,train
+sub464,2,colon_259;colon_260,supine;prone,M,test
+sub465,1,colon_261,prone,M,train
+sub466,1,colon_262,prone,F,test
+sub468,2,colon_263;colon_264,supine;prone,Not available,train
+sub473,1,colon_265,supine,M,train
+sub477,1,colon_266,prone,M,test
+sub479,1,colon_267,supine,M,train
+sub480,1,colon_268,supine,F,train
+sub481,3,colon_269;colon_270;colon_271,supine;prone;prone,F,test
+sub486,1,colon_272,supine,F,train
+sub487,2,colon_273;colon_274,supine;prone,F,train
+sub488,2,colon_275;colon_276,prone;supine,M,test
+sub490,1,colon_277,prone,F,test
+sub494,1,colon_278,supine,M,train
+sub495,1,colon_279,supine,M,train
+sub502,2,colon_280;colon_281,supine;prone,M,train
+sub511,2,colon_282;colon_283,supine;prone,M,train
+sub512,2,colon_284;colon_285,supine;prone,M,test
+sub513,2,colon_286;colon_287,supine;prone,M,train
+sub517,1,colon_288,prone,M,train
+sub518,1,colon_289,supine,M,train
+sub519,1,colon_290,prone,F,train
+sub523,1,colon_291,supine,F,train
+sub526,2,colon_292;colon_293,supine;prone,F,test
+sub528,1,colon_294,supine,M,train
+sub539,2,colon_295;colon_296,supine;prone,M,train
+sub540,1,colon_297,prone,F,train
+sub541,1,colon_298,supine,F,test
+sub542,2,colon_299;colon_300,supine;prone,M,test
+sub543,1,colon_301,supine,M,test
+sub544,1,colon_302,supine,F,train
+sub547,1,colon_303,prone,F,train
+sub549,1,colon_304,supine,M,train
+sub550,1,colon_305,supine,M,train
+sub552,1,colon_306,supine,M,train
+sub553,1,colon_307,prone,F,test
+sub555,1,colon_308,supine,M,train
+sub556,1,colon_309,prone,F,train
+sub559,1,colon_310,supine,M,test
+sub564,2,colon_311;colon_312,prone;supine,M,train
+sub568,1,colon_313,supine,M,train
+sub570,1,colon_314,prone,M,train
+sub571,2,colon_315;colon_316,prone;prone,M,train
+sub577,1,colon_317,supine,F,train
+sub580,2,colon_318;colon_319,supine;prone,M,test
+sub581,1,colon_320,prone,F,train
+sub587,2,colon_321;colon_322,supine;prone,F,test
+sub589,1,colon_323,supine,M,train
+sub590,1,colon_324,prone,M,train
+sub597,1,colon_325,supine,Not available,train
+sub600,1,colon_326,supine,F,test
+sub601,1,colon_327,prone,F,train
+sub602,1,colon_328,supine,F,train
+sub604,2,colon_329;colon_330,supine;prone,M,test
+sub605,1,colon_331,prone,M,test
+sub607,1,colon_332,supine,M,train
+sub612,1,colon_333,supine,Not available,train
+sub613,1,colon_334,supine,Not available,train
+sub616,1,colon_335,supine,F,test
+sub617,2,colon_336;colon_337,supine;prone,M,test
+sub618,2,colon_338;colon_339,supine;prone,M,train
+sub620,1,colon_340,supine,F,train
+sub627,2,colon_341;colon_342,supine;prone,M,train
+sub628,1,colon_343,supine,Not available,test
+sub629,2,colon_344;colon_345,supine;prone,M,train
+sub631,2,colon_346;colon_347,prone;supine,F,test
+sub632,1,colon_348,prone,F,test
+sub633,1,colon_349,supine,F,test
+sub636,1,colon_350,prone,M,train
+sub642,1,colon_351,prone,F,train
+sub643,2,colon_352;colon_353,supine;prone,F,train
+sub646,1,colon_354,supine,F,test
+sub649,1,colon_355,supine,M,train
+sub651,1,colon_356,supine,M,train
+sub656,1,colon_358,prone,F,train
+sub658,1,colon_359,prone,F,train
+sub659,2,colon_360;colon_361,supine;prone,M,test
+sub661,2,colon_362;colon_363,prone;prone,M,train
+sub666,1,colon_365,prone,M,train
+sub669,2,colon_364;colon_370,supine;prone,M,test
+sub674,1,colon_366,supine,M,train
+sub676,1,colon_367,supine,M,test
+sub678,2,colon_368;colon_369,supine;prone,M,train
+sub686,1,colon_371,supine,F,train
+sub688,1,colon_372,prone,F,train
+sub690,1,colon_373,supine,M,train
+sub693,1,colon_374,supine,F,train
+sub698,1,colon_375,prone,M,train
+sub700,2,colon_376;colon_377,supine;prone,F,train
+sub701,2,colon_378;colon_379,supine;prone,F,test
+sub703,1,colon_380,prone,F,train
+sub706,2,colon_381;colon_382,supine;prone,F,train
+sub712,1,colon_383,prone,M,test
+sub713,1,colon_384,prone,F,train
+sub714,1,colon_385,supine,M,train
+sub718,1,colon_386,prone,F,test
+sub719,2,colon_387;colon_388,supine;prone,M,train
+sub726,2,colon_389;colon_390,prone;supine,F,train
+sub728,1,colon_391,supine,M,test
+sub729,1,colon_392,supine,M,test
+sub732,1,colon_393,supine,F,train
+sub746,2,colon_394;colon_395,prone;supine,M,train
+sub747,2,colon_396;colon_397,supine;prone,F,train
+sub749,1,colon_398,supine,M,test
+sub758,1,colon_399,supine,Not available,test
+sub761,2,colon_400;colon_401,supine;prone,M,train
+sub762,1,colon_402,prone,F,train
+sub768,1,colon_403,prone,M,train
+sub769,1,colon_404,prone,M,train
+sub771,2,colon_405;colon_406,prone;supine,F,train
+sub772,1,colon_407,prone,F,test
+sub775,2,colon_408;colon_409,supine;prone,M,train
+sub777,1,colon_410,prone,F,test
+sub778,1,colon_411,supine,M,train
+sub783,2,colon_412;colon_413,prone;supine,F,train
+sub786,1,colon_414,prone,F,test
+sub788,1,colon_415,supine,F,train
+sub789,2,colon_416;colon_417,supine;prone,F,train
+sub791,1,colon_418,prone,M,train
+sub793,4,colon_419;colon_420;colon_421;colon_422,supine;prone;supine;prone,F,test
+sub797,1,colon_423,supine,M,test
+sub799,2,colon_424;colon_425,prone;supine,Not available,train
+sub807,2,colon_426;colon_427,supine;prone,M,train
+sub809,1,colon_428,prone,F,train
+sub811,1,colon_429,supine,M,train
+sub815,1,colon_430,prone,M,train
+sub819,2,colon_431;colon_432,supine;prone,F,test
+sub820,1,colon_433,supine,F,test
+sub822,1,colon_434,prone,M,train
+sub825,1,colon_435,prone,M,train

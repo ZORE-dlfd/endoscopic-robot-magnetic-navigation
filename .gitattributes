@@ -1,11 +1,6 @@
 *.py text eol=lf
+*.md text eol=lf
 *.json text eol=lf
 *.npz binary
-*.exe binary
-*.dll binary
-*.pyd binary
-
-数据/** -text whitespace=cr-at-eol
-软件/** -text -diff
-文档/第三方许可/** -text -diff
-软件/第三方许可/** -diff
+*.npy binary
+*.pth binary

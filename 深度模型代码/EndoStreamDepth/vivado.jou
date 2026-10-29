@@ -1,0 +1,36 @@
+#-----------------------------------------------------------
+# Vivado v2023.2 (64-bit)
+# SW Build 4029153 on Fri Oct 13 20:13:54 MDT 2023
+# IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+# SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+# Start of session at: Thu Oct 22 11:16:01 2026
+# Process ID: 275864
+# Current directory: /home/zhujh459/桌面/newdata1/EndoStreamDepth
+# Command line: vivado
+# Log file: /home/zhujh459/桌面/newdata1/EndoStreamDepth/vivado.log
+# Journal file: /home/zhujh459/桌面/newdata1/EndoStreamDepth/vivado.jou
+# Running On: zhujh459-All-Series, OS: Linux, CPU Frequency: 1199.537 MHz, CPU Physical cores: 8, Host memory: 98732 MB
+#-----------------------------------------------------------
+start_gui
+create_project project_1 /home/zhujh459/newdata1/EndoStreamDepth/project_1 -part xc7k70tfbv676-1
+file mkdir /home/zhujh459/newdata1/EndoStreamDepth/project_1/project_1.srcs/sources_1/new
+close [ open /home/zhujh459/newdata1/EndoStreamDepth/project_1/project_1.srcs/sources_1/new/vote.sv w ]
+add_files /home/zhujh459/newdata1/EndoStreamDepth/project_1/project_1.srcs/sources_1/new/vote.sv
+set_property file_type Verilog [get_files  /home/zhujh459/newdata1/EndoStreamDepth/project_1/project_1.srcs/sources_1/new/vote.sv]
+update_compile_order -fileset sources_1
+file mkdir /home/zhujh459/newdata1/EndoStreamDepth/project_1/project_1.srcs/sim_1/new
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+close [ open /home/zhujh459/newdata1/EndoStreamDepth/project_1/project_1.srcs/sim_1/new/testbench.v w ]
+add_files -fileset sim_1 /home/zhujh459/newdata1/EndoStreamDepth/project_1/project_1.srcs/sim_1/new/testbench.v
+update_compile_order -fileset sim_1
+export_ip_user_files -of_objects  [get_files /home/zhujh459/newdata1/EndoStreamDepth/project_1/project_1.srcs/sim_1/new/testbench.v] -no_script -reset -force -quiet
+remove_files  -fileset sim_1 /home/zhujh459/newdata1/EndoStreamDepth/project_1/project_1.srcs/sim_1/new/testbench.v
+remove_files  -fileset sim_1 /home/zhujh459/newdata1/EndoStreamDepth/project_1/project_1.srcs/sim_1/new/testbench.v
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+close [ open /home/zhujh459/newdata1/EndoStreamDepth/project_1/project_1.srcs/sim_1/new/test.v w ]
+add_files -fileset sim_1 /home/zhujh459/newdata1/EndoStreamDepth/project_1/project_1.srcs/sim_1/new/test.v
+update_compile_order -fileset sim_1
+update_compile_order -fileset sim_1
+launch_simulation
+source tb_vote.tcl
+close_sim

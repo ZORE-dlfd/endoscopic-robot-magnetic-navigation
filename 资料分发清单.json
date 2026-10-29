@@ -1,0 +1,6977 @@
+[
+  {
+    "path": "总仿真软件+代码/工具/__pycache__/audit_eight_coil.cpython-313.pyc",
+    "bytes": 11506,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/工具/audit_eight_coil.py",
+    "bytes": 6417,
+    "distribution": "git"
+  },
+  {
+    "path": "总仿真软件+代码/工具/audit_predictive.py",
+    "bytes": 5874,
+    "distribution": "git"
+  },
+  {
+    "path": "总仿真软件+代码/工具/build_finite_field.py",
+    "bytes": 2101,
+    "distribution": "git"
+  },
+  {
+    "path": "总仿真软件+代码/工具/build_native.py",
+    "bytes": 1897,
+    "distribution": "git"
+  },
+  {
+    "path": "总仿真软件+代码/工具/collect_licenses.py",
+    "bytes": 6162,
+    "distribution": "git"
+  },
+  {
+    "path": "总仿真软件+代码/工具/finalize_eight_coil_assets.py",
+    "bytes": 8985,
+    "distribution": "git"
+  },
+  {
+    "path": "总仿真软件+代码/工具/generate_eight_coil.py",
+    "bytes": 9550,
+    "distribution": "git"
+  },
+  {
+    "path": "总仿真软件+代码/工具/generate_predictive.py",
+    "bytes": 6908,
+    "distribution": "git"
+  },
+  {
+    "path": "总仿真软件+代码/工具/import_rotating_run.py",
+    "bytes": 13295,
+    "distribution": "git"
+  },
+  {
+    "path": "总仿真软件+代码/工具/integrate_compact_coils.py",
+    "bytes": 10113,
+    "distribution": "git"
+  },
+  {
+    "path": "总仿真软件+代码/工具/migrate_data.py",
+    "bytes": 3037,
+    "distribution": "git"
+  },
+  {
+    "path": "总仿真软件+代码/工具/verify_native.py",
+    "bytes": 7871,
+    "distribution": "git"
+  },
+  {
+    "path": "总仿真软件+代码/数据/clon001/algorithms.json",
+    "bytes": 10843,
+    "distribution": "git"
+  },
+  {
+    "path": "总仿真软件+代码/数据/clon001/app.ico",
+    "bytes": 21909,
+    "distribution": "git"
+  },
+  {
+    "path": "总仿真软件+代码/数据/clon001/arrays.npz",
+    "bytes": 11271548,
+    "distribution": "git"
+  },
+  {
+    "path": "总仿真软件+代码/数据/clon001/finite_field.npz",
+    "bytes": 40564508,
+    "distribution": "git"
+  },
+  {
+    "path": "总仿真软件+代码/数据/clon001/magnetic_manifest.json",
+    "bytes": 454,
+    "distribution": "git"
+  },
+  {
+    "path": "总仿真软件+代码/数据/clon001/metadata.json",
+    "bytes": 4541323,
+    "distribution": "git"
+  },
+  {
+    "path": "总仿真软件+代码/数据/clon001/predictive_camera.json",
+    "bytes": 4633,
+    "distribution": "git"
+  },
+  {
+    "path": "总仿真软件+代码/数据/clon001/predictive_camera.npz",
+    "bytes": 6993872,
+    "distribution": "git"
+  },
+  {
+    "path": "总仿真软件+代码/数据/clon001/provenance.json",
+    "bytes": 726,
+    "distribution": "git"
+  },
+  {
+    "path": "总仿真软件+代码/深度服务与测试/service.py",
+    "bytes": 5741,
+    "distribution": "git"
+  },
+  {
+    "path": "总仿真软件+代码/深度服务与测试/test_depth_autostart.py",
+    "bytes": 1200,
+    "distribution": "git"
+  },
+  {
+    "path": "总仿真软件+代码/源码/__pycache__/main.cpython-313.pyc",
+    "bytes": 689,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/源码/coil_simulation/__init__.py",
+    "bytes": 80,
+    "distribution": "git"
+  },
+  {
+    "path": "总仿真软件+代码/源码/coil_simulation/__pycache__/__init__.cpython-313.pyc",
+    "bytes": 233,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/源码/coil_simulation/__pycache__/coil_physics.cpython-313.pyc",
+    "bytes": 4536,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/源码/coil_simulation/__pycache__/coupled_camera.cpython-313.pyc",
+    "bytes": 9586,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/源码/coil_simulation/__pycache__/export.cpython-313.pyc",
+    "bytes": 17018,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/源码/coil_simulation/__pycache__/finite_adapter.cpython-313.pyc",
+    "bytes": 4613,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/源码/coil_simulation/__pycache__/finite_sources._array_components-198.py313.1.nbc",
+    "bytes": 282006,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/源码/coil_simulation/__pycache__/finite_sources._array_components-198.py313.nbi",
+    "bytes": 1658,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/源码/coil_simulation/__pycache__/finite_sources._integrate_core-115.py313.1.nbc",
+    "bytes": 78632,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/源码/coil_simulation/__pycache__/finite_sources._integrate_core-115.py313.nbi",
+    "bytes": 1651,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/源码/coil_simulation/__pycache__/finite_sources._integrate_winding-136.py313.1.nbc",
+    "bytes": 103094,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/源码/coil_simulation/__pycache__/finite_sources._integrate_winding-136.py313.nbi",
+    "bytes": 1654,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/源码/coil_simulation/__pycache__/finite_sources.cpython-313.pyc",
+    "bytes": 18390,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/源码/coil_simulation/__pycache__/model.cpython-313.pyc",
+    "bytes": 10711,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/源码/coil_simulation/__pycache__/path_guidance.cpython-313.pyc",
+    "bytes": 13455,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/源码/coil_simulation/__pycache__/posture.cpython-313.pyc",
+    "bytes": 10545,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/源码/coil_simulation/__pycache__/redundant_actuator.cpython-313.pyc",
+    "bytes": 6697,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/源码/coil_simulation/__pycache__/route_direction.cpython-313.pyc",
+    "bytes": 5833,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/源码/coil_simulation/__pycache__/simulation.cpython-313.pyc",
+    "bytes": 17183,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/源码/coil_simulation/coil_physics.py",
+    "bytes": 3153,
+    "distribution": "git"
+  },
+  {
+    "path": "总仿真软件+代码/源码/coil_simulation/coupled_camera.py",
+    "bytes": 5082,
+    "distribution": "git"
+  },
+  {
+    "path": "总仿真软件+代码/源码/coil_simulation/export.py",
+    "bytes": 11065,
+    "distribution": "git"
+  },
+  {
+    "path": "总仿真软件+代码/源码/coil_simulation/finite_adapter.py",
+    "bytes": 2491,
+    "distribution": "git"
+  },
+  {
+    "path": "总仿真软件+代码/源码/coil_simulation/finite_sources.py",
+    "bytes": 12125,
+    "distribution": "git"
+  },
+  {
+    "path": "总仿真软件+代码/源码/coil_simulation/model.py",
+    "bytes": 7013,
+    "distribution": "git"
+  },
+  {
+    "path": "总仿真软件+代码/源码/coil_simulation/path_guidance.py",
+    "bytes": 9638,
+    "distribution": "git"
+  },
+  {
+    "path": "总仿真软件+代码/源码/coil_simulation/posture.py",
+    "bytes": 6190,
+    "distribution": "git"
+  },
+  {
+    "path": "总仿真软件+代码/源码/coil_simulation/redundant_actuator.py",
+    "bytes": 4411,
+    "distribution": "git"
+  },
+  {
+    "path": "总仿真软件+代码/源码/coil_simulation/route_direction.py",
+    "bytes": 3325,
+    "distribution": "git"
+  },
+  {
+    "path": "总仿真软件+代码/源码/coil_simulation/simulation.py",
+    "bytes": 10748,
+    "distribution": "git"
+  },
+  {
+    "path": "总仿真软件+代码/源码/magnetic_app/__init__.py",
+    "bytes": 22,
+    "distribution": "git"
+  },
+  {
+    "path": "总仿真软件+代码/源码/magnetic_app/__pycache__/__init__.cpython-313.pyc",
+    "bytes": 276,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/源码/magnetic_app/__pycache__/__init__.cpython-314.pyc",
+    "bytes": 278,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/源码/magnetic_app/__pycache__/app.cpython-313.pyc",
+    "bytes": 28210,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/源码/magnetic_app/app.py",
+    "bytes": 15029,
+    "distribution": "git"
+  },
+  {
+    "path": "总仿真软件+代码/源码/magnetic_app/depth/__init__.py",
+    "bytes": 66,
+    "distribution": "git"
+  },
+  {
+    "path": "总仿真软件+代码/源码/magnetic_app/depth/__pycache__/__init__.cpython-313.pyc",
+    "bytes": 330,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/源码/magnetic_app/depth/__pycache__/__init__.cpython-314.pyc",
+    "bytes": 332,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/源码/magnetic_app/depth/__pycache__/cache.cpython-313.pyc",
+    "bytes": 17028,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/源码/magnetic_app/depth/__pycache__/cache.cpython-314.pyc",
+    "bytes": 18916,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/源码/magnetic_app/depth/__pycache__/client.cpython-313.pyc",
+    "bytes": 7976,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/源码/magnetic_app/depth/__pycache__/service.cpython-313.pyc",
+    "bytes": 9251,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/源码/magnetic_app/depth/__pycache__/worker.cpython-313.pyc",
+    "bytes": 3451,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/源码/magnetic_app/depth/cache.py",
+    "bytes": 9945,
+    "distribution": "git"
+  },
+  {
+    "path": "总仿真软件+代码/源码/magnetic_app/depth/client.py",
+    "bytes": 4051,
+    "distribution": "git"
+  },
+  {
+    "path": "总仿真软件+代码/源码/magnetic_app/depth/service.py",
+    "bytes": 5741,
+    "distribution": "git"
+  },
+  {
+    "path": "总仿真软件+代码/源码/magnetic_app/depth/worker.py",
+    "bytes": 1361,
+    "distribution": "git"
+  },
+  {
+    "path": "总仿真软件+代码/源码/magnetic_app/domain/__init__.py",
+    "bytes": 0,
+    "distribution": "git"
+  },
+  {
+    "path": "总仿真软件+代码/源码/magnetic_app/domain/__pycache__/__init__.cpython-313.pyc",
+    "bytes": 257,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/源码/magnetic_app/domain/__pycache__/algorithms.cpython-313.pyc",
+    "bytes": 674,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/源码/magnetic_app/domain/__pycache__/clock.cpython-313.pyc",
+    "bytes": 2730,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/源码/magnetic_app/domain/__pycache__/coil_sources.cpython-313.pyc",
+    "bytes": 13203,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/源码/magnetic_app/domain/__pycache__/finite_field.cpython-313.pyc",
+    "bytes": 7710,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/源码/magnetic_app/domain/__pycache__/predictive.cpython-313.pyc",
+    "bytes": 9966,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/源码/magnetic_app/domain/__pycache__/probe.cpython-313.pyc",
+    "bytes": 1093,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/源码/magnetic_app/domain/__pycache__/replay.cpython-313.pyc",
+    "bytes": 21749,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/源码/magnetic_app/domain/algorithms.py",
+    "bytes": 225,
+    "distribution": "git"
+  },
+  {
+    "path": "总仿真软件+代码/源码/magnetic_app/domain/clock.py",
+    "bytes": 1031,
+    "distribution": "git"
+  },
+  {
+    "path": "总仿真软件+代码/源码/magnetic_app/domain/coil_sources.py",
+    "bytes": 7568,
+    "distribution": "git"
+  },
+  {
+    "path": "总仿真软件+代码/源码/magnetic_app/domain/finite_field.py",
+    "bytes": 4206,
+    "distribution": "git"
+  },
+  {
+    "path": "总仿真软件+代码/源码/magnetic_app/domain/predictive.py",
+    "bytes": 5950,
+    "distribution": "git"
+  },
+  {
+    "path": "总仿真软件+代码/源码/magnetic_app/domain/probe.py",
+    "bytes": 618,
+    "distribution": "git"
+  },
+  {
+    "path": "总仿真软件+代码/源码/magnetic_app/domain/replay.py",
+    "bytes": 11529,
+    "distribution": "git"
+  },
+  {
+    "path": "总仿真软件+代码/源码/magnetic_app/rendering/__init__.py",
+    "bytes": 0,
+    "distribution": "git"
+  },
+  {
+    "path": "总仿真软件+代码/源码/magnetic_app/rendering/__pycache__/__init__.cpython-313.pyc",
+    "bytes": 260,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/源码/magnetic_app/rendering/__pycache__/geometry.cpython-313.pyc",
+    "bytes": 14615,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/源码/magnetic_app/rendering/__pycache__/picking.cpython-313.pyc",
+    "bytes": 4175,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/源码/magnetic_app/rendering/__pycache__/view.cpython-313.pyc",
+    "bytes": 58797,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/源码/magnetic_app/rendering/geometry.py",
+    "bytes": 6895,
+    "distribution": "git"
+  },
+  {
+    "path": "总仿真软件+代码/源码/magnetic_app/rendering/picking.py",
+    "bytes": 2408,
+    "distribution": "git"
+  },
+  {
+    "path": "总仿真软件+代码/源码/magnetic_app/rendering/view.py",
+    "bytes": 32697,
+    "distribution": "git"
+  },
+  {
+    "path": "总仿真软件+代码/源码/magnetic_app/ui/__init__.py",
+    "bytes": 0,
+    "distribution": "git"
+  },
+  {
+    "path": "总仿真软件+代码/源码/magnetic_app/ui/__pycache__/__init__.cpython-313.pyc",
+    "bytes": 253,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/源码/magnetic_app/ui/__pycache__/chart.cpython-313.pyc",
+    "bytes": 16078,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/源码/magnetic_app/ui/__pycache__/style.cpython-313.pyc",
+    "bytes": 2668,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/源码/magnetic_app/ui/__pycache__/window.cpython-313.pyc",
+    "bytes": 96064,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/源码/magnetic_app/ui/chart.py",
+    "bytes": 7059,
+    "distribution": "git"
+  },
+  {
+    "path": "总仿真软件+代码/源码/magnetic_app/ui/style.py",
+    "bytes": 2413,
+    "distribution": "git"
+  },
+  {
+    "path": "总仿真软件+代码/源码/magnetic_app/ui/window.py",
+    "bytes": 57188,
+    "distribution": "git"
+  },
+  {
+    "path": "总仿真软件+代码/源码/main.py",
+    "bytes": 284,
+    "distribution": "git"
+  },
+  {
+    "path": "总仿真软件+代码/源码/retreat_planner/__init__.py",
+    "bytes": 84,
+    "distribution": "git"
+  },
+  {
+    "path": "总仿真软件+代码/源码/retreat_planner/__pycache__/__init__.cpython-313.pyc",
+    "bytes": 237,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/源码/retreat_planner/__pycache__/config.cpython-313.pyc",
+    "bytes": 2607,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/源码/retreat_planner/__pycache__/controller.cpython-313.pyc",
+    "bytes": 5483,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/源码/retreat_planner/__pycache__/coverage.cpython-313.pyc",
+    "bytes": 5767,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/源码/retreat_planner/__pycache__/experiment.cpython-313.pyc",
+    "bytes": 13986,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/源码/retreat_planner/__pycache__/geometry.cpython-313.pyc",
+    "bytes": 4998,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/源码/retreat_planner/__pycache__/planning.cpython-313.pyc",
+    "bytes": 7076,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/源码/retreat_planner/__pycache__/scene.cpython-313.pyc",
+    "bytes": 4460,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/源码/retreat_planner/__pycache__/search.cpython-313.pyc",
+    "bytes": 6381,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/源码/retreat_planner/__pycache__/visibility.cpython-313.pyc",
+    "bytes": 15877,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/源码/retreat_planner/config.py",
+    "bytes": 1321,
+    "distribution": "git"
+  },
+  {
+    "path": "总仿真软件+代码/源码/retreat_planner/controller.py",
+    "bytes": 2779,
+    "distribution": "git"
+  },
+  {
+    "path": "总仿真软件+代码/源码/retreat_planner/coverage.py",
+    "bytes": 2569,
+    "distribution": "git"
+  },
+  {
+    "path": "总仿真软件+代码/源码/retreat_planner/experiment.py",
+    "bytes": 8098,
+    "distribution": "git"
+  },
+  {
+    "path": "总仿真软件+代码/源码/retreat_planner/geometry.py",
+    "bytes": 2219,
+    "distribution": "git"
+  },
+  {
+    "path": "总仿真软件+代码/源码/retreat_planner/planning.py",
+    "bytes": 3981,
+    "distribution": "git"
+  },
+  {
+    "path": "总仿真软件+代码/源码/retreat_planner/scene.py",
+    "bytes": 2063,
+    "distribution": "git"
+  },
+  {
+    "path": "总仿真软件+代码/源码/retreat_planner/search.py",
+    "bytes": 3450,
+    "distribution": "git"
+  },
+  {
+    "path": "总仿真软件+代码/源码/retreat_planner/visibility.py",
+    "bytes": 7626,
+    "distribution": "git"
+  },
+  {
+    "path": "总仿真软件+代码/源码/tests/__pycache__/test_clock.cpython-313-pytest-8.4.2.pyc",
+    "bytes": 8459,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/源码/tests/__pycache__/test_clock.cpython-313.pyc",
+    "bytes": 2949,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/源码/tests/__pycache__/test_coil_sources.cpython-313-pytest-8.4.2.pyc",
+    "bytes": 21958,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/源码/tests/__pycache__/test_coil_sources.cpython-313.pyc",
+    "bytes": 7739,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/源码/tests/__pycache__/test_depth_cache.cpython-313-pytest-8.4.2.pyc",
+    "bytes": 13258,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/源码/tests/__pycache__/test_finite_source_integration.cpython-313-pytest-8.4.2.pyc",
+    "bytes": 22142,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/源码/tests/__pycache__/test_finite_source_integration.cpython-313.pyc",
+    "bytes": 8329,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/源码/tests/__pycache__/test_geometry.cpython-313-pytest-8.4.2.pyc",
+    "bytes": 10606,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/源码/tests/__pycache__/test_geometry.cpython-313.pyc",
+    "bytes": 3758,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/源码/tests/__pycache__/test_magnetic_dynamics.cpython-313-pytest-8.4.2.pyc",
+    "bytes": 36971,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/源码/tests/__pycache__/test_magnetic_dynamics.cpython-313.pyc",
+    "bytes": 11467,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/源码/tests/__pycache__/test_planner_core.cpython-313-pytest-8.4.2.pyc",
+    "bytes": 19171,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/源码/tests/__pycache__/test_planner_core.cpython-313.pyc",
+    "bytes": 8583,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/源码/tests/__pycache__/test_planner_prediction.cpython-313-pytest-8.4.2.pyc",
+    "bytes": 15328,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/源码/tests/__pycache__/test_planner_prediction.cpython-313.pyc",
+    "bytes": 9099,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/源码/tests/__pycache__/test_posture.cpython-313-pytest-8.4.2.pyc",
+    "bytes": 20044,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/源码/tests/__pycache__/test_posture.cpython-313.pyc",
+    "bytes": 12177,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/源码/tests/__pycache__/test_predictive.cpython-313-pytest-8.4.2.pyc",
+    "bytes": 22460,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/源码/tests/__pycache__/test_predictive.cpython-313.pyc",
+    "bytes": 6557,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/源码/tests/__pycache__/test_release_audit.cpython-313-pytest-8.4.2.pyc",
+    "bytes": 5433,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/源码/tests/__pycache__/test_release_audit.cpython-313.pyc",
+    "bytes": 3001,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/源码/tests/__pycache__/test_replay.cpython-313-pytest-8.4.2.pyc",
+    "bytes": 25498,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/源码/tests/__pycache__/test_replay.cpython-313.pyc",
+    "bytes": 8866,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/源码/tests/__pycache__/test_rotating_source.cpython-313-pytest-8.4.2.pyc",
+    "bytes": 9138,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/源码/tests/__pycache__/test_rotating_source.cpython-313.pyc",
+    "bytes": 6916,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/源码/tests/__pycache__/test_route_direction.cpython-313-pytest-8.4.2.pyc",
+    "bytes": 11347,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/源码/tests/__pycache__/test_route_direction.cpython-313.pyc",
+    "bytes": 8245,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/源码/tests/__pycache__/test_ui.cpython-313-pytest-8.4.2.pyc",
+    "bytes": 64888,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/源码/tests/__pycache__/test_ui.cpython-313.pyc",
+    "bytes": 17593,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/源码/tests/test_clock.py",
+    "bytes": 1152,
+    "distribution": "git"
+  },
+  {
+    "path": "总仿真软件+代码/源码/tests/test_coil_sources.py",
+    "bytes": 4326,
+    "distribution": "git"
+  },
+  {
+    "path": "总仿真软件+代码/源码/tests/test_depth_cache.py",
+    "bytes": 3811,
+    "distribution": "git"
+  },
+  {
+    "path": "总仿真软件+代码/源码/tests/test_finite_source_integration.py",
+    "bytes": 4661,
+    "distribution": "git"
+  },
+  {
+    "path": "总仿真软件+代码/源码/tests/test_geometry.py",
+    "bytes": 1625,
+    "distribution": "git"
+  },
+  {
+    "path": "总仿真软件+代码/源码/tests/test_magnetic_dynamics.py",
+    "bytes": 5653,
+    "distribution": "git"
+  },
+  {
+    "path": "总仿真软件+代码/源码/tests/test_planner_core.py",
+    "bytes": 3708,
+    "distribution": "git"
+  },
+  {
+    "path": "总仿真软件+代码/源码/tests/test_planner_prediction.py",
+    "bytes": 3581,
+    "distribution": "git"
+  },
+  {
+    "path": "总仿真软件+代码/源码/tests/test_posture.py",
+    "bytes": 6460,
+    "distribution": "git"
+  },
+  {
+    "path": "总仿真软件+代码/源码/tests/test_predictive.py",
+    "bytes": 3481,
+    "distribution": "git"
+  },
+  {
+    "path": "总仿真软件+代码/源码/tests/test_release_audit.py",
+    "bytes": 1591,
+    "distribution": "git"
+  },
+  {
+    "path": "总仿真软件+代码/源码/tests/test_replay.py",
+    "bytes": 4000,
+    "distribution": "git"
+  },
+  {
+    "path": "总仿真软件+代码/源码/tests/test_rotating_source.py",
+    "bytes": 3744,
+    "distribution": "git"
+  },
+  {
+    "path": "总仿真软件+代码/源码/tests/test_route_direction.py",
+    "bytes": 4745,
+    "distribution": "git"
+  },
+  {
+    "path": "总仿真软件+代码/源码/tests/test_ui.py",
+    "bytes": 9525,
+    "distribution": "git"
+  },
+  {
+    "path": "总仿真软件+代码/缓存生成身份校验/20261026-120135-025111/generate_cache.py",
+    "bytes": 4522,
+    "distribution": "git"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/_asyncio.pyd",
+    "bytes": 72520,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/_bz2.pyd",
+    "bytes": 36168,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/_ctypes.pyd",
+    "bytes": 141640,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/_decimal.pyd",
+    "bytes": 158024,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/_hashlib.pyd",
+    "bytes": 64328,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/_lzma.pyd",
+    "bytes": 48968,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/_multiprocessing.pyd",
+    "bytes": 34632,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/_overlapped.pyd",
+    "bytes": 55624,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/_queue.pyd",
+    "bytes": 32584,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/_socket.pyd",
+    "bytes": 85832,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/_ssl.pyd",
+    "bytes": 185672,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/_wmi.pyd",
+    "bytes": 36680,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/api-ms-win-core-console-l1-1-0.dll",
+    "bytes": 21984,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/api-ms-win-core-console-l1-2-0.dll",
+    "bytes": 21976,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/api-ms-win-core-datetime-l1-1-0.dll",
+    "bytes": 21984,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/api-ms-win-core-debug-l1-1-0.dll",
+    "bytes": 21984,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/api-ms-win-core-errorhandling-l1-1-0.dll",
+    "bytes": 21976,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/api-ms-win-core-fibers-l1-1-0.dll",
+    "bytes": 21992,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/api-ms-win-core-file-l1-1-0.dll",
+    "bytes": 26088,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/api-ms-win-core-file-l1-2-0.dll",
+    "bytes": 21976,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/api-ms-win-core-file-l2-1-0.dll",
+    "bytes": 21976,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/api-ms-win-core-handle-l1-1-0.dll",
+    "bytes": 21984,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/api-ms-win-core-heap-l1-1-0.dll",
+    "bytes": 21984,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/api-ms-win-core-interlocked-l1-1-0.dll",
+    "bytes": 21984,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/api-ms-win-core-libraryloader-l1-1-0.dll",
+    "bytes": 22008,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/api-ms-win-core-localization-l1-2-0.dll",
+    "bytes": 21984,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/api-ms-win-core-memory-l1-1-0.dll",
+    "bytes": 21976,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/api-ms-win-core-namedpipe-l1-1-0.dll",
+    "bytes": 21984,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/api-ms-win-core-processenvironment-l1-1-0.dll",
+    "bytes": 22008,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/api-ms-win-core-processthreads-l1-1-0.dll",
+    "bytes": 21976,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/api-ms-win-core-processthreads-l1-1-1.dll",
+    "bytes": 21976,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/api-ms-win-core-profile-l1-1-0.dll",
+    "bytes": 21992,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/api-ms-win-core-rtlsupport-l1-1-0.dll",
+    "bytes": 21984,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/api-ms-win-core-string-l1-1-0.dll",
+    "bytes": 21976,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/api-ms-win-core-synch-l1-1-0.dll",
+    "bytes": 21976,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/api-ms-win-core-synch-l1-2-0.dll",
+    "bytes": 21976,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/api-ms-win-core-sysinfo-l1-1-0.dll",
+    "bytes": 21984,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/api-ms-win-core-timezone-l1-1-0.dll",
+    "bytes": 21976,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/api-ms-win-core-util-l1-1-0.dll",
+    "bytes": 21992,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/api-ms-win-crt-conio-l1-1-0.dll",
+    "bytes": 21984,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/api-ms-win-crt-convert-l1-1-0.dll",
+    "bytes": 26080,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/api-ms-win-crt-environment-l1-1-0.dll",
+    "bytes": 21984,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/api-ms-win-crt-filesystem-l1-1-0.dll",
+    "bytes": 21984,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/api-ms-win-crt-heap-l1-1-0.dll",
+    "bytes": 21984,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/api-ms-win-crt-locale-l1-1-0.dll",
+    "bytes": 21984,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/api-ms-win-crt-math-l1-1-0.dll",
+    "bytes": 30184,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/api-ms-win-crt-multibyte-l1-1-0.dll",
+    "bytes": 30176,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/api-ms-win-crt-private-l1-1-0.dll",
+    "bytes": 75232,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/api-ms-win-crt-process-l1-1-0.dll",
+    "bytes": 21984,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/api-ms-win-crt-runtime-l1-1-0.dll",
+    "bytes": 26104,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/api-ms-win-crt-stdio-l1-1-0.dll",
+    "bytes": 26080,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/api-ms-win-crt-string-l1-1-0.dll",
+    "bytes": 26072,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/api-ms-win-crt-time-l1-1-0.dll",
+    "bytes": 21984,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/api-ms-win-crt-utility-l1-1-0.dll",
+    "bytes": 22000,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/assets/algorithms.json",
+    "bytes": 10843,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/assets/app.ico",
+    "bytes": 21909,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/assets/arrays.npz",
+    "bytes": 11271548,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/assets/finite_field.npz",
+    "bytes": 40564508,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/assets/magnetic_manifest.json",
+    "bytes": 454,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/assets/metadata.json",
+    "bytes": 4541323,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/assets/predictive_camera.json",
+    "bytes": 4633,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/assets/predictive_camera.npz",
+    "bytes": 6993872,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/assets/provenance.json",
+    "bytes": 726,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/base_library.zip",
+    "bytes": 1403000,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/bzip2.dll",
+    "bytes": 83224,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/charset.dll",
+    "bytes": 22800,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/concrt140.dll",
+    "bytes": 324720,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/expat.dll",
+    "bytes": 276296,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/ffi-7.dll",
+    "bytes": 40208,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/ffi-8.dll",
+    "bytes": 40216,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/ffi.dll",
+    "bytes": 40216,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/freetype.dll",
+    "bytes": 682256,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/gio-2.0-0.dll",
+    "bytes": 1660232,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/glib-2.0-0.dll",
+    "bytes": 1353544,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/gmodule-2.0-0.dll",
+    "bytes": 31048,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/gobject-2.0-0.dll",
+    "bytes": 337224,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/graphite2.dll",
+    "bytes": 130560,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/harfbuzz.dll",
+    "bytes": 1118480,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/iconv.dll",
+    "bytes": 950032,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/icudt73.dll",
+    "bytes": 32001536,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/icuin73.dll",
+    "bytes": 3944960,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/icuuc73.dll",
+    "bytes": 2744832,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/intl-8.dll",
+    "bytes": 22344,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/libbz2.dll",
+    "bytes": 83216,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/libcrypto-3-x64.dll",
+    "bytes": 7343944,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/libexpat.dll",
+    "bytes": 276296,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/libimalloc.dll",
+    "bytes": 17288,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/libiomp5md.dll",
+    "bytes": 1310600,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/libiomp5md_db.dll",
+    "bytes": 125320,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/libiompstubs5md.dll",
+    "bytes": 43912,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/libjpeg.dll",
+    "bytes": 285512,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/liblzma.dll",
+    "bytes": 198416,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/libmpdec-4.dll",
+    "bytes": 213264,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/libpng16.dll",
+    "bytes": 206664,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/libssl-3-x64.dll",
+    "bytes": 1327944,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/mkl/_mklinit.cp313-win_amd64.pyd",
+    "bytes": 22856,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/mkl/_py_mkl_service.cp313-win_amd64.pyd",
+    "bytes": 119112,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/mkl_avx2.2.dll",
+    "bytes": 38077320,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/mkl_avx512.2.dll",
+    "bytes": 57260424,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/mkl_blacs_ilp64.2.dll",
+    "bytes": 731528,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/mkl_blacs_intelmpi_ilp64.2.dll",
+    "bytes": 139144,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/mkl_blacs_intelmpi_lp64.2.dll",
+    "bytes": 139144,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/mkl_blacs_lp64.2.dll",
+    "bytes": 395144,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/mkl_blacs_msmpi_ilp64.2.dll",
+    "bytes": 139144,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/mkl_blacs_msmpi_lp64.2.dll",
+    "bytes": 139144,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/mkl_cdft_core.2.dll",
+    "bytes": 446344,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/mkl_core.2.dll",
+    "bytes": 66158472,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/mkl_def.2.dll",
+    "bytes": 32881032,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/mkl_intel_thread.2.dll",
+    "bytes": 36122504,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/mkl_mc3.2.dll",
+    "bytes": 39126920,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/mkl_rt.2.dll",
+    "bytes": 27346312,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/mkl_scalapack_ilp64.2.dll",
+    "bytes": 7481736,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/mkl_scalapack_lp64.2.dll",
+    "bytes": 7395208,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/mkl_sequential.2.dll",
+    "bytes": 22430600,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/mkl_tbb_thread.2.dll",
+    "bytes": 27564424,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/mkl_vml_avx2.2.dll",
+    "bytes": 15119752,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/mkl_vml_avx512.2.dll",
+    "bytes": 15758216,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/mkl_vml_cmpt.2.dll",
+    "bytes": 8092552,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/mkl_vml_def.2.dll",
+    "bytes": 9334152,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/mkl_vml_mc3.2.dll",
+    "bytes": 13115784,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/msmpi.dll",
+    "bytes": 2260480,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/msvcp140.dll",
+    "bytes": 557648,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/msvcp140_1.dll",
+    "bytes": 35952,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/msvcp140_2.dll",
+    "bytes": 280176,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/msvcp140_atomic_wait.dll",
+    "bytes": 50288,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/msvcp140_codecvt_ids.dll",
+    "bytes": 31880,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/MSVCR100.dll",
+    "bytes": 829264,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/numpy/_core/_multiarray_tests.cp313-win_amd64.pyd",
+    "bytes": 75592,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/numpy/_core/_multiarray_umath.cp313-win_amd64.pyd",
+    "bytes": 2730312,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/numpy/fft/_pocketfft_umath.cp313-win_amd64.pyd",
+    "bytes": 291144,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/numpy/linalg/_umath_linalg.cp313-win_amd64.pyd",
+    "bytes": 122696,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/numpy/random/_bounded_integers.cp313-win_amd64.pyd",
+    "bytes": 221512,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/numpy/random/_common.cp313-win_amd64.pyd",
+    "bytes": 173896,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/numpy/random/_generator.cp313-win_amd64.pyd",
+    "bytes": 726344,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/numpy/random/_mt19937.cp313-win_amd64.pyd",
+    "bytes": 97608,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/numpy/random/_pcg64.cp313-win_amd64.pyd",
+    "bytes": 105800,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/numpy/random/_philox.cp313-win_amd64.pyd",
+    "bytes": 90440,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/numpy/random/_sfc64.cp313-win_amd64.pyd",
+    "bytes": 70984,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/numpy/random/bit_generator.cp313-win_amd64.pyd",
+    "bytes": 174920,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/numpy/random/mtrand.cp313-win_amd64.pyd",
+    "bytes": 615752,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/numpy-2.3.5.dist-info/direct_url.json",
+    "bytes": 316,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/numpy-2.3.5.dist-info/entry_points.txt",
+    "bytes": 220,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/numpy-2.3.5.dist-info/INSTALLER",
+    "bytes": 5,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/numpy-2.3.5.dist-info/LICENSE.txt",
+    "bytes": 1543,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/numpy-2.3.5.dist-info/METADATA",
+    "bytes": 7423,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/numpy-2.3.5.dist-info/RECORD",
+    "bytes": 110310,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/numpy-2.3.5.dist-info/REQUESTED",
+    "bytes": 0,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/numpy-2.3.5.dist-info/WHEEL",
+    "bytes": 85,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/omptarget.dll",
+    "bytes": 1330056,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/omptarget.rtl.level0.dll",
+    "bytes": 1327496,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/omptarget.rtl.opencl.dll",
+    "bytes": 1192840,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/omptarget.rtl.unified_runtime.dll",
+    "bytes": 968072,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/omptarget.sycl.wrap.dll",
+    "bytes": 23432,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/OpenGL/DLLS/freeglut32.vc10.dll",
+    "bytes": 218112,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/OpenGL/DLLS/freeglut32.vc14.dll",
+    "bytes": 199680,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/OpenGL/DLLS/freeglut32.vc9.dll",
+    "bytes": 217600,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/OpenGL/DLLS/freeglut64.vc10.dll",
+    "bytes": 256000,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/OpenGL/DLLS/freeglut64.vc14.dll",
+    "bytes": 244736,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/OpenGL/DLLS/freeglut64.vc9.dll",
+    "bytes": 254976,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/OpenGL/DLLS/freeglut_COPYING.txt",
+    "bytes": 1466,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/OpenGL/DLLS/freeglut_README.txt",
+    "bytes": 5065,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/OpenGL/DLLS/gle32.vc10.dll",
+    "bytes": 55808,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/OpenGL/DLLS/gle32.vc14.dll",
+    "bytes": 63488,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/OpenGL/DLLS/gle32.vc9.dll",
+    "bytes": 52736,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/OpenGL/DLLS/gle64.vc10.dll",
+    "bytes": 77312,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/OpenGL/DLLS/gle64.vc14.dll",
+    "bytes": 77312,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/OpenGL/DLLS/gle64.vc9.dll",
+    "bytes": 76288,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/OpenGL/DLLS/gle_AUTHORS",
+    "bytes": 290,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/OpenGL/DLLS/gle_COPYING",
+    "bytes": 19125,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/OpenGL/DLLS/gle_COPYING.src",
+    "bytes": 3261,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/OpenGL/DLLS/GLE_WIN32_README.txt",
+    "bytes": 209,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/OpenGL_accelerate/arraydatatype.cp313-win_amd64.pyd",
+    "bytes": 200704,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/OpenGL_accelerate/buffers_formathandler.cp313-win_amd64.pyd",
+    "bytes": 66560,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/OpenGL_accelerate/errorchecker.cp313-win_amd64.pyd",
+    "bytes": 59392,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/OpenGL_accelerate/formathandler.cp313-win_amd64.pyd",
+    "bytes": 70656,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/OpenGL_accelerate/latebind.cp313-win_amd64.pyd",
+    "bytes": 58368,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/OpenGL_accelerate/nones_formathandler.cp313-win_amd64.pyd",
+    "bytes": 47104,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/OpenGL_accelerate/numpy_formathandler.cp313-win_amd64.pyd",
+    "bytes": 81920,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/OpenGL_accelerate/vbo.cp313-win_amd64.pyd",
+    "bytes": 128512,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/OpenGL_accelerate/wrapper.cp313-win_amd64.pyd",
+    "bytes": 236032,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/pcre2-16.dll",
+    "bytes": 586056,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/pcre2-8.dll",
+    "bytes": 621896,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/psutil/_psutil_windows.pyd",
+    "bytes": 79688,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/pyexpat.pyd",
+    "bytes": 66888,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/PySide6/plugins/generic/qtuiotouchplugin.dll",
+    "bytes": 101704,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/PySide6/plugins/iconengines/qsvgicon.dll",
+    "bytes": 77640,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/PySide6/plugins/imageformats/qgif.dll",
+    "bytes": 47432,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/PySide6/plugins/imageformats/qico.dll",
+    "bytes": 45896,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/PySide6/plugins/imageformats/qjpeg.dll",
+    "bytes": 64328,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/PySide6/plugins/imageformats/qpdf.dll",
+    "bytes": 41800,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/PySide6/plugins/imageformats/qsvg.dll",
+    "bytes": 38216,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/PySide6/plugins/networkinformation/qglib.dll",
+    "bytes": 33608,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/PySide6/plugins/networkinformation/qnetworklistmanager.dll",
+    "bytes": 69448,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/PySide6/plugins/platforms/qdirect2d.dll",
+    "bytes": 1013576,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/PySide6/plugins/platforms/qminimal.dll",
+    "bytes": 60744,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/PySide6/plugins/platforms/qoffscreen.dll",
+    "bytes": 109384,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/PySide6/plugins/platforms/qwindows.dll",
+    "bytes": 941896,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/PySide6/plugins/styles/qmodernwindowsstyle.dll",
+    "bytes": 211272,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/PySide6/plugins/tls/qcertonlybackend.dll",
+    "bytes": 103240,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/PySide6/plugins/tls/qopensslbackend.dll",
+    "bytes": 240456,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/PySide6/plugins/tls/qschannelbackend.dll",
+    "bytes": 260936,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/PySide6/QtCore.cp313-win_amd64.pyd",
+    "bytes": 3182408,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/PySide6/QtGui.cp313-win_amd64.pyd",
+    "bytes": 3872584,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/PySide6/QtNetwork.cp313-win_amd64.pyd",
+    "bytes": 1002312,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/PySide6/QtOpenGL.cp313-win_amd64.pyd",
+    "bytes": 8763208,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/PySide6/QtOpenGLWidgets.cp313-win_amd64.pyd",
+    "bytes": 119624,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/PySide6/QtWidgets.cp313-win_amd64.pyd",
+    "bytes": 4730184,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/pyside6.cp313-win_amd64.dll",
+    "bytes": 240456,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/python3.dll",
+    "bytes": 70472,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/python313.dll",
+    "bytes": 7116616,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/pywin32_system32/pywintypes313.dll",
+    "bytes": 147272,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/Qt6Core.dll",
+    "bytes": 5790024,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/Qt6Gui.dll",
+    "bytes": 8526152,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/Qt6Network.dll",
+    "bytes": 1777992,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/Qt6OpenGL.dll",
+    "bytes": 1986888,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/Qt6OpenGLWidgets.dll",
+    "bytes": 64328,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/Qt6Pdf.dll",
+    "bytes": 4345160,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/Qt6Svg.dll",
+    "bytes": 625480,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/Qt6Widgets.dll",
+    "bytes": 6571336,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/select.pyd",
+    "bytes": 30536,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/shiboken6/Shiboken.cp313-win_amd64.pyd",
+    "bytes": 32584,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/shiboken6.cp313-win_amd64.dll",
+    "bytes": 481096,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/sqlite3.dll",
+    "bytes": 1645384,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/tbb12.dll",
+    "bytes": 349968,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/tbbmalloc.dll",
+    "bytes": 124688,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/tbbmalloc_proxy.dll",
+    "bytes": 43280,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/tcl86t.dll",
+    "bytes": 1842504,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/tk86t.dll",
+    "bytes": 1582408,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/ucrtbase.dll",
+    "bytes": 1123808,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/unicodedata.pyd",
+    "bytes": 707400,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/vcamp140.dll",
+    "bytes": 418896,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/vccorlib140.dll",
+    "bytes": 352336,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/vcomp140.dll",
+    "bytes": 193184,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/vcruntime140.dll",
+    "bytes": 124496,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/vcruntime140_1.dll",
+    "bytes": 49744,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/vcruntime140_threads.dll",
+    "bytes": 38480,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/win32/win32pdh.pyd",
+    "bytes": 46408,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/yaml/_yaml.cp313-win_amd64.pyd",
+    "bytes": 181576,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/yaml.dll",
+    "bytes": 103936,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/zlib.dll",
+    "bytes": 101192,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/_internal/zstd.dll",
+    "bytes": 673608,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/analyze_curvature.py",
+    "bytes": 2121,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/export_demo_video.py",
+    "bytes": 9489,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/export_endoscope_video.py",
+    "bytes": 3631,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/Magnetic_Camera_8Coil.exe",
+    "bytes": 5552447,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/使用说明.md",
+    "bytes": 5756,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/导出预览/demo_in.jpg",
+    "bytes": 77784,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/导出预览/demo_out.jpg",
+    "bytes": 86504,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/导出预览/frame_200s.jpg",
+    "bytes": 24576,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/导出预览/frame_30s.jpg",
+    "bytes": 24744,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/导出预览/frame_500s.jpg",
+    "bytes": 21880,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/导出预览/probe_t0.0.png",
+    "bytes": 467079,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/导出预览/probe_t301.8.png",
+    "bytes": 345398,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/导出预览/probe_t603.5.png",
+    "bytes": 578092,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/导出预览/v2_seg1.jpg",
+    "bytes": 76777,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/导出预览/v2_seg2.jpg",
+    "bytes": 91684,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/导出预览/v2_seg3.jpg",
+    "bytes": 106932,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/导出预览/v3_in.jpg",
+    "bytes": 86921,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/导出预览/v3_out.jpg",
+    "bytes": 98870,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/导出预览/v4_seg1.jpg",
+    "bytes": 77683,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/导出预览/v4_seg2.jpg",
+    "bytes": 84696,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/导出预览/v4_seg3.jpg",
+    "bytes": 94981,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/方案可行性展示_三视图.mp4",
+    "bytes": 14757367,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/第三方组件说明.md",
+    "bytes": 1603,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/缓存数据/3d545ecb0a1a5d67b5c12e7ad84c83671bb944a7bef23ab380fdfb2dba176f53/network_depth.json",
+    "bytes": 175,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件/缓存数据/3d545ecb0a1a5d67b5c12e7ad84c83671bb944a7bef23ab380fdfb2dba176f53/network_depth.npy",
+    "bytes": 3239744104,
+    "distribution": "release"
+  },
+  {
+    "path": "总仿真软件+代码/软件说明与视频工具/export_demo_video.py",
+    "bytes": 6183,
+    "distribution": "git"
+  },
+  {
+    "path": "总仿真软件+代码/软件说明与视频工具/使用说明.md",
+    "bytes": 3537,
+    "distribution": "git"
+  },
+  {
+    "path": "总仿真软件+代码/软件说明与视频工具/文档统计更新-20261026-120813-7220533/使用说明.md",
+    "bytes": 5756,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/B_finetune.py",
+    "bytes": 6565,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/B_render_gt_depth.py",
+    "bytes": 3357,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/B_render_textured.py",
+    "bytes": 4616,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/c3vd_depth_to_world_pc.py",
+    "bytes": 5095,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/configs/endostreamdepth/config.yaml",
+    "bytes": 1999,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/configs/example_inference/config.yaml",
+    "bytes": 1995,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/configs/real_video/config.yaml",
+    "bytes": 1749,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/CTC_case_mapping.csv",
+    "bytes": 78231,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/CTC_subject_mapping.csv",
+    "bytes": 13198,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/dataloaders/__init__.py",
+    "bytes": 0,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/dataloaders/base_dataset_pairs.py",
+    "bytes": 4865,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/dataloaders/combined_dataset.py",
+    "bytes": 14579,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/dataloaders/cv3d2_dataset.py",
+    "bytes": 2747,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/dataloaders/cv3d_dataset.py",
+    "bytes": 2926,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/dataloaders/depthanything_preprocess.py",
+    "bytes": 13297,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/dataloaders/get_separate_dataloaders.py",
+    "bytes": 1159,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/dataloaders/pairs_cache/cv3d2_pairs_train.pkl",
+    "bytes": 1070320,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/dataloaders/pairs_cache/cv3d2_pairs_val.pkl",
+    "bytes": 1066489,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/dataloaders/pairs_cache/cv3d_pairs_train.pkl",
+    "bytes": 920672,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/dataloaders/pairs_cache/cv3d_pairs_val.pkl",
+    "bytes": 174071,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/dataloaders/pairs_cache/simcol3d_pairs_train.pkl",
+    "bytes": 5285280,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/dataloaders/pairs_cache/simcol3d_pairs_val.pkl",
+    "bytes": 5262688,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/dataloaders/random_dataset.py",
+    "bytes": 3059,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/dataloaders/README.md",
+    "bytes": 1,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/dataloaders/simcol3d.py",
+    "bytes": 2971,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/depth_to_pointcloud.py",
+    "bytes": 5071,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/endostreamdepth/__pycache__/dinov2.cpython-313.pyc",
+    "bytes": 19605,
+    "distribution": "release"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/endostreamdepth/__pycache__/hybrid_fusion.cpython-313.pyc",
+    "bytes": 5904,
+    "distribution": "release"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/endostreamdepth/__pycache__/mamba.cpython-313.pyc",
+    "bytes": 8962,
+    "distribution": "release"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/endostreamdepth/__pycache__/model.cpython-313.pyc",
+    "bytes": 31093,
+    "distribution": "release"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/endostreamdepth/__pycache__/original_dpt.cpython-313.pyc",
+    "bytes": 13943,
+    "distribution": "release"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/endostreamdepth/__pycache__/rnn_transformer.cpython-313.pyc",
+    "bytes": 8946,
+    "distribution": "release"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/endostreamdepth/dinov2.py",
+    "bytes": 18186,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/endostreamdepth/dinov2_layers/__init__.py",
+    "bytes": 431,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/endostreamdepth/dinov2_layers/__pycache__/__init__.cpython-313.pyc",
+    "bytes": 366,
+    "distribution": "release"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/endostreamdepth/dinov2_layers/__pycache__/attention.cpython-313.pyc",
+    "bytes": 11291,
+    "distribution": "release"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/endostreamdepth/dinov2_layers/__pycache__/block.cpython-313.pyc",
+    "bytes": 13100,
+    "distribution": "release"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/endostreamdepth/dinov2_layers/__pycache__/drop_path.cpython-313.pyc",
+    "bytes": 1773,
+    "distribution": "release"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/endostreamdepth/dinov2_layers/__pycache__/layer_scale.cpython-313.pyc",
+    "bytes": 1554,
+    "distribution": "release"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/endostreamdepth/dinov2_layers/__pycache__/mlp.cpython-313.pyc",
+    "bytes": 1989,
+    "distribution": "release"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/endostreamdepth/dinov2_layers/__pycache__/patch_embed.cpython-313.pyc",
+    "bytes": 4177,
+    "distribution": "release"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/endostreamdepth/dinov2_layers/attention.py",
+    "bytes": 9222,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/endostreamdepth/dinov2_layers/block.py",
+    "bytes": 9409,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/endostreamdepth/dinov2_layers/drop_path.py",
+    "bytes": 1160,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/endostreamdepth/dinov2_layers/fla/__init__.py",
+    "bytes": 1786,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/endostreamdepth/dinov2_layers/fla/layers/__init__.py",
+    "bytes": 817,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/endostreamdepth/dinov2_layers/fla/layers/abc.py",
+    "bytes": 8311,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/endostreamdepth/dinov2_layers/fla/layers/attn.py",
+    "bytes": 7504,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/endostreamdepth/dinov2_layers/fla/layers/based.py",
+    "bytes": 4234,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/endostreamdepth/dinov2_layers/fla/layers/bitattn.py",
+    "bytes": 7582,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/endostreamdepth/dinov2_layers/fla/layers/delta_net.py",
+    "bytes": 10121,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/endostreamdepth/dinov2_layers/fla/layers/gla.py",
+    "bytes": 16129,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/endostreamdepth/dinov2_layers/fla/layers/gsa.py",
+    "bytes": 9453,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/endostreamdepth/dinov2_layers/fla/layers/hgrn.py",
+    "bytes": 6087,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/endostreamdepth/dinov2_layers/fla/layers/hgrn2.py",
+    "bytes": 8307,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/endostreamdepth/dinov2_layers/fla/layers/linear_attn.py",
+    "bytes": 6523,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/endostreamdepth/dinov2_layers/fla/layers/multiscale_retention.py",
+    "bytes": 12574,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/endostreamdepth/dinov2_layers/fla/layers/rebased.py",
+    "bytes": 5056,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/endostreamdepth/dinov2_layers/fla/layers/rwkv6.py",
+    "bytes": 10325,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/endostreamdepth/dinov2_layers/fla/layers/simple_gla.py",
+    "bytes": 11073,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/endostreamdepth/dinov2_layers/fla/models/__init__.py",
+    "bytes": 2025,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/endostreamdepth/dinov2_layers/fla/models/abc/__init__.py",
+    "bytes": 422,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/endostreamdepth/dinov2_layers/fla/models/abc/configuration_abc.py",
+    "bytes": 3002,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/endostreamdepth/dinov2_layers/fla/models/abc/modeling_abc.py",
+    "bytes": 16705,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/endostreamdepth/dinov2_layers/fla/models/bitnet/__init__.py",
+    "bytes": 470,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/endostreamdepth/dinov2_layers/fla/models/bitnet/configuration_bitnet.py",
+    "bytes": 2204,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/endostreamdepth/dinov2_layers/fla/models/bitnet/modeling_bitnet.py",
+    "bytes": 17140,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/endostreamdepth/dinov2_layers/fla/models/delta_net/__init__.py",
+    "bytes": 560,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/endostreamdepth/dinov2_layers/fla/models/delta_net/configuration_delta_net.py",
+    "bytes": 3036,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/endostreamdepth/dinov2_layers/fla/models/delta_net/modeling_delta_net.py",
+    "bytes": 18368,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/endostreamdepth/dinov2_layers/fla/models/gla/__init__.py",
+    "bytes": 422,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/endostreamdepth/dinov2_layers/fla/models/gla/configuration_gla.py",
+    "bytes": 3219,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/endostreamdepth/dinov2_layers/fla/models/gla/modeling_gla.py",
+    "bytes": 17579,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/endostreamdepth/dinov2_layers/fla/models/gsa/__init__.py",
+    "bytes": 422,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/endostreamdepth/dinov2_layers/fla/models/gsa/configuration_gsa.py",
+    "bytes": 3424,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/endostreamdepth/dinov2_layers/fla/models/gsa/modeling_gsa.py",
+    "bytes": 18460,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/endostreamdepth/dinov2_layers/fla/models/hgrn/__init__.py",
+    "bytes": 438,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/endostreamdepth/dinov2_layers/fla/models/hgrn/configuration_hgrn.py",
+    "bytes": 2689,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/endostreamdepth/dinov2_layers/fla/models/hgrn/modeling_hgrn.py",
+    "bytes": 17791,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/endostreamdepth/dinov2_layers/fla/models/hgrn2/__init__.py",
+    "bytes": 454,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/endostreamdepth/dinov2_layers/fla/models/hgrn2/configuration_hgrn2.py",
+    "bytes": 2769,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/endostreamdepth/dinov2_layers/fla/models/hgrn2/modeling_hgrn2.py",
+    "bytes": 17857,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/endostreamdepth/dinov2_layers/fla/models/linear_attn/__init__.py",
+    "bytes": 610,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/endostreamdepth/dinov2_layers/fla/models/linear_attn/configuration_linear_attn.py",
+    "bytes": 3022,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/endostreamdepth/dinov2_layers/fla/models/linear_attn/modeling_linear_attn.py",
+    "bytes": 17940,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/endostreamdepth/dinov2_layers/fla/models/mamba/__init__.py",
+    "bytes": 545,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/endostreamdepth/dinov2_layers/fla/models/mamba/configuration_mamba.py",
+    "bytes": 7375,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/endostreamdepth/dinov2_layers/fla/models/mamba/modeling_mamba.py",
+    "bytes": 37333,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/endostreamdepth/dinov2_layers/fla/models/mamba2/__init__.py",
+    "bytes": 501,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/endostreamdepth/dinov2_layers/fla/models/mamba2/configuration_mamba2.py",
+    "bytes": 7803,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/endostreamdepth/dinov2_layers/fla/models/mamba2/modeling_mamba2.py",
+    "bytes": 47681,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/endostreamdepth/dinov2_layers/fla/models/retnet/__init__.py",
+    "bytes": 470,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/endostreamdepth/dinov2_layers/fla/models/retnet/configuration_retnet.py",
+    "bytes": 3117,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/endostreamdepth/dinov2_layers/fla/models/retnet/modeling_retnet.py",
+    "bytes": 17771,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/endostreamdepth/dinov2_layers/fla/models/rwkv6/__init__.py",
+    "bytes": 454,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/endostreamdepth/dinov2_layers/fla/models/rwkv6/configuration_rwkv6.py",
+    "bytes": 2842,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/endostreamdepth/dinov2_layers/fla/models/rwkv6/modeling_rwkv6.py",
+    "bytes": 18479,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/endostreamdepth/dinov2_layers/fla/models/samba/__init__.py",
+    "bytes": 545,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/endostreamdepth/dinov2_layers/fla/models/samba/configuration_samba.py",
+    "bytes": 3012,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/endostreamdepth/dinov2_layers/fla/models/samba/modeling_samba.py",
+    "bytes": 17846,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/endostreamdepth/dinov2_layers/fla/models/transformer/__init__.py",
+    "bytes": 557,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/endostreamdepth/dinov2_layers/fla/models/transformer/configuration_transformer.py",
+    "bytes": 2214,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/endostreamdepth/dinov2_layers/fla/models/transformer/modeling_transformer.py",
+    "bytes": 17191,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/endostreamdepth/dinov2_layers/fla/models/utils.py",
+    "bytes": 5624,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/endostreamdepth/dinov2_layers/fla/modules/__init__.py",
+    "bytes": 1226,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/endostreamdepth/dinov2_layers/fla/modules/activations.py",
+    "bytes": 12138,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/endostreamdepth/dinov2_layers/fla/modules/convolution.py",
+    "bytes": 11973,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/endostreamdepth/dinov2_layers/fla/modules/feature_map.py",
+    "bytes": 8972,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/endostreamdepth/dinov2_layers/fla/modules/fused_bitlinear.py",
+    "bytes": 20810,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/endostreamdepth/dinov2_layers/fla/modules/fused_cross_entropy.py",
+    "bytes": 16070,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/endostreamdepth/dinov2_layers/fla/modules/fused_kl_div.py",
+    "bytes": 9807,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/endostreamdepth/dinov2_layers/fla/modules/fused_linear_cross_entropy.py",
+    "bytes": 17601,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/endostreamdepth/dinov2_layers/fla/modules/fused_norm_gate.py",
+    "bytes": 27005,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/endostreamdepth/dinov2_layers/fla/modules/l2norm.py",
+    "bytes": 5939,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/endostreamdepth/dinov2_layers/fla/modules/layernorm.py",
+    "bytes": 31212,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/endostreamdepth/dinov2_layers/fla/modules/layernorm_gated.py",
+    "bytes": 17924,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/endostreamdepth/dinov2_layers/fla/modules/rotary.py",
+    "bytes": 11969,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/endostreamdepth/dinov2_layers/fla/ops/__init__.py",
+    "bytes": 517,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/endostreamdepth/dinov2_layers/fla/ops/abc/__init__.py",
+    "bytes": 85,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/endostreamdepth/dinov2_layers/fla/ops/abc/chunk.py",
+    "bytes": 47189,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/endostreamdepth/dinov2_layers/fla/ops/abc/naive.py",
+    "bytes": 3066,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/endostreamdepth/dinov2_layers/fla/ops/based/__init__.py",
+    "bytes": 166,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/endostreamdepth/dinov2_layers/fla/ops/based/fused_chunk.py",
+    "bytes": 14551,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/endostreamdepth/dinov2_layers/fla/ops/based/naive.py",
+    "bytes": 2268,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/endostreamdepth/dinov2_layers/fla/ops/based/parallel.py",
+    "bytes": 14682,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/endostreamdepth/dinov2_layers/fla/ops/common/__init__.py",
+    "bytes": 24,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/endostreamdepth/dinov2_layers/fla/ops/common/chunk_h.py",
+    "bytes": 36203,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/endostreamdepth/dinov2_layers/fla/ops/common/fused_recurrent.py",
+    "bytes": 22009,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/endostreamdepth/dinov2_layers/fla/ops/delta_rule/__init__.py",
+    "bytes": 267,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/endostreamdepth/dinov2_layers/fla/ops/delta_rule/chunk.py",
+    "bytes": 39613,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/endostreamdepth/dinov2_layers/fla/ops/delta_rule/fused_chunk.py",
+    "bytes": 18016,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/endostreamdepth/dinov2_layers/fla/ops/delta_rule/fused_recurrent.py",
+    "bytes": 21579,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/endostreamdepth/dinov2_layers/fla/ops/delta_rule/naive.py",
+    "bytes": 6234,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/endostreamdepth/dinov2_layers/fla/ops/delta_rule/parallel.py",
+    "bytes": 14726,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/endostreamdepth/dinov2_layers/fla/ops/delta_rule/README.md",
+    "bytes": 95,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/endostreamdepth/dinov2_layers/fla/ops/delta_rule/wy_fast.py",
+    "bytes": 29704,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/endostreamdepth/dinov2_layers/fla/ops/generalized_delta_rule/__init__.py",
+    "bytes": 0,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/endostreamdepth/dinov2_layers/fla/ops/generalized_delta_rule/iplr/__init__.py",
+    "bytes": 0,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/endostreamdepth/dinov2_layers/fla/ops/generalized_delta_rule/iplr/fused_recurrent.py",
+    "bytes": 13841,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/endostreamdepth/dinov2_layers/fla/ops/generalized_delta_rule/iplr/naive.py",
+    "bytes": 3867,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/endostreamdepth/dinov2_layers/fla/ops/gla/__init__.py",
+    "bytes": 225,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/endostreamdepth/dinov2_layers/fla/ops/gla/chunk.py",
+    "bytes": 55245,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/endostreamdepth/dinov2_layers/fla/ops/gla/fused_chunk.py",
+    "bytes": 23289,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/endostreamdepth/dinov2_layers/fla/ops/gla/fused_recurrent.py",
+    "bytes": 5410,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/endostreamdepth/dinov2_layers/fla/ops/gla/naive.py",
+    "bytes": 959,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/endostreamdepth/dinov2_layers/fla/ops/gsa/__init__.py",
+    "bytes": 161,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/endostreamdepth/dinov2_layers/fla/ops/gsa/chunk.py",
+    "bytes": 46413,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/endostreamdepth/dinov2_layers/fla/ops/gsa/fused_recurrent.py",
+    "bytes": 18198,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/endostreamdepth/dinov2_layers/fla/ops/gsa/naive.py",
+    "bytes": 2091,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/endostreamdepth/dinov2_layers/fla/ops/hgrn/__init__.py",
+    "bytes": 165,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/endostreamdepth/dinov2_layers/fla/ops/hgrn/chunk.py",
+    "bytes": 9775,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/endostreamdepth/dinov2_layers/fla/ops/hgrn/fused_recurrent.py",
+    "bytes": 10138,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/endostreamdepth/dinov2_layers/fla/ops/hgrn/naive.py",
+    "bytes": 1582,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/endostreamdepth/dinov2_layers/fla/ops/linear_attn/__init__.py",
+    "bytes": 273,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/endostreamdepth/dinov2_layers/fla/ops/linear_attn/chunk.py",
+    "bytes": 13052,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/endostreamdepth/dinov2_layers/fla/ops/linear_attn/fused_chunk.py",
+    "bytes": 13244,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/endostreamdepth/dinov2_layers/fla/ops/linear_attn/fused_recurrent.py",
+    "bytes": 8412,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/endostreamdepth/dinov2_layers/fla/ops/linear_attn/naive.py",
+    "bytes": 1098,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/endostreamdepth/dinov2_layers/fla/ops/linear_attn/utils.py",
+    "bytes": 175,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/endostreamdepth/dinov2_layers/fla/ops/rebased/__init__.py",
+    "bytes": 102,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/endostreamdepth/dinov2_layers/fla/ops/rebased/naive.py",
+    "bytes": 1470,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/endostreamdepth/dinov2_layers/fla/ops/rebased/parallel.py",
+    "bytes": 15278,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/endostreamdepth/dinov2_layers/fla/ops/retention/__init__.py",
+    "bytes": 328,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/endostreamdepth/dinov2_layers/fla/ops/retention/chunk.py",
+    "bytes": 29806,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/endostreamdepth/dinov2_layers/fla/ops/retention/fused_chunk.py",
+    "bytes": 12869,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/endostreamdepth/dinov2_layers/fla/ops/retention/fused_recurrent.py",
+    "bytes": 17880,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/endostreamdepth/dinov2_layers/fla/ops/retention/naive.py",
+    "bytes": 594,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/endostreamdepth/dinov2_layers/fla/ops/retention/parallel.py",
+    "bytes": 15538,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/endostreamdepth/dinov2_layers/fla/ops/rotary.py",
+    "bytes": 8985,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/endostreamdepth/dinov2_layers/fla/ops/rwkv4/__init__.py",
+    "bytes": 119,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/endostreamdepth/dinov2_layers/fla/ops/rwkv4/fused_recurrent.py",
+    "bytes": 13528,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/endostreamdepth/dinov2_layers/fla/ops/rwkv6/__init__.py",
+    "bytes": 169,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/endostreamdepth/dinov2_layers/fla/ops/rwkv6/chunk.py",
+    "bytes": 35012,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/endostreamdepth/dinov2_layers/fla/ops/rwkv6/chunk_naive.py",
+    "bytes": 1481,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/endostreamdepth/dinov2_layers/fla/ops/rwkv6/fused_recurrent.py",
+    "bytes": 15602,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/endostreamdepth/dinov2_layers/fla/ops/rwkv6/recurrent_naive.py",
+    "bytes": 3116,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/endostreamdepth/dinov2_layers/fla/ops/simple_gla/__init__.py",
+    "bytes": 258,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/endostreamdepth/dinov2_layers/fla/ops/simple_gla/chunk.py",
+    "bytes": 27069,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/endostreamdepth/dinov2_layers/fla/ops/simple_gla/fused_recurrent.py",
+    "bytes": 5324,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/endostreamdepth/dinov2_layers/fla/ops/simple_gla/naive.py",
+    "bytes": 1917,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/endostreamdepth/dinov2_layers/fla/ops/simple_gla/parallel.py",
+    "bytes": 18557,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/endostreamdepth/dinov2_layers/fla/ops/simple_gla/README.md",
+    "bytes": 535,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/endostreamdepth/dinov2_layers/fla/ops/utils/__init__.py",
+    "bytes": 1332,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/endostreamdepth/dinov2_layers/fla/ops/utils/cumsum.py",
+    "bytes": 20701,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/endostreamdepth/dinov2_layers/fla/ops/utils/logcumsumexp.py",
+    "bytes": 1886,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/endostreamdepth/dinov2_layers/fla/ops/utils/logsumexp.py",
+    "bytes": 2019,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/endostreamdepth/dinov2_layers/fla/ops/utils/matmul.py",
+    "bytes": 7147,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/endostreamdepth/dinov2_layers/fla/ops/utils/softmax.py",
+    "bytes": 2351,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/endostreamdepth/dinov2_layers/fla/utils.py",
+    "bytes": 1618,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/endostreamdepth/dinov2_layers/flash_attn.py",
+    "bytes": 10351,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/endostreamdepth/dinov2_layers/layer_scale.py",
+    "bytes": 823,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/endostreamdepth/dinov2_layers/mlp.py",
+    "bytes": 1272,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/endostreamdepth/dinov2_layers/patch_embed.py",
+    "bytes": 2832,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/endostreamdepth/dinov2_layers/swiglu_ffn.py",
+    "bytes": 1859,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/endostreamdepth/enc_dec.py",
+    "bytes": 8246,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/endostreamdepth/helpers.py",
+    "bytes": 540,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/endostreamdepth/hybrid_fusion.py",
+    "bytes": 3969,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/endostreamdepth/hydra.py",
+    "bytes": 19030,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/endostreamdepth/mamba.py",
+    "bytes": 7241,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/endostreamdepth/model.py",
+    "bytes": 29984,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/endostreamdepth/model_original.py",
+    "bytes": 23478,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/endostreamdepth/original_dpt.py",
+    "bytes": 11689,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/endostreamdepth/refinement_head.py",
+    "bytes": 6440,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/endostreamdepth/rnn_transformer.py",
+    "bytes": 6133,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/endostreamdepth/util/__pycache__/blocks.cpython-313.pyc",
+    "bytes": 5609,
+    "distribution": "release"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/endostreamdepth/util/__pycache__/loss.cpython-313.pyc",
+    "bytes": 20837,
+    "distribution": "release"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/endostreamdepth/util/blocks.py",
+    "bytes": 4028,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/endostreamdepth/util/loss.py",
+    "bytes": 16001,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/endostreamdepth/util/metric.py",
+    "bytes": 1010,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/endostreamdepth/util/transform.py",
+    "bytes": 6075,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/endostreamdepth/util/utils.py",
+    "bytes": 647,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/endostreamdepth/xlstm_block.py",
+    "bytes": 4826,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/eval_B_depth.py",
+    "bytes": 1995,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/evaluation/quantitative.py",
+    "bytes": 13728,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/export_onnx.py",
+    "bytes": 2431,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/figs/EndoStreamDepth_overview_horizontal.png",
+    "bytes": 788806,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/figs/EndoStreamDepth_overview_vertical.png",
+    "bytes": 929131,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/figs/qualitative.png",
+    "bytes": 4799937,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/figs/README.md",
+    "bytes": 41,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/LICENSE",
+    "bytes": 11356,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/mamba/AUTHORS",
+    "bytes": 53,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/mamba/benchmarks/benchmark_generation_mamba_simple.py",
+    "bytes": 3302,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/mamba/csrc/selective_scan/reverse_scan.cuh",
+    "bytes": 18423,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/mamba/csrc/selective_scan/selective_scan.cpp",
+    "bytes": 21689,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/mamba/csrc/selective_scan/selective_scan.h",
+    "bytes": 2771,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/mamba/csrc/selective_scan/selective_scan_bwd_bf16_complex.cu",
+    "bytes": 395,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/mamba/csrc/selective_scan/selective_scan_bwd_bf16_real.cu",
+    "bytes": 391,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/mamba/csrc/selective_scan/selective_scan_bwd_fp16_complex.cu",
+    "bytes": 391,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/mamba/csrc/selective_scan/selective_scan_bwd_fp16_real.cu",
+    "bytes": 387,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/mamba/csrc/selective_scan/selective_scan_bwd_fp32_complex.cu",
+    "bytes": 388,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/mamba/csrc/selective_scan/selective_scan_bwd_fp32_real.cu",
+    "bytes": 384,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/mamba/csrc/selective_scan/selective_scan_bwd_kernel.cuh",
+    "bytes": 34955,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/mamba/csrc/selective_scan/selective_scan_common.h",
+    "bytes": 9327,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/mamba/csrc/selective_scan/selective_scan_fwd_bf16.cu",
+    "bytes": 500,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/mamba/csrc/selective_scan/selective_scan_fwd_fp16.cu",
+    "bytes": 492,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/mamba/csrc/selective_scan/selective_scan_fwd_fp32.cu",
+    "bytes": 486,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/mamba/csrc/selective_scan/selective_scan_fwd_kernel.cuh",
+    "bytes": 20661,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/mamba/csrc/selective_scan/static_switch.h",
+    "bytes": 1278,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/mamba/csrc/selective_scan/uninitialized_copy.cuh",
+    "bytes": 2828,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/mamba/evals/lm_harness_eval.py",
+    "bytes": 1287,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/mamba/LICENSE",
+    "bytes": 11348,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/mamba/mamba_ssm/__init__.py",
+    "bytes": 264,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/mamba/mamba_ssm/distributed/__init__.py",
+    "bytes": 0,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/mamba/mamba_ssm/distributed/distributed_utils.py",
+    "bytes": 5825,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/mamba/mamba_ssm/distributed/tensor_parallel.py",
+    "bytes": 12008,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/mamba/mamba_ssm/models/__init__.py",
+    "bytes": 0,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/mamba/mamba_ssm/models/config_mamba.py",
+    "bytes": 489,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/mamba/mamba_ssm/models/mixer_seq_simple.py",
+    "bytes": 11667,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/mamba/mamba_ssm/modules/__init__.py",
+    "bytes": 0,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/mamba/mamba_ssm/modules/block.py",
+    "bytes": 3729,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/mamba/mamba_ssm/modules/mamba2.py",
+    "bytes": 22691,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/mamba/mamba_ssm/modules/mamba2_simple.py",
+    "bytes": 7608,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/mamba/mamba_ssm/modules/mamba_simple.py",
+    "bytes": 11710,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/mamba/mamba_ssm/modules/mha.py",
+    "bytes": 13392,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/mamba/mamba_ssm/modules/mlp.py",
+    "bytes": 1130,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/mamba/mamba_ssm/modules/ssd_minimal.py",
+    "bytes": 4144,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/mamba/mamba_ssm/ops/__init__.py",
+    "bytes": 0,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/mamba/mamba_ssm/ops/selective_scan_interface.py",
+    "bytes": 19852,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/mamba/mamba_ssm/ops/triton/__init__.py",
+    "bytes": 0,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/mamba/mamba_ssm/ops/triton/k_activations.py",
+    "bytes": 5169,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/mamba/mamba_ssm/ops/triton/layer_norm.py",
+    "bytes": 35966,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/mamba/mamba_ssm/ops/triton/layernorm_gated.py",
+    "bytes": 17763,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/mamba/mamba_ssm/ops/triton/selective_state_update.py",
+    "bytes": 11445,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/mamba/mamba_ssm/ops/triton/softplus.py",
+    "bytes": 328,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/mamba/mamba_ssm/ops/triton/ssd_bmm.py",
+    "bytes": 13637,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/mamba/mamba_ssm/ops/triton/ssd_chunk_scan.py",
+    "bytes": 105336,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/mamba/mamba_ssm/ops/triton/ssd_chunk_state.py",
+    "bytes": 56072,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/mamba/mamba_ssm/ops/triton/ssd_combined.py",
+    "bytes": 53538,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/mamba/mamba_ssm/ops/triton/ssd_state_passing.py",
+    "bytes": 16377,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/mamba/mamba_ssm/utils/__init__.py",
+    "bytes": 0,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/mamba/mamba_ssm/utils/generation.py",
+    "bytes": 15466,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/mamba/mamba_ssm/utils/hf.py",
+    "bytes": 966,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/mamba/mamba_ssm/utils/torch.py",
+    "bytes": 676,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/mamba/pyproject.toml",
+    "bytes": 990,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/mamba/README.md",
+    "bytes": 956,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/mamba/rocm_patch/rocm6_0.patch",
+    "bytes": 2249,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/mamba/setup.py",
+    "bytes": 13818,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/mamba/tests/ops/test_selective_scan.py",
+    "bytes": 13064,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/mamba/tests/ops/triton/test_layernorm_gated.py",
+    "bytes": 5498,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/mamba/tests/ops/triton/test_selective_state_update.py",
+    "bytes": 9504,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/mamba/tests/ops/triton/test_ssd.py",
+    "bytes": 3883,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/mamba/tests/test_generation.py",
+    "bytes": 4891,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/mamba/usage.md",
+    "bytes": 1380,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/README.md",
+    "bytes": 7283,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/setup_env.sh",
+    "bytes": 460,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/train.py",
+    "bytes": 13574,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/utils/__init__.py",
+    "bytes": 0,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/utils/__pycache__/__init__.cpython-313.pyc",
+    "bytes": 211,
+    "distribution": "release"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/utils/__pycache__/helpers.cpython-313.pyc",
+    "bytes": 29409,
+    "distribution": "release"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/utils/eval_metrics/__pycache__/boundary_metrics.cpython-313.pyc",
+    "bytes": 19953,
+    "distribution": "release"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/utils/eval_metrics/__pycache__/metrics.cpython-313.pyc",
+    "bytes": 14952,
+    "distribution": "release"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/utils/eval_metrics/boundary_metrics.py",
+    "bytes": 16984,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/utils/eval_metrics/metrics.py",
+    "bytes": 12826,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/utils/helpers.py",
+    "bytes": 25123,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/utils/init_setup.py",
+    "bytes": 14191,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/utils/logging_config.py",
+    "bytes": 1500,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/utils/process_ckpt.py",
+    "bytes": 1333,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/vivado.jou",
+    "bytes": 2472,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型代码/EndoStreamDepth/vivado.log",
+    "bytes": 36872,
+    "distribution": "git"
+  },
+  {
+    "path": "深度模型预训练权重/iter_20001_C3VD.pth",
+    "bytes": 4231268944,
+    "distribution": "release"
+  },
+  {
+    "path": "磁场神经网络训练代码/data_audit_current.json",
+    "bytes": 9216,
+    "distribution": "git"
+  },
+  {
+    "path": "磁场神经网络训练代码/diagnose_centerline_fit.py",
+    "bytes": 2116,
+    "distribution": "git"
+  },
+  {
+    "path": "磁场神经网络训练代码/diagnose_error_sources.py",
+    "bytes": 13003,
+    "distribution": "git"
+  },
+  {
+    "path": "磁场神经网络训练代码/diagnose_training_fit.py",
+    "bytes": 2370,
+    "distribution": "git"
+  },
+  {
+    "path": "磁场神经网络训练代码/evaluate_field.py",
+    "bytes": 8089,
+    "distribution": "git"
+  },
+  {
+    "path": "磁场神经网络训练代码/field_data.py",
+    "bytes": 8820,
+    "distribution": "git"
+  },
+  {
+    "path": "磁场神经网络训练代码/field_model.py",
+    "bytes": 4746,
+    "distribution": "git"
+  },
+  {
+    "path": "磁场神经网络训练代码/finalize_training.py",
+    "bytes": 3697,
+    "distribution": "git"
+  },
+  {
+    "path": "磁场神经网络训练代码/lookup_field_papers.py",
+    "bytes": 1883,
+    "distribution": "git"
+  },
+  {
+    "path": "磁场神经网络训练代码/lookup_field_papers_details.py",
+    "bytes": 1511,
+    "distribution": "git"
+  },
+  {
+    "path": "磁场神经网络训练代码/lookup_field_papers_followup.py",
+    "bytes": 2149,
+    "distribution": "git"
+  },
+  {
+    "path": "磁场神经网络训练代码/plot_error_sources.py",
+    "bytes": 3496,
+    "distribution": "git"
+  },
+  {
+    "path": "磁场神经网络训练代码/README.md",
+    "bytes": 7592,
+    "distribution": "git"
+  },
+  {
+    "path": "磁场神经网络训练代码/README_中线优先训练.md",
+    "bytes": 6514,
+    "distribution": "git"
+  },
+  {
+    "path": "磁场神经网络训练代码/show_training_progress.py",
+    "bytes": 4944,
+    "distribution": "git"
+  },
+  {
+    "path": "磁场神经网络训练代码/tests/test_interfaces.py",
+    "bytes": 8283,
+    "distribution": "git"
+  },
+  {
+    "path": "磁场神经网络训练代码/train_config.json",
+    "bytes": 484,
+    "distribution": "git"
+  },
+  {
+    "path": "磁场神经网络训练代码/train_config_centerline.json",
+    "bytes": 590,
+    "distribution": "git"
+  },
+  {
+    "path": "磁场神经网络训练代码/train_field.py",
+    "bytes": 8622,
+    "distribution": "git"
+  },
+  {
+    "path": "磁场神经网络训练代码/verification_report.json",
+    "bytes": 789,
+    "distribution": "git"
+  },
+  {
+    "path": "磁场神经网络训练代码/verify_error_sources.py",
+    "bytes": 6197,
+    "distribution": "git"
+  },
+  {
+    "path": "肠道磁场数据包/.pip-cache/http-v2/0/0/3/4/0/00340dc40d3f38899c8915431c775e447957f2685b9ddb660fe35e1f",
+    "bytes": 1277,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/.pip-cache/http-v2/0/0/3/4/0/00340dc40d3f38899c8915431c775e447957f2685b9ddb660fe35e1f.body",
+    "bytes": 5857,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/.pip-cache/http-v2/0/3/4/4/7/0344711816d57886537d387c82cfd7fc5f29fdb37db9820e0b8f560b",
+    "bytes": 302,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/.pip-cache/http-v2/0/3/4/4/7/0344711816d57886537d387c82cfd7fc5f29fdb37db9820e0b8f560b.body",
+    "bytes": 8321,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/.pip-cache/http-v2/0/3/9/9/f/0399f4fda360c37f313a0e4d1a3ecc033d8884c1aee16f82602bea44",
+    "bytes": 304,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/.pip-cache/http-v2/0/3/9/9/f/0399f4fda360c37f313a0e4d1a3ecc033d8884c1aee16f82602bea44.body",
+    "bytes": 70643,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/.pip-cache/http-v2/0/c/f/6/e/0cf6e817e2c5554000c735ecab0f3cf492f7d33b50d5a474a801ba24",
+    "bytes": 1898,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/.pip-cache/http-v2/0/c/f/6/e/0cf6e817e2c5554000c735ecab0f3cf492f7d33b50d5a474a801ba24.body",
+    "bytes": 10134,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/.pip-cache/http-v2/0/f/b/9/e/0fb9e3091de4f40ea9031e23c8e25fea79ee5e5b34dcff8f41dc7eae",
+    "bytes": 1870,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/.pip-cache/http-v2/0/f/b/9/e/0fb9e3091de4f40ea9031e23c8e25fea79ee5e5b34dcff8f41dc7eae.body",
+    "bytes": 224613,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/.pip-cache/http-v2/1/a/a/6/e/1aa6e0e6e71a31722e783abee65262631a7109e2737fc06dc913a855",
+    "bytes": 1248,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/.pip-cache/http-v2/1/a/a/6/e/1aa6e0e6e71a31722e783abee65262631a7109e2737fc06dc913a855.body",
+    "bytes": 19488,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/.pip-cache/http-v2/2/0/2/d/1/202d19a513cf749f7cb0800a6ea6112a00afd5c33b7b1751b88f46fb",
+    "bytes": 305,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/.pip-cache/http-v2/2/0/2/d/1/202d19a513cf749f7cb0800a6ea6112a00afd5c33b7b1751b88f46fb.body",
+    "bytes": 347996,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/.pip-cache/http-v2/2/0/8/3/5/208355b094b1b92f81c52c52c24ee3c6df37a704c41a1d207a4f6581",
+    "bytes": 317,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/.pip-cache/http-v2/2/0/8/3/5/208355b094b1b92f81c52c52c24ee3c6df37a704c41a1d207a4f6581.body",
+    "bytes": 823806,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/.pip-cache/http-v2/2/9/f/0/4/29f042b956a171a2ea7b7efb831178b1c6b8ea87b92662dea223c2c5",
+    "bytes": 303,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/.pip-cache/http-v2/2/9/f/0/4/29f042b956a171a2ea7b7efb831178b1c6b8ea87b92662dea223c2c5.body",
+    "bytes": 11050,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/.pip-cache/http-v2/2/a/c/1/9/2ac19b1b51e6c9117be1a3b34918925ec3744b5ab12f1d38d4a00b53",
+    "bytes": 1280,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/.pip-cache/http-v2/2/a/c/1/9/2ac19b1b51e6c9117be1a3b34918925ec3744b5ab12f1d38d4a00b53.body",
+    "bytes": 1358,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/.pip-cache/http-v2/2/d/0/9/7/2d097f13b7a7f97ee8b10f21516e7825c64639b5ff2531db0697d6e2",
+    "bytes": 308,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/.pip-cache/http-v2/2/d/0/9/7/2d097f13b7a7f97ee8b10f21516e7825c64639b5ff2531db0697d6e2.body",
+    "bytes": 11346086,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/.pip-cache/http-v2/2/f/3/b/1/2f3b1da703964f9232d87a3baedde2c195042eef2a13449f26427713",
+    "bytes": 313,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/.pip-cache/http-v2/2/f/3/b/1/2f3b1da703964f9232d87a3baedde2c195042eef2a13449f26427713.body",
+    "bytes": 3653,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/.pip-cache/http-v2/2/f/9/9/2/2f9928949077a94de83c5877acc2dadec61c4bd6111559473347e682",
+    "bytes": 1297,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/.pip-cache/http-v2/2/f/9/9/2/2f9928949077a94de83c5877acc2dadec61c4bd6111559473347e682.body",
+    "bytes": 22904,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/.pip-cache/http-v2/3/4/0/a/d/340ad8fc36900f84ef0129c972e52b8f8663e89209f659e995c69823",
+    "bytes": 317,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/.pip-cache/http-v2/3/4/0/a/d/340ad8fc36900f84ef0129c972e52b8f8663e89209f659e995c69823.body",
+    "bytes": 406896,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/.pip-cache/http-v2/4/6/7/8/2/46782699abbec5872b7532f8fdb60b49d903fe55317d456987dab6fe",
+    "bytes": 1897,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/.pip-cache/http-v2/4/6/7/8/2/46782699abbec5872b7532f8fdb60b49d903fe55317d456987dab6fe.body",
+    "bytes": 110195,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/.pip-cache/http-v2/4/f/d/9/9/4fd9905d8fcf6c7171cea2f59df81a4bc7f724ddc9166ff63d1ffc54",
+    "bytes": 1249,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/.pip-cache/http-v2/4/f/d/9/9/4fd9905d8fcf6c7171cea2f59df81a4bc7f724ddc9166ff63d1ffc54.body",
+    "bytes": 60764,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/.pip-cache/http-v2/5/3/5/5/b/5355b463d7e99fc9e6de0f5f79911908cb281897425a45e02bc019d9",
+    "bytes": 317,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/.pip-cache/http-v2/5/3/5/5/b/5355b463d7e99fc9e6de0f5f79911908cb281897425a45e02bc019d9.body",
+    "bytes": 547307,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/.pip-cache/http-v2/6/3/4/e/f/634efdc81342b910dc7cf45604b1ed39a02a1123ae1ed8ce8dfaa18f",
+    "bytes": 1267,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/.pip-cache/http-v2/6/3/4/e/f/634efdc81342b910dc7cf45604b1ed39a02a1123ae1ed8ce8dfaa18f.body",
+    "bytes": 2874,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/.pip-cache/http-v2/6/4/c/f/c/64cfc03e83f9fad4049b1d2a1d785c9273270a4ab9788b538f5054e3",
+    "bytes": 1871,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/.pip-cache/http-v2/6/4/c/f/c/64cfc03e83f9fad4049b1d2a1d785c9273270a4ab9788b538f5054e3.body",
+    "bytes": 345319,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/.pip-cache/http-v2/6/5/1/e/5/651e58859e8db8c99b9e7068d03984cfd4577518ff0e021c717afbf4",
+    "bytes": 1277,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/.pip-cache/http-v2/6/5/1/e/5/651e58859e8db8c99b9e7068d03984cfd4577518ff0e021c717afbf4.body",
+    "bytes": 3779,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/.pip-cache/http-v2/6/6/e/c/7/66ec76a7b6ed4081044f5c7821af293b63c17bc2ac523ff93d5ca7d5",
+    "bytes": 1872,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/.pip-cache/http-v2/6/6/e/c/7/66ec76a7b6ed4081044f5c7821af293b63c17bc2ac523ff93d5ca7d5.body",
+    "bytes": 286196,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/.pip-cache/http-v2/7/2/8/a/2/728a2f33f382f4dacf08f6df77aad6f3d889f819ba4fa3efad5ec7e4",
+    "bytes": 1898,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/.pip-cache/http-v2/7/2/8/a/2/728a2f33f382f4dacf08f6df77aad6f3d889f819ba4fa3efad5ec7e4.body",
+    "bytes": 138517,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/.pip-cache/http-v2/7/3/c/3/a/73c3a780e17f5e947c788a9cb111cdef096f43dbe925001283e27a77",
+    "bytes": 1896,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/.pip-cache/http-v2/7/3/c/3/a/73c3a780e17f5e947c788a9cb111cdef096f43dbe925001283e27a77.body",
+    "bytes": 37310,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/.pip-cache/http-v2/7/9/2/1/a/7921ac3318a5cdb592026cc26a94f7a2c1e1f7d3a1dc1e3857fd49f1",
+    "bytes": 1897,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/.pip-cache/http-v2/7/9/2/1/a/7921ac3318a5cdb592026cc26a94f7a2c1e1f7d3a1dc1e3857fd49f1.body",
+    "bytes": 1940,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/.pip-cache/http-v2/7/a/f/4/5/7af453c86ad72d82cfafb98a85508f99770f64a8f5fb413df5dc1cc1",
+    "bytes": 305,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/.pip-cache/http-v2/7/a/f/4/5/7af453c86ad72d82cfafb98a85508f99770f64a8f5fb413df5dc1cc1.body",
+    "bytes": 126420,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/.pip-cache/http-v2/8/0/2/a/7/802a719c420a47119bdcb68143e72657101cfebab3c78505f8d47202",
+    "bytes": 315,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/.pip-cache/http-v2/8/0/2/a/7/802a719c420a47119bdcb68143e72657101cfebab3c78505f8d47202.body",
+    "bytes": 17369,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/.pip-cache/http-v2/8/9/3/a/9/893a9178010858cecf72b523725b46ddedbe6c23406a020810080ab3",
+    "bytes": 1898,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/.pip-cache/http-v2/8/9/3/a/9/893a9178010858cecf72b523725b46ddedbe6c23406a020810080ab3.body",
+    "bytes": 81733,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/.pip-cache/http-v2/8/e/3/0/1/8e3010284c7c5252cb0f5ff06c8851145aff41285054bda79fa59e48",
+    "bytes": 1239,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/.pip-cache/http-v2/8/e/3/0/1/8e3010284c7c5252cb0f5ff06c8851145aff41285054bda79fa59e48.body",
+    "bytes": 127446,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/.pip-cache/http-v2/8/f/7/8/a/8f78a59c750512c5eff98117526033c3ddca4a99c7d75426a1ad4942",
+    "bytes": 1280,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/.pip-cache/http-v2/8/f/7/8/a/8f78a59c750512c5eff98117526033c3ddca4a99c7d75426a1ad4942.body",
+    "bytes": 1658,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/.pip-cache/http-v2/9/1/9/0/8/9190815d44f5d8bafd00798ab6c979a6b898991c316da05a22e51231",
+    "bytes": 315,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/.pip-cache/http-v2/9/1/9/0/8/9190815d44f5d8bafd00798ab6c979a6b898991c316da05a22e51231.body",
+    "bytes": 26541,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/.pip-cache/http-v2/9/9/1/6/2/9916291adb8b7e8e4403dbad088deb5c806df7c9279af96b7ee23522",
+    "bytes": 315,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/.pip-cache/http-v2/9/9/1/6/2/9916291adb8b7e8e4403dbad088deb5c806df7c9279af96b7ee23522.body",
+    "bytes": 21904,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/.pip-cache/http-v2/9/b/5/1/6/9b51619e20a708f99372afefd7dbe20a1b5e42ae213f02bf27267976",
+    "bytes": 1898,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/.pip-cache/http-v2/9/b/5/1/6/9b51619e20a708f99372afefd7dbe20a1b5e42ae213f02bf27267976.body",
+    "bytes": 305624,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/.pip-cache/http-v2/a/f/3/e/2/af3e25af9f097d52dafe826fecf086cec86fef8a03df1f5f0f065e99",
+    "bytes": 305,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/.pip-cache/http-v2/a/f/3/e/2/af3e25af9f097d52dafe826fecf086cec86fef8a03df1f5f0f065e99.body",
+    "bytes": 506342,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/.pip-cache/http-v2/b/1/f/5/d/b1f5dc01896eee598e8915be35e61304ad2b16363d00711f8576642c",
+    "bytes": 1895,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/.pip-cache/http-v2/b/1/f/5/d/b1f5dc01896eee598e8915be35e61304ad2b16363d00711f8576642c.body",
+    "bytes": 126872,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/.pip-cache/http-v2/b/6/3/3/4/b633470b5b775d3bc91dde82dddca53c83cb1644db8ed5b842b33c5d",
+    "bytes": 309,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/.pip-cache/http-v2/b/6/3/3/4/b633470b5b775d3bc91dde82dddca53c83cb1644db8ed5b842b33c5d.body",
+    "bytes": 41259201,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/.pip-cache/http-v2/b/7/1/1/1/b7111b60e15d529666916287b62d7f97dcadcc621fb1b2036ff95c39",
+    "bytes": 1251,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/.pip-cache/http-v2/b/7/1/1/1/b7111b60e15d529666916287b62d7f97dcadcc621fb1b2036ff95c39.body",
+    "bytes": 52837,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/.pip-cache/http-v2/b/9/0/e/f/b90ef5a9404182197990984ca9df0d3c2faa4519231c712c5d633dbf",
+    "bytes": 1251,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/.pip-cache/http-v2/b/9/0/e/f/b90ef5a9404182197990984ca9df0d3c2faa4519231c712c5d633dbf.body",
+    "bytes": 5461,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/.pip-cache/http-v2/b/b/5/9/3/bb593b853e169dfbd9b9941f204f4051abebf5d3d449e99584ab23b5",
+    "bytes": 1305,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/.pip-cache/http-v2/b/b/5/9/3/bb593b853e169dfbd9b9941f204f4051abebf5d3d449e99584ab23b5.body",
+    "bytes": 8237,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/.pip-cache/http-v2/b/f/9/f/4/bf9f49a5fb0e15e519da5c7d1a6d689ded134d6cc007d15fc8bd6d6c",
+    "bytes": 1272,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/.pip-cache/http-v2/b/f/9/f/4/bf9f49a5fb0e15e519da5c7d1a6d689ded134d6cc007d15fc8bd6d6c.body",
+    "bytes": 4952,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/.pip-cache/http-v2/c/0/4/0/0/c0400f4849a16bb7ec1db13ba6d964327b0869995ab53c54f6668654",
+    "bytes": 1897,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/.pip-cache/http-v2/c/0/4/0/0/c0400f4849a16bb7ec1db13ba6d964327b0869995ab53c54f6668654.body",
+    "bytes": 6557,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/.pip-cache/http-v2/c/4/2/7/8/c4278393df023c246ae0bf48f099a8fe1e565dfa1d6b3483f9c9e1ec",
+    "bytes": 319,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/.pip-cache/http-v2/c/4/2/7/8/c4278393df023c246ae0bf48f099a8fe1e565dfa1d6b3483f9c9e1ec.body",
+    "bytes": 1060236,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/.pip-cache/http-v2/c/9/b/c/0/c9bc0eaff9e2a0e476444b61c0928406927d392b223724940a3f4495",
+    "bytes": 317,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/.pip-cache/http-v2/c/9/b/c/0/c9bc0eaff9e2a0e476444b61c0928406927d392b223724940a3f4495.body",
+    "bytes": 259811,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/.pip-cache/http-v2/c/d/5/d/e/cd5de44b899cbe1869765c21b55cffc53c0c0ffa9d3c6f1fd40a42a2",
+    "bytes": 1898,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/.pip-cache/http-v2/c/d/5/d/e/cd5de44b899cbe1869765c21b55cffc53c0c0ffa9d3c6f1fd40a42a2.body",
+    "bytes": 284433,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/.pip-cache/http-v2/c/d/6/2/2/cd6225a1f97e087ffa406eb84195ec120fde2078b5388cd23be8e57c",
+    "bytes": 305,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/.pip-cache/http-v2/c/d/6/2/2/cd6225a1f97e087ffa406eb84195ec120fde2078b5388cd23be8e57c.body",
+    "bytes": 221188,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/.pip-cache/http-v2/d/0/b/1/e/d0b1e4b3489e62e491d171604e64fd2853a5c47836bfbcb541d2f539",
+    "bytes": 319,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/.pip-cache/http-v2/d/0/b/1/e/d0b1e4b3489e62e491d171604e64fd2853a5c47836bfbcb541d2f539.body",
+    "bytes": 1154522,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/.pip-cache/http-v2/d/0/d/d/2/d0dd2c159b5023c99b719025a751f46f5767249781bf5197a9a7c721",
+    "bytes": 317,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/.pip-cache/http-v2/d/0/d/d/2/d0dd2c159b5023c99b719025a751f46f5767249781bf5197a9a7c721.body",
+    "bytes": 116911,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/.pip-cache/http-v2/d/7/f/1/0/d7f10d805e5ac1981e054a78dbad8f343ccab2bf4849b010425449f0",
+    "bytes": 307,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/.pip-cache/http-v2/d/7/f/1/0/d7f10d805e5ac1981e054a78dbad8f343ccab2bf4849b010425449f0.body",
+    "bytes": 8199701,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/.pip-cache/http-v2/d/9/b/f/5/d9bf532c51d7c8b05c441aa180ba16683f9e955e9ea48fff9f0afdce",
+    "bytes": 309,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/.pip-cache/http-v2/d/9/b/f/5/d9bf532c51d7c8b05c441aa180ba16683f9e955e9ea48fff9f0afdce.body",
+    "bytes": 41865271,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/.pip-cache/http-v2/d/d/0/2/4/dd024ce539707de4fdff955c7582285aa3b5a512147c2fe6664bae88",
+    "bytes": 307,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/.pip-cache/http-v2/d/d/0/2/4/dd024ce539707de4fdff955c7582285aa3b5a512147c2fe6664bae88.body",
+    "bytes": 1633354,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/.pip-cache/http-v2/e/1/a/1/0/e1a102a58d5f97b4d2a7ffd62157f43e68a5808f81e4779f2eb95e89",
+    "bytes": 1870,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/.pip-cache/http-v2/e/1/a/1/0/e1a102a58d5f97b4d2a7ffd62157f43e68a5808f81e4779f2eb95e89.body",
+    "bytes": 7644,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/.pip-cache/http-v2/e/4/8/f/8/e48f8ac4de40b6dd11366883c1277f54b157b715cdf241d120af6a51",
+    "bytes": 307,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/.pip-cache/http-v2/e/4/8/f/8/e48f8ac4de40b6dd11366883c1277f54b157b715cdf241d120af6a51.body",
+    "bytes": 2831101,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/.pip-cache/http-v2/e/7/9/8/4/e798483e196017376742b3c43835e5944599ab23de03f9686944bf81",
+    "bytes": 317,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/.pip-cache/http-v2/e/7/9/8/4/e798483e196017376742b3c43835e5944599ab23de03f9686944bf81.body",
+    "bytes": 504271,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/.pip-cache/http-v2/e/8/3/8/4/e8384e1a7eb6cadbfa8bac8141e77fe7ccd2a6e51ea76e889edec9ff",
+    "bytes": 319,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/.pip-cache/http-v2/e/8/3/8/4/e8384e1a7eb6cadbfa8bac8141e77fe7ccd2a6e51ea76e889edec9ff.body",
+    "bytes": 1291242,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/.pip-cache/http-v2/e/c/8/d/7/ec8d761ec54d80c9441d395755d09c9c27e4402c75bae8067d9b78c5",
+    "bytes": 318,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/.pip-cache/http-v2/e/c/8/d/7/ec8d761ec54d80c9441d395755d09c9c27e4402c75bae8067d9b78c5.body",
+    "bytes": 1027694,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/.pip-cache/http-v2/e/f/d/f/e/efdfe8935adb0ae1680599212c8b6ab7cbf1d19cc145753cba1c0652",
+    "bytes": 1237,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/.pip-cache/http-v2/e/f/d/f/e/efdfe8935adb0ae1680599212c8b6ab7cbf1d19cc145753cba1c0652.body",
+    "bytes": 5250,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/.pip-cache/http-v2/f/d/e/5/a/fde5a07d81d816fdc5de5ee5eca4aa0febd7e7f8b375e5fdba248574",
+    "bytes": 304,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/.pip-cache/http-v2/f/d/e/5/a/fde5a07d81d816fdc5de5ee5eca4aa0febd7e7f8b375e5fdba248574.body",
+    "bytes": 94659,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_001/baseline_30A_long_4h_resume_20261023/config/baseline_assumptions.json",
+    "bytes": 11875,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_001/baseline_30A_long_4h_resume_20261023/config/settings_portable.json",
+    "bytes": 539,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_001/baseline_30A_long_4h_resume_20261023/config/settings_resolved.json",
+    "bytes": 790,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_001/baseline_30A_long_4h_resume_20261023/config/source_manifest.json",
+    "bytes": 3413,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_001/baseline_30A_long_4h_resume_20261023/geometry/colon_model.stl",
+    "bytes": 9303284,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_001/baseline_30A_long_4h_resume_20261023/geometry/mesh.npz",
+    "bytes": 1640746,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_001/baseline_30A_long_4h_resume_20261023/geometry/planned_path.vtk",
+    "bytes": 198685,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_001/baseline_30A_long_4h_resume_20261023/geometry/risk_report.json",
+    "bytes": 491,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_001/baseline_30A_long_4h_resume_20261023/geometry/route_reference.csv",
+    "bytes": 428798,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_001/baseline_30A_long_4h_resume_20261023/simulation/insertion/final_state.npz",
+    "bytes": 1444,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_001/baseline_30A_long_4h_resume_20261023/simulation/insertion/metrics.json",
+    "bytes": 3870,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_001/baseline_30A_long_4h_resume_20261023/simulation/insertion/rotation_decisions.json",
+    "bytes": 1299450,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_001/baseline_30A_long_4h_resume_20261023/simulation/insertion/status.json",
+    "bytes": 3870,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_001/baseline_30A_long_4h_resume_20261023/simulation/insertion/trajectory.npz",
+    "bytes": 2669199,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_001/baseline_30A_long_4h_resume_20261023/simulation/smoke/final_state.npz",
+    "bytes": 1439,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_001/baseline_30A_long_4h_resume_20261023/simulation/smoke/metrics.json",
+    "bytes": 3875,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_001/baseline_30A_long_4h_resume_20261023/simulation/smoke/rotation_decisions.json",
+    "bytes": 9569,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_001/baseline_30A_long_4h_resume_20261023/simulation/smoke/status.json",
+    "bytes": 3875,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_001/baseline_30A_long_4h_resume_20261023/simulation/smoke/trajectory.npz",
+    "bytes": 25080,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_001/baseline_30A_long_4h_resume_20261023/simulation/withdrawal/metrics.json",
+    "bytes": 211,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_001/baseline_30A_long_4h_resume_20261023/simulation/withdrawal/status.json",
+    "bytes": 211,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_001/baseline_30A_long_4h_resume_20261023/simulation/withdrawal/trajectory.npz",
+    "bytes": 1822433,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_001/baseline_30A_long_4h_resume_20261023/status.json",
+    "bytes": 48,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_001/baseline_30A_long_4h_resume_20261023/validation/input_audit.json",
+    "bytes": 866,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_001_resume.log",
+    "bytes": 59635,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_018/baseline_30A_long_4h/config/baseline_assumptions.json",
+    "bytes": 11875,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_018/baseline_30A_long_4h/config/settings_portable.json",
+    "bytes": 539,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_018/baseline_30A_long_4h/config/settings_resolved.json",
+    "bytes": 774,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_018/baseline_30A_long_4h/config/source_manifest.json",
+    "bytes": 3413,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_018/baseline_30A_long_4h/dataset/compute_benchmark.json",
+    "bytes": 541,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_018/baseline_30A_long_4h/dataset/dataset_summary.json",
+    "bytes": 1101,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_018/baseline_30A_long_4h/dataset/field_responses.npz",
+    "bytes": 21121652,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_018/baseline_30A_long_4h/dataset/trajectory_index.npz",
+    "bytes": 104931,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_018/baseline_30A_long_4h/geometry/colon_model.stl",
+    "bytes": 9317734,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_018/baseline_30A_long_4h/geometry/mesh.npz",
+    "bytes": 1730198,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_018/baseline_30A_long_4h/geometry/planned_path.vtk",
+    "bytes": 206825,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_018/baseline_30A_long_4h/geometry/risk_report.json",
+    "bytes": 503,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_018/baseline_30A_long_4h/geometry/route_reference.csv",
+    "bytes": 434505,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_018/baseline_30A_long_4h/simulation/insertion/final_state.npz",
+    "bytes": 1445,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_018/baseline_30A_long_4h/simulation/insertion/metrics.json",
+    "bytes": 3881,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_018/baseline_30A_long_4h/simulation/insertion/rotation_decisions.json",
+    "bytes": 969189,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_018/baseline_30A_long_4h/simulation/insertion/status.json",
+    "bytes": 3881,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_018/baseline_30A_long_4h/simulation/insertion/trajectory.npz",
+    "bytes": 1999811,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_018/baseline_30A_long_4h/simulation/smoke/final_state.npz",
+    "bytes": 1441,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_018/baseline_30A_long_4h/simulation/smoke/metrics.json",
+    "bytes": 3890,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_018/baseline_30A_long_4h/simulation/smoke/rotation_decisions.json",
+    "bytes": 9426,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_018/baseline_30A_long_4h/simulation/smoke/status.json",
+    "bytes": 3890,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_018/baseline_30A_long_4h/simulation/smoke/trajectory.npz",
+    "bytes": 25342,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_018/baseline_30A_long_4h/simulation/withdrawal/final_state.npz",
+    "bytes": 1446,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_018/baseline_30A_long_4h/simulation/withdrawal/metrics.json",
+    "bytes": 2365,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_018/baseline_30A_long_4h/simulation/withdrawal/rotation_decisions.json",
+    "bytes": 965950,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_018/baseline_30A_long_4h/simulation/withdrawal/status.json",
+    "bytes": 2365,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_018/baseline_30A_long_4h/simulation/withdrawal/trajectory.npz",
+    "bytes": 1983306,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_018/baseline_30A_long_4h/status.json",
+    "bytes": 338,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_018/baseline_30A_long_4h/validation/input_audit.json",
+    "bytes": 877,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_018/baseline_30A_long_4h/validation/physical_consistency.json",
+    "bytes": 548,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_018/baseline_30A_long_4h/validation/run_summary.json",
+    "bytes": 12311,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_018/baseline_30A_long_4h/validation/trajectory_and_current.png",
+    "bytes": 225452,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_018_all.log",
+    "bytes": 38946,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_031/baseline_30A_long_4h/config/baseline_assumptions.json",
+    "bytes": 11546,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_031/baseline_30A_long_4h/config/settings_portable.json",
+    "bytes": 522,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_031/baseline_30A_long_4h/config/settings_resolved.json",
+    "bytes": 754,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_031/baseline_30A_long_4h/config/source_manifest.json",
+    "bytes": 3312,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_031/baseline_30A_long_4h/dataset/compute_benchmark.json",
+    "bytes": 535,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_031/baseline_30A_long_4h/dataset/dataset_summary.json",
+    "bytes": 1076,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_031/baseline_30A_long_4h/dataset/field_responses.npz",
+    "bytes": 27130075,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_031/baseline_30A_long_4h/dataset/trajectory_index.npz",
+    "bytes": 141875,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_031/baseline_30A_long_4h/geometry/colon_model.stl",
+    "bytes": 9179184,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_031/baseline_30A_long_4h/geometry/mesh.npz",
+    "bytes": 1668540,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_031/baseline_30A_long_4h/geometry/planned_path.vtk",
+    "bytes": 212806,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_031/baseline_30A_long_4h/geometry/risk_report.json",
+    "bytes": 503,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_031/baseline_30A_long_4h/geometry/route_reference.csv",
+    "bytes": 461737,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_031/baseline_30A_long_4h/simulation/insertion/final_state.npz",
+    "bytes": 1447,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_031/baseline_30A_long_4h/simulation/insertion/metrics.json",
+    "bytes": 3781,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_031/baseline_30A_long_4h/simulation/insertion/rotation_decisions.json",
+    "bytes": 1254587,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_031/baseline_30A_long_4h/simulation/insertion/status.json",
+    "bytes": 3781,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_031/baseline_30A_long_4h/simulation/insertion/trajectory.npz",
+    "bytes": 2676935,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_031/baseline_30A_long_4h/simulation/smoke/final_state.npz",
+    "bytes": 1437,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_031/baseline_30A_long_4h/simulation/smoke/metrics.json",
+    "bytes": 3784,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_031/baseline_30A_long_4h/simulation/smoke/rotation_decisions.json",
+    "bytes": 8944,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_031/baseline_30A_long_4h/simulation/smoke/status.json",
+    "bytes": 3784,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_031/baseline_30A_long_4h/simulation/smoke/trajectory.npz",
+    "bytes": 25074,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_031/baseline_30A_long_4h/simulation/withdrawal/final_state.npz",
+    "bytes": 1439,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_031/baseline_30A_long_4h/simulation/withdrawal/metrics.json",
+    "bytes": 3757,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_031/baseline_30A_long_4h/simulation/withdrawal/rotation_decisions.json",
+    "bytes": 1256097,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_031/baseline_30A_long_4h/simulation/withdrawal/status.json",
+    "bytes": 3757,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_031/baseline_30A_long_4h/simulation/withdrawal/trajectory.npz",
+    "bytes": 2680866,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_031/baseline_30A_long_4h/status.json",
+    "bytes": 325,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_031/baseline_30A_long_4h/validation/input_audit.json",
+    "bytes": 851,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_031/baseline_30A_long_4h/validation/package_sha256.json",
+    "bytes": 3647,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_031/baseline_30A_long_4h/validation/package_validation.json",
+    "bytes": 3737,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_031/baseline_30A_long_4h/validation/physical_consistency.json",
+    "bytes": 530,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_031/baseline_30A_long_4h/validation/run_summary.json",
+    "bytes": 13698,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_031/baseline_30A_long_4h/validation/trajectory_and_current.png",
+    "bytes": 283497,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_046/baseline_30A_long_4h/config/baseline_assumptions.json",
+    "bytes": 11875,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_046/baseline_30A_long_4h/config/settings_portable.json",
+    "bytes": 539,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_046/baseline_30A_long_4h/config/settings_resolved.json",
+    "bytes": 775,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_046/baseline_30A_long_4h/config/source_manifest.json",
+    "bytes": 3413,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_046/baseline_30A_long_4h/geometry/colon_model.stl",
+    "bytes": 9093734,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_046/baseline_30A_long_4h/geometry/planned_path.vtk",
+    "bytes": 84264,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_046/baseline_30A_long_4h/geometry/risk_report.json",
+    "bytes": 461,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_046/baseline_30A_long_4h/status.json",
+    "bytes": 48,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_046_all.log",
+    "bytes": 509,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_047/baseline_30A_long_4h/config/baseline_assumptions.json",
+    "bytes": 11875,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_047/baseline_30A_long_4h/config/settings_portable.json",
+    "bytes": 539,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_047/baseline_30A_long_4h/config/settings_resolved.json",
+    "bytes": 774,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_047/baseline_30A_long_4h/config/source_manifest.json",
+    "bytes": 3413,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_047/baseline_30A_long_4h/dataset/compute_benchmark.json",
+    "bytes": 540,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_047/baseline_30A_long_4h/dataset/dataset_summary.json",
+    "bytes": 1103,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_047/baseline_30A_long_4h/dataset/field_responses.npz",
+    "bytes": 23014070,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_047/baseline_30A_long_4h/dataset/trajectory_index.npz",
+    "bytes": 117239,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_047/baseline_30A_long_4h/geometry/colon_model.stl",
+    "bytes": 9299384,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_047/baseline_30A_long_4h/geometry/mesh.npz",
+    "bytes": 1571322,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_047/baseline_30A_long_4h/geometry/planned_path.vtk",
+    "bytes": 201586,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_047/baseline_30A_long_4h/geometry/risk_report.json",
+    "bytes": 492,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_047/baseline_30A_long_4h/geometry/route_reference.csv",
+    "bytes": 383206,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_047/baseline_30A_long_4h/simulation/insertion/final_state.npz",
+    "bytes": 1445,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_047/baseline_30A_long_4h/simulation/insertion/metrics.json",
+    "bytes": 3843,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_047/baseline_30A_long_4h/simulation/insertion/rotation_decisions.json",
+    "bytes": 1082172,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_047/baseline_30A_long_4h/simulation/insertion/status.json",
+    "bytes": 3843,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_047/baseline_30A_long_4h/simulation/insertion/trajectory.npz",
+    "bytes": 2224973,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_047/baseline_30A_long_4h/simulation/smoke/final_state.npz",
+    "bytes": 1435,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_047/baseline_30A_long_4h/simulation/smoke/metrics.json",
+    "bytes": 3842,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_047/baseline_30A_long_4h/simulation/smoke/rotation_decisions.json",
+    "bytes": 9532,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_047/baseline_30A_long_4h/simulation/smoke/status.json",
+    "bytes": 3842,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_047/baseline_30A_long_4h/simulation/smoke/trajectory.npz",
+    "bytes": 25033,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_047/baseline_30A_long_4h/simulation/withdrawal/final_state.npz",
+    "bytes": 1446,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_047/baseline_30A_long_4h/simulation/withdrawal/metrics.json",
+    "bytes": 2359,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_047/baseline_30A_long_4h/simulation/withdrawal/rotation_decisions.json",
+    "bytes": 1085309,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_047/baseline_30A_long_4h/simulation/withdrawal/status.json",
+    "bytes": 2359,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_047/baseline_30A_long_4h/simulation/withdrawal/trajectory.npz",
+    "bytes": 2219807,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_047/baseline_30A_long_4h/status.json",
+    "bytes": 338,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_047/baseline_30A_long_4h/validation/input_audit.json",
+    "bytes": 860,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_047/baseline_30A_long_4h/validation/physical_consistency.json",
+    "bytes": 544,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_047/baseline_30A_long_4h/validation/run_summary.json",
+    "bytes": 12215,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_047/baseline_30A_long_4h/validation/trajectory_and_current.png",
+    "bytes": 240995,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_047_all.log",
+    "bytes": 68927,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_048/baseline_30A_long_4h/config/baseline_assumptions.json",
+    "bytes": 11875,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_048/baseline_30A_long_4h/config/settings_portable.json",
+    "bytes": 539,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_048/baseline_30A_long_4h/config/settings_resolved.json",
+    "bytes": 752,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_048/baseline_30A_long_4h/config/source_manifest.json",
+    "bytes": 3413,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_048/baseline_30A_long_4h/dataset/compute_benchmark.json",
+    "bytes": 540,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_048/baseline_30A_long_4h/dataset/dataset_summary.json",
+    "bytes": 1101,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_048/baseline_30A_long_4h/dataset/field_responses.npz",
+    "bytes": 24521967,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_048/baseline_30A_long_4h/dataset/trajectory_index.npz",
+    "bytes": 125439,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_048/baseline_30A_long_4h/geometry/colon_model.stl",
+    "bytes": 9416784,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_048/baseline_30A_long_4h/geometry/mesh.npz",
+    "bytes": 1550895,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_048/baseline_30A_long_4h/geometry/planned_path.vtk",
+    "bytes": 207992,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_048/baseline_30A_long_4h/geometry/risk_report.json",
+    "bytes": 491,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_048/baseline_30A_long_4h/geometry/route_reference.csv",
+    "bytes": 384102,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_048/baseline_30A_long_4h/simulation/insertion/final_state.npz",
+    "bytes": 1444,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_048/baseline_30A_long_4h/simulation/insertion/metrics.json",
+    "bytes": 3882,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_048/baseline_30A_long_4h/simulation/insertion/rotation_decisions.json",
+    "bytes": 1151826,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_048/baseline_30A_long_4h/simulation/insertion/status.json",
+    "bytes": 3882,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_048/baseline_30A_long_4h/simulation/insertion/trajectory.npz",
+    "bytes": 2352834,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_048/baseline_30A_long_4h/simulation/smoke/final_state.npz",
+    "bytes": 1446,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_048/baseline_30A_long_4h/simulation/smoke/metrics.json",
+    "bytes": 3887,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_048/baseline_30A_long_4h/simulation/smoke/rotation_decisions.json",
+    "bytes": 9326,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_048/baseline_30A_long_4h/simulation/smoke/status.json",
+    "bytes": 3887,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_048/baseline_30A_long_4h/simulation/smoke/trajectory.npz",
+    "bytes": 24870,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_048/baseline_30A_long_4h/simulation/withdrawal/final_state.npz",
+    "bytes": 1446,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_048/baseline_30A_long_4h/simulation/withdrawal/metrics.json",
+    "bytes": 3878,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_048/baseline_30A_long_4h/simulation/withdrawal/rotation_decisions.json",
+    "bytes": 1166804,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_048/baseline_30A_long_4h/simulation/withdrawal/status.json",
+    "bytes": 3878,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_048/baseline_30A_long_4h/simulation/withdrawal/trajectory.npz",
+    "bytes": 2369456,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_048/baseline_30A_long_4h/status.json",
+    "bytes": 338,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_048/baseline_30A_long_4h/validation/input_audit.json",
+    "bytes": 859,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_048/baseline_30A_long_4h/validation/physical_consistency.json",
+    "bytes": 544,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_048/baseline_30A_long_4h/validation/run_summary.json",
+    "bytes": 14058,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_048/baseline_30A_long_4h/validation/trajectory_and_current.png",
+    "bytes": 227990,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_048/prepare_check/config/baseline_assumptions.json",
+    "bytes": 11875,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_048/prepare_check/config/settings_portable.json",
+    "bytes": 541,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_048/prepare_check/config/settings_resolved.json",
+    "bytes": 747,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_048/prepare_check/config/source_manifest.json",
+    "bytes": 3413,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_048/prepare_check/geometry/colon_model.stl",
+    "bytes": 9416784,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_048/prepare_check/geometry/mesh.npz",
+    "bytes": 1550895,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_048/prepare_check/geometry/planned_path.vtk",
+    "bytes": 207992,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_048/prepare_check/geometry/risk_report.json",
+    "bytes": 491,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_048/prepare_check/geometry/route_reference.csv",
+    "bytes": 384102,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_048/prepare_check/status.json",
+    "bytes": 55,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_048/prepare_check/validation/input_audit.json",
+    "bytes": 859,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_048/smoke_check/config/baseline_assumptions.json",
+    "bytes": 11875,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_048/smoke_check/config/settings_portable.json",
+    "bytes": 541,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_048/smoke_check/config/settings_resolved.json",
+    "bytes": 745,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_048/smoke_check/config/source_manifest.json",
+    "bytes": 3413,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_048/smoke_check/dataset/compute_benchmark.json",
+    "bytes": 541,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_048/smoke_check/dataset/dataset_summary.json",
+    "bytes": 1103,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_048/smoke_check/dataset/field_responses.npz",
+    "bytes": 5079084,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_048/smoke_check/dataset/trajectory_index.npz",
+    "bytes": 1201,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_048/smoke_check/geometry/colon_model.stl",
+    "bytes": 9416784,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_048/smoke_check/geometry/mesh.npz",
+    "bytes": 1550895,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_048/smoke_check/geometry/planned_path.vtk",
+    "bytes": 207992,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_048/smoke_check/geometry/risk_report.json",
+    "bytes": 491,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_048/smoke_check/geometry/route_reference.csv",
+    "bytes": 384102,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_048/smoke_check/simulation/smoke/final_state.npz",
+    "bytes": 1446,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_048/smoke_check/simulation/smoke/metrics.json",
+    "bytes": 3888,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_048/smoke_check/simulation/smoke/rotation_decisions.json",
+    "bytes": 9326,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_048/smoke_check/simulation/smoke/status.json",
+    "bytes": 3888,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_048/smoke_check/simulation/smoke/trajectory.npz",
+    "bytes": 24870,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_048/smoke_check/status.json",
+    "bytes": 281,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_048/smoke_check/validation/input_audit.json",
+    "bytes": 859,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_048/smoke_check/validation/physical_consistency.json",
+    "bytes": 549,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_048/smoke_check/validation/run_summary.json",
+    "bytes": 5306,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_048/smoke_check/validation/trajectory_and_current.png",
+    "bytes": 168852,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_048_all.log",
+    "bytes": 80440,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_123/baseline_30A_long_4h/config/baseline_assumptions.json",
+    "bytes": 11875,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_123/baseline_30A_long_4h/config/settings_portable.json",
+    "bytes": 539,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_123/baseline_30A_long_4h/config/settings_resolved.json",
+    "bytes": 774,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_123/baseline_30A_long_4h/config/source_manifest.json",
+    "bytes": 3413,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_123/baseline_30A_long_4h/dataset/compute_benchmark.json",
+    "bytes": 543,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_123/baseline_30A_long_4h/dataset/dataset_summary.json",
+    "bytes": 1100,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_123/baseline_30A_long_4h/dataset/field_responses.npz",
+    "bytes": 14509564,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_123/baseline_30A_long_4h/dataset/trajectory_index.npz",
+    "bytes": 62438,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_123/baseline_30A_long_4h/geometry/colon_model.stl",
+    "bytes": 8718984,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_123/baseline_30A_long_4h/geometry/mesh.npz",
+    "bytes": 1670782,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_123/baseline_30A_long_4h/geometry/planned_path.vtk",
+    "bytes": 107442,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_123/baseline_30A_long_4h/geometry/risk_report.json",
+    "bytes": 503,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_123/baseline_30A_long_4h/geometry/route_reference.csv",
+    "bytes": 211107,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_123/baseline_30A_long_4h/simulation/insertion/final_state.npz",
+    "bytes": 1445,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_123/baseline_30A_long_4h/simulation/insertion/metrics.json",
+    "bytes": 3877,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_123/baseline_30A_long_4h/simulation/insertion/rotation_decisions.json",
+    "bytes": 567472,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_123/baseline_30A_long_4h/simulation/insertion/status.json",
+    "bytes": 3877,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_123/baseline_30A_long_4h/simulation/insertion/trajectory.npz",
+    "bytes": 1188994,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_123/baseline_30A_long_4h/simulation/smoke/final_state.npz",
+    "bytes": 1437,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_123/baseline_30A_long_4h/simulation/smoke/metrics.json",
+    "bytes": 3884,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_123/baseline_30A_long_4h/simulation/smoke/rotation_decisions.json",
+    "bytes": 9588,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_123/baseline_30A_long_4h/simulation/smoke/status.json",
+    "bytes": 3884,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_123/baseline_30A_long_4h/simulation/smoke/trajectory.npz",
+    "bytes": 25627,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_123/baseline_30A_long_4h/simulation/withdrawal/final_state.npz",
+    "bytes": 1440,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_123/baseline_30A_long_4h/simulation/withdrawal/metrics.json",
+    "bytes": 2366,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_123/baseline_30A_long_4h/simulation/withdrawal/rotation_decisions.json",
+    "bytes": 571304,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_123/baseline_30A_long_4h/simulation/withdrawal/status.json",
+    "bytes": 2366,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_123/baseline_30A_long_4h/simulation/withdrawal/trajectory.npz",
+    "bytes": 1184856,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_123/baseline_30A_long_4h/status.json",
+    "bytes": 338,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_123/baseline_30A_long_4h/validation/input_audit.json",
+    "bytes": 884,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_123/baseline_30A_long_4h/validation/physical_consistency.json",
+    "bytes": 547,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_123/baseline_30A_long_4h/validation/run_summary.json",
+    "bytes": 12301,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_123/baseline_30A_long_4h/validation/trajectory_and_current.png",
+    "bytes": 219649,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_123_all.log",
+    "bytes": 22649,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_175/baseline_30A_long_4h/config/baseline_assumptions.json",
+    "bytes": 11875,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_175/baseline_30A_long_4h/config/settings_portable.json",
+    "bytes": 539,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_175/baseline_30A_long_4h/config/settings_resolved.json",
+    "bytes": 774,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_175/baseline_30A_long_4h/config/source_manifest.json",
+    "bytes": 3413,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_175/baseline_30A_long_4h/geometry/colon_model.stl",
+    "bytes": 9488534,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_175/baseline_30A_long_4h/geometry/planned_path.vtk",
+    "bytes": 166122,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_175/baseline_30A_long_4h/geometry/risk_report.json",
+    "bytes": 470,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_175/baseline_30A_long_4h/status.json",
+    "bytes": 48,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_175_all.log",
+    "bytes": 509,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_201/baseline_30A_long_4h/config/baseline_assumptions.json",
+    "bytes": 11875,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_201/baseline_30A_long_4h/config/settings_portable.json",
+    "bytes": 539,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_201/baseline_30A_long_4h/config/settings_resolved.json",
+    "bytes": 773,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_201/baseline_30A_long_4h/config/source_manifest.json",
+    "bytes": 3413,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_201/baseline_30A_long_4h/dataset/compute_benchmark.json",
+    "bytes": 540,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_201/baseline_30A_long_4h/dataset/dataset_summary.json",
+    "bytes": 1104,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_201/baseline_30A_long_4h/dataset/field_responses.npz",
+    "bytes": 13598071,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_201/baseline_30A_long_4h/dataset/trajectory_index.npz",
+    "bytes": 58166,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_201/baseline_30A_long_4h/geometry/colon_model.stl",
+    "bytes": 8426884,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_201/baseline_30A_long_4h/geometry/mesh.npz",
+    "bytes": 1596715,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_201/baseline_30A_long_4h/geometry/planned_path.vtk",
+    "bytes": 253918,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_201/baseline_30A_long_4h/geometry/risk_report.json",
+    "bytes": 508,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_201/baseline_30A_long_4h/geometry/route_reference.csv",
+    "bytes": 546694,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_201/baseline_30A_long_4h/simulation/insertion/final_state.npz",
+    "bytes": 1436,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_201/baseline_30A_long_4h/simulation/insertion/metrics.json",
+    "bytes": 5442,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_201/baseline_30A_long_4h/simulation/insertion/rotation_decisions.json",
+    "bytes": 1034601,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_201/baseline_30A_long_4h/simulation/insertion/status.json",
+    "bytes": 5442,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_201/baseline_30A_long_4h/simulation/insertion/trajectory.npz",
+    "bytes": 2116232,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_201/baseline_30A_long_4h/simulation/smoke/final_state.npz",
+    "bytes": 1437,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_201/baseline_30A_long_4h/simulation/smoke/metrics.json",
+    "bytes": 3872,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_201/baseline_30A_long_4h/simulation/smoke/rotation_decisions.json",
+    "bytes": 9378,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_201/baseline_30A_long_4h/simulation/smoke/status.json",
+    "bytes": 3872,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_201/baseline_30A_long_4h/simulation/smoke/trajectory.npz",
+    "bytes": 25177,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_201/baseline_30A_long_4h/status.json",
+    "bytes": 316,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_201/baseline_30A_long_4h/validation/input_audit.json",
+    "bytes": 874,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_201/baseline_30A_long_4h/validation/physical_consistency.json",
+    "bytes": 545,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_201/baseline_30A_long_4h/validation/run_summary.json",
+    "bytes": 11473,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_201/baseline_30A_long_4h/validation/trajectory_and_current.png",
+    "bytes": 225588,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_201_all.log",
+    "bytes": 23926,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_222/baseline_30A_long_4h/config/baseline_assumptions.json",
+    "bytes": 11875,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_222/baseline_30A_long_4h/config/settings_portable.json",
+    "bytes": 539,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_222/baseline_30A_long_4h/config/settings_resolved.json",
+    "bytes": 774,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_222/baseline_30A_long_4h/config/source_manifest.json",
+    "bytes": 3413,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_222/baseline_30A_long_4h/dataset/compute_benchmark.json",
+    "bytes": 542,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_222/baseline_30A_long_4h/dataset/dataset_summary.json",
+    "bytes": 1103,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_222/baseline_30A_long_4h/dataset/field_responses.npz",
+    "bytes": 21797945,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_222/baseline_30A_long_4h/dataset/trajectory_index.npz",
+    "bytes": 109724,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_222/baseline_30A_long_4h/geometry/colon_model.stl",
+    "bytes": 8615384,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_222/baseline_30A_long_4h/geometry/mesh.npz",
+    "bytes": 1666197,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_222/baseline_30A_long_4h/geometry/planned_path.vtk",
+    "bytes": 184009,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_222/baseline_30A_long_4h/geometry/risk_report.json",
+    "bytes": 500,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_222/baseline_30A_long_4h/geometry/route_reference.csv",
+    "bytes": 360622,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_222/baseline_30A_long_4h/simulation/insertion/final_state.npz",
+    "bytes": 1441,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_222/baseline_30A_long_4h/simulation/insertion/metrics.json",
+    "bytes": 3882,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_222/baseline_30A_long_4h/simulation/insertion/rotation_decisions.json",
+    "bytes": 1011648,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_222/baseline_30A_long_4h/simulation/insertion/status.json",
+    "bytes": 3882,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_222/baseline_30A_long_4h/simulation/insertion/trajectory.npz",
+    "bytes": 2081870,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_222/baseline_30A_long_4h/simulation/smoke/final_state.npz",
+    "bytes": 1431,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_222/baseline_30A_long_4h/simulation/smoke/metrics.json",
+    "bytes": 3884,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_222/baseline_30A_long_4h/simulation/smoke/rotation_decisions.json",
+    "bytes": 9325,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_222/baseline_30A_long_4h/simulation/smoke/status.json",
+    "bytes": 3884,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_222/baseline_30A_long_4h/simulation/smoke/trajectory.npz",
+    "bytes": 24979,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_222/baseline_30A_long_4h/simulation/withdrawal/final_state.npz",
+    "bytes": 1447,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_222/baseline_30A_long_4h/simulation/withdrawal/metrics.json",
+    "bytes": 2370,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_222/baseline_30A_long_4h/simulation/withdrawal/rotation_decisions.json",
+    "bytes": 1011895,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_222/baseline_30A_long_4h/simulation/withdrawal/status.json",
+    "bytes": 2370,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_222/baseline_30A_long_4h/simulation/withdrawal/trajectory.npz",
+    "bytes": 2082254,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_222/baseline_30A_long_4h/status.json",
+    "bytes": 338,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_222/baseline_30A_long_4h/validation/input_audit.json",
+    "bytes": 869,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_222/baseline_30A_long_4h/validation/physical_consistency.json",
+    "bytes": 545,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_222/baseline_30A_long_4h/validation/run_summary.json",
+    "bytes": 12308,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_222/baseline_30A_long_4h/validation/trajectory_and_current.png",
+    "bytes": 208753,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_222_all.log",
+    "bytes": 38097,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_293/baseline_30A_long_4h/config/baseline_assumptions.json",
+    "bytes": 11875,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_293/baseline_30A_long_4h/config/settings_portable.json",
+    "bytes": 539,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_293/baseline_30A_long_4h/config/settings_resolved.json",
+    "bytes": 774,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_293/baseline_30A_long_4h/config/source_manifest.json",
+    "bytes": 3413,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_293/baseline_30A_long_4h/dataset/compute_benchmark.json",
+    "bytes": 540,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_293/baseline_30A_long_4h/dataset/dataset_summary.json",
+    "bytes": 1101,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_293/baseline_30A_long_4h/dataset/field_responses.npz",
+    "bytes": 18227827,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_293/baseline_30A_long_4h/dataset/trajectory_index.npz",
+    "bytes": 87158,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_293/baseline_30A_long_4h/geometry/colon_model.stl",
+    "bytes": 8667984,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_293/baseline_30A_long_4h/geometry/mesh.npz",
+    "bytes": 1780538,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_293/baseline_30A_long_4h/geometry/planned_path.vtk",
+    "bytes": 249573,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_293/baseline_30A_long_4h/geometry/risk_report.json",
+    "bytes": 514,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_293/baseline_30A_long_4h/geometry/route_reference.csv",
+    "bytes": 500108,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_293/baseline_30A_long_4h/simulation/insertion/final_state.npz",
+    "bytes": 1447,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_293/baseline_30A_long_4h/simulation/insertion/metrics.json",
+    "bytes": 5406,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_293/baseline_30A_long_4h/simulation/insertion/rotation_decisions.json",
+    "bytes": 1432347,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_293/baseline_30A_long_4h/simulation/insertion/status.json",
+    "bytes": 5406,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_293/baseline_30A_long_4h/simulation/insertion/trajectory.npz",
+    "bytes": 2922839,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_293/baseline_30A_long_4h/simulation/smoke/final_state.npz",
+    "bytes": 1441,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_293/baseline_30A_long_4h/simulation/smoke/metrics.json",
+    "bytes": 3898,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_293/baseline_30A_long_4h/simulation/smoke/rotation_decisions.json",
+    "bytes": 9651,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_293/baseline_30A_long_4h/simulation/smoke/status.json",
+    "bytes": 3898,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_293/baseline_30A_long_4h/simulation/smoke/trajectory.npz",
+    "bytes": 25559,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_293/baseline_30A_long_4h/simulation/withdrawal/final_state.npz",
+    "bytes": 1431,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_293/baseline_30A_long_4h/simulation/withdrawal/metrics.json",
+    "bytes": 3936,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_293/baseline_30A_long_4h/simulation/withdrawal/rotation_decisions.json",
+    "bytes": 141716,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_293/baseline_30A_long_4h/simulation/withdrawal/status.json",
+    "bytes": 3936,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_293/baseline_30A_long_4h/simulation/withdrawal/trajectory.npz",
+    "bytes": 296242,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_293/baseline_30A_long_4h/status.json",
+    "bytes": 346,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_293/baseline_30A_long_4h/validation/input_audit.json",
+    "bytes": 888,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_293/baseline_30A_long_4h/validation/physical_consistency.json",
+    "bytes": 547,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_293/baseline_30A_long_4h/validation/run_summary.json",
+    "bytes": 15902,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_293/baseline_30A_long_4h/validation/trajectory_and_current.png",
+    "bytes": 234985,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_293_all.log",
+    "bytes": 35774,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_324/baseline_30A_long_4h/config/baseline_assumptions.json",
+    "bytes": 11875,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_324/baseline_30A_long_4h/config/settings_portable.json",
+    "bytes": 539,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_324/baseline_30A_long_4h/config/settings_resolved.json",
+    "bytes": 774,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_324/baseline_30A_long_4h/config/source_manifest.json",
+    "bytes": 3413,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_324/baseline_30A_long_4h/dataset/compute_benchmark.json",
+    "bytes": 539,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_324/baseline_30A_long_4h/dataset/dataset_summary.json",
+    "bytes": 1100,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_324/baseline_30A_long_4h/dataset/field_responses.npz",
+    "bytes": 25125956,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_324/baseline_30A_long_4h/dataset/trajectory_index.npz",
+    "bytes": 129401,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_324/baseline_30A_long_4h/geometry/colon_model.stl",
+    "bytes": 8800284,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_324/baseline_30A_long_4h/geometry/mesh.npz",
+    "bytes": 1623346,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_324/baseline_30A_long_4h/geometry/planned_path.vtk",
+    "bytes": 166797,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_324/baseline_30A_long_4h/geometry/risk_report.json",
+    "bytes": 507,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_324/baseline_30A_long_4h/geometry/route_reference.csv",
+    "bytes": 374886,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_324/baseline_30A_long_4h/simulation/insertion/final_state.npz",
+    "bytes": 1447,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_324/baseline_30A_long_4h/simulation/insertion/metrics.json",
+    "bytes": 3874,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_324/baseline_30A_long_4h/simulation/insertion/rotation_decisions.json",
+    "bytes": 1188410,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_324/baseline_30A_long_4h/simulation/insertion/status.json",
+    "bytes": 3874,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_324/baseline_30A_long_4h/simulation/insertion/trajectory.npz",
+    "bytes": 2439862,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_324/baseline_30A_long_4h/simulation/smoke/final_state.npz",
+    "bytes": 1437,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_324/baseline_30A_long_4h/simulation/smoke/metrics.json",
+    "bytes": 3887,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_324/baseline_30A_long_4h/simulation/smoke/rotation_decisions.json",
+    "bytes": 9602,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_324/baseline_30A_long_4h/simulation/smoke/status.json",
+    "bytes": 3887,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_324/baseline_30A_long_4h/simulation/smoke/trajectory.npz",
+    "bytes": 25193,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_324/baseline_30A_long_4h/simulation/withdrawal/final_state.npz",
+    "bytes": 1445,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_324/baseline_30A_long_4h/simulation/withdrawal/metrics.json",
+    "bytes": 2363,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_324/baseline_30A_long_4h/simulation/withdrawal/rotation_decisions.json",
+    "bytes": 1179528,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_324/baseline_30A_long_4h/simulation/withdrawal/status.json",
+    "bytes": 2363,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_324/baseline_30A_long_4h/simulation/withdrawal/trajectory.npz",
+    "bytes": 2413364,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_324/baseline_30A_long_4h/status.json",
+    "bytes": 338,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_324/baseline_30A_long_4h/validation/input_audit.json",
+    "bytes": 885,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_324/baseline_30A_long_4h/validation/physical_consistency.json",
+    "bytes": 545,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_324/baseline_30A_long_4h/validation/run_summary.json",
+    "bytes": 12296,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_324/baseline_30A_long_4h/validation/trajectory_and_current.png",
+    "bytes": 228842,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_324_all.log",
+    "bytes": 90804,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_347/baseline_30A_long_4h/config/baseline_assumptions.json",
+    "bytes": 11875,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_347/baseline_30A_long_4h/config/settings_portable.json",
+    "bytes": 539,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_347/baseline_30A_long_4h/config/settings_resolved.json",
+    "bytes": 773,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_347/baseline_30A_long_4h/config/source_manifest.json",
+    "bytes": 3413,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_347/baseline_30A_long_4h/dataset/compute_benchmark.json",
+    "bytes": 541,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_347/baseline_30A_long_4h/dataset/dataset_summary.json",
+    "bytes": 1101,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_347/baseline_30A_long_4h/dataset/field_responses.npz",
+    "bytes": 11870953,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_347/baseline_30A_long_4h/dataset/trajectory_index.npz",
+    "bytes": 45796,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_347/baseline_30A_long_4h/geometry/colon_model.stl",
+    "bytes": 8697134,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_347/baseline_30A_long_4h/geometry/mesh.npz",
+    "bytes": 1665770,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_347/baseline_30A_long_4h/geometry/planned_path.vtk",
+    "bytes": 231417,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_347/baseline_30A_long_4h/geometry/risk_report.json",
+    "bytes": 507,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_347/baseline_30A_long_4h/geometry/route_reference.csv",
+    "bytes": 463516,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_347/baseline_30A_long_4h/simulation/insertion/final_state.npz",
+    "bytes": 1433,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_347/baseline_30A_long_4h/simulation/insertion/metrics.json",
+    "bytes": 5480,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_347/baseline_30A_long_4h/simulation/insertion/rotation_decisions.json",
+    "bytes": 811825,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_347/baseline_30A_long_4h/simulation/insertion/status.json",
+    "bytes": 5480,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_347/baseline_30A_long_4h/simulation/insertion/trajectory.npz",
+    "bytes": 1665530,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_347/baseline_30A_long_4h/simulation/smoke/final_state.npz",
+    "bytes": 1446,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_347/baseline_30A_long_4h/simulation/smoke/metrics.json",
+    "bytes": 3898,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_347/baseline_30A_long_4h/simulation/smoke/rotation_decisions.json",
+    "bytes": 9490,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_347/baseline_30A_long_4h/simulation/smoke/status.json",
+    "bytes": 3898,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_347/baseline_30A_long_4h/simulation/smoke/trajectory.npz",
+    "bytes": 24707,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_347/baseline_30A_long_4h/status.json",
+    "bytes": 316,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_347/baseline_30A_long_4h/validation/input_audit.json",
+    "bytes": 887,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_347/baseline_30A_long_4h/validation/physical_consistency.json",
+    "bytes": 544,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_347/baseline_30A_long_4h/validation/run_summary.json",
+    "bytes": 11536,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_347/baseline_30A_long_4h/validation/trajectory_and_current.png",
+    "bytes": 212411,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_347_all.log",
+    "bytes": 24397,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_356/baseline_30A_long_4h/config/baseline_assumptions.json",
+    "bytes": 11875,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_356/baseline_30A_long_4h/config/settings_portable.json",
+    "bytes": 539,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_356/baseline_30A_long_4h/config/settings_resolved.json",
+    "bytes": 775,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_356/baseline_30A_long_4h/config/source_manifest.json",
+    "bytes": 3413,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_356/baseline_30A_long_4h/geometry/colon_model.stl",
+    "bytes": 9877884,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_356/baseline_30A_long_4h/geometry/planned_path.vtk",
+    "bytes": 169927,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_356/baseline_30A_long_4h/geometry/risk_report.json",
+    "bytes": 506,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_356/baseline_30A_long_4h/status.json",
+    "bytes": 48,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_356_all.log",
+    "bytes": 509,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_363/baseline_30A_long_4h/config/baseline_assumptions.json",
+    "bytes": 11875,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_363/baseline_30A_long_4h/config/settings_portable.json",
+    "bytes": 539,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_363/baseline_30A_long_4h/config/settings_resolved.json",
+    "bytes": 774,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_363/baseline_30A_long_4h/config/source_manifest.json",
+    "bytes": 3413,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_363/baseline_30A_long_4h/geometry/colon_model.stl",
+    "bytes": 8566134,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_363/baseline_30A_long_4h/geometry/mesh.npz",
+    "bytes": 1612813,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_363/baseline_30A_long_4h/geometry/planned_path.vtk",
+    "bytes": 216691,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_363/baseline_30A_long_4h/geometry/risk_report.json",
+    "bytes": 505,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_363/baseline_30A_long_4h/geometry/route_reference.csv",
+    "bytes": 430780,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_363/baseline_30A_long_4h/simulation/insertion/metrics.json",
+    "bytes": 209,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_363/baseline_30A_long_4h/simulation/insertion/status.json",
+    "bytes": 209,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_363/baseline_30A_long_4h/simulation/insertion/trajectory.npz",
+    "bytes": 168552,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_363/baseline_30A_long_4h/simulation/smoke/final_state.npz",
+    "bytes": 1440,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_363/baseline_30A_long_4h/simulation/smoke/metrics.json",
+    "bytes": 3889,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_363/baseline_30A_long_4h/simulation/smoke/rotation_decisions.json",
+    "bytes": 9520,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_363/baseline_30A_long_4h/simulation/smoke/status.json",
+    "bytes": 3889,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_363/baseline_30A_long_4h/simulation/smoke/trajectory.npz",
+    "bytes": 25160,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_363/baseline_30A_long_4h/status.json",
+    "bytes": 48,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_363/baseline_30A_long_4h/validation/input_audit.json",
+    "bytes": 861,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_363_all.log",
+    "bytes": 509,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_401/baseline_30A_long_4h/config/baseline_assumptions.json",
+    "bytes": 11875,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_401/baseline_30A_long_4h/config/settings_portable.json",
+    "bytes": 539,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_401/baseline_30A_long_4h/config/settings_resolved.json",
+    "bytes": 773,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_401/baseline_30A_long_4h/config/source_manifest.json",
+    "bytes": 3413,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_401/baseline_30A_long_4h/geometry/colon_model.stl",
+    "bytes": 8644184,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_401/baseline_30A_long_4h/geometry/mesh.npz",
+    "bytes": 1676215,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_401/baseline_30A_long_4h/geometry/planned_path.vtk",
+    "bytes": 194726,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_401/baseline_30A_long_4h/geometry/risk_report.json",
+    "bytes": 492,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_401/baseline_30A_long_4h/geometry/route_reference.csv",
+    "bytes": 423295,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_401/baseline_30A_long_4h/simulation/insertion/metrics.json",
+    "bytes": 208,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_401/baseline_30A_long_4h/simulation/insertion/status.json",
+    "bytes": 208,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_401/baseline_30A_long_4h/simulation/insertion/trajectory.npz",
+    "bytes": 394440,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_401/baseline_30A_long_4h/simulation/smoke/final_state.npz",
+    "bytes": 1438,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_401/baseline_30A_long_4h/simulation/smoke/metrics.json",
+    "bytes": 3853,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_401/baseline_30A_long_4h/simulation/smoke/rotation_decisions.json",
+    "bytes": 9476,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_401/baseline_30A_long_4h/simulation/smoke/status.json",
+    "bytes": 3853,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_401/baseline_30A_long_4h/simulation/smoke/trajectory.npz",
+    "bytes": 24736,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_401/baseline_30A_long_4h/status.json",
+    "bytes": 48,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_401/baseline_30A_long_4h/validation/input_audit.json",
+    "bytes": 875,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/colon_401_all.log",
+    "bytes": 4636,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/raw intestine/colon_015.mha",
+    "bytes": 144441708,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/raw intestine/colon_016.mha",
+    "bytes": 144966010,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/raw intestine/colon_017.mha",
+    "bytes": 153616748,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/raw intestine/colon_018.mha",
+    "bytes": 136053112,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/raw intestine/colon_019.mha",
+    "bytes": 128975226,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/raw intestine/colon_020.mha",
+    "bytes": 159908201,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/raw intestine/colon_021.mha",
+    "bytes": 163840381,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/raw intestine/colon_022.mha",
+    "bytes": 145228158,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/raw intestine/colon_023.mha",
+    "bytes": 148636018,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/raw intestine/colon_024.mha",
+    "bytes": 152306026,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/raw intestine/colon_025.mha",
+    "bytes": 136839544,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/raw intestine/colon_026.mha",
+    "bytes": 147849582,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/raw intestine/colon_027.mha",
+    "bytes": 142868843,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/raw intestine/colon_028.mha",
+    "bytes": 150471027,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/raw intestine/colon_029.mha",
+    "bytes": 152043894,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/raw intestine/colon_030.mha",
+    "bytes": 157548915,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/raw intestine/colon_031.mha",
+    "bytes": 149422458,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/raw intestine/colon_032.mha",
+    "bytes": 139985264,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/raw intestine/colon_033.mha",
+    "bytes": 153354618,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/raw intestine/colon_034.mha",
+    "bytes": 136577384,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/remaining_cases_queue.log",
+    "bytes": 4425,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/remaining_cases_queue_status.json",
+    "bytes": 189,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/run_remaining_cases.ps1",
+    "bytes": 3047,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/run_unfinished_cases_resume.ps1",
+    "bytes": 3304,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/settings_colon048_all.json",
+    "bytes": 582,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/settings_colon048_prepare.json",
+    "bytes": 577,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/settings_colon048_smoke.json",
+    "bytes": 575,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/settings_colon_001_resume.json",
+    "bytes": 620,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/settings_colon_018_all.json",
+    "bytes": 604,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/settings_colon_046_all.json",
+    "bytes": 605,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/settings_colon_047_all.json",
+    "bytes": 604,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/settings_colon_123_all.json",
+    "bytes": 604,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/settings_colon_175_all.json",
+    "bytes": 604,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/settings_colon_201_all.json",
+    "bytes": 603,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/settings_colon_222_all.json",
+    "bytes": 604,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/settings_colon_293_all.json",
+    "bytes": 604,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/settings_colon_324_all.json",
+    "bytes": 604,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/settings_colon_347_all.json",
+    "bytes": 603,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/settings_colon_356_all.json",
+    "bytes": 605,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/settings_colon_363_all.json",
+    "bytes": 604,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/settings_colon_401_all.json",
+    "bytes": 603,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/tmp/numba-cache/compact_coils_b02286863ea0efa7367d39839bac071c405c4294/physics._array_components-210.py310.1.nbc",
+    "bytes": 218087,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/tmp/numba-cache/compact_coils_b02286863ea0efa7367d39839bac071c405c4294/physics._array_components-210.py310.nbi",
+    "bytes": 1599,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/tmp/numba-cache/compact_coils_b02286863ea0efa7367d39839bac071c405c4294/physics._integrate_core-115.py310.1.nbc",
+    "bytes": 60199,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/tmp/numba-cache/compact_coils_b02286863ea0efa7367d39839bac071c405c4294/physics._integrate_core-115.py310.nbi",
+    "bytes": 1592,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/tmp/numba-cache/compact_coils_b02286863ea0efa7367d39839bac071c405c4294/physics._integrate_winding-142.py310.1.nbc",
+    "bytes": 68547,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/tmp/numba-cache/compact_coils_b02286863ea0efa7367d39839bac071c405c4294/physics._integrate_winding-142.py310.nbi",
+    "bytes": 1595,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/tmp/numba-cache/训练代码_74b96eadb7952668cfa3e62ca26cb539f7743731/run_withdrawal_model._numba_forward-72.py310.1.nbc",
+    "bytes": 127815,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/tmp/numba-cache/训练代码_74b96eadb7952668cfa3e62ca26cb539f7743731/run_withdrawal_model._numba_forward-72.py310.nbi",
+    "bytes": 1624,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/tmp/pip-unpack-11k3lyl5/pyparsing-3.3.3-py3-none-any.whl.metadata",
+    "bytes": 5857,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/tmp/pip-unpack-6iudw495/contourpy-1.3.2-cp310-cp310-win_amd64.whl.metadata",
+    "bytes": 5461,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/tmp/pip-unpack-8_hmxxj4/llvmlite-0.50.0-cp310-cp310-win_amd64.whl.metadata",
+    "bytes": 4952,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/tmp/pip-unpack-8_yot5am/python_dateutil-3.0.0-py2.py3-none-any.whl.metadata",
+    "bytes": 8237,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/tmp/pip-unpack-b_7w62hm/fonttools-4.65.0-cp310-cp310-win_amd64.whl.metadata",
+    "bytes": 127446,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/tmp/pip-unpack-bmw44g5t/cycler-0.12.1-py3-none-any.whl.metadata",
+    "bytes": 3779,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/tmp/pip-unpack-ed1e_2ys/scipy-1.15.3-cp310-cp310-win_amd64.whl.metadata",
+    "bytes": 60764,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/tmp/pip-unpack-fnhl8m_8/pytz-2026.5-py2.py3-none-any.whl.metadata",
+    "bytes": 22904,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/tmp/pip-unpack-ikdv5zkp/matplotlib-3.10.9-cp310-cp310-win_amd64.whl.metadata",
+    "bytes": 52837,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/tmp/pip-unpack-k8pr3xho/pandas-2.3.3-cp310-cp310-win_amd64.whl.metadata",
+    "bytes": 19488,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/tmp/pip-unpack-m08s8z7i/scipy-1.15.3-cp310-cp310-win_amd64.whl",
+    "bytes": 10747904,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/tmp/pip-unpack-qsll57_j/tzdata-2026.5-py2.py3-none-any.whl.metadata",
+    "bytes": 1358,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/tmp/pip-unpack-rq9sw9ui/kiwisolver-1.5.1-cp310-cp310-win_amd64.whl.metadata",
+    "bytes": 5250,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/tmp/pip-unpack-smgqyjrp/six-1.17.0-py2.py3-none-any.whl.metadata",
+    "bytes": 1658,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/tmp/pip-unpack-sv9gpvxo/numba-0.68.0-cp310-cp310-win_amd64.whl.metadata",
+    "bytes": 2874,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/unfinished_resume_runner_stderr.log",
+    "bytes": 0,
+    "distribution": "release"
+  },
+  {
+    "path": "肠道磁场数据包/unfinished_resume_runner_stdout.log",
+    "bytes": 51655,
+    "distribution": "release"
+  }
+]

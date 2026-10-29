@@ -1,0 +1,77 @@
+# Inference on real endoscopy video (mp4 file or directory of mp4 files).
+# Outputs: <config_dir>/<eval.outfolder>/<video_name>/{depth_npy_files,vis_maps,*.mp4}
+config_dir: null # overwrite by --config-path
+inference: true
+load: null
+
+dataset:
+  data_root: null
+  resolution: 'base'
+  video_length: 5
+  train_datasets: [cv3d]
+  val_datasets: [cv3d]
+  disparity: false
+
+training:
+  batch_size: 1
+  workers: 0
+  gradient_checkpointing: false
+  save_freq: 5000
+  val_freq: 100000
+  vis_freq: 1000
+  total_iters: 20002
+  gradient_accumulation: 1
+  loss_type: "l1"
+  wandb: false
+  wandb_name: "experiment"
+  start_with_val: false
+  lr:
+    vit: 5.0e-6
+    fusion: 1.0e-4
+    dpt: 5.0e-5
+    head: 5.0e-5
+    mamba: 1.0e-4
+    warmup_steps: 1000
+
+model:
+  vit_size: "vitl"
+  patch_size: 14
+  attn_class: "MemEffAttention"
+  # Mamba2 needs Triton, which requires CC >= 7.0; GTX 1080 Ti is CC 6.1.
+  # On an Ampere+ GPU set this to true to get the temporally-consistent video model.
+  use_mamba: false
+  mamba_type: "add"
+  num_mamba_layers: 4
+  downsample_mamba: [0.1, 0.1, 0.1, 0.1]
+  mamba_pos_embed: null
+  mamba_in_dpt_layer: [0, 1, 2, 3]
+  mamba_d_conv: 4
+  mamba_d_state: 256
+  use_hydra: false
+  use_transformer_rnn: false
+  use_xlstm: false
+
+hybrid_configs:
+  use_hybrid: false
+  teacher_model_path: null
+  teacher_resolution: 490
+  layers_to_skip: [1,2,3]
+  num_blocks: 4
+  mlp_expand: 2
+  num_heads: 2
+
+eval:
+  compile: false
+  metrics: false
+  save_grid: false
+  outfolder: "outputs"
+  test_datasets: [cv3d]
+  test_dataset_resolution: 'base'
+  random_input: null  # set to an .mp4 or a directory of .mp4 files
+  out_video: true
+  out_mp4: true
+  save_res: 518
+  save_depth_npy: true
+  save_vis_map: true
+  dummy_timing: false
+  large_dir: null
